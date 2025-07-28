@@ -1,0 +1,2638 @@
+\documentclass[
+  jou,
+  floatsintext,
+  longtable,
+  a4paper,
+  nolmodern,
+  notxfonts,
+  notimes,
+  colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{apa7}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+
+\usepackage[bidi=default]{babel}
+\babelprovide[main,import]{spanish}
+
+
+\babelfont{rm}[,RawFeature={fallback=mainfontfallback}]{Latin Modern
+Roman}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+\RequirePackage{longtable}
+\RequirePackage{threeparttablex}
+
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-.5em}%
+	{\normalfont\normalsize\bfseries\typesectitle}}
+
+\renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{0.5em}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-\z@\relax}%
+	{\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+\makeatother
+
+
+
+
+\usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
+\usepackage{subcaption}
+
+
+\renewcommand\thesubfigure{\Alph{subfigure}}
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.7}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,theorems, breakable, skins}
+\usepackage{fontawesome5}
+
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{ACACAC}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582EC}
+\definecolor{quarto-callout-important-color-frame}{HTML}{D9534F}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{F0AD4E}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02B875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{FD7E14}
+
+%\newlength\Oldarrayrulewidth
+%\newlength\Oldtabcolsep
+
+
+\usepackage{hyperref}
+
+
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+
+
+\usepackage{fontspec} 
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+
+  \setmainfont[,RawFeature={fallback=mainfontfallback}]{Latin Modern
+Roman}
+
+
+
+
+\title{Tipos de Elementos en Zotero: Guía para Citas}
+
+
+\shorttitle{Guía de Tipos de Elementos en Zotero}
+
+
+\usepackage{etoolbox}
+
+
+
+\ccoppy{\textcopyright~2025}
+
+
+
+\author{Edison Achalma}
+
+
+
+\affiliation{
+{Escuela Profesional de Economía, Universidad Nacional de San Cristóbal
+de Huamanga}}
+
+
+
+
+\leftheader{Achalma}
+
+\date{2025-04-23}
+
+
+\abstract{This article provides a comprehensive guide to the item types
+supported by Zotero, a widely used reference management tool. It details
+the purpose, fields, and appropriate use of each item type, such as
+Artwork, Book, Journal Article, and more, based on official Zotero
+documentation. The guide emphasizes the importance of selecting the
+correct item type to ensure accurate citations and compliance with APA
+standards. It also covers the use of the ``Extra'' field for unsupported
+types and additional metadata, offering practical tips for academic
+researchers and students. The article aligns with SEO best practices to
+enhance discoverability while maintaining academic rigor for scholarly
+publications. }
+
+\keywords{Zotero item types, reference management, APA
+citation, academic writing, bibliographic metadata}
+
+\authornote{\par{\addORCIDlink{Edison Achalma}{0000-0001-6996-3364}} 
+\par{ }
+\par{   El autor no tiene conflictos de interés que revelar.    Los
+roles de autor se clasificaron utilizando la taxonomía de roles de
+colaborador (CRediT; https://credit.niso.org/) de la siguiente
+manera:  Edison Achalma:   conceptualización, redacción}
+\par{La correspondencia relativa a este artículo debe dirigirse a Edison
+Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
+}
+
+\usepackage{pbalance}
+% \usepackage{float}
+\makeatletter
+\let\oldtpt\ThreePartTable
+\let\endoldtpt\endThreePartTable
+\def\ThreePartTable{\@ifnextchar[\ThreePartTable@i \ThreePartTable@ii}
+\def\ThreePartTable@i[#1]{\begin{figure}[!htbp]
+\onecolumn
+\begin{minipage}{0.485\textwidth}
+\oldtpt[#1]
+}
+\def\ThreePartTable@ii{\begin{figure}[!htbp]
+\onecolumn
+\begin{minipage}{0.48\textwidth}
+\oldtpt
+}
+\def\endThreePartTable{
+\endoldtpt
+\end{minipage}
+\twocolumn
+\end{figure}}
+\makeatother
+
+
+\makeatletter
+\let\endoldlt\endlongtable		
+\def\endlongtable{
+\hline
+\endoldlt}
+\makeatother
+
+\newenvironment{twocolumntable}% environment name
+{% begin code
+\begin{table*}[!htbp]%
+\onecolumn%
+}%
+{%
+\twocolumn%
+\end{table*}%
+}% end code
+
+\urlstyle{same}
+
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\makeatother
+
+% From https://tex.stackexchange.com/a/645996/211326
+%%% apa7 doesn't want to add appendix section titles in the toc
+%%% let's make it do it
+\makeatletter
+\xpatchcmd{\appendix}
+  {\par}
+  {\addcontentsline{toc}{section}{\@currentlabelname}\par}
+  {}{}
+\makeatother
+
+%% Disable longtable counter
+%% https://tex.stackexchange.com/a/248395/211326
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\LT@caption}
+  {\bgroup}
+  {\bgroup\global\LTpatch@captiontrue}
+  {}{}
+\patchcmd{\longtable}
+  {\par}
+  {\par\global\LTpatch@captionfalse}
+  {}{}
+\apptocmd{\endlongtable}
+  {\ifLTpatch@caption\else\addtocounter{table}{-1}\fi}
+  {}{}
+\newif\ifLTpatch@caption
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\hypertarget{toc}{}
+\tableofcontents
+\newpage
+\section[Introduction]{Tipos de Elementos en Zotero}
+
+\setcounter{secnumdepth}{5}
+
+\setlength\LTleft{0pt}
+
+
+Esta guía proporciona una descripción detallada de los tipos de
+elementos soportados por Zotero, basada en la documentación oficial de
+Zotero.
+
+\subsection{1. Artwork (Obra de arte)}\label{artwork-obra-de-arte}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para registrar obras de arte como pinturas al óleo, esculturas,
+    fotografías o cualquier tipo de imagen visual, incluidas figuras
+    científicas (por ejemplo, gráficos o diagramas).
+  \item
+    Usar este tipo en lugar de ``Document'' para elementos visuales con
+    un enfoque artístico o científico que requieran citar al creador
+    como un artista.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Artwork'' para categorizar como
+    obra de arte.
+  \item
+    \textbf{Artist}: Nombre del creador de la obra (persona o entidad).
+    Ingresar en formato de dos campos (Apellido, Nombre) para personas o
+    un campo para instituciones.
+  \item
+    \textbf{Title}: Título principal de la obra, en mayúsculas según el
+    idioma (sentence case).
+  \item
+    \textbf{Abstract}: Breve descripción de la obra, si es relevante.
+  \item
+    \textbf{Date}: Año de creación o publicación de la obra.
+  \item
+    \textbf{Medium}: Tipo de obra o material usado (por ejemplo,
+    ``Pintura al óleo'', ``Escultura de madera'', ``Gráfico de
+    dispersión'').
+  \item
+    \textbf{Artwork Size}: Dimensiones físicas de la obra (por ejemplo,
+    ``50x70 cm'').
+  \item
+    \textbf{Place}: Lugar donde se creó o exhibe la obra, si aplica.
+  \item
+    \textbf{Publisher}: Institución o galería que publica o exhibe la
+    obra.
+  \item
+    \textbf{Language}: Código ISO del idioma (por ejemplo, ``es-ES''
+    para español).
+  \item
+    \textbf{Short Title}: Versión abreviada del título para citas
+    posteriores en estilos de notas.
+  \item
+    \textbf{URL}: Dirección web donde se puede acceder a una
+    representación digital de la obra.
+  \item
+    \textbf{Accessed}: Fecha en que se accedió a la obra en línea.
+  \item
+    \textbf{Archive}: Nombre del archivo o museo donde se encuentra la
+    obra.
+  \item
+    \textbf{Loc. in Archive}: Ubicación específica en el archivo (por
+    ejemplo, número de sala o caja).
+  \item
+    \textbf{Library Catalog}: Catálogo o base de datos de donde se
+    importó la información.
+  \item
+    \textbf{Call Number}: Número de clasificación en una biblioteca o
+    archivo.
+  \item
+    \textbf{Rights}: Información sobre derechos de autor o licencias.
+  \item
+    \textbf{Extra}: Información adicional, como notas o campos no
+    soportados (por ejemplo, ``Original Date: 1886'').
+  \item
+    \textbf{Date Added/Modified}: Campos automáticos con la fecha de
+    adición o modificación.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es ideal para citar obras de arte o imágenes visuales,
+    diferenciándolas de documentos genéricos. La documentación
+    recomienda usar el campo ``Medium'' para describir el material o
+    tipo de obra, y ``Artwork Size'' para dimensiones físicas. Si la
+    obra no encaja perfectamente, se puede adaptar usando el campo
+    ``Extra'' para detalles específicos.
+  \end{itemize}
+\end{itemize}
+
+\subsection{2. Audio Recording (Grabación de
+audio)}\label{audio-recording-grabaciuxf3n-de-audio}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para música, grabaciones de voz, efectos de sonido, grabaciones de
+    archivo o figuras científicas basadas en audio.
+  \item
+    Usar en lugar de ``Podcast'' si no es un programa distribuido en
+    línea por suscripción.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Audio Recording''.
+  \item
+    \textbf{Performer}: Nombre del intérprete principal (persona o
+    grupo). Ingresar en formato de dos campos para personas.
+  \item
+    \textbf{Composer}: Nombre del compositor de la música, si aplica.
+  \item
+    \textbf{Words By}: Autor de las letras o texto hablado (por ejemplo,
+    letrista o guionista).
+  \item
+    \textbf{Title}: Título de la grabación (por ejemplo, nombre de la
+    canción o pieza).
+  \item
+    \textbf{Abstract}: Descripción breve del contenido.
+  \item
+    \textbf{Date}: Fecha de publicación o grabación.
+  \item
+    \textbf{Format}: Formato de la grabación (por ejemplo, ``CD'',
+    ``MP3'').
+  \item
+    \textbf{Running Time}: Duración de la grabación (por ejemplo, ``3:45
+    mins'').
+  \item
+    \textbf{Label}: Compañía discográfica que distribuye la grabación.
+  \item
+    \textbf{Series}: Nombre de una serie de grabaciones, si aplica.
+  \item
+    \textbf{Series Title}: Título de una serie específica dentro de una
+    publicación.
+  \item
+    \textbf{Volume}: Número de volumen, si es parte de una colección.
+  \item
+    \textbf{Place}: Lugar de publicación o grabación.
+  \item
+    \textbf{Publisher}: Editorial o productora de la grabación.
+  \item
+    \textbf{ISBN}: Número ISBN, si la grabación está publicada como
+    parte de un conjunto.
+  \item
+    \textbf{Language}: Código ISO del idioma.
+  \item
+    \textbf{Short Title}: Título abreviado para citas posteriores.
+  \item
+    \textbf{URL}: Dirección web de la grabación.
+  \item
+    \textbf{Accessed}: Fecha de acceso en línea.
+  \item
+    \textbf{Archive/Loc. in Archive}: Archivo y ubicación específica
+    donde se encuentra.
+  \item
+    \textbf{Library Catalog/Call Number}: Catálogo y número de
+    clasificación.
+  \item
+    \textbf{Rights/Extra/Date Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo cubre cualquier grabación de audio, desde música hasta
+    grabaciones históricas. El campo ``Format'' es clave para
+    especificar el medio físico o digital. Los creadores como
+    ``Performer'' o ``Composer'' son esenciales para citas precisas.
+    Para roles adicionales (por ejemplo, productores), usar el campo
+    ``Extra'' con el formato ``Director: Nombre \textbar\textbar{}
+    Apellido''.
+  \end{itemize}
+\end{itemize}
+
+\subsection{3. Bill (Proyecto de ley)}\label{bill-proyecto-de-ley}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para propuestas de legislación presentadas ante un cuerpo
+    legislativo.
+  \item
+    Usar en lugar de ``Statute'' si la legislación aún no ha sido
+    aprobada.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Bill''.
+  \item
+    \textbf{Sponsor}: Autor principal del proyecto (persona o entidad).
+  \item
+    \textbf{Cosponsor}: Coautores o patrocinadores adicionales.
+  \item
+    \textbf{Title}: Título oficial del proyecto de ley.
+  \item
+    \textbf{Abstract}: Resumen del contenido del proyecto.
+  \item
+    \textbf{Bill Number}: Número asignado al proyecto de ley.
+  \item
+    \textbf{Code}: Nombre del código donde se publica el proyecto.
+  \item
+    \textbf{Code Volume}: Volumen del código.
+  \item
+    \textbf{Code Number}: Número específico dentro del código.
+  \item
+    \textbf{Section}: Sección específica del proyecto citada.
+  \item
+    \textbf{Date}: Fecha de presentación del proyecto.
+  \item
+    \textbf{Legislative Body}: Cuerpo legislativo que debate el proyecto
+    (por ejemplo, ``Senado'').
+  \item
+    \textbf{Session}: Sesión legislativa en la que se presentó.
+  \item
+    \textbf{History}: Información sobre el historial procesal del
+    proyecto.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es específico para legislación propuesta. El campo ``Bill
+    Number'' es crucial para identificar el proyecto, y ``History''
+    permite rastrear su progreso. La documentación sugiere usar
+    ``Extra'' para campos legales adicionales no soportados, como
+    ``Event Place''.
+  \end{itemize}
+\end{itemize}
+
+\subsection{4. Blog Post (Entrada de
+blog)}\label{blog-post-entrada-de-blog}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para artículos o entradas publicadas en un blog personal.
+  \item
+    Usar ``Magazine Article'' o ``Newspaper Article'' para publicaciones
+    en línea de medios más grandes (por ejemplo, blogs de NYT).
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Blog Post''.
+  \item
+    \textbf{Author}: Autor de la entrada, en formato de dos campos.
+  \item
+    \textbf{Commenter}: Persona que comenta la entrada (no usado en
+    citas).
+  \item
+    \textbf{Title}: Título de la entrada del blog.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Blog Title}: Nombre del blog que contiene la entrada.
+  \item
+    \textbf{Website Type}: Género del sitio web (por ejemplo, ``Blog
+    personal''), raramente usado.
+  \item
+    \textbf{Date}: Fecha de publicación de la entrada.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es ideal para blogs personales, diferenciándolos de
+    artículos de medios establecidos. El campo ``Blog Title'' es
+    esencial para contextualizar la entrada. La documentación recomienda
+    usar ``Webpage'' si no se ajusta a otros tipos más específicos.
+  \end{itemize}
+\end{itemize}
+
+\subsection{5. Book (Libro)}\label{book-libro}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para libros publicados, incluidas monografías, antologías o textos
+    académicos.
+  \item
+    Usar ``Report'' para documentos gubernamentales, informes técnicos o
+    manuales.
+  \item
+    Puede adaptarse para ítems inusuales si otros tipos no encajan.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Book''.
+  \item
+    \textbf{Author}: Autor principal del libro.
+  \item
+    \textbf{Editor}: Editor del libro, si aplica.
+  \item
+    \textbf{Translator}: Traductor, si el libro es una traducción.
+  \item
+    \textbf{Contributor}: Colaboradores adicionales (no usados en
+    citas).
+  \item
+    \textbf{Title}: Título completo del libro.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Series}: Nombre de la serie editorial, si aplica.
+  \item
+    \textbf{Series Number}: Número del libro en la serie.
+  \item
+    \textbf{Volume}: Volumen del libro, si es parte de una colección.
+  \item
+    \textbf{\# of Volumes}: Número total de volúmenes en la obra.
+  \item
+    \textbf{Edition}: Número de edición (por ejemplo, ``2'' para segunda
+    edición).
+  \item
+    \textbf{Place}: Lugar de publicación.
+  \item
+    \textbf{Publisher}: Editorial que publicó el libro.
+  \item
+    \textbf{Date}: Año de publicación.
+  \item
+    \textbf{\# of Pages}: Número total de páginas.
+  \item
+    \textbf{ISBN}: Número ISBN del libro.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es versátil y puede adaptarse a muchos ítems inusuales. La
+    documentación recomienda usar ``Type'' o ``Extra'' para especificar
+    subtipos (por ejemplo, ``Novela'' o ``Biografía''). El campo
+    ``Edition'' debe contener solo números, y ``Series'' es clave para
+    colecciones editoriales.
+  \end{itemize}
+\end{itemize}
+
+\subsection{6. Book Section (Sección de
+libro)}\label{book-section-secciuxf3n-de-libro}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para capítulos, prólogos, introducciones, apéndices, comentarios u
+    otras secciones de un libro.
+  \item
+    Usar en lugar de ``Book'' cuando se cita una parte específica de un
+    libro.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Book Section''.
+  \item
+    \textbf{Author}: Autor de la sección.
+  \item
+    \textbf{Editor/Translator/Contributor}: Igual que en ``Book''.
+  \item
+    \textbf{Title}: Título de la sección o capítulo.
+  \item
+    \textbf{Book Title}: Título del libro que contiene la sección.
+  \item
+    \textbf{Abstract/Series/Series Number/Volume/\# of
+    Volumes/Edition/Place/Publisher/Date/\# of Pages/ISBN/Language/Short
+    Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call
+    Number/Rights/Extra/Date Added/Modified}: Igual que en ``Book''.
+  \item
+    \textbf{Pages}: Rango de páginas de la sección dentro del libro.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es específico para citar partes de libros. El campo ``Book
+    Title'' es obligatorio para contextualizar la sección, y ``Pages''
+    es crucial para ubicar la cita. La documentación sugiere usar
+    ``Extra'' para campos como ``Chapter Number''.
+  \end{itemize}
+\end{itemize}
+
+\subsection{7. Case (Caso legal)}\label{case-caso-legal}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para casos legales, ya sean publicados o inéditos.
+  \item
+    Usar en lugar de ``Document'' para citas legales formales.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Case''.
+  \item
+    \textbf{Author}: Abogado o entidad que presenta el caso (rara vez
+    usado).
+  \item
+    \textbf{Counsel}: Abogado que argumenta el caso.
+  \item
+    \textbf{Case Name}: Título oficial del caso (por ejemplo, ``Roe v.
+    Wade'').
+  \item
+    \textbf{Abstract}: Resumen del caso.
+  \item
+    \textbf{Court}: Tribunal donde se argumentó el caso.
+  \item
+    \textbf{Date Decided}: Fecha de la decisión del caso.
+  \item
+    \textbf{Docket Number}: Número de expediente asignado.
+  \item
+    \textbf{Reporter}: Publicación donde se reporta el caso.
+  \item
+    \textbf{Reporter Volume}: Volumen del reporter.
+  \item
+    \textbf{First Page}: Primera página del caso en el reporter.
+  \item
+    \textbf{History}: Recursos relacionados con el historial del caso.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es específico para citas legales. Los campos ``Case Name''
+    y ``Court'' son esenciales, y ``History'' permite rastrear el
+    progreso del caso. La documentación recomienda consultar la sección
+    de ``Legal Citations'' para soporte adicional.
+  \end{itemize}
+\end{itemize}
+
+\subsection{8. Conference Paper (Artículo en
+conferencia)}\label{conference-paper-artuxedculo-en-conferencia}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para trabajos presentados en conferencias y publicados en actas
+    formales (por ejemplo, como libro o revista).
+  \item
+    Usar ``Presentation'' para trabajos no publicados en actas.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Conference Paper''.
+  \item
+    \textbf{Author}: Autor del artículo.
+  \item
+    \textbf{Title}: Título del artículo.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Proceedings Title}: Título de las actas donde se publicó.
+  \item
+    \textbf{Conference Name}: Nombre de la conferencia.
+  \item
+    \textbf{Place}: Lugar de publicación de las actas.
+  \item
+    \textbf{Publisher}: Editorial de las actas.
+  \item
+    \textbf{Date}: Año de publicación.
+  \item
+    \textbf{Volume}: Volumen de las actas.
+  \item
+    \textbf{Pages}: Rango de páginas del artículo.
+  \item
+    \textbf{Series}: Serie de la publicación, si aplica.
+  \item
+    \textbf{DOI}: Identificador DOI del artículo.
+  \item
+    \textbf{ISBN}: ISBN de las actas.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para artículos publicados en actas, no para
+    presentaciones orales. Los campos ``Proceedings Title'' y
+    ``Conference Name'' son clave para contextualizar. Si la conferencia
+    y la publicación tienen lugares diferentes, usar ``Extra'' para
+    ``Event Place''.
+  \end{itemize}
+\end{itemize}
+
+\subsection{9. Dictionary Entry (Entrada de
+diccionario)}\label{dictionary-entry-entrada-de-diccionario}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para entradas publicadas en un diccionario.
+  \item
+    Usar en lugar de ``Encyclopedia Article'' si el recurso es
+    específicamente un diccionario.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Dictionary Entry''.
+  \item
+    \textbf{Author}: Autor de la entrada, si se especifica.
+  \item
+    \textbf{Title}: Título de la entrada (por ejemplo, la palabra
+    definida).
+  \item
+    \textbf{Dictionary Title}: Título del diccionario.
+  \item
+    \textbf{Abstract/Series/Series Number/Volume/\# of
+    Volumes/Edition/Place/Publisher/Date/Pages/ISBN/Language/Short
+    Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call
+    Number/Rights/Extra/Date Added/Modified}: Igual que en ``Book''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es específico para diccionarios. El campo ``Dictionary
+    Title'' es esencial, y ``Pages'' puede usarse para entradas largas.
+    La documentación sugiere usar ``Book Section'' si la entrada es más
+    extensa o compleja.
+  \end{itemize}
+\end{itemize}
+
+\subsection{10. Document (Documento)}\label{document-documento}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para documentos genéricos no cubiertos por otros tipos.
+  \item
+    Evitar su uso si es posible, ya que tiene pocos campos y soporte
+    limitado en estilos de cita.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Document''.
+  \item
+    \textbf{Author}: Autor del documento.
+  \item
+    \textbf{Title}: Título del documento.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Publisher}: Entidad que publica el documento.
+  \item
+    \textbf{Date}: Fecha de publicación.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es un último recurso debido a su falta de campos
+    específicos. La documentación recomienda usar ``Book'', ``Report'' o
+    ``Manuscript'' para mejores resultados en citas.
+  \end{itemize}
+\end{itemize}
+
+\subsection{11. Email (Correo
+electrónico)}\label{email-correo-electruxf3nico}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para mensajes enviados por correo electrónico u otras formas de
+    comunicación personal.
+  \item
+    Usar en lugar de ``Letter'' si la comunicación es digital.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Email''.
+  \item
+    \textbf{Author}: Remitente del correo.
+  \item
+    \textbf{Recipient}: Destinatario del correo.
+  \item
+    \textbf{Subject}: Asunto del correo electrónico.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Date}: Fecha de envío.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es adecuado para comunicaciones personales digitales. El
+    campo ``Subject'' actúa como título, y ``Recipient'' es importante
+    para el contexto. La documentación sugiere usar ``Letter'' para
+    comunicaciones similares no electrónicas.
+  \end{itemize}
+\end{itemize}
+
+\subsection{12. Encyclopedia Article (Artículo de
+enciclopedia)}\label{encyclopedia-article-artuxedculo-de-enciclopedia}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para artículos o capítulos publicados en una enciclopedia.
+  \item
+    Usar en lugar de ``Dictionary Entry'' si el recurso es una
+    enciclopedia general.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Encyclopedia Article''.
+  \item
+    \textbf{Author}: Autor del artículo.
+  \item
+    \textbf{Title}: Título del artículo.
+  \item
+    \textbf{Encyclopedia Title}: Título de la enciclopedia.
+  \item
+    \textbf{Abstract/Series/Series Number/Volume/\# of
+    Volumes/Edition/Place/Publisher/Date/Pages/ISBN/Language/Short
+    Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call
+    Number/Rights/Extra/Date Added/Modified}: Igual que en ``Book''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para enciclopedias, con ``Encyclopedia Title'' como
+    campo clave. Similar a ``Book Section'', pero optimizado para
+    enciclopedias. Usar ``Extra'' para detalles adicionales.
+  \end{itemize}
+\end{itemize}
+
+\subsection{13. Film (Película)}\label{film-peluxedcula}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para películas artísticas, incluyendo ficción, no ficción y
+    documentales.
+  \item
+    Usar ``Video Recording'' para videos no artísticos (por ejemplo,
+    YouTube).
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Film''.
+  \item
+    \textbf{Director}: Director de la película (autor principal).
+  \item
+    \textbf{Producer/Scriptwriter}: Productores o guionistas, si aplica.
+  \item
+    \textbf{Cast Member}: Actores principales (no usado en citas).
+  \item
+    \textbf{Title}: Título de la película.
+  \item
+    \textbf{Abstract}: Resumen de la trama o contenido.
+  \item
+    \textbf{Date}: Año de estreno.
+  \item
+    \textbf{Format}: Formato de la película (por ejemplo, ``DVD'',
+    ``Streaming'').
+  \item
+    \textbf{Running Time}: Duración de la película.
+  \item
+    \textbf{Distributor}: Compañía que distribuye la película.
+  \item
+    \textbf{Genre}: Género de la película (por ejemplo, ``Drama'').
+  \item
+    \textbf{Place/Publisher/ISBN/Language/Short
+    Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call
+    Number/Rights/Extra/Date Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para películas con enfoque artístico. El campo
+    ``Director'' es clave, y roles como ``Producer'' deben especificarse
+    en ``Extra''. La documentación recomienda usar etiquetas en
+    ``Extra'' para roles adicionales.
+  \end{itemize}
+\end{itemize}
+
+\subsection{14. Forum Post (Publicación en
+foro)}\label{forum-post-publicaciuxf3n-en-foro}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para publicaciones en foros en línea, incluidas redes sociales como
+    tweets o comentarios de Facebook.
+  \item
+    Usar en lugar de ``Blog Post'' si la publicación es en un foro o red
+    social.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Forum Post''.
+  \item
+    \textbf{Author}: Autor de la publicación.
+  \item
+    \textbf{Commenter}: Persona que comenta (no usado en citas).
+  \item
+    \textbf{Title}: Título de la publicación o mensaje.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Forum/Listserv Title}: Nombre del foro o plataforma (por
+    ejemplo, ``Twitter'').
+  \item
+    \textbf{Post Type}: Tipo de publicación (por ejemplo, ``Tweet'').
+  \item
+    \textbf{Date}: Fecha de publicación.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo cubre publicaciones en foros y redes sociales. El campo
+    ``Post Type'' permite especificar el formato (por ejemplo,
+    ``Tweet''). La documentación sugiere usar ``Webpage'' para
+    publicaciones en línea más genéricas.
+  \end{itemize}
+\end{itemize}
+
+\subsection{15. Hearing (Audiencia)}\label{hearing-audiencia}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para informes o registros de audiencias formales de un cuerpo
+    legislativo.
+  \item
+    Usar en lugar de ``Document'' para citas legales específicas.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Hearing''.
+  \item
+    \textbf{Contributor}: Persona o entidad asociada (autor principal).
+  \item
+    \textbf{Title}: Título de la audiencia.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Committee}: Comité que realiza la audiencia.
+  \item
+    \textbf{Place}: Lugar de la audiencia.
+  \item
+    \textbf{Publisher}: Entidad que publica el registro.
+  \item
+    \textbf{Date}: Fecha de la audiencia.
+  \item
+    \textbf{\# of Volumes}: Número de volúmenes del registro.
+  \item
+    \textbf{Document Number}: Número de identificación del registro.
+  \item
+    \textbf{Pages}: Rango de páginas citado.
+  \item
+    \textbf{Legislative Body}: Cuerpo legislativo (por ejemplo,
+    ``Congreso'').
+  \item
+    \textbf{Session}: Sesión legislativa.
+  \item
+    \textbf{History}: Historial procesal de la audiencia.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para audiencias legislativas formales. Los campos
+    ``Committee'' y ``Document Number'' son esenciales. La documentación
+    recomienda usar ``Legal Citations'' para más detalles.
+  \end{itemize}
+\end{itemize}
+
+\subsection{16. Instant Message (Mensaje
+instantáneo)}\label{instant-message-mensaje-instantuxe1neo}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para mensajes enviados por servicios de mensajería instantánea o
+    chat.
+  \item
+    Usar en lugar de ``Email'' si la comunicación es en tiempo real.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Instant Message''.
+  \item
+    \textbf{Author}: Remitente del mensaje.
+  \item
+    \textbf{Recipient}: Destinatario del mensaje.
+  \item
+    \textbf{Title}: Título o asunto del mensaje.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Date}: Fecha de envío.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para comunicaciones personales en tiempo real. Similar
+    a ``Email'', pero enfocado en chats. La documentación sugiere usar
+    ``Letter'' para comunicaciones similares no digitales.
+  \end{itemize}
+\end{itemize}
+
+\subsection{17. Interview (Entrevista)}\label{interview-entrevista}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para grabaciones, transcripciones o registros de entrevistas.
+  \item
+    Usar en lugar de ``Document'' para entrevistas formales o
+    publicadas.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Interview''.
+  \item
+    \textbf{Interview With}: Persona entrevistada (autor principal).
+  \item
+    \textbf{Interviewer}: Persona que realiza la entrevista.
+  \item
+    \textbf{Title}: Título de la entrevista, si tiene uno.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Date}: Fecha de la entrevista.
+  \item
+    \textbf{Medium}: Formato de la entrevista (por ejemplo, ``Grabación
+    de audio'', ``Transcripción'').
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para entrevistas formales o publicadas. El campo
+    ``Interview With'' es clave, y ``Medium'' especifica el formato. La
+    documentación recomienda usar ``Extra'' para detalles como ``Event
+    Date''.
+  \end{itemize}
+\end{itemize}
+
+\subsection{18. Journal Article (Artículo de revista
+académica)}\label{journal-article-artuxedculo-de-revista-acaduxe9mica}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para artículos publicados en revistas académicas, ya sea en formato
+    impreso u online.
+  \item
+    Usar en lugar de ``Magazine Article'' para publicaciones académicas
+    revisadas por pares.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Journal Article''.
+  \item
+    \textbf{Author}: Autor del artículo.
+  \item
+    \textbf{Reviewed Author}: Autor de la obra reseñada, si es una
+    reseña.
+  \item
+    \textbf{Title}: Título del artículo.
+  \item
+    \textbf{Publication}: Nombre de la revista.
+  \item
+    \textbf{Abstract}: Resumen del artículo.
+  \item
+    \textbf{Volume}: Volumen de la revista.
+  \item
+    \textbf{Issue}: Número de la revista.
+  \item
+    \textbf{Pages}: Rango de páginas del artículo.
+  \item
+    \textbf{Date}: Fecha de publicación.
+  \item
+    \textbf{Series/Series Title}: Serie o sección especial de la
+    revista.
+  \item
+    \textbf{Journal Abbr}: Abreviatura de la revista (según estándares
+    como MEDLINE).
+  \item
+    \textbf{DOI}: Identificador DOI del artículo.
+  \item
+    \textbf{ISSN}: Número ISSN de la revista.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para artículos académicos revisados por pares. Los
+    campos ``Publication'', ``Volume'' e ``Issue'' son esenciales. La
+    documentación recomienda usar ``Extra'' para campos como ``PMID'' o
+    ``Status'' (por ejemplo, ``in press'').
+  \end{itemize}
+\end{itemize}
+
+\subsection{19. Letter (Carta)}\label{letter-carta}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para cartas enviadas entre personas u organizaciones, especialmente
+    comunicaciones históricas o personales.
+  \item
+    Usar en lugar de ``Email'' para comunicaciones no digitales.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Letter''.
+  \item
+    \textbf{Author}: Remitente de la carta.
+  \item
+    \textbf{Recipient}: Destinatario de la carta.
+  \item
+    \textbf{Title}: Título o descripción de la carta.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Type}: Tipo de carta (por ejemplo, ``Correspondencia
+    privada'').
+  \item
+    \textbf{Date}: Fecha de envío.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para comunicaciones personales no electrónicas. El
+    campo ``Type'' permite especificar el propósito de la carta. La
+    documentación sugiere usar ``Manuscript'' para cartas históricas con
+    valor archivístico.
+  \end{itemize}
+\end{itemize}
+
+\subsection{20. Magazine Article (Artículo de
+revista)}\label{magazine-article-artuxedculo-de-revista}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para artículos publicados en revistas populares, comerciales o no
+    académicas.
+  \item
+    Usar en lugar de ``Journal Article'' si no es una publicación
+    revisada por pares.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Magazine Article''.
+  \item
+    \textbf{Author}: Autor del artículo.
+  \item
+    \textbf{Title}: Título del artículo.
+  \item
+    \textbf{Publication}: Nombre de la revista.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Volume/Issue}: Volumen y número de la revista, si aplica.
+  \item
+    \textbf{Date}: Fecha de publicación.
+  \item
+    \textbf{Pages}: Rango de páginas.
+  \item
+    \textbf{ISSN}: Número ISSN de la revista.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para revistas no académicas. Los campos ``Publication''
+    y ``Date'' son clave. La documentación recomienda usar ``Journal
+    Article'' para publicaciones académicas y ``Newspaper Article'' para
+    diarios.
+  \end{itemize}
+\end{itemize}
+
+\subsection{21. Manuscript (Manuscrito)}\label{manuscript-manuscrito}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para manuscritos inéditos, ya sean históricos o modernos (por
+    ejemplo, trabajos no publicados, borradores o artículos en proceso).
+  \item
+    Usar en lugar de ``Document'' para documentos con valor archivístico
+    o académico.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Manuscript''.
+  \item
+    \textbf{Author}: Autor del manuscrito.
+  \item
+    \textbf{Title}: Título del manuscrito.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Type}: Tipo o estado del manuscrito (por ejemplo,
+    ``Manuscrito inédito'', ``Trabajo en proceso'').
+  \item
+    \textbf{Date}: Fecha de creación o redacción.
+  \item
+    \textbf{Place}: Lugar donde se creó el manuscrito.
+  \item
+    \textbf{\# of Pages}: Número de páginas.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es versátil para documentos inéditos. El campo ``Type'' es
+    crucial para especificar el estado. La documentación recomienda usar
+    ``Extra'' para detalles archivísticos adicionales.
+  \end{itemize}
+\end{itemize}
+
+\subsection{22. Map (Mapa)}\label{map-mapa}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para mapas o modelos geográficos.
+  \item
+    Usar en lugar de ``Artwork'' si el enfoque es cartográfico.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Map''.
+  \item
+    \textbf{Cartographer}: Creador del mapa (autor principal).
+  \item
+    \textbf{Title}: Título del mapa.
+  \item
+    \textbf{Abstract}: Descripción del contenido.
+  \item
+    \textbf{Type}: Tipo o género del mapa (por ejemplo, ``Mapa
+    topográfico'').
+  \item
+    \textbf{Scale}: Escala del mapa (por ejemplo, ``1:50,000'').
+  \item
+    \textbf{Series/Series Title}: Serie cartográfica, si aplica.
+  \item
+    \textbf{Edition}: Edición del mapa.
+  \item
+    \textbf{Place/Publisher/Date/ISBN/Language/Short
+    Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call
+    Number/Rights/Extra/Date Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para recursos cartográficos. El campo ``Scale'' es
+    único y esencial. La documentación sugiere usar ``Type'' para
+    géneros específicos y ``Extra'' para detalles adicionales.
+  \end{itemize}
+\end{itemize}
+
+\subsection{23. Newspaper Article (Artículo de
+periódico)}\label{newspaper-article-artuxedculo-de-periuxf3dico}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para artículos publicados en periódicos, ya sea en formato impreso u
+    online.
+  \item
+    Usar en lugar de ``Magazine Article'' si el medio es un diario.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Newspaper Article''.
+  \item
+    \textbf{Author}: Autor del artículo.
+  \item
+    \textbf{Title}: Título del artículo.
+  \item
+    \textbf{Publication}: Nombre del periódico.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Place}: Lugar de publicación del periódico.
+  \item
+    \textbf{Edition}: Edición del periódico (por ejemplo, ``Edición
+    matutina'').
+  \item
+    \textbf{Date}: Fecha de publicación.
+  \item
+    \textbf{Section}: Sección del periódico (por ejemplo,
+    ``Internacional'').
+  \item
+    \textbf{Pages}: Rango de páginas.
+  \item
+    \textbf{ISSN}: Número ISSN del periódico.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para artículos de prensa. Los campos ``Publication'' y
+    ``Section'' son clave para contextualizar. La documentación
+    recomienda usar ``Magazine Article'' para revistas no académicas.
+  \end{itemize}
+\end{itemize}
+
+\subsection{24. Patent (Patente)}\label{patent-patente}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para patentes otorgadas por una invención.
+  \item
+    Usar en lugar de ``Document'' para citas legales específicas.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Patent''.
+  \item
+    \textbf{Inventor}: Creador de la invención (autor principal).
+  \item
+    \textbf{Attorney/Agent}: Abogado o agente que representa al
+    inventor.
+  \item
+    \textbf{Title}: Título de la patente.
+  \item
+    \textbf{Abstract}: Resumen de la invención.
+  \item
+    \textbf{Country}: País que emite la patente.
+  \item
+    \textbf{Assignee}: Entidad a la que se asignan los derechos.
+  \item
+    \textbf{Issuing Authority}: Oficina que emite la patente.
+  \item
+    \textbf{Patent Number}: Número de la patente.
+  \item
+    \textbf{Filing Date}: Fecha de presentación de la solicitud.
+  \item
+    \textbf{Issue Date}: Fecha de emisión de la patente.
+  \item
+    \textbf{Application Number}: Número de la solicitud.
+  \item
+    \textbf{Priority Numbers}: Números de prioridad internacional.
+  \item
+    \textbf{References}: Recursos relacionados con la patente.
+  \item
+    \textbf{Legal Status}: Estado legal de la patente.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para patentes formales. Los campos ``Patent Number'' e
+    ``Issuing Authority'' son esenciales. La documentación recomienda
+    usar ``Extra'' para campos legales adicionales.
+  \end{itemize}
+\end{itemize}
+
+\subsection{25. Podcast (Podcast)}\label{podcast-podcast}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para episodios de programas de audio o video distribuidos en línea,
+    generalmente por suscripción.
+  \item
+    Usar en lugar de ``Audio Recording'' si el contenido es un podcast.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Podcast''.
+  \item
+    \textbf{Podcaster}: Anfitrión del podcast (autor principal).
+  \item
+    \textbf{Guest}: Invitado en el episodio, si aplica.
+  \item
+    \textbf{Title}: Título del episodio.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Program Title}: Nombre del programa de podcast.
+  \item
+    \textbf{Episode Number}: Número del episodio.
+  \item
+    \textbf{Date}: Fecha de publicación.
+  \item
+    \textbf{Running Time}: Duración del episodio.
+  \item
+    \textbf{Format}: Formato del podcast (por ejemplo, ``MP3'').
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para podcasts distribuidos en línea. El campo ``Program
+    Title'' contextualiza el episodio, y ``Episode Number'' es útil para
+    identificación. La documentación sugiere usar ``Audio Recording''
+    para grabaciones no distribuidas como podcasts.
+  \end{itemize}
+\end{itemize}
+
+\subsection{26. Presentation
+(Presentación)}\label{presentation-presentaciuxf3n}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para presentaciones en conferencias, simposios o reuniones, no
+    publicadas en actas.
+  \item
+    Usar ``Conference Paper'' si la presentación se publicó en actas.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Presentation''.
+  \item
+    \textbf{Presenter}: Persona que realiza la presentación (autor
+    principal).
+  \item
+    \textbf{Title}: Título de la presentación.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Meeting Name}: Nombre del evento o conferencia.
+  \item
+    \textbf{Place}: Lugar donde se realizó la presentación.
+  \item
+    \textbf{Date}: Fecha de la presentación.
+  \item
+    \textbf{Type}: Formato de la presentación (por ejemplo, ``Póster'',
+    ``Conferencia'').
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para presentaciones no publicadas. El campo ``Type''
+    permite especificar el formato, y ``Meeting Name'' es clave para el
+    contexto. La documentación sugiere usar ``Extra'' para ``Event
+    Date'' si es diferente de la fecha de publicación.
+  \end{itemize}
+\end{itemize}
+
+\subsection{27. Radio Broadcast (Emisión de
+radio)}\label{radio-broadcast-emisiuxf3n-de-radio}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para programas de radio, como noticias, series de entretenimiento o
+    grabaciones archivadas.
+  \item
+    Usar en lugar de ``Podcast'' si no es un programa distribuido por
+    suscripción.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Radio Broadcast''.
+  \item
+    \textbf{Director}: Director del programa (autor principal).
+  \item
+    \textbf{Producer/Scriptwriter/Cast Member/Guest}: Roles adicionales,
+    si aplica.
+  \item
+    \textbf{Title}: Título del episodio o programa.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Program Title}: Nombre del programa de radio.
+  \item
+    \textbf{Episode Number}: Número del episodio, si aplica.
+  \item
+    \textbf{Date}: Fecha de emisión.
+  \item
+    \textbf{Running Time}: Duración del programa.
+  \item
+    \textbf{Network}: Cadena de radio que emite el programa.
+  \item
+    \textbf{Format}: Formato de la emisión (por ejemplo, ``Streaming'').
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para emisiones de radio, incluidas grabaciones
+    archivadas. El campo ``Network'' es importante para contextualizar.
+    La documentación recomienda usar ``Extra'' para roles como
+    ``Producer''.
+  \end{itemize}
+\end{itemize}
+
+\subsection{28. Report (Informe)}\label{report-informe}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para informes publicados por organizaciones, gobiernos o
+    instituciones, incluidos preprints y documentos de trabajo.
+  \item
+    Usar en lugar de ``Book'' para informes técnicos o gubernamentales.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Report''.
+  \item
+    \textbf{Author}: Autor del informe.
+  \item
+    \textbf{Title}: Título del informe.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Report Number}: Número asignado al informe.
+  \item
+    \textbf{Report Type}: Tipo de informe (por ejemplo, ``Informe
+    técnico'').
+  \item
+    \textbf{Institution}: Organización que publica el informe.
+  \item
+    \textbf{Place}: Lugar de publicación.
+  \item
+    \textbf{Date}: Fecha de publicación.
+  \item
+    \textbf{Pages}: Número de páginas.
+  \item
+    \textbf{Series/Series Number}: Serie del informe, si aplica.
+  \item
+    \textbf{DOI}: Identificador DOI, si aplica.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es versátil para informes institucionales. Los campos
+    ``Report Number'' e ``Institution'' son clave. La documentación
+    sugiere usar ``Extra'' para campos como ``Status'' (por ejemplo,
+    ``preprint'').
+  \end{itemize}
+\end{itemize}
+
+\subsection{29. Software (Software)}\label{software-software}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para programas de computadora, aplicaciones o software.
+  \item
+    Usar en lugar de ``Document'' para citas de software específicas.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Software''.
+  \item
+    \textbf{Programmer}: Creador del software (autor principal).
+  \item
+    \textbf{Title}: Nombre del software.
+  \item
+    \textbf{Abstract}: Descripción del software.
+  \item
+    \textbf{Version}: Versión del software (por ejemplo, ``2.3.1'').
+  \item
+    \textbf{System}: Sistema operativo o plataforma (por ejemplo,
+    ``Windows'').
+  \item
+    \textbf{Company}: Empresa que publica el software.
+  \item
+    \textbf{Date}: Fecha de publicación.
+  \item
+    \textbf{Language}: Lenguaje de programación, si aplica.
+  \item
+    \textbf{Short Title/URL/Accessed/Rights/Extra/Date Added/Modified}:
+    Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para software y aplicaciones. El campo ``Version'' es
+    crucial para identificación. La documentación recomienda usar
+    ``Extra'' para detalles adicionales.
+  \end{itemize}
+\end{itemize}
+
+\subsection{30. Statute (Ley)}\label{statute-ley}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para leyes o legislación aprobada.
+  \item
+    Usar en lugar de ``Bill'' si la legislación ya está promulgada.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Statute''.
+  \item
+    \textbf{Sponsor}: Autor principal de la ley.
+  \item
+    \textbf{Title}: Título oficial de la ley.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Name of Act}: Nombre completo de la ley.
+  \item
+    \textbf{Code}: Código donde se publica la ley.
+  \item
+    \textbf{Code Volume}: Volumen del código.
+  \item
+    \textbf{Code Number}: Número de la ley en el código.
+  \item
+    \textbf{Public Law Number}: Número de la ley pública.
+  \item
+    \textbf{Date Enacted}: Fecha de promulgación.
+  \item
+    \textbf{Section}: Sección citada.
+  \item
+    \textbf{Pages}: Páginas en el código.
+  \item
+    \textbf{Legislative Body}: Cuerpo que aprobó la ley.
+  \item
+    \textbf{Session}: Sesión legislativa.
+  \item
+    \textbf{History}: Historial de la ley.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para legislación aprobada. Los campos ``Name of Act'' y
+    ``Public Law Number'' son esenciales. La documentación recomienda
+    usar ``Legal Citations'' para más detalles.
+  \end{itemize}
+\end{itemize}
+
+\subsection{31. Thesis (Tesis)}\label{thesis-tesis}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para tesis de grado, ya sean publicadas o inéditas.
+  \item
+    Usar en lugar de ``Manuscript'' para trabajos académicos formales.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Thesis''.
+  \item
+    \textbf{Author}: Autor de la tesis.
+  \item
+    \textbf{Title}: Título de la tesis.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Type}: Tipo de tesis (por ejemplo, ``Tesis doctoral'',
+    ``Tesis de maestría'').
+  \item
+    \textbf{University}: Universidad que otorga el grado.
+  \item
+    \textbf{Place}: Lugar de la universidad.
+  \item
+    \textbf{Date}: Año de presentación.
+  \item
+    \textbf{\# of Pages}: Número de páginas.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para tesis académicas. El campo ``Type'' debe incluir
+    ``tesis'' o ``disertación''. La documentación recomienda usar
+    ``Extra'' para campos como ``Submitted Date''.
+  \end{itemize}
+\end{itemize}
+
+\subsection{32. TV Broadcast (Emisión de
+televisión)}\label{tv-broadcast-emisiuxf3n-de-televisiuxf3n}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para episodios de series de televisión o programas emitidos.
+  \item
+    Usar en lugar de ``Video Recording'' para emisiones formales.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``TV Broadcast''.
+  \item
+    \textbf{Director}: Director del episodio (autor principal).
+  \item
+    \textbf{Producer/Scriptwriter/Cast Member/Guest}: Roles adicionales.
+  \item
+    \textbf{Title}: Título del episodio.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Program Title}: Nombre del programa.
+  \item
+    \textbf{Episode Number}: Número del episodio.
+  \item
+    \textbf{Date}: Fecha de emisión.
+  \item
+    \textbf{Running Time}: Duración del episodio.
+  \item
+    \textbf{Network}: Cadena de televisión.
+  \item
+    \textbf{Format}: Formato de la emisión (por ejemplo, ``Streaming'').
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para emisiones de televisión. El campo ``Program
+    Title'' es clave para contextualizar. La documentación recomienda
+    usar ``Extra'' para roles como ``Producer''.
+  \end{itemize}
+\end{itemize}
+
+\subsection{33. Video Recording (Grabación de
+video)}\label{video-recording-grabaciuxf3n-de-video}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para videos que no encajan en ``Film'', ``TV Broadcast'' o
+    ``Podcast'' (por ejemplo, videos de YouTube o figuras científicas).
+  \item
+    Usar en lugar de ``Document'' para contenido audiovisual.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Video Recording''.
+  \item
+    \textbf{Director}: Director del video (autor principal).
+  \item
+    \textbf{Producer/Scriptwriter}: Roles adicionales.
+  \item
+    \textbf{Title}: Título del video.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Date}: Fecha de publicación.
+  \item
+    \textbf{Format}: Formato del video (por ejemplo, ``MP4'').
+  \item
+    \textbf{Running Time}: Duración del video.
+  \item
+    \textbf{Studio}: Estudio que produce el video.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Archive/Loc. in
+    Archive/Library Catalog/Call Number/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para videos genéricos. El campo ``Format'' es
+    importante para especificar el medio. La documentación recomienda
+    usar ``Film'' para películas artísticas.
+  \end{itemize}
+\end{itemize}
+
+\subsection{34. Webpage (Página web)}\label{webpage-puxe1gina-web}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para páginas web genéricas que no encajan en tipos más específicos
+    como ``Blog Post'' o ``Report''.
+  \item
+    Usar como última opción si no hay un tipo más adecuado.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Webpage''.
+  \item
+    \textbf{Author}: Autor de la página.
+  \item
+    \textbf{Title}: Título de la página.
+  \item
+    \textbf{Abstract}: Resumen del contenido.
+  \item
+    \textbf{Website Title}: Nombre del sitio web.
+  \item
+    \textbf{Website Type}: Género del sitio (por ejemplo, ``Sitio
+    corporativo''), raramente usado.
+  \item
+    \textbf{Date}: Fecha de publicación o actualización.
+  \item
+    \textbf{Language/Short Title/URL/Accessed/Rights/Extra/Date
+    Added/Modified}: Igual que en ``Artwork''.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es genérico para contenido en línea. El campo ``Website
+    Title'' es clave para contextualizar. La documentación recomienda
+    usar tipos más específicos siempre que sea posible.
+  \end{itemize}
+\end{itemize}
+
+\subsection{35. Attachment (Archivo
+adjunto)}\label{attachment-archivo-adjunto}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para archivos independientes (por ejemplo, PDF, JPEG, DOCX) no
+    asociados a un ítem principal.
+  \item
+    Evitar su uso, ya que tiene funcionalidad limitada (no se pueden
+    citar ni buscar adecuadamente).
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Attachment''.
+  \item
+    \textbf{Title}: Nombre del archivo.
+  \item
+    \textbf{Date Added/Modified}: Campos automáticos.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para archivos sueltos, pero la documentación
+    desaconseja su uso. Se recomienda asociar archivos a ítems completos
+    (por ejemplo, ``Journal Article'' con un PDF adjunto).
+  \end{itemize}
+\end{itemize}
+
+\subsection{36. Note (Nota)}\label{note-nota}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cuándo utilizar}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Para notas independientes usadas para organización o anotaciones.
+  \item
+    No es ideal para citas, ya que usa los primeros 120 caracteres como
+    título.
+  \end{itemize}
+\item
+  \textbf{Campos y su propósito}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Item Type}: Seleccionar ``Note''.
+  \item
+    \textbf{Title}: Primeros 120 caracteres de la nota (automático).
+  \item
+    \textbf{Date Added/Modified}: Campos automáticos.
+  \end{itemize}
+\item
+  \textbf{Información oficial de Zotero}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Este tipo es para notas internas. La documentación advierte que
+    citar notas no es confiable y sugiere usar ítems completos para
+    comentarios en bibliografías.
+  \end{itemize}
+\end{itemize}
+
+\section{Tipos de Elementos No Soportados
+Formalmente}\label{tipos-de-elementos-no-soportados-formalmente}
+
+Zotero no soporta formalmente los siguientes tipos, pero pueden citarse
+usando el campo ``Extra'' con el formato \texttt{Type:\ CSL\ Type}.
+Ejemplo: \texttt{Type:\ dataset}.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Dataset (Conjunto de datos)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Cuándo utilizar}: Para datos crudos o conjuntos de datos.
+  \item
+    \textbf{Campos sugeridos}: Usar ``Report'' o ``Document'' y agregar
+    \texttt{Type:\ dataset} en ``Extra''. Incluir ``Identifier'',
+    ``Version'', ``Repository''.
+  \item
+    \textbf{Información oficial}: La documentación recomienda usar
+    ``Extra'' para ``DOI'' o ``Format''.
+  \end{itemize}
+\item
+  \textbf{Figure (Figura)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Cuándo utilizar}: Para figuras en trabajos académicos.
+  \item
+    \textbf{Campos sugeridos}: Usar ``Artwork'' y agregar
+    \texttt{Type:\ figure} en ``Extra''. Incluir ``Medium''.
+  \item
+    \textbf{Información oficial}: Similar a ``Artwork'', pero enfocado
+    en figuras científicas.
+  \end{itemize}
+\item
+  \textbf{Musical Score (Partitura musical)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Cuándo utilizar}: Para partituras escritas.
+  \item
+    \textbf{Campos sugeridos}: Usar ``Book'' o ``Manuscript'' y agregar
+    \texttt{Type:\ musical\_score} en ``Extra''.
+  \item
+    \textbf{Información oficial}: La documentación sugiere usar
+    ``Extra'' para detalles específicos.
+  \end{itemize}
+\item
+  \textbf{Pamphlet (Folleto)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Cuándo utilizar}: Para trabajos publicados informalmente.
+  \item
+    \textbf{Campos sugeridos}: Usar ``Report'' y agregar
+    \texttt{Type:\ pamphlet} en ``Extra''.
+  \item
+    \textbf{Información oficial}: Menos técnico que ``Report''.
+  \end{itemize}
+\item
+  \textbf{Book Review (Reseña de libro)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Cuándo utilizar}: Para reseñas de libros publicadas.
+  \item
+    \textbf{Campos sugeridos}: Usar ``Journal Article'', ``Magazine
+    Article'' o ``Newspaper Article'' con ``Reviewed Author'' y agregar
+    \texttt{Type:\ review-book} en ``Extra''.
+  \item
+    \textbf{Información oficial}: La documentación recomienda
+    especificar ``Reviewed Title'' en ``Extra''.
+  \end{itemize}
+\item
+  \textbf{Treaty (Tratado)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Cuándo utilizar}: Para tratados legales entre naciones.
+  \item
+    \textbf{Campos sugeridos}: Usar ``Document'' y agregar
+    \texttt{Type:\ treaty} en ``Extra''.
+  \item
+    \textbf{Información oficial}: La documentación sugiere consultar
+    ``Legal Citations''.
+  \end{itemize}
+\end{itemize}
+
+\section{Campos Adicionales en
+``Extra''}\label{campos-adicionales-en-extra}
+
+Para campos no soportados, usar el formato
+\texttt{CSL\ Variable:\ Value} en el campo ``Extra''. Ejemplos:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{PMID:\ 123456}
+\item
+  \texttt{Status:\ in\ press}
+\item
+  \texttt{Director:\ Kubrick\ \textbar{}\textbar{}\ Stanley}
+\end{itemize}
+
+Campos comunes:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{PMID/PMCID}: Identificadores de PubMed.
+\item
+  \textbf{Status}: Estado de publicación (por ejemplo, ``forthcoming'').
+\item
+  \textbf{Original Date}: Fecha original de publicación (formato ISO).
+\item
+  \textbf{Director/Editorial Director/Illustrator}: Roles de creadores
+  adicionales.
+\end{itemize}
+
+\section{Consejos Generales}\label{consejos-generales}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Selección del tipo de elemento}: Elegir el tipo más específico
+  posible para mejorar la precisión de las citas.
+\item
+  \textbf{Uso de ``Extra''}: Aprovechar este campo para información no
+  cubierta por los campos estándar.
+\item
+  \textbf{Citas legales}: Consultar la sección ``Legal Citations'' de
+  Zotero para soporte adicional.
+\item
+  \textbf{Archivos}: Siempre asociar archivos adjuntos a ítems completos
+  para mejor funcionalidad.
+\item
+  \textbf{Idioma}: Usar códigos ISO (por ejemplo, ``es-ES'') para
+  consistencia en el formato de títulos.
+\end{itemize}
+
+\section{Publicaciones Similares}\label{publicaciones-similares}
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y
+recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo
+algunas sugerencias:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf}{\faIcon{file-pdf}}
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia}{Ideas
+  De Investigacion Para Economia}
+\item
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion}{Pautas
+  De Presentacion Del Informe De Investigacion}
+\item
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recursos-de-bibliografia-y-documentacion}{Recursos
+  De Bibliografia Y Documentacion}
+\item
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-02-09-recursos-para-traducción-y-correccion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-02-09-recursos-para-traducción-y-correccion}{Recursos
+  Para Traducción Y Correccion}
+\end{enumerate}
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y
+útiles. ¡Disfruta de la lectura!
+
+
+
+
+
+
+\end{document}

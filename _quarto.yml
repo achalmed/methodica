@@ -1,0 +1,70 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - resourses/cv.pdf
+    - sidebar.jpg
+
+website:
+  title: "Edison Achalma B.Sc. Econ."
+  description: "Investigador y educador que aplica la ciencia de datos de forma que se dé prioridad a la equidad social."
+  google-analytics:
+    tracking-id: "G-XGH6TP6RB3"
+    anonymize-ip: true
+  open-graph:
+    locale: es_ES
+    site-name: AchalmaEdison
+  twitter-card:
+    creator: "@achalmaedison"
+  comments:
+    utterances:
+      repo: achalmed/website-achalma
+      label: utterances
+      theme: body-light
+      issue-term: title
+  # cookie-consent: true
+  site-url: https://achalmaedison.netlify.app/
+  repo-url: https://github.com/achalmed/website-achalma
+  navbar:
+    right:
+      - text: About
+        aria-label: "About Me"
+        href: https://achalmaedison.netlify.app/about/
+      - icon: github
+        href: https://github.com/achalmed
+      - icon: twitter
+        href: https://x.com/achalmaedison
+  page-footer:
+    left: >-
+      &#169; 2025 Edison Achalma &#8729; Made with [Quarto](https://quarto.org)
+    center: |
+      <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a>
+      <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>
+      <a class="link-dark me-1" href="https://github.com/achalmed" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+      <a class="link-dark me-1" href="https://orcid.org/0000-0001-6996-3364" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
+      <a class="link-dark me-1" href="https://scholar.google.com/citations?hl=en&user=LvAkIvcAAAAJ" title="Google Scholar" target="_blank"rel="noopener">{{< ai google-scholar >}}</a>
+      <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
+    right:
+      - text: "Accessibility"
+        aria-label: "Accessibility Commitment"
+        href: https://achalmaedison.netlify.app/accessibility
+      - text: "Contact"
+        aria-label: "Contact Form"
+        href: https://achalmaedison.netlify.app/contact
+      - text: "License"
+        aria-label: "License Details"
+        href: https://achalmaedison.netlify.app/license
+      - icon: rss
+        href: index.xml
+        #href: https://achalmaedison.netlify.app/blog/index.xml
+
+
+format:
+  html:
+    theme:
+      - cosmo
+      - achalma.scss
+    css: styles.css
+
+
+

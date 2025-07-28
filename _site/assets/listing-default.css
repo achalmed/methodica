@@ -1,0 +1,56 @@
+/* Título y estructura general */
+
+/* Elimina todos los estilos predeterminados del bloque de título y su contenedor */
+#title-block-header,
+#title-block-header-title {
+  all: unset; /* Restablece todas las propiedades CSS a sus valores iniciales */
+  background-image: none !important; /* Fuerza la eliminación de cualquier imagen de fondo */
+}
+
+/* Estilo del título de la página */
+#title-block-header.quarto-title-block.default .quarto-title .title {
+  font-size: 2.5em; /* Establece el tamaño de fuente del título a 2.5 veces el tamaño base */
+  text-align: center; /* Centra el texto del título horizontalmente */
+  margin: 0 0 0.5em 0; /* Define márgenes: 0 arriba, 0 a los lados, 0.5em abajo, 0 a la izquierda */
+}
+
+/* Estilo del texto debajo del título (descripción) */
+.description p {
+  text-align: center; /* Centra el texto de la descripción */
+  margin: 0 1em 10em 1em; /* Márgenes: 0 arriba, 1em a los lados, 10em abajo (espacio grande), 1em a la izquierda */
+  padding: 0 0 5em 0; /* Relleno: 0 arriba, 0 a los lados, 5em abajo (espacio adicional), 0 a la izquierda */
+}
+
+/* Contenedor de la descripción */
+.description {
+  overflow: hidden; /* Evita que el contenido se desborde y corrige el flujo del diseño */
+  /* Corrige el flujo: asegura que los elementos respeten el espacio asignado */
+}
+
+/* Estilo de los enlaces dentro de la descripción */
+.description a {
+  text-decoration: underline !important; /* Fuerza que los enlaces estén subrayados */
+}
+
+/* Estilo de los enlaces al pasar el cursor sobre ellos */
+.description a:hover {
+  text-decoration: none !important; /* Elimina el subrayado cuando el cursor pasa por encima */
+}
+
+/* Estilo de las tarjetas del listado (listing cards) */
+.card {
+  background: transparent; /* Fondo transparente para las tarjetas */
+  border: none; /* Elimina los bordes de las tarjetas */
+  border-radius: 4px; /* Añade esquinas redondeadas de 4px */
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); /* Sombra suave: 1px a la derecha, 1px abajo, 10px de desenfoque, 10% de opacidad */
+}
+
+/* Estilo de las imágenes dentro de las tarjetas */
+.card-img {
+  border-radius: 8px 8px 0px 0px; /* Esquinas redondeadas solo en la parte superior (8px) */
+}
+
+/* Clase para definir un color específico */
+.color {
+  color: papayawhip; /* Establece el color del texto a "papayawhip" (un tono crema claro) */
+}

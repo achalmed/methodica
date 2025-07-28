@@ -1,0 +1,94 @@
+<style>
+  :root {
+    --primary-color: $primary-color$;
+  }
+
+  #title-block-header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .title-block-content {
+    position: relative;
+    padding-top: 60px;
+    /* Reducido de 130px */
+    padding-bottom: 60px;
+    /* Reducido de 130px */
+    max-width: 752px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+</style>
+
+<header id="title-block-header" class="quarto-title-block default page-columns"
+  style="position: relative; width: 100%; margin: 0; padding: 0;">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Incluir imagen de fondo si existe featured.jpg, de lo contrario, partículas -->
+  $if(featured.jpg)$
+  <img src="$featured.jpg$" alt="imagen de fondo para decoración" class="bg-image" />
+  $else$
+  <div id="particles-js"></div>
+  $endif$
+
+  <!-- Contenido principal del bloque de título -->
+  <div class="title-block-content">
+    <h1 class="title">$title$</h1>
+    $if(subtitle)$
+    <p class="subtitle lead">$subtitle$</p>
+    $endif$
+    $if(categories)$
+    $if(quarto-template-params.title-block-categories)$
+    <div class="quarto-categories">
+      $for(categories)$
+      <div class="quarto-category">$categories$</div>
+      $endfor$
+    </div>
+    $endif$
+    $endif$
+
+    $title-metadata.html()$
+
+    $if(links)$
+    <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group"
+      aria-label="Enlaces">
+      $for(links)$
+      <a href="$links.url$" class="btn btn-secondary text-capitalize"><i class="bi bi-$links.icon$ me-1"></i>
+        $links.name$</a>
+      $endfor$
+    </div>
+    $endif$
+
+    <!-- Cargar script de Particle.js desde CDN, solo si no hay featured.jpg -->
+    $if(featured.jpg)$
+    $else$
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load(
+        "particles-js",
+        "https://raw.githubusercontent.com/holtzy/lumo/main/_extensions/lumo/particles.json"
+      );
+    </script>
+    $endif$
+  </div>
+</header>

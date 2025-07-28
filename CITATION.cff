@@ -1,0 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Web Achalma
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Edison
+    family-names: Achalma
+    email: achalmed.18@gmail.com
+    name-particle: Edison
+    orcid: 'https://orcid.org/0000-0001-6996-3364'
+identifiers:
+  - type: url
+    value: 'https://achalmaedison.netlify.app/'
+repository-code: 'https://github.com/achalmed/website-achalma'
+url: 'https://achalmaedison.netlify.app/'
+abstract: >-
+  Aquí podrás encontrar todos los archivos y códigos
+  utilizados para construir mi sitio web personal. Desde el
+  diseño y la estructura hasta el contenido y la
+  funcionalidad, todo está a tu disposición para que puedas
+  explorar, aprender y crear tu propio sitio web. ¡Disfruta!
+license: MPL-2.0
+version: '3.10'

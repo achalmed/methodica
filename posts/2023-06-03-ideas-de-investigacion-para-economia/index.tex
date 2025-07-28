@@ -1,0 +1,696 @@
+\documentclass[
+  man,
+  floatsintext,
+  longtable,
+  a4paper,
+  nolmodern,
+  notxfonts,
+  notimes,
+  colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{apa7}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+
+\usepackage[bidi=default]{babel}
+\babelprovide[main,import]{spanish}
+
+
+\babelfont{rm}[,RawFeature={fallback=mainfontfallback}]{Latin Modern
+Roman}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+\RequirePackage{longtable}
+\RequirePackage{threeparttablex}
+
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-.5em}%
+	{\normalfont\normalsize\bfseries\typesectitle}}
+
+\renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{0.5em}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-\z@\relax}%
+	{\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+\makeatother
+
+
+
+
+\usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
+\usepackage{subcaption}
+
+
+\renewcommand\thesubfigure{\Alph{subfigure}}
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.7}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,theorems, breakable, skins}
+\usepackage{fontawesome5}
+
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{ACACAC}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582EC}
+\definecolor{quarto-callout-important-color-frame}{HTML}{D9534F}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{F0AD4E}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02B875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{FD7E14}
+
+%\newlength\Oldarrayrulewidth
+%\newlength\Oldtabcolsep
+
+
+\usepackage{hyperref}
+
+
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+
+
+\usepackage{fontspec} 
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+
+  \setmainfont[,RawFeature={fallback=mainfontfallback}]{Latin Modern
+Roman}
+
+
+
+
+\title{Ideas de investigación en Econometría Análisis de variables y
+relaciones económicas: Explora diferentes enfoques para investigar la
+economía y sus interacciones a través de la Econometría}
+
+
+\shorttitle{Editar}
+
+
+\usepackage{etoolbox}
+
+
+
+\ccoppy{\textcopyright~2025}
+
+
+
+\author{Edison Achalma}
+
+
+
+\affiliation{
+{Escuela Profesional de Economía, Universidad Nacional de San Cristóbal
+de Huamanga}}
+
+
+
+
+\leftheader{Achalma}
+
+\date{2023-06-03}
+
+
+\abstract{Este abstract será actualizado una vez que se complete el
+contenido final del artículo. }
+
+\keywords{keyword1, keyword2}
+
+\authornote{\par{\addORCIDlink{Edison Achalma}{0000-0001-6996-3364}} 
+\par{ }
+\par{   El autor no tiene conflictos de interés que revelar.    Los
+roles de autor se clasificaron utilizando la taxonomía de roles de
+colaborador (CRediT; https://credit.niso.org/) de la siguiente
+manera:  Edison Achalma:   conceptualización, redacción}
+\par{La correspondencia relativa a este artículo debe dirigirse a Edison
+Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
+}
+
+\makeatletter
+\let\endoldlt\endlongtable
+\def\endlongtable{
+\hline
+\endoldlt
+}
+\makeatother
+
+\urlstyle{same}
+
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\makeatother
+
+% From https://tex.stackexchange.com/a/645996/211326
+%%% apa7 doesn't want to add appendix section titles in the toc
+%%% let's make it do it
+\makeatletter
+\xpatchcmd{\appendix}
+  {\par}
+  {\addcontentsline{toc}{section}{\@currentlabelname}\par}
+  {}{}
+\makeatother
+
+%% Disable longtable counter
+%% https://tex.stackexchange.com/a/248395/211326
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\LT@caption}
+  {\bgroup}
+  {\bgroup\global\LTpatch@captiontrue}
+  {}{}
+\patchcmd{\longtable}
+  {\par}
+  {\par\global\LTpatch@captionfalse}
+  {}{}
+\apptocmd{\endlongtable}
+  {\ifLTpatch@caption\else\addtocounter{table}{-1}\fi}
+  {}{}
+\newif\ifLTpatch@caption
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\hypertarget{toc}{}
+\tableofcontents
+\newpage
+\section[Introduction]{Ideas de investigación en Econometría Análisis de
+variables y relaciones económicas}
+
+\setcounter{secnumdepth}{5}
+
+\setlength\LTleft{0pt}
+
+
+\section{Propuesta de investigación: Determinantes microeconómicos de la
+pobreza en el departamento de Ayacucho durante el periodo
+2000-2020.}\label{propuesta-de-investigaciuxf3n-determinantes-microeconuxf3micos-de-la-pobreza-en-el-departamento-de-ayacucho-durante-el-periodo-2000-2020.}
+
+\textbf{Justificación:} La pobreza es un fenómeno social de gran impacto
+que afecta a nivel personal, familiar y nacional. Está presente en
+nuestra vida diaria, en las noticias de los medios de comunicación y en
+el discurso político. Además, es una realidad que afecta de manera
+significativa a aquellos que se encuentran en situación de pobreza.
+
+Por esta razón, resulta fundamental llevar a cabo una investigación
+enfocada en los determinantes microeconómicos de la pobreza en el
+departamento de Ayacucho. Esto permitirá comprender las causas y
+factores que contribuyen a esta problemática en un ámbito específico y a
+lo largo de un periodo de tiempo extenso (2000-2020).
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1528}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8472}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Elemento
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Descripción
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Problema} & \textbf{Problema general:} ¿Cuáles son los
+determinantes microeconómicos de la probabilidad de ser pobre en el Perú
+según la encuesta de ENAHO 2020? \textbf{Problemas secundarios:} 1.
+¿Cuál es la incidencia de las variables demográficas sobre la
+probabilidad de ser pobre en el departamento de Ayacucho? 2. ¿Cuál es la
+incidencia de las variables de capital humano sobre la probabilidad de
+que el hogar sea pobre o no en el departamento de Ayacucho? 3. ¿Cuál es
+la incidencia de la actividad económica sobre la probabilidad de que el
+hogar sea pobre o no en el departamento de Ayacucho? \\
+\textbf{Objetivos} & \textbf{Objetivo general:} Plantear un modelo de
+probabilidad que permite identificar los determinantes de la pobreza de
+los hogares en el departamento de Ayacucho según la encuesta de ENAHO
+2020 \textbf{Objetivos específicos:} 1. Determinar cuál es la incidencia
+de las variables demográficas sobre la probabilidad de que el hogar sea
+pobre o no en el departamento de Ayacucho. 2. Precisar cuál es la
+incidencia de las variables del capital humano sobre la probabilidad de
+que el hogar sea pobre en el departamento de Ayacucho. 3. Mostrar cuál
+es la incidencia de las variables del hogar sobre la probabilidad de que
+el hogar sea pobre o no en el departamento. \\
+\textbf{Hipótesis} & La edad del jefe del hogar tiene incidencia en la
+probabilidad de que el hogar sea pobre o no. A menor edad, mayor
+probabilidad de ser pobre. La escolaridad del jefe de hogar tiene
+incidencia en la probabilidad de que el hogar sea pobre o no. A mayor
+escolaridad, menor probabilidad de ser pobre. La rama de actividad al
+que se dedica el jefe del hogar tiene una fuerte incidencia en la
+probabilidad de que el hogar sea pobre o no. El número de miembros del
+hogar que trabajan tiene una fuerte incidencia en la prueba de que el
+hogar sea pobre o no. A mayor número de miembros del hogar que trabajan,
+menor probabilidad de ser pobre. \\
+\textbf{Variables} & \textbf{Endógenas:} Probabilidad de ser pobre
+\textbf{Indicador:} Variable dummy que denota presencia/ausencia de
+pobreza \textbf{Exógenas:} Demográficas, capital humano, actividad
+económica, variables de localización \textbf{Indicadores:} Edad, sexo,
+estado civil, número de miembros del hogar, posición de negocio,
+informalidad, empleo, localización (costa, sierra y selva) \\
+\textbf{Metodología} & \textbf{Tipo de investigación:} Aplicada
+\textbf{Nivel de investigación:} Descriptivo, analítico \textbf{Método:}
+Inductivo \textbf{Diseño:} Investigación por objetivo \\
+\end{longtable}
+
+\section{Propuesta de investigación: Gasto social y nivel de pobreza en
+el departamento de Ayacucho: periodo
+2000-2019.}\label{propuesta-de-investigaciuxf3n-gasto-social-y-nivel-de-pobreza-en-el-departamento-de-ayacucho-periodo-2000-2019.}
+
+Variable causa: Gasto social. Variable efecto: Nivel de pobreza.
+
+\textbf{Justificación:}
+
+En el contexto de países de Medio Oriente y África, se observan
+conflictos sociales, guerras civiles y alta inflación, lo que resulta en
+una extrema pobreza que afecta a una gran parte de su población.
+
+A pesar de que Perú cuenta con mejores condiciones geográficas,
+estabilidad política y económica, presenta un porcentaje similar o
+incluso mayor de extrema pobreza y desigualdad en su población,
+especialmente en las zonas rurales. Estas áreas aún enfrentan problemas
+estructurales en cuanto a servicios básicos como agua potable, energía
+eléctrica, educación, salud y alimentación. Esto se debe, en parte, a
+una deficiente distribución del gasto social en departamentos como
+Ayacucho.
+
+Por lo tanto, es necesario identificar las variables que explican los
+niveles de pobreza y comprender por qué existe una brecha significativa
+entre las zonas rurales y urbanas. Para lograrlo, se llevará a cabo un
+análisis estadístico descriptivo y se aplicará un modelo econométrico
+utilizando la base de datos de la Encuesta Nacional de Hogares (ENAHO)
+del INEI.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.3056}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1944}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Variable
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Definición conceptual
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Definición operacional
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Indicadores
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Unidad de medida
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Valor final
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+X = Gasto social & Es la búsqueda de logros en materia de equidad
+social, a través del desarrollo del capital físico y humano, promoviendo
+el aseguramiento de necesidades básicas. & & - Gasto en educación- Gasto
+en salud- Programas sociales & Números & R-Squared Es la búsqueda de
+logros en materia de equidad social, a través del desarrollo del capital
+físico y humano, promoviendo el aseguramiento de necesidades básicas. \\
+Y = Nivel de pobreza & Según el INEI (2007), se define la pobreza como
+aquel conjunto de personas que no alcanzan a tener un nivel de
+satisfacción mínimo respecto a un conjunto de necesidades básicas
+relacionadas con la salud, nutrición, educación, vivienda, etc. & & -
+Índice de Desarrollo Humano- Índice de Gini & Números & - \\
+\end{longtable}
+
+\section{Propuesta de investigación: Factores asociados a la
+desnutrición en niños menores de 5 años en el
+Perú}\label{propuesta-de-investigaciuxf3n-factores-asociados-a-la-desnutriciuxf3n-en-niuxf1os-menores-de-5-auxf1os-en-el-peruxfa}
+
+\textbf{Justificación:}
+
+La desnutrición infantil representa uno de los mayores desafíos en
+términos de Salud Pública en el Perú.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1944}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8056}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Título
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Contenido
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Problema de investigación & ¿De qué manera la pobreza y el analfabetismo
+influyen en la desnutrición de los niños menores de 5 años en los
+departamentos de Perú de 2009 a 2019? \\
+Problemas específicos & ¿De qué manera se relaciona la desnutrición en
+menores de 5 años con la pobreza en los departamentos de Perú? ¿De qué
+manera se relaciona la desnutrición en menores de 5 años con el
+analfabetismo en los departamentos de Perú? \\
+Objetivo general & Determinar la influencia de la pobreza y el
+analfabetismo en la desnutrición de los niños menores de 5 años en los
+departamentos de Perú de 2009 a 2019. \\
+Objetivos específicos & Explicar la relación de la desnutrición en
+menores de 5 años con la pobreza en los departamentos de Perú. Explicar
+la relación de la desnutrición en menores de 5 años con el analfabetismo
+en los departamentos de Perú. \\
+Hipótesis general & La pobreza y el analfabetismo influyen
+significativamente en la desnutrición de los niños menores de 5 años en
+los departamentos de Perú de 2009 a 2019. \\
+Hipótesis específicas & La desnutrición en menores de 5 años se
+relaciona significativamente con la pobreza en los departamentos de
+Perú. La desnutrición en menores de 5 años se relaciona
+significativamente con el analfabetismo en los departamentos de Perú. \\
+Variable endógena & Desnutrición en niños menores de 5 años \\
+Indicador & Tasa de desnutrición en menores de 5 años \\
+Variables exógenas & Pobreza Analfabetismo Inflación \\
+Indicadores & Tasa de pobreza Tasa de analfabetismo IPC \\
+Tipo de investigación & Aplicada \\
+Diseño de investigación & Descriptivo - correlacional \\
+\end{longtable}
+
+\section{Propuesta de investigación: Influencia de la recaudación de
+impuestos prediales en la recaudación tributaria de la Municipalidad
+Distrital de Huamanga en el año
+2021.}\label{propuesta-de-investigaciuxf3n-influencia-de-la-recaudaciuxf3n-de-impuestos-prediales-en-la-recaudaciuxf3n-tributaria-de-la-municipalidad-distrital-de-huamanga-en-el-auxf1o-2021.}
+
+\textbf{Justificación:}
+
+Esta investigación tiene como objetivo analizar el impacto de la
+recaudación de impuestos prediales en la recaudación tributaria de la
+Municipalidad Distrital de Huamanga. Se busca determinar si los
+ciudadanos otorgan la debida importancia al cumplimiento de sus
+obligaciones tributarias, así como promover una mayor conciencia sobre
+la importancia de realizar los pagos correspondientes.
+
+Además, se plantea la posibilidad de investigar la influencia del
+impuesto a la renta en los tributos nacionales, con el fin de ampliar el
+alcance de la investigación.
+
+Para llevar a cabo este estudio, se sugiere utilizar métodos como la
+realización de encuestas para obtener datos precisos sobre la
+recaudación de impuestos prediales. En caso de que no se encuentren
+datos disponibles para el distrito de Huamanga, se podría considerar
+ampliar el análisis a nivel nacional.
+
+Fuentes de referencia:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Guía de Meta: Recaudación de impuestos y tasas 2019-2020. Disponible
+  en:
+  \href{https://www.mef.gob.pe/contenidos/presu_publ/migl/metas/GUIA_META_2_rcaudacion2019_2020.pdf}{enlace
+  a la fuente}.
+\item
+  Banco Central de Reserva del Perú: Estadísticas económicas. Disponible
+  en:
+  \href{https://estadisticas.bcrp.gob.pe/estadisticas/series/mensuales/resultados/RD13778DM/html}{enlace
+  a la fuente}.
+\end{enumerate}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7778}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Título
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Modo Oración
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Problema de investigación & ¿De qué manera el impuesto predial se
+relaciona con la recaudación tributaria en la Municipalidad Distrital de
+Huamanga-2021? \\
+Problema específico & ¿De qué manera el impuesto predial se relaciona
+con los impuestos municipales en la Municipalidad Distrital de
+Huamanga-2021? \\
+& ¿De qué manera la recaudación tributaria se relaciona con el auto
+valúo en la Municipalidad Distrital de Huamanga-2021? \\
+& ¿De qué manera el impuesto predial se relaciona con las tasas
+municipales en la Municipalidad Distrital de Huamanga-2021? \\
+Objetivo general & Analizar si el impuesto predial se relaciona con la
+recaudación tributaria en la municipalidad distrital de Huamanga-2021 \\
+Objetivos específicos & - Demostrar si el impuesto predial se relaciona
+con los impuestos municipales en la Municipalidad Distrital de
+Huamanga-2021 \\
+& - Demostrar si la recaudación tributaria se relaciona con el auto
+valúo en la Municipalidad Distrital de Huamanga-2021 \\
+& - Demostrar si el impuesto predial se relaciona con las tasas
+municipales en la Municipalidad Distrital de Huamanga-2021 \\
+Hipótesis general & El impuesto predial se relaciona con la recaudación
+tributaria en la municipalidad distrital de Huamanga-2021 \\
+Hipótesis específicas & - El impuesto predial se relaciona con los
+impuestos municipales en la Municipalidad Distrital de Huamanga-2021 \\
+& - La recaudación tributaria se relaciona con el auto valuó en la
+Municipalidad Distrital de Huamanga-2021 \\
+& - El impuesto predial se relaciona con las tasas municipales en la
+Municipalidad Distrital de Huamanga-2021 \\
+Variables e Indicadores & \textbf{Variable Independiente:} Impuesto
+predial \\
+& - Indicadores: Auto valúo, Predios \\
+& \textbf{Variable Dependiente:} Recaudación tributaria \\
+& - Indicadores: Impuestos municipales, Tasas municipales (licencias de
+funcionamiento) \\
+Metodología & - Tipo de investigación: Descriptivo y correlacional \\
+\end{longtable}
+
+\section{Propuesta de investigación: Propuesta de programa de inserción
+escolar con formación e incorporación al mundo laboral de manera
+emprendedora en la región
+Ayacucho.}\label{propuesta-de-investigaciuxf3n-propuesta-de-programa-de-inserciuxf3n-escolar-con-formaciuxf3n-e-incorporaciuxf3n-al-mundo-laboral-de-manera-emprendedora-en-la-regiuxf3n-ayacucho.}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2466}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2603}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4932}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+PROBLEMAS
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+OBJETIVOS
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HIPÓTESIS
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+¿Cómo se desempeñan las Startup en el Perú y cuáles son sus perspectivas
+de desarrollo? & Describir el desempeño de las Startup en el Perú y
+estimar sus perspectivas de desarrollo. & Esta investigación es de nivel
+descriptivo, por lo que no precisa una hipótesis precisa. Sin embargo,
+pueden surgir hipótesis ``emergentes'' durante el desarrollo de la
+investigación. \\
+ESPECÍFICO 1 & & \\
+¿Cómo se desempeñan las Startup en el Perú? & Describir el desempeño de
+las Startup en el Perú. & \\
+& & \\
+ESPECÍFICO 2 & & \\
+¿Cuáles son las perspectivas de desarrollo de las Startup en el Perú? &
+Estimar las perspectivas de desarrollo de las Startup en el Perú. & \\
+& & \\
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1781}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1781}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6438}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+VARIABLES
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+(CATEGORÍA DE ANÁLISIS)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+METODOLOGÍA
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Desempeño de la Startup & Desempeño & Propósito: Investigación
+BásicaNivel: DescriptivoMétodo: Analítico-sintéticoEnfoque:
+CuantitativoDiseño: Diseño de investigación no experimental \\
+Perspectiva de desarrollo & Perspectiva & \\
+& & \\
+\end{longtable}
+
+Se tomaría datos de la ENAHO viendo el nivel de empleo
+
+\section{Propuesta de investigación: Choques externos e internos sobre
+la dinámica de los ingresos tributarios en el Perú, periodo 2000 -
+2019}\label{propuesta-de-investigaciuxf3n-choques-externos-e-internos-sobre-la-dinuxe1mica-de-los-ingresos-tributarios-en-el-peruxfa-periodo-2000---2019}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3194}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4306}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+PROBLEMA DE INVESTIGACIÓN
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+OBJETIVOS
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HIPÓTESIS
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+¿De qué manera los shocks externos e internos afectan los ingresos
+tributarios en Perú (2000-2019)? & Evaluar la influencia del Producto
+Bruto Interno (PBI) y los precios de exportación en los ingresos
+tributarios de Perú (1990-2019). & Los indicadores del Producto Bruto
+Interno (PBI) e Índice de Precios de Exportación (IPX) han influido
+positivamente en la dinámica de los ingresos tributarios de Perú
+(2000-2019). \\
+& Cuantificar la influencia de los precios de exportación en los
+ingresos tributarios de Perú (2000-2019). & Existiría influencia del IPX
+en la captación de ingresos tributarios de Perú en el periodo 2000 --
+2019. \\
+& Cuantificar la influencia del crecimiento del PBI en los ingresos
+tributarios de Perú (2000-2019). & Existiría influencia del PBI en la
+captación de los ingresos tributarios del Perú en el periodo 2000--
+2019. \\
+& Determinar el nivel de influencia y bidireccionalidad entre los
+ingresos tributarios y el crecimiento económico de Perú (2000-2019).
+& \\
+& & \\
+VARIABLES E INDICADORES & METODOLOGÍA & \\
+Variable endógena: Ingresos tributarios del gobierno central & Tipo de
+investigación: No experimental longitudinal & \\
+Variables exógenas: Índice de precios de exportaciónProducto Bruto
+Interno real & & \\
+\end{longtable}
+
+\section{Publicaciones Similares}\label{publicaciones-similares}
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y
+recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo
+algunas sugerencias:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf}{\faIcon{file-pdf}}
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia}{Ideas
+  De Investigacion Para Economia}
+\item
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion}{Pautas
+  De Presentacion Del Informe De Investigacion}
+\item
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recursos-de-bibliografia-y-documentacion}{Recursos
+  De Bibliografia Y Documentacion}
+\item
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-02-09-recursos-para-traducción-y-correccion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-02-09-recursos-para-traducción-y-correccion}{Recursos
+  Para Traducción Y Correccion}
+\end{enumerate}
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y
+útiles. ¡Disfruta de la lectura!
+
+
+
+
+
+
+\end{document}

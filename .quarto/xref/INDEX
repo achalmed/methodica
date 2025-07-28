@@ -1,0 +1,36 @@
+{
+  "index.qmd": {
+    "index.html": "4da4318c"
+  },
+  "SECURITY.md": {
+    "SECURITY.html": "3856268a"
+  },
+  "404.qmd": {
+    "404.html": "f2b5f899"
+  },
+  "posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.qmd": {
+    "index.html": "b6a25006",
+    "index.tex": "2ceed484",
+    "index.docx": "75e0a7fa"
+  },
+  "posts/2025-02-09-recursos-para-traducción-y-correccion/index.qmd": {
+    "index.html": "28c0372b",
+    "index.tex": "ca5b0c8d",
+    "index.docx": "9d1a02e5"
+  },
+  "posts/2025-04-23-tipos-de-elementos-en-zotero/index.qmd": {
+    "index.html": "048ef629",
+    "index.tex": "8f648f17",
+    "index.docx": "d9936228"
+  },
+  "posts/2023-06-03-ideas-de-investigacion-para-economia/index.qmd": {
+    "index.html": "de3c1c4f",
+    "index.tex": "9ef17312",
+    "index.docx": "f197e113"
+  },
+  "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.qmd": {
+    "index.html": "1f13d0a3",
+    "index.tex": "516ae6ed",
+    "index.docx": "b89b366d"
+  }
+}
