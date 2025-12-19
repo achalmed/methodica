@@ -25,11 +25,7 @@ categories:
   - Language Learning  
   - Translation Studies
 tags:
-  - Grammar Checkers  
-  - Synonym Finders  
-  - Translation Accuracy  
-  - Language Tools  
-  - Writing Assistance
+  - metodologia_investigacion
 
 # Nota del Autor
 author-note:

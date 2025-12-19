@@ -30,6 +30,32 @@ website:
       - text: About
         aria-label: "About Me"
         href: https://achalmaedison.netlify.app/about/
+      - text: "More"
+        aria-label: "More"
+        icon: ellipsis-h
+        menu:
+          - text: "Econometria"
+            href: https://epsilon-y-beta.netlify.app/
+          - text: "Filosofía"
+            href: https://dialectica-y-mercado.netlify.app/
+          - text: "Finanzas"
+            href: https://pecunia-fluxus.netlify.app/
+          - text: "Gestión empresarial"
+            href: https://actus-mercator.netlify.app/
+          - text: "Gestión pública"
+            href: https://res-publica.netlify.app/
+          - text: "Metodología de la investigación"
+            href: https://methodica.netlify.app/
+          - text: "Macroeconomía"
+            href: https://aequilibria.netlify.app/
+          - text: "Matemáticas"
+            href: https://axiomata.netlify.app/
+          - text: "Microeconomía"
+            href: https://optimums.netlify.app/
+          - text: "Programación y Software"
+            href: https://numerus-scriptum.netlify.app/
+          - text: "Seguridad informática"
+            href: https://chaska-x.netlify.app/
       - icon: github
         href: https://github.com/achalmed
       - icon: twitter
@@ -41,8 +67,6 @@ website:
       <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a>
       <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>
       <a class="link-dark me-1" href="https://github.com/achalmed" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
-      <a class="link-dark me-1" href="https://orcid.org/0000-0001-6996-3364" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
-      <a class="link-dark me-1" href="https://scholar.google.com/citations?hl=en&user=LvAkIvcAAAAJ" title="Google Scholar" target="_blank"rel="noopener">{{< ai google-scholar >}}</a>
       <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
     right:
       - text: "Accessibility"

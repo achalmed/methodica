@@ -25,11 +25,8 @@ categories:
   - Documentación
   - Metodología de Investigación
 tags:
-  - tipos de elementos Zotero
-  - citas bibliográficas
-  - normas APA
-  - gestión de referencias
-  - escritura académica
+  - zotero
+  - metodologia_investigacion
 
 # Nota del Autor
 author-note:

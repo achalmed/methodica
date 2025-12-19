@@ -25,11 +25,9 @@ categories:
   - Investigación
   - Bibliotecología
 tags:
-  - recursos bibliográficos
-  - acceso abierto 
-  - herramientas de investigación  
-  - tesis y disertaciones
-  - literatura científica
+  - recursos_bibliograficos
+  - tesis
+  - metodologia_investigacion
 
 # Nota del Autor
 author-note:

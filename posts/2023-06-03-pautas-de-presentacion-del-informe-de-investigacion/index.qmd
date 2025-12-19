@@ -25,11 +25,10 @@ categories:
   - Metodología de Investigación
   - Educación Superior
 tags:
-  - informe de investigación
-  - economía peruana
-  - variables económicas
-  - política económica
-  - análisis econométrico
+  - variables_economicas
+  - politica_economica
+  - analisis_econometrico
+  - metodologia_investigacion
 
 # Nota del Autor
 author-note:

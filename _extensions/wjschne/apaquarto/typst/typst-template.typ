@@ -21,8 +21,6 @@
 
 #let firstlineindent=0.5in
 
-
-
 // documentmode: man
 #let man(
   title: none,
@@ -37,8 +35,14 @@
   toc: false,
   lang: "en",
   cols: 1,
+  numbersections: false,
+  numberdepth: 3,
+  first-page: 1,
+  suppresstitlepage: false,
   doc,
 ) = {
+
+  if suppresstitlepage {counter(page).update(first-page)}
 
   set page(
     margin: margin,
@@ -50,7 +54,9 @@
       align(right)[#context counter(page).display()]
     )
   )
+  
 
+  
 
  
 
@@ -75,8 +81,9 @@
     size: fontsize,
     lang: lang
   )
-
+  
   show link: set text(blue)
+  show "al.'s": "al.\u{2019}s"
 
   show quote: set pad(x: 0.5in)
   show quote: set par(leading: leading)
@@ -100,43 +107,45 @@
   show figure.where(kind: "quarto-float-tbl"): it => block(width: 100%, breakable: false)[#align(left)[
   
     #if int(appendixcounter.display().at(0)) > 0 [
-      #heading(level: 2, outlined: false)[#it.supplement #appendixcounter.display("A")#it.counter.display()]
+      #heading(level: 2, outlined: false, numbering: none)[#it.supplement #appendixcounter.display("A")#it.counter.display()]
     ] else [
-      #heading(level: 2, outlined: false)[#it.supplement #it.counter.display()]
+      #heading(level: 2, outlined: false, numbering: none)[#it.supplement #it.counter.display()]
     ]
     #par[#emph[#it.caption.body]]
     #block[#it.body]
   ]]
+  
+    set heading(numbering: "1.1")
+    
+    show heading: set text(size: fontsize)
+
 
  // Redefine headings up to level 5 
   show heading.where(
     level: 1
   ): it => block(width: 100%, below: leading, above: leading)[
     #set align(center)
-    #set text(size: fontsize)
-    #it.body
+    #if(numbersections and it.outlined and numberdepth > 0 and counter(heading).get().at(0) > 0) [#counter(heading).display()] #it.body
   ]
   
   show heading.where(
     level: 2
   ): it => block(width: 100%, below: leading, above: leading)[
     #set align(left)
-    #set text(size: fontsize)
-    #it.body
+    #if(numbersections and it.outlined and numberdepth > 1 and counter(heading).get().at(0) > 0) [#counter(heading).display()] #it.body
   ]
   
   show heading.where(
     level: 3
   ): it => block(width: 100%, below: leading, above: leading)[
     #set align(left)
-    #set text(size: fontsize, style: "italic")
-    #it.body
+    #set text(style: "italic")
+    #if(numbersections and it.outlined and numberdepth > 2 and counter(heading).get().at(0) > 0) [#counter(heading).display()] #it.body
   ]
 
   show heading.where(
     level: 4
   ): it => text(
-    size: 1em,
     weight: "bold",
     it.body
   )
@@ -144,17 +153,20 @@
   show heading.where(
     level: 5
   ): it => text(
-    size: 1em,
     weight: "bold",
     style: "italic",
     it.body
   )
+  
+  
 
   if cols == 1 {
     doc
   } else {
     columns(cols, gutter: 4%, doc)
   }
+  
+
 
 
 }
