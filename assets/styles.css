@@ -1,0 +1,19 @@
+/* css styles */
+
+.keywords p {
+    font-style: italic;
+}
+
+#particles-js {
+    position: absolute;
+    /* Ensure it's positioned relative to the header */
+    width: 100%;
+    /* Cover the full width of the grid area */
+    height: 100%;
+    /* Cover the full height of the grid area */
+    grid-column: screen-start / screen-end;
+    /* Span all columns */
+    /* You might need to adjust z-index if particles are behind other elements */
+    /* z-index: -1; // Example: place behind content */
+}
+

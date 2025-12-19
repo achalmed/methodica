@@ -1,0 +1,252 @@
+/*-- scss:defaults --*/
+// Configuraciones globales y valores por defecto para el tema
+
+// Colores
+// Define los colores principales y secundarios del tema
+$primary: $spc-primary-light !default; // Color principal para elementos destacados
+$secondary: $spc-secondary !default; // Color secundario para enlaces y acentos
+
+// Fondo y texto del cuerpo
+$body-color: $spc-primary !default; // Color del texto principal del sitio
+$body-bg: $spc-bg !default; // Color de fondo del sitio
+
+// Fuentes
+// Configuración de fuentes para diferentes estilos de texto
+$font-family-sans-serif: "Red Hat Text", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default; // Fuente sans-serif principal
+// $font-family-serif:        "Petrona", serif, !default; // Fuente serif opcional (desactivada)
+$headings-font-weight: 400 !default; // Peso de las fuentes para encabezados
+$font-family-monospace: "Dank Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default; // Fuente para código
+$headings-font-family: "Petrona" !default; // Fuente específica para encabezados
+
+// Enlaces
+// Estilos para enlaces y sus interacciones
+$link-color: $secondary !default; // Color de los enlaces
+$link-decoration: underline !default; // Decoración inicial de los enlaces
+$link-hover-color: $spc-secondary-light !default; // Color de los enlaces al pasar el ratón
+$link-hover-decoration: none !default; // Decoración de los enlaces al pasar el ratón
+
+// Tablas
+// Estilos para bordes y colores de tablas
+$table-border-color: $primary !default; // Color del borde de las tablas
+$table-group-separator-color: lighten($primary, 40) !default; // Color del separador de grupos
+$table-caption-color: $primary !default; // Color del texto de los títulos de tablas
+
+// Bloques de código
+$code-block-bg: white; // Fondo de los bloques de código
+$code-block-border: #ebebeb; // Color del borde de los bloques de código
+
+/*-- scss:rules --*/
+// Reglas específicas para personalizar componentes
+
+// Tablas
+// Personalización de los bordes inferiores de las celdas
+.table> :not(caption)> :not(:last-child)>* {
+  border-bottom-color: lighten($primary, 50); // Suaviza el color del borde inferior
+}
+
+// Código en línea
+// Estilo para fragmentos de código dentro de párrafos, listas o celdas
+p code:not(.sourceCode),
+li code:not(.sourceCode),
+td code:not(.sourceCode) {
+  color: $primary; // Color del texto del código en línea
+  background-color: $spc-accent-light; // Fondo claro para destacar el código
+  border: 1px solid $spc-accent; // Borde sutil para el código en línea
+}
+
+// Citas (Blockquotes)
+// Estilo para bloques de citas
+.blockquote {
+  color: lighten($primary, 15); // Color más claro para el texto de la cita
+  font-style: oblique; // Estilo oblicuo para destacar visualmente
+}
+
+// Iconos sociales
+// Estilos para iconos en el pie de página
+.nav-footer-center i {
+  color: $secondary !important; // Color inicial de los iconos sociales
+
+  &:hover {
+    color: $spc-secondary-light !important; // Color al pasar el ratón
+  }
+}
+
+// Iconos en páginas de inicio y "acerca de"
+.about-links .about-link i {
+  color: $secondary !important; // Color inicial de los iconos
+
+  &:hover {
+    color: $spc-secondary-light !important; // Color al pasar el ratón
+  }
+}
+
+// Enlaces sociales en la sección de contacto
+.link-dark.me-1 i {
+  color: $secondary !important; // Color consistente con el tema
+}
+
+// Botones
+// Estilo para botones secundarios
+.btn-secondary {
+  color: $secondary; // Color del texto
+  background: transparent; // Fondo transparente para un diseño limpio
+}
+
+// Botones primarios al pasar el ratón (formulario de contacto)
+.btn-primary:hover {
+  background-color: $secondary; // Fondo al pasar el ratón
+  border-color: $secondary; // Borde al pasar el ratón
+}
+
+// Paginación
+// Estilo para los enlaces de paginación
+.page-link {
+  color: $primary; // Color del texto
+
+  &:hover {
+    color: white; // Color del texto al pasar el ratón
+    background-color: $primary; // Fondo al pasar el ratón
+    border-color: $primary; // Borde al pasar el ratón
+  }
+}
+
+// Categorías
+// Estilo para categorías en publicaciones y listados
+.quarto-category:hover,
+.listing-category:hover {
+  background-color: #6c757d; // Fondo gris al pasar el ratón
+  color: white !important; // Texto blanco para contraste
+}
+
+// Barra de navegación
+.navbar {
+  background: transparent; // Fondo transparente para un diseño minimalista
+}
+
+// Título de la barra de navegación
+.navbar-title {
+  font-size: 0.75em; // Tamaño pequeño para el título
+  font-weight: 500; // Peso medio para destacar
+  color: $primary; // Color del texto
+  text-transform: uppercase; // Letras en mayúsculas
+  letter-spacing: .1em; // Espaciado entre letras
+
+  &:hover {
+    border-bottom: 1px solid $primary !important; // Borde inferior al pasar el ratón
+  }
+}
+
+// Enlaces de la barra de navegación
+.navbar-nav .nav-link {
+  color: $secondary !important; // Color del texto
+  text-transform: uppercase; // Letras en mayúsculas
+  letter-spacing: .1em; // Espaciado entre letras
+  border-bottom: 0px hidden $secondary; // Borde inicial oculto
+  margin: 0px 10px 0px 10px; // Margen horizontal
+  padding: 2px 2px 4px 2px !important; // Relleno inicial
+
+  &:hover {
+    border-bottom: 1px solid $secondary !important; // Borde inferior al pasar el ratón
+    padding: 2px 2px 0px 2px !important; // Ajuste de relleno al pasar el ratón
+  }
+}
+
+// Pie de página
+// Enlaces en el lado izquierdo
+.nav-footer a {
+  color: $secondary; // Color del texto
+
+  &:hover {
+    color: $spc-secondary-light; // Color al pasar el ratón
+  }
+}
+
+// Enlaces en el lado derecho
+.nav-footer .nav-link {
+  &:hover {
+    text-decoration: underline; // Subrayado al pasar el ratón
+  }
+}
+
+// Tarjetas de listado
+.card {
+  background: transparent; // Fondo transparente
+  border: none; // Sin bordes
+  border-radius: 4px; // Bordes redondeados
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); // Sombra suave
+}
+
+.card-img {
+  border-radius: 4px 4px 0px 0px; // Bordes redondeados solo en la parte superior
+}
+
+// Bloque de título destacado
+.featured-image {
+  background-size: cover; // Cubre todo el contenedor
+  background-position: center; // Centra la imagen
+  color: white; // Texto blanco para contraste
+  box-shadow: inset 0 0 0 1000px rgba(0, 38, 66, 0.75); // Sombra oscurecida para legibilidad
+}
+
+// Centrar la barra de navegación en dispositivos móviles
+.fixed-top {
+  position: absolute; // Posición absoluta para evitar solapamiento
+}
+
+.aa-DetachedOverlay {
+  position: absolute; // Posición absoluta para superposiciones
+}
+
+// Estilos generales del sitio
+.title {
+  font-size: 2.5em; // Tamaño grande para títulos principales
+  font-weight: 500; // Peso medio
+  line-height: 1.1em; // Altura de línea ajustada
+}
+
+.subtitle {
+  font-size: 1.2em; // Tamaño para subtítulos
+}
+
+// Bloques de código
+div.sourceCode {
+  background-color: $code-block-bg; // Fondo definido en variables
+  border: 1px solid $code-block-border; // Borde definido en variables
+}
+
+// Estilos para dispositivos móviles (pantallas menores a 991.98px)
+@media screen and (max-width: 991.98px) {
+
+  // Enlaces sociales
+  .about-entity .about-links {
+    flex-direction: row !important; // Disposición en fila
+    justify-content: center !important; // Centrado horizontal
+  }
+
+  // Pie de página
+  .nav-footer {
+    flex-direction: row; // Disposición en fila
+  }
+
+  .nav-footer-center {
+    order: 1 !important; // Orden en la disposición
+    flex-basis: 100%; // Ocupa todo el ancho
+    margin: 0 0 -1.2em 0; // Margen inferior ajustado
+  }
+
+  .nav-footer-right {
+    order: 2 !important; // Orden en la disposición
+    flex-basis: 100%; // Ocupa todo el ancho
+    text-align: center; // Texto centrado
+  }
+
+  .nav-footer-left {
+    order: 3 !important; // Orden en la disposición
+    flex-basis: 100%; // Ocupa todo el ancho
+    text-align: center; // Texto centrado
+  }
+
+  .navbar .quarto-navbar-tools {
+    text-align: left; // Alineación izquierda para herramientas
+  }
+}

@@ -1,0 +1,89 @@
+// Fuentes
+/* Definición de fuentes personalizadas para el proyecto */
+
+/* Fuente Petrona - Regular (peso 400) - Latino */
+@font-face {
+  font-family: 'Petrona'; /* Nombre de la familia de la fuente: Petrona */
+  font-style: normal; /* Estilo de la fuente: normal (sin cursiva) */
+  font-weight: 400; /* Peso de la fuente: regular (400) */
+  src: url('assets/fonts/petrona-v16-latin-regular.eot'); /* Fuente para modos de compatibilidad de IE9 */
+  src: local(''), /* Intenta cargar la fuente localmente si está disponible, vacío significa ninguna fuente local */
+    // url('assets/fonts/petrona-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* Comentado: soporte para IE6-IE8 */
+       url('assets/fonts/petrona-v16-latin-regular.woff2') format('woff2'), /* Formato WOFF2: navegadores súper modernos */
+       url('assets/fonts/petrona-v16-latin-regular.woff') format('woff'), /* Formato WOFF: navegadores modernos */
+       url('assets/fonts/petrona-v16-latin-regular.ttf') format('truetype'), /* Formato TrueType: Safari, Android, iOS */
+       url('assets/fonts/petrona-v16-latin-regular.svg') format('svg'); /* Formato SVG: iOS antiguo */
+}
+
+/* Fuente Petrona - Peso 500 - Latino */
+@font-face {
+  font-family: 'Petrona'; /* Nombre de la familia de la fuente: Petrona */
+  font-style: normal; /* Estilo de la fuente: normal (sin cursiva) */
+  font-weight: 500; /* Peso de la fuente: medio (500) */
+  src: url('assets/fonts/petrona-v16-latin-500.eot'); /* Fuente para modos de compatibilidad de IE9 */
+  src: local(''), /* Intenta cargar la fuente localmente si está disponible, vacío significa ninguna fuente local */
+    // url('assets/fonts/petrona-v16-latin-500.eot?#iefix') format('embedded-opentype'), /* Comentado: soporte para IE6-IE8 */
+       url('assets/fonts/petrona-v16-latin-500.woff2') format('woff2'), /* Formato WOFF2: navegadores súper modernos */
+       url('assets/fonts/petrona-v16-latin-500.woff') format('woff'), /* Formato WOFF: navegadores modernos */
+       url('assets/fonts/petrona-v16-latin-500.ttf') format('truetype'), /* Formato TrueType: Safari, Android, iOS */
+       url('assets/fonts/petrona-v16-latin-500.svg') format('svg'); /* Formato SVG: iOS antiguo */
+}
+
+/* Fuente Red Hat Text - Regular (peso 400) - Latino */
+@font-face {
+  font-family: 'Red Hat Text'; /* Nombre de la familia de la fuente: Red Hat Text */
+  font-style: normal; /* Estilo de la fuente: normal (sin cursiva) */
+  font-weight: 400; /* Peso de la fuente: regular (400) */
+  src: url('assets/fonts/red-hat-text-v3-latin-regular.eot'); /* Fuente para modos de compatibilidad de IE9 */
+  src: local(''), /* Intenta cargar la fuente localmente si está disponible, vacío significa ninguna fuente local */
+    // url('assets/fonts/../red-hat-text-v3-latin-regular.eot?#iefix') format('embedded-opentype'), /* Comentado: soporte para IE6-IE8 */
+       url('assets/fonts/red-hat-text-v3-latin-regular.woff2') format('woff2'), /* Formato WOFF2: navegadores súper modernos */
+       url('assets/fonts/red-hat-text-v3-latin-regular.woff') format('woff'), /* Formato WOFF: navegadores modernos */
+       url('assets/fonts/red-hat-text-v3-latin-regular.ttf') format('truetype'), /* Formato TrueType: Safari, Android, iOS */
+       url('assets/fonts/red-hat-text-v3-latin-regular.svg') format('svg'); /* Formato SVG: iOS antiguo */
+}
+
+/* Fuente Red Hat Text - Cursiva (peso 400) - Latino */
+@font-face {
+  font-family: 'Red Hat Text'; /* Nombre de la familia de la fuente: Red Hat Text */
+  font-style: italic; /* Estilo de la fuente: cursiva */
+  font-weight: 400; /* Peso de la fuente: regular (400) */
+  src: url('assets/fonts/red-hat-text-v3-latin-italic.eot'); /* Fuente para modos de compatibilidad de IE9 */
+  src: local(''), /* Intenta cargar la fuente localmente si está disponible, vacío significa ninguna fuente local */
+    // url('assets/fonts/../red-hat-text-v3-latin-italic.eot?#iefix') format('embedded-opentype'), /* Comentado: soporte para IE6-IE8 */
+       url('assets/fonts/red-hat-text-v3-latin-italic.woff2') format('woff2'), /* Formato WOFF2: navegadores súper modernos */
+       url('assets/fonts/red-hat-text-v3-latin-italic.woff') format('woff'), /* Formato WOFF: navegadores modernos */
+       url('assets/fonts/red-hat-text-v3-latin-italic.ttf') format('truetype'), /* Formato TrueType: Safari, Android, iOS */
+       url('assets/fonts/red-hat-text-v3-latin-italic.svg') format('svg'); /* Formato SVG: iOS antiguo */
+}
+
+/* Fuente Red Hat Text - Peso 500 - Latino */
+@font-face {
+  font-family: 'Red Hat Text'; /* Nombre de la familia de la fuente: Red Hat Text */
+  font-style: normal; /* Estilo de la fuente: normal (sin cursiva) */
+  font-weight: 500; /* Peso de la fuente: medio (500) */
+  src: url('assets/fonts/red-hat-text-v3-latin-500.eot'); /* Fuente para modos de compatibilidad de IE9 */
+  src: local(''), /* Intenta cargar la fuente localmente si está disponible, vacío significa ninguna fuente local */
+    // url('assets/fonts/../red-hat-text-v3-latin-500.eot?#iefix') format('embedded-opentype'), /* Comentado: soporte para IE6-IE8 */
+       url('assets/fonts/red-hat-text-v3-latin-500.woff2') format('woff2'), /* Formato WOFF2: navegadores súper modernos */
+       url('assets/fonts/red-hat-text-v3-latin-500.woff') format('woff'), /* Formato WOFF: navegadores modernos */
+       url('assets/fonts/red-hat-text-v3-latin-500.ttf') format('truetype'), /* Formato TrueType: Safari, Android, iOS */
+       url('assets/fonts/red-hat-text-v3-latin-500.svg') format('svg'); /* Formato SVG: iOS antiguo */
+}
+
+/* Fuente Red Hat Text - Cursiva Peso 500 - Latino */
+@font-face {
+  font-family: 'Red Hat Text'; /* Nombre de la familia de la fuente: Red Hat Text */
+  font-style: italic; /* Estilo de la fuente: cursiva */
+  font-weight: 500; /* Peso de la fuente: medio (500) */
+  src: url('assets/fonts/red-hat-text-v3-latin-500italic.eot'); /* Fuente para modos de compatibilidad de IE9 */
+  src: local(''), /* Intenta cargar la fuente localmente si está disponible, vacío significa ninguna fuente local */
+    // url('assets/fonts/../red-hat-text-v3-latin-500italic.eot?#iefix') format('embedded-opentype'), /* Comentado: soporte para IE6-IE8 */
+       url('assets/fonts/red-hat-text-v3-latin-500italic.woff2') format('woff2'), /* Formato WOFF2: navegadores súper modernos */
+       url('assets/fonts/red-hat-text-v3-latin-500italic.woff') format('woff'), /* Formato WOFF: navegadores modernos */
+       url('assets/fonts/red-hat-text-v3-latin-500italic.ttf') format('truetype'), /* Formato TrueType: Safari, Android, iOS */
+       url('assets/fonts/red-hat-text-v3-latin-500italic.svg') format('svg'); /* Formato SVG: iOS antiguo */
+}
+
+/*-- scss:rules --*/
+/* Sección para reglas SCSS adicionales (actualmente vacía) */
