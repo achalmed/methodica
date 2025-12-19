@@ -1,5 +1,7 @@
 # ¡Bienvenidos a mi sitio web!
 
+#readme
+
 Este es el repositorio de mi página web personal, que puedes visitar en [https://achalmawebsite.netlify.app/](https://achalmawebsite.netlify.app/). En este sitio encontrarás información sobre mis proyectos, publicaciones y experiencias en distintas áreas como la informática, la filosofía y la economía.
 
 ## Tecnologías utilizadas
@@ -35,4 +37,4 @@ Si necesitas contactarme, puedes hacerlo a través de mi correo electrónico: [m
 
 ¡Gracias por visitar mi sitio web!
 
-![Screenshot](assets/silvia/img//Screenshot.png)
+![Screenshot](assets/img/achalma-social.png)

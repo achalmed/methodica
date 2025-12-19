@@ -2,29 +2,66 @@ project:
   type: website
   output-dir: _site
   resources:
-    - resourses/cv.pdf
-    - sidebar.jpg
+    - assets/img/sidebar.jpg
 
 website:
   title: "Edison Achalma B.Sc. Econ."
   description: "Investigador y educador que aplica la ciencia de datos de forma que se dé prioridad a la equidad social."
-  google-analytics:
-    tracking-id: "G-XGH6TP6RB3"
-    anonymize-ip: true
+  favicon: assets/img/favicon.png 
+  # Previews Images
+  image: /assets/img/default-preview.jpg  # Usada cuando ninguna página tiene su propia imagen
+
+  # Anuncio
+  announcement:
+    # Contenido obligatorio (puede incluir markdown)
+    content: "¡Bienvenidos a mi mundo! ¡Felices fiestas! Gracias por visitar 🎄"
+    # Apariencia (opcional)
+    icon: gift         # Icono de Bootstrap
+    type: primary               # Color del anuncio
+    dismissable: true           # Si se puede cerrar
+    position: below-navbar      # Ubicación
+    # Colores disponibles para 'type':
+    # primary, secondary, success, danger, 
+    # warning, info, light, dark
+
+  # Google Analytics con opciones avanzadas
+  #google-analytics:
+   # tracking-id: "G-XGH6TP6RB3"  # O "UA-XXXXXXXX" para versión antigua
+   # storage: cookies              # "cookies" o "none"
+   # anonymize-ip: true            # true o false
+    # version: 4                  # Opcional: 3 o 4 (se detecta automáticamente)
+
+  # Cookie Consent personalizado
+  #cookie-consent:
+   # type: express                 # "implied" (notificación) o "express" (bloqueo hasta consentimiento)
+   # style: simple                 # "simple", "headline", "interstitial", "standalone"
+   # palette: light                # "light" o "dark"
+   # language: es                  # Código de idioma (ej: "es", "en", "fr")
+   # policy-url: https://achalmaedison.netlify.app/  # URL de tu política de privacidad
+   # prefs-text: "Preferencias de Cookies"  # Texto del enlace
+
+  # Open graph
   open-graph:
-    locale: es_ES
-    site-name: AchalmaEdison
+    title: "Edison Achalma B.Sc. Econ."            # Título por defecto
+    description: "Investigador y educador que aplica la ciencia de datos de forma que se dé prioridad a la equidad social." # Descripción por defecto
+    image: /assets/img/sidebar.jpg    # Imagen por defecto
+    image-width: 1200                # Ancho de imagen recomendado
+    image-height: 630                # Alto de imagen recomendado (ratio 1.91:1)
+    locale: es_ES                    # Locale
+    site-name: "Actus mercator"    # Nombre del sitio
+
   twitter-card:
     creator: "@achalmaedison"
+    card-style: summary_large_image
   comments:
     utterances:
-      repo: achalmed/website-achalma
+      repo: achalmed/methodica
       label: utterances
       theme: body-light
       issue-term: title
   # cookie-consent: true
-  site-url: https://achalmaedison.netlify.app/
-  repo-url: https://github.com/achalmed/website-achalma
+  site-url: https://methodica.netlify.app/
+  repo-url: https://github.com/achalmed/methodica
   navbar:
     right:
       - text: About
@@ -60,6 +97,8 @@ website:
         href: https://github.com/achalmed
       - icon: twitter
         href: https://x.com/achalmaedison
+      - icon: rss
+        href: index.xml
   page-footer:
     left: >-
       &#169; 2025 Edison Achalma &#8729; Made with [Quarto](https://quarto.org)
@@ -93,5 +132,7 @@ format:
         - assets/fonts.scss
     css: assets/styles.css
 
-
+    # Google Tag Manager
+    include-in-header: assets/gtm-head.html
+    include-after-body: assets/gtm-body.html
 

@@ -17,7 +17,7 @@ listing:
     # sort-ui: false
     filter-ui: false
     fields: [title, author, description, date, image, reading-time]
-    image-placeholder: sidebar.jpg
+    image-placeholder: assets/img/sidebar.jpg
     image-align: right
     # page-size: 5
     categories: false # (numbered, unnumbered, cloud, false)
