@@ -6,6 +6,7 @@
   nolmodern,
   notxfonts,
   notimes,
+  12pt,
   colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{apa7}
 
 \usepackage{amsmath}
@@ -17,8 +18,6 @@
 \babelprovide[main,import]{spanish}
 
 
-\babelfont{rm}[,RawFeature={fallback=mainfontfallback}]{Latin Modern
-Roman}
 % get rid of language-specific shorthands (see #6817):
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
@@ -115,29 +114,26 @@ Roman}
 
 
 
-\usepackage{fontspec} 
+\usepackage{newtx}
 
 \defaultfontfeatures{Scale=MatchLowercase}
 \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 
-  \setmainfont[,RawFeature={fallback=mainfontfallback}]{Latin Modern
-Roman}
 
 
 
 
-\title{Recursos de Bibliografía y Documentación para Investigadores:
-Recursos para Investigadores y Estudiantes}
+\title{Recursos para gestión bibliográfica}
 
 
-\shorttitle{Recursos de Investigación}
+\shorttitle{RECURSOS DE INVESTIGACIÓN}
 
 
 \usepackage{etoolbox}
 
 
 
-\ccoppy{\textcopyright~2023}
+\ccoppy{\textcopyright~2025}
 
 
 
@@ -234,14 +230,14 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
   \newcommand\contentsname{Tabla de contenidos}
 \fi
 \ifdefined\listfigurename
-  \renewcommand*\listfigurename{List of Figures}
+  \renewcommand*\listfigurename{Lista de Figuras}
 \else
-  \newcommand\listfigurename{List of Figures}
+  \newcommand\listfigurename{Lista de Figuras}
 \fi
 \ifdefined\listtablename
-  \renewcommand*\listtablename{List of Tables}
+  \renewcommand*\listtablename{Lista de Tablas}
 \else
-  \newcommand\listtablename{List of Tables}
+  \newcommand\listtablename{Lista de Tablas}
 \fi
 \ifdefined\figurename
   \renewcommand*\figurename{Figura}
@@ -258,7 +254,7 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
 \floatname{codelisting}{Listing}
-\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listings}}
 \makeatother
 \makeatletter
 \makeatother
@@ -304,15 +300,17 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 
 \maketitle
 
+
 \hypertarget{toc}{}
 \tableofcontents
 \newpage
-\section[Introduction]{Recursos de Bibliografía y Documentación para
-Investigadores}
+\section[Introduction]{Recursos para gestión bibliográfica}
 
-\setcounter{secnumdepth}{5}
+\setcounter{secnumdepth}{3}
 
 \setlength\LTleft{0pt}
+
+
 
 
 \section{Introducción}\label{introducciuxf3n}
@@ -856,21 +854,25 @@ algunas sugerencias:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf}{\faIcon{file-pdf}}
-  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia}{Ideas
+  \href{https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia}{Ideas
   De Investigacion Para Economia}
 \item
-  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf}{\faIcon{file-pdf}}
-  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion}{Pautas
+  \href{https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion}{Pautas
   De Presentacion Del Informe De Investigacion}
 \item
-  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.pdf}{\faIcon{file-pdf}}
-  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recursos-de-bibliografia-y-documentacion}{Recursos
+  \href{https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion}{Recursos
   De Bibliografia Y Documentacion}
 \item
-  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-02-09-recursos-para-traducción-y-correccion/index.pdf}{\faIcon{file-pdf}}
-  \href{https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-02-09-recursos-para-traducción-y-correccion}{Recursos
+  \href{https://methodica.netlify.app/posts/2025-02-09-recursos-para-traducción-y-correccion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2025-02-09-recursos-para-traducción-y-correccion}{Recursos
   Para Traducción Y Correccion}
+\item
+  \href{https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero}{Tipos
+  De Elementos En Zotero}
 \end{enumerate}
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y

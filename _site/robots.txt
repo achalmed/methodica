@@ -1,1 +1,1 @@
-Sitemap: https://achalmaedison.netlify.app/sitemap.xml
+Sitemap: https://methodica.netlify.app/sitemap.xml
