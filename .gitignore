@@ -1,2 +1,15 @@
+.Rproj.user
+.DS_Store
+.Rhistoryt
+.Rhistory
 /.quarto/
+/_*.local
+/.venv/
+/.condaenv/
+*_cache/
+/env/
+
+
+/.luarc.json
+
 **/*.quarto_ipynb
