@@ -1,15 +1,527 @@
-.Rproj.user
-.DS_Store
-.Rhistoryt
-.Rhistory
+# =============================================================================
+# .gitignore para Blog/Sitio Web con Quarto
+# Proyecto: Economía e Informática
+# Autor: Edison Achalma (@achalmaedison)
+# =============================================================================
+
+# =============================================================================
+# QUARTO Y R
+# =============================================================================
+# Directorios de Quarto
 /.quarto/
-/_*.local
-/.venv/
-/.condaenv/
+#_site/
+_book/
+#_freeze/
 *_cache/
-/env/
+*_files/
 
-
-/.luarc.json
-
+# Archivos temporales de Quarto
+/_*.local
 **/*.quarto_ipynb
+.luarc.json
+
+# RStudio
+.Rproj.user/
+.Rhistory
+.Rapp.history
+.RData
+.RDataTmp
+.Ruserdata
+*.Rproj
+
+# R
+*-Ex.R
+/*.tar.gz
+/*.Rcheck/
+vignettes/*.html
+vignettes/*.pdf
+.httr-oauth
+/cache/
+*.utf8.md
+*.knit.md
+.Renviron
+rsconnect/
+po/*~
+
+# Knitr
+*-concordance.tex
+*-tikzDictionary
+
+# =============================================================================
+# PYTHON Y ENTORNOS VIRTUALES
+# =============================================================================
+# Byte-compiled / optimized
+__pycache__/
+*.py[codz]
+*$py.class
+*.so
+
+# Entornos virtuales
+.env
+.envrc
+.venv/
+.condaenv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pixi/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Testing / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django / Flask
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# Package managers
+.pdm-python
+.pdm-build/
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Spyder / Rope
+.spyderproject
+.spyproject
+.ropeproject
+
+# mkdocs
+/site
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# Cython
+cython_debug/
+
+# Ruff
+.ruff_cache/
+
+# Otros frameworks Python
+.abstra/
+__marimo__/
+.streamlit/secrets.toml
+.pypirc
+
+# =============================================================================
+# LATEX Y DOCUMENTOS
+# =============================================================================
+# Core LaTeX
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# Intermediate
+*.dvi
+*.xdv
+*-converted-to.*
+
+# Bibliography
+*.bbl
+*.bbl-SAVE-ERROR
+*.bcf
+*.bcf-SAVE-ERROR
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build tools
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+*.rubbercache
+rubber.cache
+latex.out/
+
+# Package-specific
+*.alg
+*.loa
+*.thm
+*.nav
+*.snm
+*.vrb
+*.cut
+*.spl
+*.mf
+*.mp
+*.tfm
+*.idx
+*.ilg
+*.ind
+*.maf
+*.mlf
+*.mlt
+*.mtc[0-9]*
+*.nlg
+*.nlo
+*.nls
+*.tdo
+*.xcp
+*.xdy
+*.listing
+
+# Otros LaTeX
+_minted*/
+*.data.minted
+*.pyg
+svg-inkscape/
+sympy-plots-for-*.tex/
+pythontex-files-*/
+
+# =============================================================================
+# STATA
+# =============================================================================
+#*.dta
+*.gph
+#*.smcl
+*.stpr
+*.stsem
+~*.stswp
+
+# =============================================================================
+# MATLAB / OCTAVE
+# =============================================================================
+*.asv
+*.m~
+*.autosave
+*.slx.r*
+*.mdl.r*
+*.p
+*.mex*
+*.mlappinstall
+*.mltbx
+*.ctf
+helpsearch*/
+slprj/
+sccprj/
+codegen/
+*.slxc
+.MATLABDriveTag
+
+# =============================================================================
+# C / C++
+# =============================================================================
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled libraries
+*.lai
+*.la
+*.a
+*.lib
+*.dll
+*.dylib
+*.so
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug
+*.ilk
+*.pdb
+*.dwo
+
+# Fortran
+*.mod
+*.smod
+
+# =============================================================================
+# MICROSOFT OFFICE
+# =============================================================================
+# Word
+~$*.doc*
+~$*.dot*
+Backup of *.doc*
+
+# Excel
+~$*.xls*
+*.xlk
+
+# PowerPoint
+~$*.ppt*
+
+# Visio
+*.~vsd*
+
+# LibreOffice
+.~lock.*#
+
+# =============================================================================
+# SISTEMA OPERATIVO
+# =============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+nohup.out
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# =============================================================================
+# EDITORES E IDEs
+# =============================================================================
+# VS Code
+.vscode/
+#*.code-workspace
+
+# JetBrains (PyCharm, IntelliJ, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.swp
+
+# Emacs
+*~
+\#*\#
+.\#*
+.emacs.desktop
+.emacs.desktop.lock
+auto-save-list
+tramp
+.\#*
+auto/
+*.el
+
+# TextMate
+*.tmproj
+*.tmproject
+tmtags
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Xcode
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+
+# =============================================================================
+# ARCHIVOS TEMPORALES Y RESPALDOS
+# =============================================================================
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+*.temp
+*.old
+*.backup
+*.sav
+*.bak[0-9]*
+~[0-9]*
+
+# =============================================================================
+# BASES DE DATOS Y LOGS
+# =============================================================================
+*.sqlite
+*.sqlite3
+*.db
+*.rdb
+*.aof
+*.pid
+mnesia/
+rabbitmq/
+rabbitmq-data/
+activemq-data/
+
+# =============================================================================
+# ARCHIVOS DE CONFIGURACIÓN SENSIBLES
+# =============================================================================
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets.toml
+.secrets
+credentials.json
+config.local.*
+
+# =============================================================================
+# MULTIMEDIA (opcional - descomentar si deseas ignorarlos)
+# =============================================================================
+# Descomenta las siguientes líneas si NO quieres versionar archivos multimedia
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.svg
+# *.ico
+# *.mp3
+# *.mp4
+# *.avi
+# *.mov
+# *.wmv
+# *.pdf
+# *.eps
+# *.ps
+
+# =============================================================================
+# ARCHIVOS GENERADOS POR ANÁLISIS DE DATOS
+# =============================================================================
+# Outputs de análisis
+results/
+output/
+figures/
+plots/
+graphs/
+
+# =============================================================================
+# NODE.JS (si usas algún preprocesador JS)
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# =============================================================================
+# GIT
+# =============================================================================
+*.orig
+*.rej
+*.patch
+
+# =============================================================================
+# ARCHIVOS ESPECÍFICOS DEL PROYECTO
+# =============================================================================
+# Agrega aquí archivos específicos de tu proyecto
+# Ejemplo:
+# /drafts/
+# /notas-personales/
+# /trabajo-en-progreso/
