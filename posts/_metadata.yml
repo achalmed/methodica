@@ -2,71 +2,121 @@
 # CONFIGURACIÓN COMPLETA DE _metadata.yml
 # ========================================================================
 # Este archivo define opciones compartidas para todos los documentos
-# en este directorio y subdirectorios
+# en este directorio y subdirectorios.
+# Más información en: https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/#migraci%C3%B3n-de-configuraciones-antiguas
 
 # ========================================================================
 # SECCIÓN 1: INFORMACIÓN DEL AUTOR
 # ========================================================================
 author:
   - name: Edison Achalma
-    url: https://achalmaedison.netlify.app
+    url: https://achalmaedison.netlify.app   # Sitio web personal
+    
+    # Afiliación institucional
     affiliation:
-      - id: unsch
+      - id: unsch                             # ID único para referenciar
         name: Universidad Nacional de San Cristóbal de Huamanga
         department: Escuela Profesional de Economía
+        address: Portal Independencia N° 57
         city: Ayacucho
         region: AYA
+        postal-code: 05001
         country: Perú
+    
     affiliation-url: https://www.gob.pe/unsch
     orcid: 0000-0001-6996-3364
     email: elmer.achalma.09@unsch.edu.pe
+    
+    # Atributos del autor
     attributes:
-      corresponding: true
-      equal-contributor: true
-      deceased: false
+      corresponding: true      # Es el autor de correspondencia
+      equal-contributor: false # Contribuyó equitativamente con otros autores
+      deceased: false          # Está fallecido 
+    # Roles del autor (taxonomía CRediT)
     roles:
       - conceptualización
+      - metodología
+      - análisis formal
+      - investigación
+      - recursos
+      - curación de datos
       - redacción
+      - visualización
+      - supervisión
+      - administración del proyecto
 
 # Nota del Autor (si aplica)
 author-note:
   disclosures:
     conflict-of-interest: Los autores no tienen conflictos de intereses que revelar.
+    study-registration: Este estudio fue registrado en el Registro Nacional de Investigaciones (código 09170105).
+    data-sharing: Los datos están disponibles en https://github.com/achalmed/data
+    financial-support: Esta investigación fue financiada por CONCYTEC mediante el proyecto N° 2024-01.
+    gratitude: Los autores agradecen a los revisores anónimos por sus valiosos comentarios.
 
 # ========================================================================
 # SECCIÓN 2: METADATOS GENERALES DEL DOCUMENTO
 # ========================================================================
 
 # Metadatos del Documento
-date-modified: "today"
-license: "CC BY-SA"
-lang: es
-search: true
-lightbox: true
+date-modified: "today"                    # Se actualiza cada render
+# O fecha específica:
+# date-modified: "2025-01-02"
+
+lang: es                     # Idioma del contenido (es, en, fr, de, etc.)
+license: "CC BY-SA"          # Licencia Creative Commons
+
+# Otras licencias comunes:
+# license: "CC BY"           # Atribución
+# license: "CC BY-NC"        # Atribución-No Comercial
+# license: "CC BY-NC-SA"     # Atribución-No Comercial-Compartir Igual
+# license: "CC0"             # Dominio Público
+
+search: true                 # Habilitar búsqueda en el documento
+lightbox: true               # Habilitar lightbox para zoom de imágenes
 
 # Configuración del Bloque de Título
-title-block-banner: true
-is-particlejs-enabled: true
+title-block-banner: true     # Banner colorido en el título
+# O imagen personalizada:
+# title-block-banner: images/banner.jpg
+
+is-particlejs-enabled: true  # Efecto de partículas en el fondo
 
 # ========================================================================
 # SECCIÓN 3: CONFIGURACIÓN DE TABLA DE CONTENIDOS
 # ========================================================================
-toc: true
-toc-title: " "
-toc-location: left
+toc: true                    # Mostrar tabla de contenidos
+toc-title: " "               # Título (vacío para solo mostrar el ícono)
+# toc-title: "Contenidos"    # O con título explícito
+
+toc-location: left           # Ubicación: left, right, body
+toc-depth: 3                 # Profundidad de niveles (1-6)
+toc-expand: 2                # Nivel inicial expandido
+
+# Solo HTML:
+toc-float: true              # TOC flotante, visible al hacer scroll
 
 # ========================================================================
 # SECCIÓN 4: REFERENCIAS Y CITAS
 # ========================================================================
-floatsintext: true
-citation: true
-google-scholar: true
-link-citations: true
-appendix-cite-as: display
-citation-last-author-separator: "y"
+citation: true          # Habilitar generación de citas
+google-scholar: true    # Habilitar metadatos para Google Scholar
+link-citations: true    # Enlaces clicables en citas
+floatsintext: true      # Figuras y tablas en el texto (no al final)
+
+# Personalización de citas
+citation-last-author-separator: "y"       # "y" español, "and" inglés)
 citation-masked-author: "Cita Enmascarada"
 citation-masked-title: "Título Enmascarado"
-citation-masked-date: "n.f."
+citation-masked-date: "n.f."              # "n.f." = no fecha
+
+# Ubicación de citas (solo HTML)
+citation-location: document               # Opciones: document, margin
+# footnote-location: margin               # Ubicación de notas al pie
+
+
+appendix-cite-as: display
+
 
 # Títulos de Bloques
 title-block-author-note: "Nota de Autores"
@@ -78,9 +128,24 @@ references-meta-analysis: "Las referencias marcadas con un asterisco indican est
 # SECCIÓN 5: REFERENCIAS CRUZADAS
 # ========================================================================
 language:
+  # Figuras
   crossref-fig-title: Figura
+  crossref-fig-prefix: Figura
+  
+  # Tablas
   crossref-tbl-title: Tabla
-  crossref-lst-title: "Listing"
+  crossref-tbl-prefix: Tabla
+  
+  # Ecuaciones
+  crossref-eq-prefix: Ecuación
+  
+  # Secciones
+  crossref-sec-prefix: "Sección"
+  crossref-ch-prefix: "Capítulo"
+  crossref-apx-prefix: Anexo
+  
+  # Otros elementos
+  crossref-lst-title: "Listado"         # Code listings
   crossref-thm-title: "Teorema"
   crossref-lem-title: "Lema"
   crossref-cor-title: "Corolario"
@@ -89,21 +154,24 @@ language:
   crossref-def-title: "Definición"
   crossref-exm-title: "Ejemplo"
   crossref-exr-title: "Ejercicio"
-  crossref-ch-prefix: "Capítulo"
-  crossref-apx-prefix: Anexo
-  crossref-sec-prefix: "Sección"
-  crossref-eq-prefix: Ecuación
+  
+  # Listas
   crossref-lof-title: "Lista de Figuras"
   crossref-lot-title: "Lista de Tablas"
-  crossref-lol-title: "Lista de Listings"
+  crossref-lol-title: "Lista de Listados"
 
 # ========================================================================
 # SECCIÓN 6: VISIBILIDAD Y BORRADOR
 # ========================================================================
-mask: false
-draft: true
-draftfirst: false
-draftall: false
+# Modo borrador (no se publica)
+draft: true                  # true = borrador, false = publicado
+
+# Enmascarar información (para peer review)
+mask: false                  # Oculta nombres de autores y afiliaciones
+
+# Opciones avanzadas de borrador
+draftfirst: false            # Solo primera página como borrador (PDF)
+draftall: false              # Todas las páginas como borrador (PDF)
 
 # ========================================================================
 # SECCIÓN 7: FORMATOS DE SALIDA
@@ -113,29 +181,66 @@ format:
   # Formato HTML
   # ----------------------------------------------------------------------
   html:
-    toc-depth: 1
-    toc-expand: 3
-    smooth-scroll: true
-    link-external-newwindow: true
-    citations-hover: true
-    footnotes-hover: true
-    highlight-style: github
-    code-copy: true
-    code-fold: true
-    code-summary: "Mostrar el código"
-    code-overflow: scroll
-    code-line-numbers: true
+    # --- TABLA DE CONTENIDOS ---
+    toc: true
+    toc-depth: 3
+    toc-expand: 2
+    toc-title: "Contenidos"
+    toc-location: left            # left, right, body
+    
+    # --- NAVEGACIÓN ---
+    smooth-scroll: true           # Scroll suave al navegar
+    link-external-newwindow: true # Enlaces externos en nueva pestaña
+    
+    # --- CITAS Y NOTAS ---
+    citations-hover: true         # Popup con cita al pasar el mouse
+    footnotes-hover: true         # Popup con nota al pie al pasar el mouse
+    citation-location: document   # document, margin
+    
+    # --- CÓDIGO ---
+    highlight-style: github       # Estilo: github, monokai, etc.
+    code-copy: true               # Botón para copiar código
+    code-fold: true               # Código plegable
+    code-summary: "Mostrar el código"     # Texto del botón
+    code-overflow: scroll         # scroll, wrap
+    code-line-numbers: true       # Números de línea
     code-tools:
-      source: repo
-      toggle: false
+      source: repo                # Mostrar enlace al código fuente
+      toggle: false               # Botón para mostrar/ocultar código
       caption: none
+    
+    # --- DIAGRAMAS ---
     mermaid:
-      theme: neutral
-    citation-location: document
-    self-contained: true
+      theme: neutral              # Tema para diagramas mermaid
+    
+    # --- TEMA ---
+    theme: litera                 # Tema Bootstrap
+    # Temas disponibles: default, cerulean, cosmo, cyborg, darkly, flatly,
+    # journal, litera, lumen, lux, materia, minty, morph, pulse, quartz,
+    # sandstone, simplex, sketchy, slate, solar, spacelab, superhero,
+    # united, vapor, yeti, zephyr
+    
+    # O tema personalizado:
+    # theme: 
+    #   - litera
+    #   - custom.scss
+    
+    # --- OTRAS OPCIONES ---
+    self-contained: false         # HTML independiente (incluye CSS/JS)
+    page-layout: article          # article, full, custom
+    format-links: true            # Enlaces a otros formatos
+    
+    # Plantillas personalizadas
     template-partials:
       - ../_partials/title-block-link-buttons/title-block.html
-    theme: litera
+    
+    # Configuración de grid (ancho de columnas)
+    grid:
+      sidebar-width: 400px
+      body-width: 1000px
+      margin-width: 200px
+      gutter-width: 1.5rem
+
     other-links:
       - text: Gravatar
         href: https://gravatar.com/achalmaedison
@@ -145,20 +250,44 @@ format:
   # Formato PDF (APA Quarto)
   # ----------------------------------------------------------------------
   apaquarto-pdf:
-    documentmode: jou
+    # --- MODO DE DOCUMENTO ---
+    documentmode: jou  # jou (journal), man (manuscript), stu (student), doc (document)
+    
+    # --- METADATOS ---
     copyrightnotice: 2026
     copyrightext: Todos los derechos reservados
+    
+    # Solo para modo journal:
+    #journal: "Revista de Economía"
+    #volume: "2025, Vol. 1, No. 1, 1--30"
+    
+    # Solo para modo estudiante:
+    # course: "Econometría Avanzada"
+    # professor: "Dr. Edison Achalma"
+    # duedate: "2025-12-31"
+    
+    # --- ESTRUCTURA ---
     toc: true
     list-of-figures: true
     list-of-tables: true
-    keep-tex: true
-    fontsize: 12pt
-    a4paper: true
-    numbered-lines: false
     number-sections: true
-    colorlinks: true
-    pdf-engine: xelatex
-    keep-md: false
+    
+    # --- FORMATO ---
+    fontsize: 12pt                        # 10pt, 11pt, 12pt
+    a4paper: true                         # true para A4, false para Letter
+    numbered-lines: false                 # Numerar líneas
+    colorlinks: true                      # Enlaces con color
+    
+    # --- OPCIONES DE COMPILACIÓN ---
+    pdf-engine: xelatex                   # xelatex, pdflatex, lualatex
+    keep-tex: true                        # Mantener archivos .tex
+    keep-md: false                        # Mantener archivos .md
+    
+    # --- SUPRESIÓN SELECTIVA ---
+    # suppress-title-page: false
+    # donotrepeattitle: false
+    # draftfirst: false
+    # draftall: false
     
   # ----------------------------------------------------------------------
   # Formato DOCX (APA Quarto)
@@ -170,51 +299,71 @@ format:
     numbered-lines: false
     number-sections: true
     keep-md: false
+    
+    # Opciones adicionales
+    # blank-lines-above-title: 2
+    # blank-lines-above-author-note: 2
 
 # ========================================================================
 # SECCIÓN 8: CONFIGURACIÓN DEL ENTORNO DE EJECUCIÓN
 # ========================================================================
 
-jupyter: python3
+# Kernel de Jupyter
+jupyter: python3                  # python3, ir (R), julia
 
-# Editor
+# Configuración del editor
 editor:
   # Modo preferido (source o visual)
   mode: source
   
   # Configuración de Markdown
   markdown:
-    canonical: true      # Formato consistente. Usar formato Markdown canónico (mejor para control de versiones)
-    wrap: 72            # 72 caracteres por línea
+    canonical: true               # Formato Markdown consistente
+    wrap: 72                      # Ancho de línea (caracteres)
     references:
-      location: section # Notas al pie por sección
-    
+      location: section           # Ubicación de referencias: document, section, block
+
     # Opciones de escritura
-    auto-wrapping: true
-    sentence-spacing: true
+    auto-wrapping: true           # Ajuste automático de línea
+    sentence-spacing: true        # Doble espacio después de punto
 
 # ========================================================================
 # SECCIÓN 9: CONFIGURACIÓN DE COMENTARIOS
 # ========================================================================
 
 comments:
-  utterances:
-    repo: achalmed/website-achalma
-    issue-term: title
-    theme: boxy-light
-    label: "comments :crystal_ball:"
+  utterances:                         # GitHub Utterances
+    repo: achalmed/website-achalma    # Repositorio de GitHub
+    issue-term: title                 # Cómo asociar comentarios: title, pathname, url, og:title
+    theme: boxy-light                 # Tema: github-light, github-dark, boxy-light, etc.
+    label: "comments :crystal_ball:"  # Etiqueta en los issues
 
 # ========================================================================
 # SECCIÓN 10: CONFIGURACIÓN DE EJECUCIÓN DE CÓDIGO
 # ========================================================================
 
 execute:
-  freeze: true  # true: Nunca re-ejecutar durante el renderizado del proyecto. auto: Re-ejecutar solo cuando cambia el código fuente (fuciona solo si .qmd que tienen Python/R)
-  keep-md: true  # Mantener archivos .md generados
-  keep-ipynb: true 
-  echo: true  # Mostrar comandos ejecutados
-  output: true  # Mostrar resultados de la ejecución
-  warning: false  # Ocultar advertencias
-  error: false  # Ocultar errores
-  enabled: false  # Deshabilita la ejecución de código por defecto. Habilitar la ejecución: quarto render notebook.ipynb --execute
-  cache: true  # PARA RESULTADOS DE CALCULO: quarto render index.qmd --cache-refresh #singledoc quarto render --cache-refresh #entireproject
+  # --- CONTROL DE EJECUCIÓN ---
+  freeze: true                    # No re-ejecutar código al renderizar
+  # Opciones de freeze:
+  # - true: Nunca re-ejecutar (usa resultados guardados)
+  # - false: Siempre re-ejecutar
+  # - auto: Re-ejecutar solo si el código cambió
+  
+  enabled: false                  # Deshabilitar ejecución por defecto
+  # Para ejecutar: quarto render --execute
+  
+  # --- SALIDA ---
+  echo: true                      # Mostrar código fuente
+  output: true                    # Mostrar resultados
+  warning: false                  # Ocultar advertencias
+  error: false                    # Ocultar errores
+  message: false                  # Ocultar mensajes
+  
+  # --- ARCHIVOS GENERADOS ---
+  keep-md: true                   # Mantener archivo .md intermedio
+  keep-ipynb: true                # Mantener notebook .ipynb
+  
+  # --- CACHÉ ---
+  cache: true                     # Usar caché para resultados
+  # Para limpiar caché: quarto render --cache-refresh
