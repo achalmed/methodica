@@ -2,7 +2,7 @@
 documentmode: doc
 copyrightnotice: 2026
 copyrightext: All rights reserved
-title: Configuración de _metadata.yml para documentos académicos
+title: Configuración de `_metadata.yml` para documentos académicos
 abstract: El archivo _metadata.yml constituye una herramienta fundamental en Quarto para establecer configuraciones compartidas y consistentes en documentos y sitios académicos. Esta guía exhaustiva explica su funcionamiento, jerarquía de precedencia, estructura recomendada y las principales opciones de configuración (autoría con taxonomía CRediT, formatos de salida HTML/PDF/DOCX con apaquarto, ejecución de código, referencias cruzadas, citas académicas y gestión de borradores). Se presentan casos de uso reales, comparación entre configuraciones antiguas y optimizadas, mejores prácticas, proceso de migración y resolución de problemas frecuentes. El objetivo es facilitar la creación de blogs académicos reproducibles, mantenibles y profesionalmente presentados, minimizando la repetición de código (principio DRY) y maximizando la consistencia en proyectos de mediana y gran escala.
 keywords:
 - Quarto
