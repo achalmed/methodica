@@ -200,7 +200,7 @@ format:
     # --- CÓDIGO ---
     highlight-style: github       # Estilo: github, monokai, etc.
     code-copy: true               # Botón para copiar código
-    code-fold: true               # Código plegable
+    code-fold: false               # Código plegable
     code-summary: "Mostrar el código"     # Texto del botón
     code-overflow: scroll         # scroll, wrap
     code-line-numbers: true       # Números de línea
