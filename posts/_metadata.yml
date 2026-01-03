@@ -1,22 +1,12 @@
-# =============================================================================
-# CONFIGURACIÓN GENERAL DEL DOCUMENTO
-# =============================================================================
+# ========================================================================
+# CONFIGURACIÓN COMPLETA DE _metadata.yml
+# ========================================================================
+# Este archivo define opciones compartidas para todos los documentos
+# en este directorio y subdirectorios
 
-# Metadatos del Documento
-date-modified: "today"
-license: "CC BY-SA"
-lang: es
-search: true
-lightbox: true
-
-# Configuración del Bloque de Título
-title-block-banner: true
-is-particlejs-enabled: true
-
-# =============================================================================
-# INFORMACIÓN DEL AUTOR
-# =============================================================================
-
+# ========================================================================
+# SECCIÓN 1: INFORMACIÓN DEL AUTOR
+# ========================================================================
 author:
   - name: Edison Achalma
     url: https://achalmaedison.netlify.app
@@ -38,23 +28,36 @@ author:
       - conceptualización
       - redacción
 
-# Nota del Autor
+# Nota del Autor (si aplica)
 author-note:
   disclosures:
     conflict-of-interest: Los autores no tienen conflictos de intereses que revelar.
 
-# =============================================================================
-# CONFIGURACIÓN DE TABLA DE CONTENIDOS
-# =============================================================================
+# ========================================================================
+# SECCIÓN 2: METADATOS GENERALES DEL DOCUMENTO
+# ========================================================================
 
+# Metadatos del Documento
+date-modified: "today"
+license: "CC BY-SA"
+lang: es
+search: true
+lightbox: true
+
+# Configuración del Bloque de Título
+title-block-banner: true
+is-particlejs-enabled: true
+
+# ========================================================================
+# SECCIÓN 3: CONFIGURACIÓN DE TABLA DE CONTENIDOS
+# ========================================================================
 toc: true
 toc-title: " "
 toc-location: left
 
-# =============================================================================
-# CONFIGURACIÓN DE REFERENCIAS Y CITAS
-# =============================================================================
-
+# ========================================================================
+# SECCIÓN 4: REFERENCIAS Y CITAS
+# ========================================================================
 floatsintext: true
 citation: true
 google-scholar: true
@@ -65,16 +68,15 @@ citation-masked-author: "Cita Enmascarada"
 citation-masked-title: "Título Enmascarado"
 citation-masked-date: "n.f."
 
-# Bloques de Títulos
+# Títulos de Bloques
 title-block-author-note: "Nota de Autores"
 title-block-correspondence-note: "La correspondencia relativa a este artículo debe dirigirse a"
 title-block-role-introduction: "Los roles de autor se clasificaron utilizando la taxonomía de roles de colaborador (CRediT; https://credit.niso.org/) de la siguiente manera:"
 references-meta-analysis: "Las referencias marcadas con un asterisco indican estudios incluidos en el metanálisis."
 
-# =============================================================================
-# CONFIGURACIÓN DE REFERENCIAS CRUZADAS
-# =============================================================================
-
+# ========================================================================
+# SECCIÓN 5: REFERENCIAS CRUZADAS
+# ========================================================================
 language:
   crossref-fig-title: Figura
   crossref-tbl-title: Tabla
@@ -95,23 +97,21 @@ language:
   crossref-lot-title: "Lista de Tablas"
   crossref-lol-title: "Lista de Listings"
 
-# =============================================================================
-# CONFIGURACIÓN DE VISIBILIDAD Y BORRADOR
-# =============================================================================
-
+# ========================================================================
+# SECCIÓN 6: VISIBILIDAD Y BORRADOR
+# ========================================================================
 mask: false
 draft: true
 draftfirst: false
 draftall: false
 
-# =============================================================================
-# FORMATOS DE SALIDA
-# =============================================================================
-
+# ========================================================================
+# SECCIÓN 7: FORMATOS DE SALIDA
+# ========================================================================
 format:
-  # ---------------------------------------------------------------------------
+  # ----------------------------------------------------------------------
   # Formato HTML
-  # ---------------------------------------------------------------------------
+  # ----------------------------------------------------------------------
   html:
     toc-depth: 1
     toc-expand: 3
@@ -140,10 +140,10 @@ format:
       - text: Gravatar
         href: https://gravatar.com/achalmaedison
     format-links: true
-
-  # ---------------------------------------------------------------------------
+    
+  # ----------------------------------------------------------------------
   # Formato PDF (APA Quarto)
-  # ---------------------------------------------------------------------------
+  # ----------------------------------------------------------------------
   apaquarto-pdf:
     documentmode: jou
     copyrightnotice: 2026
@@ -159,10 +159,10 @@ format:
     colorlinks: true
     pdf-engine: xelatex
     keep-md: false
-
-  # ---------------------------------------------------------------------------
+    
+  # ----------------------------------------------------------------------
   # Formato DOCX (APA Quarto)
-  # ---------------------------------------------------------------------------
+  # ----------------------------------------------------------------------
   apaquarto-docx:
     toc: true
     fontsize: 12pt
@@ -171,9 +171,9 @@ format:
     number-sections: true
     keep-md: false
 
-# =============================================================================
-# CONFIGURACIÓN DEL ENTORNO DE EJECUCIÓN
-# =============================================================================
+# ========================================================================
+# SECCIÓN 8: CONFIGURACIÓN DEL ENTORNO DE EJECUCIÓN
+# ========================================================================
 
 jupyter: python3
 
@@ -193,9 +193,9 @@ editor:
     auto-wrapping: true
     sentence-spacing: true
 
-# =============================================================================
-# CONFIGURACIÓN DE COMENTARIOS
-# =============================================================================
+# ========================================================================
+# SECCIÓN 9: CONFIGURACIÓN DE COMENTARIOS
+# ========================================================================
 
 comments:
   utterances:
@@ -204,9 +204,9 @@ comments:
     theme: boxy-light
     label: "comments :crystal_ball:"
 
-# =============================================================================
-# CONFIGURACIÓN DE EJECUCIÓN
-# =============================================================================
+# ========================================================================
+# SECCIÓN 10: CONFIGURACIÓN DE EJECUCIÓN DE CÓDIGO
+# ========================================================================
 
 execute:
   freeze: true  # true: Nunca re-ejecutar durante el renderizado del proyecto. auto: Re-ejecutar solo cuando cambia el código fuente (fuciona solo si .qmd que tienen Python/R)
