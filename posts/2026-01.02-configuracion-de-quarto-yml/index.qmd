@@ -1,0 +1,3045 @@
+---
+documentmode: doc
+copyrightnotice: 2026
+copyrightext: All rights reserved
+title: Configuración de `_quarto.yml` para Proyectos Quarto
+abstract: Esta publiación proporciona una guía sobre la configuración del archivo _quarto.yml en proyectos Quarto, que actúa como el archivo principal para definir opciones globales aplicables a sitios web académicos, libros o proyectos simples. Se explica su diferencia con _metadata.yml, destacando el alcance global del primero frente al directorio específico del segundo. Se detallan las funciones principales, como el control del tipo de proyecto, estructura del sitio (navegación, footer, sidebar), apariencia (temas, CSS), metadatos SEO, integración de herramientas externas (Google Analytics, comentarios) y formatos de salida (HTML, PDF, DOCX). Se analiza la jerarquía de configuración, con énfasis en la prioridad (del front-matter del documento a los valores por defecto) y la herencia/combinación de opciones. La estructura del archivo se desglosa en secciones clave; project (tipo, output-dir, resources), website (título, navbar, sidebar, footer, anuncios, Open Graph, Twitter Cards), y format (opciones por formato). Además, se incluyen configuraciones avanzadas, un análisis de una configuración ejemplo, sugerencias de optimización, casos de uso prácticos (blog académico, documentación técnica, portfolio), mejores prácticas, troubleshooting y comandos útiles. El objetivo es capacitar a investigadores y desarrolladores para crear sitios web académicos y profesionales eficientes con Quarto, priorizando accesibilidad, SEO y privacidad (RGPD). Se enfatiza la validación YAML, testing y recursos adicionales para una implementación óptima.
+keywords:
+- Quarto
+- _metadata.yml
+- Metadatos compartidos
+categories:
+- Metodología de Investigación
+tags:
+- metodologia_investigacion
+- quarto
+- _quarto.yml
+author-note:
+  status-changes:
+    affiliation-change: null
+    deceased: null
+  disclosures:
+    study-registration: null
+    data-sharing: null
+    related-report: null
+    conflict-of-interest: El autor no tiene conflictos de interés que revelar.
+    financial-support: null
+    gratitude: null
+    authorship-agreements: null
+description: _quarto.yml es el archivo de configuración principal de un proyecto Quarto. Define las opciones globales que se aplicarán a todo el sitio web, libro o proyecto.
+eval: false
+citation:
+  type: article-journal
+  author:
+  - Edison Achalma
+  pdf-url: https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero/index.pdf
+date: 01/02/2026
+draft: false
+image: ../featured.jpg
+---
+
+# ¿Qué es `_quarto.yml`?
+
+`_quarto.yml` es el archivo de configuración principal de un proyecto Quarto. Define las opciones globales que se aplicarán a todo el sitio web, libro o proyecto.
+
+**Ubicación:**
+
+```
+proyecto/
+├── _quarto.yml          <- Archivo principal (raíz del proyecto)
+├── index.qmd
+├── posts/
+│   ├── _metadata.yml    <- Opciones específicas para posts
+│   └── post1/
+│       └── index.qmd
+└── assets/
+```
+
+## Diferencia con `_metadata.yml`
+
+| Archivo | Alcance | Uso Principal | Ubicación |
+|---------|---------|---------------|-----------|
+| `_quarto.yml` | Todo el proyecto | Configuración del sitio, navbar, footer, tema | Raíz del proyecto |
+| `_metadata.yml` | Directorio específico | Opciones por defecto para posts | Dentro de directorios |
+
+**Ejemplo de relación:**
+
+```yaml
+# _quarto.yml (global para TODO el sitio)
+website:
+  title: "Mi Sitio"
+  navbar:
+    left:
+      - text: "Blog"
+        href: blog/
+
+# blog/_metadata.yml (solo para posts del blog)
+author:
+  - name: Edison Achalma
+date-modified: "today"
+```
+
+## Propósito y Funciones Principales
+
+**`_quarto.yml` controla:**
+
+1. **Tipo de proyecto** (website, book, default)
+2. **Estructura del sitio** (navegación, footer, sidebar)
+3. **Apariencia global** (tema, CSS, fuentes)
+4. **Metadatos del sitio** (título, descripción, SEO)
+5. **Herramientas externas** (Google Analytics, comentarios)
+6. **Formatos de salida** (HTML, PDF, DOCX)
+7. **Recursos compartidos** (imágenes, archivos estáticos)
+
+# Jerarquía de Configuración
+
+## Orden de Prioridad
+
+```
+1. Front-matter del documento (index.qmd)
+   └── Mayor prioridad
+   
+2. _metadata.yml (directorio del documento)
+   
+3. _metadata.yml (directorio padre)
+   
+4. _quarto.yml (raíz del proyecto)
+   
+5. Valores por defecto de Quarto
+   └── Menor prioridad
+```
+
+**Ejemplo práctico:**
+
+```yaml
+# _quarto.yml (global)
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+# posts/_metadata.yml (categoría)
+format:
+  html:
+    toc-depth: 3
+
+# posts/mi-post/index.qmd (documento)
+---
+format:
+  html:
+    toc: false
+---
+```
+
+**Resultado final para `mi-post/index.qmd`:**
+
+- `toc: false` (del documento - mayor prioridad)
+- `theme: cosmo` (de _quarto.yml - heredado)
+- `toc-depth: 3` (de _metadata.yml - no se usa porque toc está desactivado)
+
+## Herencia y Combinación
+
+**Regla:** Las configuraciones se **combinan** cuando son diferentes claves, pero se **sobrescriben** cuando son la misma clave.
+
+```yaml
+# _quarto.yml
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+
+# _metadata.yml
+format:
+  html:
+    toc: false        # Sobrescribe toc
+    code-copy: true   # Se añade (nueva clave)
+    # theme y code-fold se heredan
+```
+
+**Resultado combinado:**
+
+```yaml
+format:
+  html:
+    theme: cosmo          # Heredado de _quarto.yml
+    toc: false            # Sobrescrito por _metadata.yml
+    code-fold: true       # Heredado de _quarto.yml
+    code-copy: true       # Añadido por _metadata.yml
+```
+
+# Estructura del Archivo
+
+## Anatomía de `_quarto.yml`
+
+```yaml
+# ========================================================================
+# CONFIGURACIÓN DE PROYECTO
+# ========================================================================
+project:
+  type: website
+  output-dir: _site
+  resources: []
+
+# ========================================================================
+# CONFIGURACIÓN DEL SITIO WEB
+# ========================================================================
+website:
+  # Información básica
+  title: ""
+  description: ""
+  
+  # Navegación
+  navbar: {}
+  sidebar: []
+  
+  # Footer
+  page-footer: {}
+  
+  # SEO y metadatos
+  site-url: ""
+  favicon: ""
+  open-graph: {}
+  twitter-card: {}
+  
+  # Herramientas
+  google-analytics: {}
+  cookie-consent: {}
+  comments: {}
+
+# ========================================================================
+# FORMATOS DE SALIDA
+# ========================================================================
+format:
+  html: {}
+  pdf: {}
+  docx: {}
+
+# ========================================================================
+# OPCIONES AVANZADAS
+# ========================================================================
+# Bibliografía global, filtros, extensiones, etc.
+```
+
+## Secciones Principales
+
+| Sección | Propósito | Obligatoria |
+|---------|-----------|-------------|
+| `project` | Define tipo y estructura del proyecto | Sí |
+| `website` | Configuración específica de sitios web | Sí (para websites) |
+| `format` | Formatos de salida y sus opciones | Recomendada |
+| `editor` | Configuración del editor | Opcional |
+| `execute` | Opciones de ejecución de código | Opcional |
+
+# Sección: Project
+
+Esta sección define las características fundamentales del proyecto.
+
+## Opciones Básicas
+
+```yaml
+project:
+  type: website              # Tipo de proyecto
+  output-dir: _site          # Directorio de salida
+```
+
+## `type`: Tipo de Proyecto
+
+**Opciones disponibles:**
+
+| Valor | Descripción | Uso |
+|-------|-------------|-----|
+| `website` | Sitio web con múltiples páginas | Blogs, sitios académicos, portfolios |
+| `book` | Libro con capítulos | Documentación técnica, libros académicos |
+| `default` | Proyecto simple sin estructura especial | Documentos individuales |
+
+**Ejemplo para cada tipo:**
+
+```yaml
+# Sitio web
+project:
+  type: website
+
+# Libro
+project:
+  type: book
+  
+# Proyecto simple
+project:
+  type: default
+```
+
+## `output-dir`: Directorio de Salida
+
+Define dónde se generan los archivos compilados.
+
+```yaml
+project:
+  output-dir: _site          # Directorio por defecto
+
+# Alternativas comunes:
+# output-dir: docs           # Para GitHub Pages con /docs
+# output-dir: public         # Convención de algunos frameworks
+# output-dir: dist           # Build/distribución
+```
+
+**Importante:** Si cambias `output-dir`, asegúrate de actualizar:
+- `.gitignore` (agregar el nuevo directorio)
+- Configuración de despliegue (Netlify, GitHub Pages, etc.)
+
+## `resources`: Archivos Adicionales
+
+**Site Resources** permite asegurar que archivos adicionales (como imágenes, documentos, datos, configuraciones especiales, etc.) se copien automáticamente al directorio de salida del sitio (`_site`) durante el renderizado. Quarto ya copia de forma automática los archivos referenciados en tus documentos (imágenes, CSS, etc.), pero con esta opción puedes forzar la inclusión de archivos no referenciados directamente.
+
+```yaml
+project:
+  resources:
+    - "assets/img/sidebar.jpg"      # Archivo individual
+    - "data/"                       # Directorio completo
+    - "*.pdf"                       # Patrón glob
+    - "CNAME"                       # Dominio personalizado (GitHub Pages)
+    - ".nojekyll"                   # Desactivar Jekyll (GitHub Pages)
+```
+
+**Cuándo usar `resources`:**
+
+- Archivos no referenciados directamente en documentos
+- Archivos de configuración de hosting (CNAME, robots.txt)
+- Datasets descargables
+- Documentos PDF, Excel, etc.
+
+**Archivos copiados automáticamente (sin necesidad de declararlos):**
+
+- `404.html`
+- `robots.txt`
+- `_redirects` (Netlify)
+- `CNAME` (GitHub Pages)
+- `.nojekyll` (GitHub Pages)
+
+### Ejemplos prácticos
+
+#### 1. Sitio con datos descargables
+
+```yaml
+project:
+  type: website
+  resources:
+    - "data/"                  # Todos los datasets en carpeta data
+    - "downloads/*.zip"        # Archivos comprimidos descargables
+```
+
+Los usuarios podrán acceder a `https://tusitio.com/data/mi-datos.csv`.
+
+#### 2. Publicar en GitHub Pages con dominio personalizado
+
+```yaml
+project:
+  type: website
+  resources:
+    - "CNAME"                  # Archivo con tu dominio (ej: misitio.com)
+    - ".nojekyll"              # Evita que GitHub procese con Jekyll
+```
+
+#### 3. Incluir documentos PDF o Excel para descarga
+
+```yaml
+project:
+  type: website
+  resources:
+    - "reports/*.pdf"
+    - "datasets/*.xlsx"
+```
+
+Y en una página:
+
+```markdown
+Descarga el [reporte completo](/reports/informe-2025.pdf).
+```
+
+#### 4. Recursos solo en una página específica
+
+```yaml
+# informe.qmd
+---
+title: "Informe Anual 2025"
+resources:
+  - "supplements/anexo-datos.xlsx"
+  - "supplements/graficos-extra.pdf"
+---
+```
+
+Solo estas páginas tendrán los archivos adicionales copiados.
+
+## `pre-render` y `post-render`: Scripts Personalizados
+
+**Ejecutar scripts antes o después del renderizado:**
+
+```yaml
+project:
+  pre-render: scripts/setup.sh         # Ejecutar antes de renderizar
+  post-render: scripts/cleanup.sh      # Ejecutar después de renderizar
+```
+
+**Ejemplo de `pre-render` (preparar datos):**
+
+```bash
+#!/bin/bash
+# scripts/setup.sh
+
+echo "Preparando datos..."
+python scripts/fetch_data.py
+echo "Datos listos."
+```
+
+**Ejemplo de `post-render` (optimizar imágenes):**
+
+```bash
+#!/bin/bash
+# scripts/cleanup.sh
+
+echo "Optimizando imágenes..."
+find _site -name "*.png" -exec optipng {} \;
+echo "Optimización completa."
+```
+
+## `render`: Control de Renderizado
+
+**Especificar qué archivos renderizar:**
+
+```yaml
+project:
+  render:
+    - "*.qmd"                    # Todos los .qmd
+    - "!drafts/"                 # Excepto directorio drafts/
+    - "!templates/"              # Excepto templates/
+```
+
+**Casos de uso:**
+
+- Excluir directorios de trabajo en progreso
+- Renderizar solo archivos específicos durante desarrollo
+- Ignorar templates o plantillas
+
+# Sección: Website
+
+Esta sección contiene toda la configuración específica de sitios web.
+
+## Información Básica
+
+```yaml
+website:
+  title: "Edison Achalma B.Sc. Econ."
+  description: "Investigador y educador que aplica la ciencia de datos \ 
+  de forma que se dé prioridad a la equidad social."
+  site-url: https://methodica.netlify.app/
+  repo-url: https://github.com/achalmed/methodica
+```
+
+### `title`: Título del Sitio
+
+```yaml
+website:
+  title: "Mi Sitio Web"
+  # O con subtítulo:
+  title: "Mi Sitio Web"
+  subtitle: "Un blog sobre econometría"
+```
+
+- Aparece en la navbar (si no se especifica logo)
+- Se usa como título por defecto en Open Graph
+- Máximo recomendado: 60 caracteres
+
+### `description`: Descripción del Sitio
+
+```yaml
+website:
+  description: "Sitio web académico sobre econometría y estadística"
+```
+
+- Usada en metadatos SEO
+- Aparece en resultados de búsqueda
+- Recomendado: 150-160 caracteres
+
+### `site-url`: URL del Sitio
+
+```yaml
+website:
+  site-url: https://misitio.com
+  # NO incluir trailing slash al final
+```
+
+**Obligatorio para:**
+
+- Open Graph y Twitter Cards (imágenes de vista previa)
+- RSS feeds
+- Sitemap.xml
+- Canonical URLs
+
+**Sin `site-url`:** Las rutas relativas en Open Graph no funcionarán correctamente.
+
+### `repo-url`: Repositorio de Código
+
+```yaml
+website:
+  repo-url: https://github.com/usuario/repositorio
+```
+
+**Beneficios:**
+
+- Botón automático "Edit this page" en cada página
+- Enlace al repositorio en la navbar (con `repo-actions`)
+
+```yaml
+website:
+  repo-url: https://github.com/usuario/repo
+  repo-actions: [edit, issue]    # Botones de editar y reportar issue
+```
+
+## Favicon e Imágenes
+
+El **Favicon** es el pequeño ícono que aparece en la pestaña del navegador, en los marcadores y en otros lugares donde se representa tu sitio web. Configurarlo mejora la identidad visual y el reconocimiento de tu sitio.
+
+### `favicon`: Ícono del Sitio
+
+```yaml
+website:
+  favicon: assets/img/favicon.png
+  # O:
+  # favicon: favicon.ico
+```
+
+**Formatos recomendados:**
+
+- `.ico` (máxima compatibilidad)
+- `.png` (calidad, transparencia)
+- `.svg` (escalable)
+
+**Tamaño recomendado:** 32x32 px mínimo, 64x64 px ideal.
+
+### `image`: Imagen de Vista Previa por Defecto
+
+```yaml
+website:
+  image: /assets/img/default-preview.jpg
+```
+
+**Usada cuando:**
+
+- Una página no tiene su propia imagen especificada
+- Se comparte un enlace en redes sociales
+- Open Graph/Twitter Cards necesitan una imagen
+
+**Especificaciones:**
+
+- Tamaño ideal: 1200x630 px (ratio 1.91:1)
+- Formato: JPG o PNG
+- Máximo: 8 MB
+
+## Navbar: Barra de Navegación
+
+La navbar es la barra superior del sitio.
+
+### Estructura Básica
+
+```yaml
+website:
+  navbar:
+    title: "Mi Sitio"           # Título en la navbar (opcional)
+    logo: assets/img/logo.png   # Logo (opcional)
+    background: primary         # Color de fondo
+    foreground: light           # Color del texto
+    left:                       # Items del lado izquierdo
+      - text: "Inicio"
+        href: index.qmd
+    right:                      # Items del lado derecho
+      - text: "About"
+        href: about.qmd
+```
+
+### Items de Navegación
+
+**Enlace simple:**
+
+```yaml
+navbar:
+  left:
+    - text: "Blog"
+      href: blog/
+```
+
+**Enlace con ícono:**
+
+```yaml
+navbar:
+  right:
+    - icon: github
+      href: https://github.com/usuario
+      aria-label: "GitHub"
+```
+
+**Menú desplegable:**
+
+```yaml
+navbar:
+  right:
+    - text: "Recursos"
+      menu:
+        - text: "Tutoriales"
+          href: tutoriales/
+        - text: "Datasets"
+          href: datasets/
+        - text: "---"              # Separador
+        - text: "Documentación"
+          href: docs/
+```
+
+**Menú con íconos:**
+
+```yaml
+navbar:
+  right:
+    - text: "More"
+      icon: ellipsis-h
+      menu:
+        - text: "Econometría"
+          href: https://epsilon-y-beta.netlify.app/
+        - text: "Filosofía"
+          href: https://dialectica-y-mercado.netlify.app/
+```
+
+### Logo
+
+```yaml
+navbar:
+  logo: assets/img/logo.png
+  logo-alt: "Logo del sitio"        # Texto alternativo
+  logo-href: index.html              # Enlace del logo (por defecto: home)
+```
+
+**Recomendaciones:**
+
+- Tamaño: 40-50 px de alto
+- Formato: PNG con transparencia o SVG
+- Si usas logo, el título se oculta automáticamente (a menos que uses `title: false`)
+
+### Colores y Apariencia
+
+```yaml
+navbar:
+  background: primary                # Color de fondo
+  foreground: light                  # Color del texto
+  
+  # Opciones de background:
+  # primary, secondary, success, danger, warning, info, light, dark
+  # O código hexadecimal: "#1a1a1a"
+  
+  # Opciones de foreground:
+  # light, dark
+```
+
+### Búsqueda
+
+```yaml
+navbar:
+  search: true                       # Habilitar búsqueda
+  # O con opciones avanzadas:
+  search:
+    location: navbar                 # navbar (por defecto) o sidebar
+    type: overlay                    # overlay (por defecto) o textbox
+```
+
+### Collapse (Menú Móvil)
+
+```yaml
+navbar:
+  collapse-below: lg                 # Colapsar en pantallas menores a lg
+  # Opciones: sm, md, lg, xl
+```
+
+### Ejemplo Completo de Navbar
+
+```yaml
+website:
+  navbar:
+    title: "Mi Sitio Académico"
+    logo: assets/img/logo.png
+    background: primary
+    foreground: light
+    search: true
+    collapse-below: lg
+    
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Blog"
+        href: blog/
+      - text: "Publicaciones"
+        href: publications/
+        
+    right:
+      - text: "Recursos"
+        menu:
+          - text: "Tutoriales"
+            href: tutoriales/
+          - text: "Datasets"
+            href: datasets/
+          - text: "---"
+          - text: "Código"
+            icon: github
+            href: https://github.com/usuario
+      - icon: github
+        href: https://github.com/usuario
+        aria-label: "GitHub"
+      - icon: twitter
+        href: https://twitter.com/usuario
+        aria-label: "Twitter"
+```
+
+## Sidebar: Barra Lateral
+
+La sidebar aparece en el lado izquierdo o derecho del contenido.
+
+### Estructura Básica
+
+```yaml
+website:
+  sidebar:
+    style: "docked"                  # docked (fija) o floating (flotante)
+    background: light                # Color de fondo
+    collapse-level: 2                # Nivel de colapso automático
+    contents:
+      - section: "Introducción"
+        contents:
+          - intro.qmd
+          - setup.qmd
+      - section: "Análisis"
+        contents:
+          - analysis1.qmd
+          - analysis2.qmd
+```
+
+### Múltiples Sidebars
+
+```yaml
+website:
+  sidebar:
+    - title: "Blog"
+      contents:
+        - blog/index.qmd
+        - blog/post1.qmd
+        - blog/post2.qmd
+        
+    - title: "Tutoriales"
+      contents:
+        - tutoriales/index.qmd
+        - tutoriales/tutorial1.qmd
+```
+
+### Estilos de Sidebar
+
+```yaml
+sidebar:
+  style: docked                      # Fija al contenido
+  # style: floating                  # Flotante sobre el contenido
+```
+
+### Herramientas de Sidebar
+
+```yaml
+sidebar:
+  tools:
+    - icon: github
+      href: https://github.com/usuario
+      text: "GitHub"
+    - icon: twitter
+      href: https://twitter.com/usuario
+```
+
+## Page Footer
+
+El footer aparece al final de todas las páginas.
+
+### Estructura Básica
+
+```yaml
+website:
+  page-footer:
+    left: "© 2026 Mi Nombre"
+    center: |
+      <a href="privacy.html">Privacy</a>
+    right:
+      - text: "About"
+        href: about.html
+      - text: "Contact"
+        href: contact.html
+```
+
+### Con HTML y Markdown
+
+```yaml
+page-footer:
+  left: >-
+    © 2026 Edison Achalma · Made with [Quarto](https://quarto.org)
+    
+  center: |
+    <a class="link-dark" href="https://github.com/usuario">
+      <i class="bi bi-github"></i>
+    </a>
+    
+  right:
+    - text: "License"
+      href: license.html
+    - icon: rss
+      href: index.xml
+```
+
+### Footer Completo
+
+```yaml
+page-footer:
+  left: >-
+    © 2026 Edison Achalma · Made with [Quarto](https://quarto.org)
+    
+  center: |
+    <a class="link-dark me-1" href="https://github.com/usuario">
+      <i class="bi bi-github"></i>
+    </a>
+    <a class="link-dark me-1" href="https://twitter.com/usuario">
+      <i class="bi bi-twitter"></i>
+    </a>
+    
+  right:
+    - text: "Accessibility"
+      href: accessibility.html
+    - text: "Contact"
+      href: contact.html
+    - text: "License"
+      href: license.html
+    - icon: rss
+      href: index.xml
+```
+
+## Anuncios (Announcement Bar)
+
+La **Announcement Bar** (barra de anuncio) es una barra prominente y personalizable que se muestra en la parte superior del sitio web. Es ideal para resaltar información importante como alertas, actualizaciones, promociones, eventos o mensajes temporales. 
+
+### Configuración Completa
+
+```yaml
+website:
+  announcement:
+    icon: info-circle               # Ícono de Bootstrap
+    dismissable: true               # Puede cerrarse
+    content: "**Importante:** Nueva versión disponible"
+    type: primary                   # Color
+    position: below-navbar          # Ubicación
+```
+
+### Opciones de `type`
+
+```yaml
+type: primary      # Azul
+type: secondary    # Gris
+type: success      # Verde
+type: danger       # Rojo
+type: warning      # Amarillo
+type: info         # Azul claro
+type: light        # Blanco
+type: dark         # Negro
+```
+
+### Opciones de `position`
+
+```yaml
+position: below-navbar    # Debajo de la navbar (por defecto)
+position: above-navbar    # Encima de la navbar
+```
+
+### Íconos Disponibles
+
+Cualquier ícono de [Bootstrap Icons](https://icons.getbootstrap.com/):
+
+- `info-circle`
+- `bell`
+- `megaphone`
+- `gift`
+- `exclamation-triangle`
+- `calendar-check`
+- `heart`
+
+### Ejemplos por Tipo de Anuncio
+
+**Alerta importante:**
+
+```yaml
+announcement:
+  icon: exclamation-triangle
+  dismissable: false
+  content: "**Atención:** Mantenimiento programado el 15 de enero"
+  type: danger
+  position: above-navbar
+```
+
+**Evento o promoción:**
+
+```yaml
+announcement:
+  icon: calendar-check
+  dismissable: true
+  content: "Webinar gratuito el 20 de enero. \
+  [Regístrate aquí](https://example.com)"
+  type: success
+```
+
+**Actualización:**
+
+```yaml
+announcement:
+  icon: info-circle
+  dismissable: true
+  content: "Nueva versión disponible. \
+  [Ver cambios](https://example.com/changelog)"
+  type: info
+```
+
+## Open Graph
+
+**Open Graph** mejora la presentación de tus páginas cuando se comparten en plataformas como Facebook, LinkedIn, Slack, Discord, WhatsApp, iMessage y muchas más, mostrando título, descripción, imagen de vista previa y otros metadatos enriquecidos.
+
+### Configuración Completa
+
+```yaml
+website:
+  open-graph:
+    title: "Mi Sitio Web"
+    description: "Descripción del sitio"
+    image: /assets/img/og-image.jpg
+    image-width: 1200
+    image-height: 630
+    locale: es_ES
+    site-name: "Mi Sitio"
+```
+
+### Opciones
+
+| Opción | Descripción | Recomendación |
+|--------|-------------|---------------|
+| `title` | Título del sitio | Máx. 60 caracteres |
+| `description` | Descripción | 150-160 caracteres |
+| `image` | Imagen de vista previa | 1200x630 px, ratio 1.91:1 |
+| `image-width` | Ancho de la imagen | 1200 |
+| `image-height` | Alto de la imagen | 630 |
+| `locale` | Idioma y región | es_ES, en_US, etc. |
+| `site-name` | Nombre del sitio | Nombre corto |
+
+
+### Imágenes de vista previa (orden de prioridad)
+
+Exactamente igual que en Twitter Cards:
+
+1. Metadato `image` en la página (URL completa o ruta relativa).
+2. Imagen con clase `.preview-image` en el contenido:
+   ```markdown
+   ![Portada](/images/cover.jpg){.preview-image}
+   ```
+3. Archivos con nombres: `preview.png`, `feature.png`, `cover.png`, `thumbnail.png`.
+4. Imagen por defecto del sitio:
+   ```yaml
+   website:
+     image: images/default-og-preview.jpg
+   ```
+
+Para desactivar la imagen en una página específica:
+```yaml
+---
+image: false
+---
+```
+
+### Ejemplos prácticos
+
+#### 1. Configuración mínima recomendada
+
+```yaml
+website:
+  site-url: https://misitio.com
+  open-graph: true
+```
+
+#### 2. Configuración profesional (global)
+
+```yaml
+website:
+  site-url: https://misitio.com
+  open-graph:
+    locale: es_ES
+    site-name: Mi Sitio con Quarto
+  image: images/default-og.jpg # Img por defecto (1200x630 px recomendado)
+```
+
+#### 3. Personalización por página (en el front-matter de page.qmd)
+
+```yaml
+---
+title: "Guía Avanzada de Quarto"
+description: "Domina todas las funciones de Quarto en 2025"
+image: /images/guia-avanzada-og.png
+open-graph:
+  title: "¡La Guía Definitiva de Quarto 2025!"
+  description: "Todo lo nuevo y avanzado en una sola guía"
+  image-width: 1200
+  image-height: 630
+---
+```
+
+**Importante:** Requiere `site-url` definido para rutas relativas.
+
+
+## Preview Images
+
+Las **Preview Images** (imágenes de vista previa) son las imágenes que se muestran cuando una página de tu sitio se comparte en redes sociales (Twitter/X Cards, Open Graph) o en mensajeros como Slack, WhatsApp, etc. Quarto busca automáticamente estas imágenes siguiendo un orden de prioridad específico, lo que facilita su configuración.
+
+Estas imágenes se usan tanto para **Twitter Cards** como para **Open Graph**.
+
+### Configuración básica
+
+La forma más simple es definir una imagen por defecto a nivel de sitio en `_quarto.yml`:
+
+```yaml
+website:
+  site-url: https://misitio.com      # Obligatorio para rutas relativas
+  image: images/default-preview.jpg  # Imagen por defecto para todo el sitio
+```
+
+Con esto, todas las páginas que no especifiquen su propia imagen usarán esta.
+
+### Configuración completa (todas las opciones y métodos)
+
+Quarto busca la imagen de vista previa en el siguiente orden de prioridad:
+
+#### 1. Imagen explícita en el front-matter de la página (método recomendado)
+
+```yaml
+# En page.qmd
+---
+title: "Mi Artículo Genial"
+description: "Una guía completa sobre Quarto"
+image: /images/mi-articulo-preview.jpg     # Ruta relativa al proyecto
+# o URL completa:
+# image: https://misitio.com/images/mi-articulo-preview.jpg
+image-width: 1200                          # Opcional: ancho en píxeles
+image-height: 630                          # Opcional: alto en píxeles
+---
+```
+
+#### 2. Imagen con clase especial en el contenido Markdown
+
+```markdown
+![Portada del artículo](/images/portada.jpg){.preview-image width="1200" height="630"}
+```
+
+Quarto selecciona la **primera** imagen con la clase `.preview-image`.
+
+#### 3. Imagen por nombre automático
+
+Si no hay ninguna de las anteriores, Quarto busca en la página renderizada un archivo con uno de estos nombres:
+- `preview.png`
+- `feature.png`
+- `cover.png`
+- `thumbnail.png`
+
+#### 4. Imagen por defecto del sitio (en `_quarto.yml`)
+
+```yaml
+website:
+  image: images/default-preview.jpg      # Usada cuando ninguna página tiene su propia imagen
+```
+
+#### 5. Desactivar imagen en una página específica
+
+```yaml
+---
+title: "Página sin vista previa"
+image: false                           # Evita que se use cualquier imagen
+---
+```
+
+### Ejemplos prácticos
+
+#### 1. Configuración global básica + página individual
+
+```yaml
+# _quarto.yml
+website:
+  site-url: https://misitio.com
+  image: images/default-og-preview.jpg  # Imagen por defecto (1200x630 px)
+```
+
+```yaml
+# blog/nuevo-articulo.qmd
+---
+title: "Lanzamiento de Quarto 1.5"
+description: "Nuevas funciones increíbles"
+image: /images/quarto-1.5-preview.png  # Imagen específica para este post
+---
+```
+
+#### 2. Usando clase .preview-image en el contenido
+
+```markdown
+# Mi Guía Definitiva
+
+![Esta será la imagen de vista previa](/images/guia-completa.jpg){.preview-image}
+
+¡Bienvenido a la guía más completa de Quarto!
+```
+
+#### 3. Página con dimensiones específicas (mejora presentación)
+
+```yaml
+---
+title: "Análisis de Datos con Quarto"
+image: /images/analisis-datos-preview.jpg
+image-width: 1200
+image-height: 630
+---
+```
+
+#### 4. Sitio con imagen por defecto y algunas páginas personalizadas
+
+```yaml
+# _quarto.yml
+website:
+  site-url: https://misitio.com
+  image: images/site-default-preview.jpg  # Usada en el 90% de las páginas
+  twitter-card: true
+  open-graph: true
+```
+
+Páginas normales: usan la imagen por defecto.  
+Páginas importantes (blog posts, anuncios): definen su propia `image:`.
+
+## Twitter Cards
+
+**Twitter Cards** (ahora también conocidas como X Cards) permiten que los enlaces a tu sitio web se muestren de forma enriquecida cuando se comparten en X/Twitter, incluyendo título, descripción, imagen de vista previa y estilo de tarjeta.
+
+### Configuración Completa
+
+```yaml
+website:
+  twitter-card:
+    creator: "@usuario"
+    site: "@sitio_oficial"
+    card-style: summary_large_image
+```
+
+### Opciones
+
+| Opción              | Ubicación                  | Descripción                                                                 | Ejemplo / Valores posibles                          |
+|---------------------|----------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------|
+| `twitter-card`      | `website:`                 | Activa la generación automática                                             | `true`                                              |
+| `creator`           | Dentro de `twitter-card:`  | `@username` del autor del contenido                                           | `"@juanperez"` (comillas si incluye `@`)              |
+| `site`              | Dentro de `twitter-card:`  | `@username` de la cuenta oficial del sitio                                    | `"@quarto_pub"`                                     |
+| `card-style`        | Dentro de `twitter-card:`  | Estilo de la tarjeta                                                        | `summary` o `summary_large_image`                   |
+| `title`             | Global o por página        | Sobrescribe el título solo para la tarjeta                                  | "¡Nueva guía de Quarto!"                            |
+| `description`       | Global o por página        | Sobrescribe la descripción                                                  | "Aprende todo sobre sitios web con Quarto"          |
+| `image`             | Global o por página        | Ruta/URL de la imagen de vista previa                                       | "/images/preview.png" o URL completa                |
+| `image-width`       | Global o por página        | Ancho recomendado de la imagen                                              | 1200                                                |
+| `image-height`      | Global o por página        | Alto recomendado de la imagen   
+
+**Estilos de tarjeta:**
+
+- `summary`: Imagen pequeña al lado
+- `summary_large_image`: Imagen grande arriba (recomendado)
+
+
+### Imágenes de vista previa (orden de prioridad)
+
+Quarto busca la imagen en este orden:
+
+1. Metadato `image` en la página (URL completa o ruta relativa).
+2. Imagen con clase `.preview-image` en el contenido:
+   ```markdown
+   ![Mi imagen](/images/cover.jpg){.preview-image}
+   ```
+3. Archivos con nombres: `preview.png`, `feature.png`, `cover.png`, `thumbnail.png`.
+4. Imagen por defecto del sitio (configurada globalmente):
+   ```yaml
+   website:
+     image: images/default-preview.jpg
+   ```
+
+Para desactivar la imagen en una página específica:
+```yaml
+---
+image: false
+---
+```
+
+### Ejemplos prácticos
+
+#### 1. Configuración mínima recomendada
+
+```yaml
+website:
+  site-url: https://misitio.com
+  twitter-card: true
+```
+
+#### 2. Configuración profesional (global)
+
+```yaml
+website:
+  site-url: https://misitio.com
+  twitter-card:
+    creator: "@autor_principal"
+    site: "@mi_sitio_quarto"
+    card-style: summary_large_image
+  image: images/default-card.jpg   # Imagen por defecto
+```
+
+#### 3. Personalización por página (en el front-matter de page.qmd)
+
+```yaml
+---
+title: "Mi Guía Definitiva de Quarto"
+description: "Aprende a crear sitios increíbles"
+image: /images/guia-quarto-preview.png
+twitter-card:
+  title: "¡Nueva Guía de Quarto 2025!"
+  description: "Todo lo que necesitas para dominar Quarto"
+  image: /images/guia-quarto-large.jpg
+---
+```
+
+**Nota:** Twitter Cards también usa la configuración de Open Graph para título, descripción e imagen.
+
+## Google Analytics
+
+Integración con Google Analytics.
+
+### Configuración Básica
+
+```yaml
+website:
+  google-analytics: "G-XXXXXXXXXX"
+```
+
+### Configuración Completa
+
+```yaml
+website:
+  google-analytics:
+    tracking-id: "G-XXXXXXXXXX"
+    storage: cookies                 # cookies o none
+    anonymize-ip: true               # Anonimizar IPs (RGPD)
+    version: 4                       # Versión (3 o 4)
+```
+
+### Opciones
+
+| Opción | Descripción | Valores | Recomendación |
+|--------|-------------|---------|---------------|
+| `tracking-id` | ID de seguimiento | G-XXXXXXX (GA4) o UA-XXXXX (antiguo) | Obligatorio |
+| `storage` | Almacenamiento | `cookies` (por defecto) o `none` | `cookies` normal, `none` para privacidad |
+| `anonymize-ip` | Anonimizar IPs | `true` o `false` | `true` para RGPD/privacidad |
+| `version` | Versión de GA | `3` o `4` | Se detecta automáticamente |
+
+**Recomendación para Europa:**
+
+```yaml
+google-analytics:
+  tracking-id: "G-XXXXXXXXXX"
+  anonymize-ip: true
+```
+
+### Ejemplos prácticos
+
+#### 1. Configuración mínima (recomendada para la mayoría)
+
+```yaml
+website:
+  google-analytics: "G-XXXXXXXXXX"   # Solo el ID, todo lo demás por defecto
+```
+
+#### 2. Configuración respetuosa con la privacidad (recomendada en Europa)
+
+```yaml
+website:
+  google-analytics:
+    tracking-id: "G-XXXXXXXXXX"
+    anonymize-ip: true                # Cumple mejor con RGPD
+```
+
+#### 3. Sin cookies propias (máxima privacidad)
+
+```yaml
+website:
+  google-analytics:
+    tracking-id: "G-XXXXXXXXXX"
+    anonymize-ip: true
+    storage: none                     # No usa cookies de identificación
+```
+
+#### 4. Combinación con Cookie Consent (ideal para cumplimiento legal)
+
+```yaml
+website:
+  google-analytics:
+    tracking-id: "G-XXXXXXXXXX"
+    anonymize-ip: true
+  
+  cookie-consent:
+    type: express                     # Bloquea cookies hasta que el usuario acepte
+    style: headline
+    palette: dark
+```
+
+Con `cookie-consent` activado, Google Analytics **solo se cargará** si el usuario acepta las cookies de seguimiento.
+
+
+
+## Cookie Consent
+
+Solicitar consentimiento para cookies (RGPD).
+
+### Configuración Completa
+
+```yaml
+website:
+  cookie-consent:
+    type: express                    # implied o express
+    style: headline                  # simple, interstitial, standalone
+    palette: dark                    # light o dark
+    language: es                     # Código de idioma
+    policy-url: /politica-cookies    # URL de política
+    prefs-text: "Preferencias de Cookies"
+```
+
+### Opciones de `type`
+
+| Valor | Comportamiento |
+|-------|----------------|
+| `implied` | Informa pero no bloquea cookies (notificación) |
+| `express` | Bloquea cookies hasta que el usuario acepte explícitamente |
+
+**Recomendación:** `express` para cumplir con RGPD.
+
+### Opciones de `style`
+
+| Valor | Apariencia |
+|-------|------------|
+| `simple` | Diálogo pequeño en esquina inferior derecha |
+| `headline` | Barra completa en la parte superior |
+| `interstitial` | Overlay semitransparente |
+| `standalone` | Overlay opaco |
+
+### Integración con Google Analytics
+
+```yaml
+website:
+  cookie-consent:
+    type: express
+    style: headline
+    
+  google-analytics:
+    tracking-id: "G-XXXXXXXXXX"
+    anonymize-ip: true
+```
+
+**Resultado:** Google Analytics solo se cargará si el usuario acepta las cookies de tracking.
+
+## Comentarios
+
+Integración de sistemas de comentarios.
+
+### Utterances (GitHub Issues)
+
+```yaml
+website:
+  comments:
+    utterances:
+      repo: usuario/repositorio
+      issue-term: title              # title, pathname, url, og:title
+      theme: github-light            # Tema
+      label: "comments"              # Etiqueta en issues
+```
+
+**Opciones de `issue-term`:**
+
+- `title`: Usa el título del post como título del issue
+- `pathname`: Usa la ruta del post
+- `url`: Usa la URL completa
+- `og:title`: Usa el título de Open Graph
+
+**Temas disponibles:**
+
+- `github-light`, `github-dark`
+- `preferred-color-scheme` (automático)
+- `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`
+- `boxy-light`, `gruvbox-dark`
+
+### Giscus (GitHub Discussions)
+
+```yaml
+website:
+  comments:
+    giscus:
+      repo: usuario/repositorio
+      repo-id: "R_xxxxx"
+      category: "Announcements"
+      category-id: "DIC_xxxxx"
+      mapping: pathname
+      reactions-enabled: true
+      theme: light
+```
+
+### Hypothesis
+
+```yaml
+website:
+  comments:
+    hypothesis: true
+```
+
+## Headers y Footers Personalizados
+
+Agregar contenido Markdown en posiciones específicas.
+
+```yaml
+website:
+  body-header: |
+    Esta página es parte de [Mi Proyecto](https://example.com)
+    
+  body-footer: |
+    © 2026 Mi Nombre
+    
+  margin-header: |
+    ![Logo](/assets/img/logo.png)
+    
+  margin-footer: |
+    *Última actualización: {{< meta date-modified >}}*
+```
+
+**Ubicaciones:**
+
+- `body-header`: Inicio del cuerpo (debajo del título)
+- `body-footer`: Final del cuerpo
+- `margin-header`: Arriba del margen derecho (TOC)
+- `margin-footer`: Debajo del margen derecho
+
+# Sección: Format
+
+Define los formatos de salida y sus opciones.
+
+## Formato HTML
+
+### Configuración Básica
+
+```yaml
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+```
+
+### Tema
+
+**Temas predefinidos de Bootswatch:**
+
+```yaml
+format:
+  html:
+    theme: cosmo
+```
+
+**Temas disponibles:**
+
+- `default`, `cerulean`, `cosmo`, `cyborg`, `darkly`, `flatly`
+- `journal`, `litera`, `lumen`, `lux`, `materia`, `minty`
+- `morph`, `pulse`, `quartz`, `sandstone`, `simplex`, `sketchy`
+- `slate`, `solar`, `spacelab`, `superhero`, `united`, `vapor`
+- `yeti`, `zephyr`
+
+**Tema claro y oscuro:**
+
+```yaml
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+```
+
+**Tema personalizado:**
+
+```yaml
+format:
+  html:
+    theme:
+      - cosmo
+      - assets/custom.scss
+```
+
+### CSS Adicional
+
+```yaml
+format:
+  html:
+    css: assets/styles.css
+    # O múltiples archivos:
+    css:
+      - assets/styles.css
+      - assets/colors.css
+```
+
+### Tabla de Contenidos
+
+```yaml
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-expand: 2
+    toc-title: "Contenidos"
+    toc-location: left               # left, right, body
+```
+
+### Código
+
+```yaml
+format:
+  html:
+    code-fold: true
+    code-summary: "Mostrar código"
+    code-copy: true
+    code-overflow: scroll            # scroll, wrap
+    code-line-numbers: true
+    highlight-style: github
+```
+
+### Navegación
+
+```yaml
+format:
+  html:
+    page-navigation: true            # Botones Siguiente/Anterior
+    smooth-scroll: true
+    link-external-newwindow: true
+    link-external-icon: true
+```
+
+### Includes (Archivos Adicionales)
+
+```yaml
+format:
+  html:
+    include-in-header: assets/gtm-head.html
+    include-before-body: assets/banner.html
+    include-after-body: assets/gtm-body.html
+```
+
+**Casos de uso:**
+
+- Google Tag Manager
+- Scripts personalizados
+- Analytics adicionales
+- Banners o avisos
+
+### Configuración Completa de HTML
+
+```yaml
+format:
+  html:
+    # Tema
+    theme:
+      light: cosmo
+      dark: darkly
+    css: assets/styles.css
+    
+    # Tabla de contenidos
+    toc: true
+    toc-depth: 3
+    toc-expand: 2
+    toc-location: left
+    
+    # Código
+    code-fold: true
+    code-copy: true
+    code-line-numbers: true
+    code-overflow: scroll
+    highlight-style: github
+    
+    # Navegación
+    page-navigation: true
+    smooth-scroll: true
+    link-external-newwindow: true
+    
+    # Citas
+    citations-hover: true
+    footnotes-hover: true
+    
+    # Includes
+    include-in-header: assets/gtm-head.html
+    include-after-body: assets/gtm-body.html
+    
+    # Grid (ancho de columnas)
+    grid:
+      body-width: 1000px
+      sidebar-width: 300px
+      margin-width: 200px
+```
+
+## Formato PDF
+
+```yaml
+format:
+  pdf:
+    documentclass: article
+    papersize: a4
+    toc: true
+    number-sections: true
+    colorlinks: true
+    pdf-engine: xelatex
+```
+
+## Formato DOCX
+
+```yaml
+format:
+  docx:
+    toc: true
+    number-sections: true
+    reference-doc: template.docx
+```
+
+## Múltiples Formatos
+
+```yaml
+format:
+  html:
+    theme: cosmo
+    toc: true
+    
+  pdf:
+    documentclass: article
+    toc: true
+    
+  docx:
+    toc: true
+```
+
+# Configuraciones Avanzadas
+
+## Filtros
+
+```yaml
+filters:
+  - quarto
+```
+
+## Metadata Compartidos
+
+```yaml
+author: "Edison Achalma"
+date: "2026-01-02"
+lang: es
+```
+
+**Estos metadatos se aplican a todos los documentos.**
+
+## Bibliografía Global
+
+```yaml
+bibliography: references.bib
+csl: apa-6th-edition.csl
+```
+
+## Variables de Entorno
+
+```yaml
+environment:
+  QUARTO_PYTHON: /usr/bin/python3
+```
+
+# Análisis de Tu Configuración
+
+Voy a analizar tu `_quarto.yml` sección por sección.
+
+## Tu Configuración Actual
+
+```yaml
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - assets/img/sidebar.jpg
+
+website:
+  title: "Edison Achalma B.Sc. Econ."
+  description: "Investigador y educador que aplica la ciencia de datos \ 
+  de forma que se dé prioridad a la equidad social."
+  favicon: assets/img/favicon.png 
+  image: /assets/img/default-preview.jpg
+  
+  announcement:
+    content: "¡Bienvenidos a mi mundo! ¡Felices fiestas! Gracias por  \ 
+    visitar 🎄"
+    icon: gift
+    type: primary
+    dismissable: true
+    position: below-navbar
+  
+  open-graph:
+    title: "Edison Achalma B.Sc. Econ."
+    description: "Investigador y educador que aplica la ciencia de    \ 
+    datos de forma que se dé prioridad a la equidad social."
+    image: /assets/img/sidebar.jpg
+    image-width: 1200
+    image-height: 630
+    locale: es_ES
+    site-name: "Actus mercator"
+    
+  twitter-card:
+    creator: "@achalmaedison"
+    card-style: summary_large_image
+    
+  comments:
+    utterances:
+      repo: achalmed/methodica
+      label: utterances
+      theme: body-light
+      issue-term: title
+      
+  site-url: https://methodica.netlify.app/
+  repo-url: https://github.com/achalmed/methodica
+  
+  navbar:
+    right:
+      - text: About
+        aria-label: "About Me"
+        href: https://achalmaedison.netlify.app/about/
+      - text: "More"
+        aria-label: "More"
+        icon: ellipsis-h
+        menu:
+          - text: "Econometria"
+            href: https://epsilon-y-beta.netlify.app/
+          # ... más items
+      - icon: github
+        href: https://github.com/achalmed
+      - icon: twitter
+        href: https://x.com/achalmaedison
+      - icon: rss
+        href: index.xml
+        
+  page-footer:
+    left: >-
+      © 2026 Edison Achalma · Made with [Quarto](https://quarto.org)
+    center: |
+      <a class="link-dark me-1" href="/accessibility.html">{{< fa universal-access >}}</a>
+      # ... más enlaces
+    right:
+      - text: "Accessibility"
+        href: https://achalmaedison.netlify.app/accessibility
+      # ... más items
+
+format:
+  html:
+    theme:
+      light:
+        - cosmo
+        - assets/theme_light.scss
+        - assets/colors.scss
+        - assets/fonts.scss
+    css: assets/styles.css
+    include-in-header: assets/gtm-head.html
+    include-after-body: assets/gtm-body.html
+```
+
+## Análisis Detallado
+
+### Sección: Project
+
+**Estado:** Correcto y bien configurado.
+
+```yaml
+project:
+  type: website                      # Correcto
+  output-dir: _site                  # Estándar
+  resources:
+    - assets/img/sidebar.jpg         # Solo un archivo
+```
+
+**Sugerencias:**
+
+- Considera agregar otros recursos si los necesitas:
+```yaml
+resources:
+  - assets/img/sidebar.jpg
+  - "data/"                          # Si tienes datasets
+  - "CNAME"                          # Si usas dominio personalizado
+```
+
+### Sección: Website - Información Básica
+
+**Estado:** Excelente.
+
+```yaml
+title: "Edison Achalma B.Sc. Econ."              # Bien
+description: "..."                                # Bien (descriptiva)
+site-url: https://methodica.netlify.app/         # Correcto
+repo-url: https://github.com/achalmed/methodica  # Bien
+favicon: assets/img/favicon.png                  # Correcto
+image: /assets/img/default-preview.jpg           # Bien
+```
+
+**Nota importante:** La ruta de `image` comienza con `/` (absoluta desde la raíz), lo cual es correcto.
+
+### Anuncio
+
+**Estado:** Bien configurado.
+
+```yaml
+announcement:
+  content: "¡Bienvenidos a mi mundo! Gracias por visitar 🎄"
+  icon: gift
+  type: primary
+  dismissable: true
+  position: below-navbar
+```
+
+**Sugerencia:** El mensaje parece temporal (fiestas). Considera actualizarlo o quitarlo después de las fiestas.
+
+**Alternativa neutra:**
+
+```yaml
+announcement:
+  icon: info-circle
+  content: "**Nuevo:** Explora mi colección de tutoriales de econometría"
+  type: info
+  dismissable: true
+```
+
+### Open Graph
+
+**Estado:** Excelente configuración.
+
+```yaml
+open-graph:
+  title: "Edison Achalma B.Sc. Econ."
+  description: "..."
+  image: /assets/img/sidebar.jpg                 # Bien
+  image-width: 1200                              # Perfecto
+  image-height: 630                              # Perfecto (ratio 1.91:1)
+  locale: es_ES                                  # Correcto
+  site-name: "Actus mercator"                    # Bien
+```
+
+**Nota:** `site-name` ("Actus mercator") difiere del `title` del sitio ("Edison Achalma..."). Esto es intencional. Está bien si quieres un nombre más corto para redes sociales.
+
+### Twitter Card
+
+**Estado:** Correcto.
+
+```yaml
+twitter-card:
+  creator: "@achalmaedison"
+  card-style: summary_large_image
+```
+
+**Sugerencia opcional:** Agregar `site`:
+```yaml
+twitter-card:
+  creator: "@achalmaedison"
+  site: "@achalmaedison"              # Cuenta oficial del sitio
+  card-style: summary_large_image
+```
+
+### Comentarios
+
+**Estado:** Bien configurado.
+
+```yaml
+comments:
+  utterances:
+    repo: achalmed/methodica
+    label: utterances
+    theme: body-light                            # Tema claro
+    issue-term: title
+```
+
+**Sugerencias:**
+1. Verifica que el repositorio `achalmed/methodica` existe y tiene Utterances instalado.
+2. Si usas tema claro/oscuro en tu sitio, considera `theme: preferred-color-scheme` para que se adapte automáticamente.
+
+```yaml
+comments:
+  utterances:
+    repo: achalmed/methodica
+    label: "comments"                # Más descriptivo
+    theme: preferred-color-scheme    # Se adapta al tema del usuario
+    issue-term: title
+```
+
+### Google Analytics y Cookie Consent
+
+**Estado:** Comentado (deshabilitado).
+
+```yaml
+#google-analytics:
+ # tracking-id: "G-XGH6TP6RB3"
+ # storage: cookies
+ # anonymize-ip: true
+
+#cookie-consent:
+ # type: express
+ # style: simple
+ # palette: light
+ # language: es
+ # policy-url: https://achalmaedison.netlify.app/
+ # prefs-text: "Preferencias de Cookies"
+```
+
+**Sugerencia:** Si deseas analytics, descomenta y configura:
+
+```yaml
+google-analytics:
+  tracking-id: "G-XGH6TP6RB3"
+  anonymize-ip: true                 # Recomendado para privacidad
+  
+cookie-consent:
+  type: express                      # Cumplir con RGPD
+  style: headline                    # Más visible
+  language: es
+```
+
+### Navbar
+
+**Estado:** Bien estructurada.
+
+```yaml
+navbar:
+  right:
+    - text: About
+      href: https://achalmaedison.netlify.app/about/
+    - text: "More"
+      icon: ellipsis-h
+      menu:
+        - text: "Econometria"
+          href: https://epsilon-y-beta.netlify.app/
+        # ... más items
+    - icon: github
+      href: https://github.com/achalmed
+    - icon: twitter
+      href: https://x.com/achalmaedison
+    - icon: rss
+      href: index.xml
+```
+
+**Sugerencias:**
+1. Agregar `aria-label` a íconos sin texto:
+```yaml
+- icon: github
+  href: https://github.com/achalmed
+  aria-label: "GitHub Profile"
+```
+
+2. Considerar agregar items en `left` si tienes páginas principales del sitio:
+```yaml
+navbar:
+  left:
+    - text: "Blog"
+      href: blog/
+    - text: "Publicaciones"
+      href: publications/
+  right:
+    # ... (mantener lo actual)
+```
+
+### Page Footer
+
+**Estado:** Bien configurado.
+
+```yaml
+page-footer:
+  left: >-
+    © 2026 Edison Achalma · Made with [Quarto](https://quarto.org)
+  center: |
+    <a class="link-dark me-1" href="/accessibility.html">{{< fa universal-access >}}</a>
+    # ... más íconos
+  right:
+    - text: "Accessibility"
+      href: https://achalmaedison.netlify.app/accessibility
+    # ... más enlaces
+```
+
+**Nota:** Los enlaces en `right` apuntan a `https://achalmaedison.netlify.app/` (otro sitio). Si son páginas de este sitio, usa rutas relativas:
+
+```yaml
+right:
+  - text: "Accessibility"
+    href: accessibility.html         # Ruta local
+  - text: "Contact"
+    href: contact.html
+```
+
+### Formato HTML
+
+**Estado:** Excelente configuración avanzada.
+
+```yaml
+format:
+  html:
+    theme:
+      light:
+        - cosmo
+        - assets/theme_light.scss
+        - assets/colors.scss
+        - assets/fonts.scss
+    css: assets/styles.css
+    include-in-header: assets/gtm-head.html
+    include-after-body: assets/gtm-body.html
+```
+
+**Observaciones:**
+
+- Tema personalizado bien estructurado (base + SCSS personalizados)
+- Google Tag Manager integrado (gtm-head.html, gtm-body.html)
+- CSS adicional para estilos personalizados
+
+**Sugerencia opcional:** Agregar tema oscuro:
+
+```yaml
+format:
+  html:
+    theme:
+      light:
+        - cosmo
+        - assets/theme_light.scss
+        - assets/colors.scss
+        - assets/fonts.scss
+      dark:
+        - darkly                     # Tema oscuro base
+        - assets/theme_dark.scss     # Personalizaciones oscuras
+    css: assets/styles.css
+    include-in-header: assets/gtm-head.html
+    include-after-body: assets/gtm-body.html
+```
+
+## Configuración Optimizada
+
+```yaml
+# ========================================================================
+# CONFIGURACIÓN DE PROYECTO
+# ========================================================================
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - assets/img/sidebar.jpg
+    - "CNAME"                        # Si usas dominio personalizado
+    - ".nojekyll"                    # Para GitHub Pages
+
+# ========================================================================
+# CONFIGURACIÓN DEL SITIO WEB
+# ========================================================================
+website:
+  # ----------------------------------------------------------------------
+  # Información Básica
+  # ----------------------------------------------------------------------
+  title: "Edison Achalma B.Sc. Econ."
+  description: "Investigador y educador que aplica la ciencia de datos \ 
+  de forma que se dé prioridad a la equidad social."
+  site-url: https://methodica.netlify.app/
+  repo-url: https://github.com/achalmed/methodica
+  
+  # ----------------------------------------------------------------------
+  # Imágenes
+  # ----------------------------------------------------------------------
+  favicon: assets/img/favicon.png
+  image: /assets/img/default-preview.jpg
+  
+  # ----------------------------------------------------------------------
+  # Anuncio
+  # ----------------------------------------------------------------------
+  announcement:
+    icon: info-circle
+    content: "**Nuevo:** Explora la colección de recursos de econometría"
+    type: info
+    dismissable: true
+    position: below-navbar
+  
+  # ----------------------------------------------------------------------
+  # Open Graph (Redes Sociales)
+  # ----------------------------------------------------------------------
+  open-graph:
+    title: "Edison Achalma B.Sc. Econ."
+    description: "Investigador y educador que aplica la ciencia de datos \
+    de forma que se dé prioridad a la equidad social."
+    image: /assets/img/sidebar.jpg
+    image-width: 1200
+    image-height: 630
+    locale: es_ES
+    site-name: "Actus mercator"
+  
+  # ----------------------------------------------------------------------
+  # Twitter Card
+  # ----------------------------------------------------------------------
+  twitter-card:
+    creator: "@achalmaedison"
+    site: "@achalmaedison"
+    card-style: summary_large_image
+  
+  # ----------------------------------------------------------------------
+  # Google Analytics
+  # ----------------------------------------------------------------------
+  google-analytics:
+    tracking-id: "G-XGH6TP6RB3"
+    anonymize-ip: true
+  
+  # ----------------------------------------------------------------------
+  # Cookie Consent
+  # ----------------------------------------------------------------------
+  cookie-consent:
+    type: express
+    style: headline
+    palette: dark
+    language: es
+    policy-url: /privacy
+    prefs-text: "Preferencias de Cookies"
+  
+  # ----------------------------------------------------------------------
+  # Comentarios
+  # ----------------------------------------------------------------------
+  comments:
+    utterances:
+      repo: achalmed/methodica
+      label: "comments"
+      theme: preferred-color-scheme
+      issue-term: title
+  
+  # ----------------------------------------------------------------------
+  # Navegación
+  # ----------------------------------------------------------------------
+  navbar:
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Blog"
+        href: blog/
+        
+    right:
+      - text: "About"
+        aria-label: "About Me"
+        href: https://achalmaedison.netlify.app/about/
+        
+      - text: "More"
+        aria-label: "More Resources"
+        icon: ellipsis-h
+        menu:
+          - text: "Econometría"
+            href: https://epsilon-y-beta.netlify.app/
+          - text: "Filosofía"
+            href: https://dialectica-y-mercado.netlify.app/
+          - text: "Finanzas"
+            href: https://pecunia-fluxus.netlify.app/
+          - text: "Gestión empresarial"
+            href: https://actus-mercator.netlify.app/
+          - text: "Gestión pública"
+            href: https://res-publica.netlify.app/
+          - text: "Metodología de la investigación"
+            href: https://methodica.netlify.app/
+          - text: "Macroeconomía"
+            href: https://aequilibria.netlify.app/
+          - text: "Matemáticas"
+            href: https://axiomata.netlify.app/
+          - text: "Microeconomía"
+            href: https://optimums.netlify.app/
+          - text: "Programación y Software"
+            href: https://numerus-scriptum.netlify.app/
+          - text: "Seguridad informática"
+            href: https://chaska-x.netlify.app/
+            
+      - icon: github
+        href: https://github.com/achalmed
+        aria-label: "GitHub Profile"
+        
+      - icon: twitter
+        href: https://x.com/achalmaedison
+        aria-label: "Twitter/X Profile"
+        
+      - icon: rss
+        href: index.xml
+        aria-label: "RSS Feed"
+  
+  # ----------------------------------------------------------------------
+  # Footer
+  # ----------------------------------------------------------------------
+  page-footer:
+    left: >-
+      © 2026 Edison Achalma · Made with [Quarto](https://quarto.org)
+      
+    center: |
+      <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a>
+      <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="Mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>
+      <a class="link-dark me-1" href="https://github.com/achalmed" title="GitHub" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+      <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
+      
+    right:
+      - text: "Accessibility"
+        aria-label: "Accessibility Commitment"
+        href: accessibility.html
+      - text: "Contact"
+        aria-label: "Contact Form"
+        href: contact.html
+      - text: "Privacy"
+        aria-label: "Privacy Policy"
+        href: privacy.html
+      - text: "License"
+        aria-label: "License Details"
+        href: license.html
+      - icon: rss
+        href: index.xml
+        aria-label: "RSS Feed"
+
+# ========================================================================
+# FORMATOS DE SALIDA
+# ========================================================================
+format:
+  html:
+    # Tema
+    theme:
+      light:
+        - cosmo
+        - assets/theme_light.scss
+        - assets/colors.scss
+        - assets/fonts.scss
+      dark:
+        - darkly
+        - assets/theme_dark.scss
+        - assets/colors.scss
+        - assets/fonts.scss
+        
+    # CSS Adicional
+    css: assets/styles.css
+    
+    # Includes (Google Tag Manager)
+    include-in-header: assets/gtm-head.html
+    include-after-body: assets/gtm-body.html
+    
+    # Navegación
+    page-navigation: true
+    smooth-scroll: true
+    
+    # Tabla de Contenidos
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    
+    # Código
+    code-fold: true
+    code-copy: true
+    code-line-numbers: true
+```
+
+**Cambios principales en la versión optimizada:**
+1. Tema oscuro añadido
+2. Google Analytics y Cookie Consent activados
+3. `aria-label` en todos los íconos
+4. Anuncio actualizado (no temporal)
+5. Enlaces del footer a rutas locales
+6. `site` añadido a Twitter Card
+7. `page-navigation: true` para mejor UX
+8. Comentarios más descriptivos
+
+# Casos de Uso Completos
+
+## Caso 1: Blog Académico Personal
+
+**Escenario:** Blog de investigación con posts, publicaciones, about.
+
+```yaml
+# ========================================================================
+# BLOG ACADÉMICO PERSONAL
+# ========================================================================
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Dr. María López"
+  description: "Investigación en neurociencia cognitiva"
+  site-url: https://marialopez.com
+  favicon: assets/favicon.png
+  
+  navbar:
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Blog"
+        href: blog/
+      - text: "Publicaciones"
+        href: publications.qmd
+      - text: "CV"
+        href: cv.qmd
+    right:
+      - icon: github
+        href: https://github.com/mlopez
+        aria-label: "GitHub"
+      - icon: twitter
+        href: https://twitter.com/mlopez
+        aria-label: "Twitter"
+  
+  page-footer:
+    center: "© 2026 María López"
+
+format:
+  html:
+    theme: minty
+    toc: true
+```
+
+## Caso 2: Sitio de Documentación Técnica
+
+**Escenario:** Documentación de software con sidebar.
+
+```yaml
+# ========================================================================
+# DOCUMENTACIÓN TÉCNICA
+# ========================================================================
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "MiPaquete Docs"
+  site-url: https://docs.mipaquete.com
+  repo-url: https://github.com/org/mipaquete
+  repo-actions: [edit, issue]
+  
+  sidebar:
+    style: "docked"
+    background: light
+    contents:
+      - section: "Getting Started"
+        contents:
+          - docs/installation.qmd
+          - docs/quickstart.qmd
+      - section: "User Guide"
+        contents:
+          - docs/basics.qmd
+          - docs/advanced.qmd
+      - section: "API Reference"
+        contents:
+          - docs/api/index.qmd
+          
+  navbar:
+    right:
+      - icon: github
+        href: https://github.com/org/mipaquete
+        aria-label: "GitHub Repository"
+      - text: "Changelog"
+        href: changelog.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-copy: true
+    code-line-numbers: true
+```
+
+## Caso 3: Portfolio Personal
+
+**Escenario:** Portfolio de proyectos con galería.
+
+```yaml
+# ========================================================================
+# PORTFOLIO PERSONAL
+# ========================================================================
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Juan Pérez"
+  description: "Data Scientist & Visualización"
+  site-url: https://juanperez.com
+  
+  navbar:
+    left:
+      - text: "Proyectos"
+        href: projects/
+      - text: "Blog"
+        href: blog/
+      - text: "About"
+        href: about.qmd
+    right:
+      - icon: linkedin
+        href: https://linkedin.com/in/jperez
+        aria-label: "LinkedIn"
+      - icon: github
+        href: https://github.com/jperez
+        aria-label: "GitHub"
+
+format:
+  html:
+    theme: lux
+    page-layout: full
+```
+
+## Caso 4: Sitio Multilingüe
+
+**Escenario:** Sitio en español e inglés.
+
+```yaml
+# ========================================================================
+# SITIO MULTILINGÜE
+# ========================================================================
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Mi Sitio / My Site"
+  
+  navbar:
+    left:
+      - text: "Inicio / Home"
+        href: index.qmd
+      - text: "ES"
+        menu:
+          - text: "Blog (ES)"
+            href: es/blog/
+          - text: "About (ES)"
+            href: es/about.qmd
+      - text: "EN"
+        menu:
+          - text: "Blog (EN)"
+            href: en/blog/
+          - text: "About (EN)"
+            href: en/about.qmd
+
+format:
+  html:
+    theme: flatly
+```
+
+## Caso 5: Blog de Empresa
+
+**Escenario:** Blog corporativo con branding.
+
+```yaml
+# ========================================================================
+# BLOG CORPORATIVO
+# ========================================================================
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "TechCorp Blog"
+  description: "Insights y noticias de TechCorp"
+  site-url: https://blog.techcorp.com
+  
+  navbar:
+    logo: assets/logo.png
+    background: "#1a1a1a"
+    foreground: light
+    left:
+      - text: "Blog"
+        href: blog/
+      - text: "Productos"
+        href: https://techcorp.com/products
+      - text: "Contacto"
+        href: https://techcorp.com/contact
+    right:
+      - text: "Website Principal"
+        href: https://techcorp.com
+  
+  page-footer:
+    left: "© 2026 TechCorp. Todos los derechos reservados."
+    center: |
+      <a href="/privacy">Privacy</a> | 
+      <a href="/terms">Terms</a>
+
+format:
+  html:
+    theme:
+      - assets/corporate-theme.scss
+    css: assets/branding.css
+```
+
+# Optimización y Best Practices
+
+## 1. Estructura y Organización
+
+**Bien organizado:**
+
+```yaml
+# ========================================================================
+# SECCIÓN CLARA CON COMENTARIO
+# ========================================================================
+website:
+  # ----------------------------------------------------------------------
+  # Subsección
+  # ----------------------------------------------------------------------
+  title: "..."
+```
+
+**Mal organizado:**
+
+```yaml
+website:
+title: "..."
+navbar:
+left:
+- text: "..."
+```
+
+## 2. Comentarios Útiles
+
+**Buenos comentarios:**
+
+```yaml
+# Deshabilitado temporalmente (problemas con CORS)
+# google-analytics: "G-XXXXXX"
+
+site-url: https://misitio.com    # Requerido para Open Graph
+```
+
+**Malos comentarios:**
+
+```yaml
+title: "Mi Sitio"    # Esto es el título
+```
+
+## 3. Validación YAML
+
+**Errores comunes:**
+
+```yaml
+# Incorrecto: falta quote en string con ':'
+title: Mi Sitio: Un Blog
+
+# Correcto:
+title: "Mi Sitio: Un Blog"
+
+# Incorrecto: indentación incorrecta
+navbar:
+left:
+- text: "Blog"
+  href: blog/
+
+# Correcto:
+navbar:
+  left:
+    - text: "Blog"
+      href: blog/
+```
+
+**Validar YAML:**
+
+```bash
+# Usar yamllint
+yamllint _quarto.yml
+
+# O validador online
+# https://www.yamllint.com/
+```
+
+## 4. Rutas Consistentes
+
+**Usar rutas relativas desde la raíz:**
+
+```yaml
+# Correcto:
+image: /assets/img/logo.png
+
+# Evitar rutas absolutas del sistema:
+# Incorrecto:
+# image: /home/usuario/proyecto/assets/img/logo.png
+```
+
+## 5. Seguridad y Privacidad
+
+**Configuración recomendada para Europa (RGPD):**
+
+```yaml
+website:
+  google-analytics:
+    tracking-id: "G-XXXXXX"
+    anonymize-ip: true           # Anonimizar IPs
+    
+  cookie-consent:
+    type: express                # Bloquear hasta consentimiento
+    style: headline
+```
+
+## 6. Accesibilidad
+
+**Siempre incluir `aria-label` en íconos:**
+
+```yaml
+navbar:
+  right:
+    - icon: github
+      href: https://github.com/usuario
+      aria-label: "GitHub Profile"    # Importante para screen readers
+```
+
+## 7. SEO Básico
+
+**Mínimo requerido:**
+
+```yaml
+website:
+  title: "..."                   # Máx. 60 caracteres
+  description: "..."             # 150-160 caracteres
+  site-url: https://...          # URL completa
+  favicon: assets/favicon.png
+  
+  open-graph:
+    image: /assets/og-image.jpg  # 1200x630 px
+```
+
+## 8. Versionado con Git
+
+```bash
+# Commit cada cambio significativo en _quarto.yml
+git add _quarto.yml
+git commit -m "feat(config): Add dark theme support"
+
+# Antes de cambios grandes, crear backup
+cp _quarto.yml _quarto.yml.backup
+```
+
+## 9. Testing
+
+```bash
+# Siempre probar después de cambios
+quarto preview
+
+# Verificar que no hay errores
+quarto render
+
+# Verificar configuración efectiva
+quarto inspect index.qmd
+```
+
+## 10. Documentación
+
+**Mantener un README.md con notas:**
+
+```markdown
+# Configuración del Sitio
+
+# Estructura de Archivos
+- `_quarto.yml`: Configuración principal
+- `assets/`: Imágenes, CSS, JS
+- `blog/`: Posts del blog
+
+# Temas Personalizados
+- `theme_light.scss`: Tema claro
+- `theme_dark.scss`: Tema oscuro
+
+# Deployment
+- Netlify: https://methodica.netlify.app
+- Dominio: (pendiente)
+```
+
+# Troubleshooting
+
+## Problema 1: Navbar No Aparece
+
+**Síntomas:**
+
+- No hay barra de navegación
+- Solo aparece el título
+
+**Causas y soluciones:**
+
+```yaml
+# Causa 1: Falta la sección navbar
+# Solución: Agregar navbar
+website:
+  navbar:
+    left:
+      - text: "Inicio"
+        href: index.qmd
+
+# Causa 2: Sintaxis incorrecta
+# Incorrecto:
+navbar:
+left:
+  - text: "Blog"
+  
+# Correcto:
+navbar:
+  left:
+    - text: "Blog"
+      href: blog/
+```
+
+## Problema 2: Imágenes Open Graph No Se Muestran
+
+**Síntomas:**
+
+- Al compartir en redes sociales, no aparece imagen de vista previa
+
+**Checklist:**
+
+```yaml
+# 1. Verificar que site-url está definido
+website:
+  site-url: https://misitio.com    # Obligatorio
+
+# 2. Usar ruta absoluta desde raíz
+website:
+  open-graph:
+    image: /assets/img/og-image.jpg  # Empieza con /
+
+# 3. Verificar dimensiones de imagen
+# - Tamaño: 1200x630 px
+# - Ratio: 1.91:1
+# - Formato: JPG o PNG
+# - Máximo: 8 MB
+
+# 4. Verificar que el archivo existe
+ls assets/img/og-image.jpg
+```
+
+**Forzar actualización de caché en redes sociales:**
+
+- Facebook: https://developers.facebook.com/tools/debug/
+- Twitter: https://cards-dev.twitter.com/validator
+- LinkedIn: https://www.linkedin.com/post-inspector/
+
+## Problema 3: Tema Personalizado No Se Aplica
+
+**Síntomas:**
+
+- CSS personalizado no tiene efecto
+- Tema se ve como el predeterminado
+
+**Soluciones:**
+
+```yaml
+# Verificar rutas de archivos
+format:
+  html:
+    theme:
+      - cosmo
+      - assets/custom.scss    # Verificar que existe
+    css: assets/styles.css    # Verificar que existe
+
+# Verificar que los archivos existen
+ls assets/custom.scss
+ls assets/styles.css
+
+# Limpiar caché y re-renderizar
+rm -rf .quarto
+quarto render
+```
+
+## Problema 4: Google Analytics No Funciona
+
+**Síntomas:**
+
+- Google Analytics no registra visitas
+
+**Checklist:**
+
+```yaml
+# 1. Verificar ID de tracking
+website:
+  google-analytics: "G-XXXXXXXXXX"  # Verificar formato
+  # GA4: empieza con G-
+  # Universal Analytics (antiguo): empieza con UA-
+
+# 2. Esperar 24-48 horas
+# Los datos pueden tardar en aparecer
+
+# 3. Verificar con herramientas de desarrollo
+# - Abrir DevTools (F12)
+# - Network tab
+# - Buscar "analytics" o "gtag"
+# - Debe haber requests a google-analytics.com
+```
+
+## Problema 5: Cookie Consent No Aparece
+
+**Síntomas:**
+
+- No se muestra el banner de cookies
+
+**Soluciones:**
+
+```yaml
+# 1. Verificar configuración
+website:
+  cookie-consent: true    # O configuración completa
+  
+# 2. Limpiar localStorage del navegador
+# - DevTools > Application > Local Storage
+# - Eliminar todas las entradas
+# - Recargar página
+
+# 3. Verificar que no hay conflictos con otros scripts
+```
+
+## Problema 6: Comentarios (Utterances) No Aparecen
+
+**Síntomas:**
+
+- No se muestra la sección de comentarios
+
+**Checklist:**
+
+```yaml
+# 1. Verificar configuración
+website:
+  comments:
+    utterances:
+      repo: usuario/repositorio    # Formato correcto
+      issue-term: title
+      theme: github-light
+
+# 2. Verificar que el repositorio existe
+# https://github.com/usuario/repositorio
+
+# 3. Verificar que Utterances está instalado
+# https://github.com/apps/utterances
+# Debe estar instalado en el repositorio
+
+# 4. Verificar permisos
+# El repositorio debe ser público o Utterances debe tener acceso
+```
+
+## Problema 7: Error "Cannot Find Module"
+
+**Síntomas:**
+
+```
+Error: Cannot find module 'assets/custom.scss'
+```
+
+**Solución:**
+
+```bash
+# Verificar que el archivo existe
+ls assets/custom.scss
+
+# Si no existe, crearlo o eliminar la referencia
+# Si existe, verificar la ruta en _quarto.yml
+
+# Ruta correcta (relativa a _quarto.yml):
+theme:
+  - cosmo
+  - assets/custom.scss    # Correcto
+
+# Ruta incorrecta:
+# - /assets/custom.scss   # NO usar / al inicio en theme
+```
+
+## Problema 8: Sitio No Se Actualiza en Netlify
+
+**Síntomas:**
+
+- Cambios locales funcionan
+- Netlify muestra versión antigua
+
+**Soluciones:**
+
+```bash
+# 1. Verificar que cambios están en Git
+git status
+git add _quarto.yml
+git commit -m "Update config"
+git push
+
+# 2. Verificar build en Netlify
+# - Ir a Netlify Dashboard
+# - Site > Deploys
+# - Ver logs del último deploy
+# - Buscar errores
+
+# 3. Limpiar caché de Netlify
+# - Netlify Dashboard
+# - Site settings > Build & deploy
+# - Clear cache and retry deploy
+
+# 4. Verificar configuración de build
+# netlify.toml o configuración en UI:
+# Build command: quarto render
+# Publish directory: _site
+```
+
+# Comandos Útiles
+
+## Comandos Básicos
+
+```bash
+# Previsualizar sitio localmente
+quarto preview
+
+# Renderizar sitio completo
+quarto render
+
+# Renderizar solo archivo específico
+quarto render index.qmd
+
+# Renderizar con ejecución de código
+quarto render --execute
+```
+
+## Comandos de Inspección
+
+```bash
+# Ver configuración efectiva de un archivo
+quarto inspect index.qmd
+
+# Ver metadata del proyecto
+quarto inspect
+
+# Verificar versión de Quarto
+quarto --version
+```
+
+## Comandos de Limpieza
+
+```bash
+# Limpiar caché
+rm -rf .quarto
+
+# Limpiar output
+rm -rf _site
+
+# Limpiar todo y re-renderizar
+rm -rf .quarto _site && quarto render
+```
+
+## Comandos de Publicación
+
+```bash
+# Publicar en Quarto Pub
+quarto publish quarto-pub
+
+# Publicar en GitHub Pages
+quarto publish gh-pages
+
+# Publicar en Netlify
+quarto publish netlify
+
+# Publicar en RStudio Connect
+quarto publish connect
+```
+
+## Comandos de Desarrollo
+
+```bash
+# Modo preview con auto-reload
+quarto preview --watch
+
+# Renderizar solo archivos modificados
+quarto render --render-modified
+
+# Renderizar con perfil específico
+quarto render --profile production
+```
+
+# Conclusión
+
+## Checklist Mínimo para `_quarto.yml`
+
+```yaml
+# Obligatorio
+project:
+  type: website
+  
+website:
+  title: "..."
+  
+format:
+  html:
+    theme: cosmo
+
+# Altamente recomendado
+website:
+  description: "..."
+  site-url: https://...
+  favicon: assets/favicon.png
+  navbar: {}
+  
+# Recomendado para SEO
+website:
+  open-graph: {}
+  twitter-card: {}
+  
+# Opcional pero útil
+website:
+  google-analytics: "..."
+  cookie-consent: {}
+  comments: {}
+  page-footer: {}
+```
+
+## Template Rápido (Copiar/Pegar)
+
+```yaml
+# ========================================================================
+# TEMPLATE RÁPIDO _quarto.yml
+# ========================================================================
+
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "TU TÍTULO"
+  description: "Tu descripción del sitio"
+  site-url: https://tusitio.com
+  favicon: assets/favicon.png
+  
+  navbar:
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Blog"
+        href: blog/
+    right:
+      - icon: github
+        href: https://github.com/usuario
+        aria-label: "GitHub"
+  
+  page-footer:
+    center: "© 2026 Tu Nombre"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    code-copy: true
+```
+
+## Recursos Adicionales
+
+**Documentación oficial:**
+
+- Quarto Websites: https://quarto.org/docs/websites/
+- Quarto Reference: https://quarto.org/docs/reference/
+
+**Herramientas:**
+
+- YAML Validator: https://www.yamllint.com/
+- Open Graph Debugger: https://developers.facebook.com/tools/debug/
+- Twitter Card Validator: https://cards-dev.twitter.com/validator
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_posts.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}

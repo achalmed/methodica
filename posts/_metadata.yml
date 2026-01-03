@@ -146,7 +146,7 @@ format:
   # ---------------------------------------------------------------------------
   apaquarto-pdf:
     documentmode: jou
-    copyrightnotice: 2025
+    copyrightnotice: 2026
     copyrightext: Todos los derechos reservados
     toc: true
     list-of-figures: true

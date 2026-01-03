@@ -1,0 +1,4177 @@
+\documentclass[
+  doc,
+  floatsintext,
+  longtable,
+  a4paper,
+  nolmodern,
+  notxfonts,
+  notimes,
+  12pt,
+  colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{apa7}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\geometry{inner=1in, outer=1in}
+\fancyhfoffset[LE,RO]{0cm}
+
+
+\usepackage[bidi=default]{babel}
+\babelprovide[main,import]{spanish}
+
+
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+\RequirePackage{longtable}
+\RequirePackage{threeparttablex}
+
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-.5em}%
+	{\normalfont\normalsize\bfseries\typesectitle}}
+
+\renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{0.5em}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-\z@\relax}%
+	{\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+\makeatother
+
+
+
+
+\usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
+\usepackage{subcaption}
+
+
+\renewcommand\thesubfigure{\Alph{subfigure}}
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.7}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,theorems, breakable, skins}
+\usepackage{fontawesome5}
+
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{ACACAC}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582EC}
+\definecolor{quarto-callout-important-color-frame}{HTML}{D9534F}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{F0AD4E}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02B875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{FD7E14}
+
+%\newlength\Oldarrayrulewidth
+%\newlength\Oldtabcolsep
+
+
+\usepackage{hyperref}
+
+
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+
+
+\usepackage{newtx}
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+
+
+
+
+
+\title{Configuración de \texttt{\_quarto.yml} para Proyectos Quarto}
+
+
+\shorttitle{Configuración de \texttt{\_quarto.yml} para Proyectos
+Quarto}
+
+
+\usepackage{etoolbox}
+
+
+
+\ccoppy{\textcopyright~2026}
+
+
+
+\author{Edison Achalma}
+
+
+
+\affiliation{
+{Escuela Profesional de Economía, Universidad Nacional de San Cristóbal
+de Huamanga}}
+
+
+
+
+\leftheader{Achalma}
+
+\date{2026-01-02}
+
+
+\abstract{Esta publiación proporciona una guía sobre la configuración
+del archivo \_quarto.yml en proyectos Quarto, que actúa como el archivo
+principal para definir opciones globales aplicables a sitios web
+académicos, libros o proyectos simples. Se explica su diferencia con
+\_metadata.yml, destacando el alcance global del primero frente al
+directorio específico del segundo. Se detallan las funciones
+principales, como el control del tipo de proyecto, estructura del sitio
+(navegación, footer, sidebar), apariencia (temas, CSS), metadatos SEO,
+integración de herramientas externas (Google Analytics, comentarios) y
+formatos de salida (HTML, PDF, DOCX). Se analiza la jerarquía de
+configuración, con énfasis en la prioridad (del front-matter del
+documento a los valores por defecto) y la herencia/combinación de
+opciones. La estructura del archivo se desglosa en secciones clave;
+project (tipo, output-dir, resources), website (título, navbar, sidebar,
+footer, anuncios, Open Graph, Twitter Cards), y format (opciones por
+formato). Además, se incluyen configuraciones avanzadas, un análisis de
+una configuración ejemplo, sugerencias de optimización, casos de uso
+prácticos (blog académico, documentación técnica, portfolio), mejores
+prácticas, troubleshooting y comandos útiles. El objetivo es capacitar a
+investigadores y desarrolladores para crear sitios web académicos y
+profesionales eficientes con Quarto, priorizando accesibilidad, SEO y
+privacidad (RGPD). Se enfatiza la validación YAML, testing y recursos
+adicionales para una implementación óptima. }
+
+\keywords{Quarto, \_metadata.yml, Metadatos compartidos}
+
+\authornote{\par{\addORCIDlink{Edison Achalma}{0000-0001-6996-3364}} 
+\par{ }
+\par{   El autor no tiene conflictos de interés que revelar.    Los
+roles de autor se clasificaron utilizando la taxonomía de roles de
+colaborador (CRediT; https://credit.niso.org/) de la siguiente
+manera:  Edison Achalma:   conceptualización, redacción}
+\par{La correspondencia relativa a este artículo debe dirigirse a Edison
+Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
+}
+
+\makeatletter
+\let\endoldlt\endlongtable
+\def\endlongtable{
+\hline
+\endoldlt
+}
+\makeatother
+
+\urlstyle{same}
+
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Lista de Figuras}
+\else
+  \newcommand\listfigurename{Lista de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Lista de Tablas}
+\else
+  \newcommand\listtablename{Lista de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\makeatother
+
+% From https://tex.stackexchange.com/a/645996/211326
+%%% apa7 doesn't want to add appendix section titles in the toc
+%%% let's make it do it
+\makeatletter
+\xpatchcmd{\appendix}
+  {\par}
+  {\addcontentsline{toc}{section}{\@currentlabelname}\par}
+  {}{}
+\makeatother
+
+%% Disable longtable counter
+%% https://tex.stackexchange.com/a/248395/211326
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\LT@caption}
+  {\bgroup}
+  {\bgroup\global\LTpatch@captiontrue}
+  {}{}
+\patchcmd{\longtable}
+  {\par}
+  {\par\global\LTpatch@captionfalse}
+  {}{}
+\apptocmd{\endlongtable}
+  {\ifLTpatch@caption\else\addtocounter{table}{-1}\fi}
+  {}{}
+\newif\ifLTpatch@caption
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+
+\hypertarget{toc}{}
+\tableofcontents
+\newpage
+\section[Introduction]{Configuración de \texttt{\_quarto.yml} para
+Proyectos Quarto}
+
+\setcounter{secnumdepth}{3}
+
+\setlength\LTleft{0pt}
+
+
+
+
+\section{\texorpdfstring{¿Qué es
+\texttt{\_quarto.yml}?}{¿Qué es \_quarto.yml?}}\label{quuxe9-es-_quarto.yml}
+
+\texttt{\_quarto.yml} es el archivo de configuración principal de un
+proyecto Quarto. Define las opciones globales que se aplicarán a todo el
+sitio web, libro o proyecto.
+
+\textbf{Ubicación:}
+
+\begin{verbatim}
+proyecto/
+├── _quarto.yml          <- Archivo principal (raíz del proyecto)
+├── index.qmd
+├── posts/
+│   ├── _metadata.yml    <- Opciones específicas para posts
+│   └── post1/
+│       └── index.qmd
+└── assets/
+\end{verbatim}
+
+\subsection{\texorpdfstring{Diferencia con
+\texttt{\_metadata.yml}}{Diferencia con \_metadata.yml}}\label{diferencia-con-_metadata.yml}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2045}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2045}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3409}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Archivo
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Alcance
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Uso Principal
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ubicación
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{\_quarto.yml} & Todo el proyecto & Configuración del sitio,
+navbar, footer, tema & Raíz del proyecto \\
+\texttt{\_metadata.yml} & Directorio específico & Opciones por defecto
+para posts & Dentro de directorios \\
+\end{longtable}
+
+\textbf{Ejemplo de relación:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# \_quarto.yml (global para }\AlertTok{TODO}\CommentTok{ el sitio)}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Sitio"}
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+
+\CommentTok{\# blog/\_metadata.yml (solo para posts del blog)}
+\FunctionTok{author}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{name}\KeywordTok{:}\AttributeTok{ Edison Achalma}
+\FunctionTok{date{-}modified}\KeywordTok{:}\AttributeTok{ }\StringTok{"today"}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Propósito y Funciones
+Principales}\label{propuxf3sito-y-funciones-principales}
+
+\textbf{\texttt{\_quarto.yml} controla:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Tipo de proyecto} (website, book, default)
+\item
+  \textbf{Estructura del sitio} (navegación, footer, sidebar)
+\item
+  \textbf{Apariencia global} (tema, CSS, fuentes)
+\item
+  \textbf{Metadatos del sitio} (título, descripción, SEO)
+\item
+  \textbf{Herramientas externas} (Google Analytics, comentarios)
+\item
+  \textbf{Formatos de salida} (HTML, PDF, DOCX)
+\item
+  \textbf{Recursos compartidos} (imágenes, archivos estáticos)
+\end{enumerate}
+
+\section{Jerarquía de
+Configuración}\label{jerarquuxeda-de-configuraciuxf3n}
+
+\subsection{Orden de Prioridad}\label{orden-de-prioridad}
+
+\begin{verbatim}
+1. Front-matter del documento (index.qmd)
+   └── Mayor prioridad
+   
+2. _metadata.yml (directorio del documento)
+   
+3. _metadata.yml (directorio padre)
+   
+4. _quarto.yml (raíz del proyecto)
+   
+5. Valores por defecto de Quarto
+   └── Menor prioridad
+\end{verbatim}
+
+\textbf{Ejemplo práctico:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# \_quarto.yml (global)}
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ cosmo}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+
+\CommentTok{\# posts/\_metadata.yml (categoría)}
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{toc{-}depth}\KeywordTok{:}\AttributeTok{ }\DecValTok{3}
+
+\CommentTok{\# posts/mi{-}post/index.qmd (documento)}
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{false}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Resultado final para \texttt{mi-post/index.qmd}:}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{toc:\ false} (del documento - mayor prioridad)
+\item
+  \texttt{theme:\ cosmo} (de \_quarto.yml - heredado)
+\item
+  \texttt{toc-depth:\ 3} (de \_metadata.yml - no se usa porque toc está
+  desactivado)
+\end{itemize}
+
+\subsection{Herencia y Combinación}\label{herencia-y-combinaciuxf3n}
+
+\textbf{Regla:} Las configuraciones se \textbf{combinan} cuando son
+diferentes claves, pero se \textbf{sobrescriben} cuando son la misma
+clave.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# \_quarto.yml}
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ cosmo}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}fold}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+
+\CommentTok{\# \_metadata.yml}
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{false}\CommentTok{        \# Sobrescribe toc}
+\AttributeTok{    }\FunctionTok{code{-}copy}\KeywordTok{:}\AttributeTok{ }\CharTok{true}\CommentTok{   \# Se añade (nueva clave)}
+\CommentTok{    \# theme y code{-}fold se heredan}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Resultado combinado:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ cosmo}\CommentTok{          \# Heredado de \_quarto.yml}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{false}\CommentTok{            \# Sobrescrito por \_metadata.yml}
+\AttributeTok{    }\FunctionTok{code{-}fold}\KeywordTok{:}\AttributeTok{ }\CharTok{true}\CommentTok{       \# Heredado de \_quarto.yml}
+\AttributeTok{    }\FunctionTok{code{-}copy}\KeywordTok{:}\AttributeTok{ }\CharTok{true}\CommentTok{       \# Añadido por \_metadata.yml}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Estructura del Archivo}\label{estructura-del-archivo}
+
+\subsection{\texorpdfstring{Anatomía de
+\texttt{\_quarto.yml}}{Anatomía de \_quarto.yml}}\label{anatomuxeda-de-_quarto.yml}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# ========================================================================}
+\CommentTok{\# CONFIGURACIÓN DE PROYECTO}
+\CommentTok{\# ========================================================================}
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ \_site}
+\AttributeTok{  }\FunctionTok{resources}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[]}
+
+\CommentTok{\# ========================================================================}
+\CommentTok{\# CONFIGURACIÓN DEL SITIO WEB}
+\CommentTok{\# ========================================================================}
+\FunctionTok{website}\KeywordTok{:}
+\CommentTok{  \# Información básica}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{""}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{""}
+\AttributeTok{  }
+\CommentTok{  \# Navegación}
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }\FunctionTok{sidebar}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[]}
+\AttributeTok{  }
+\CommentTok{  \# Footer}
+\AttributeTok{  }\FunctionTok{page{-}footer}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }
+\CommentTok{  \# SEO y metadatos}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ }\StringTok{""}
+\AttributeTok{  }\FunctionTok{favicon}\KeywordTok{:}\AttributeTok{ }\StringTok{""}
+\AttributeTok{  }\FunctionTok{open{-}graph}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }\FunctionTok{twitter{-}card}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }
+\CommentTok{  \# Herramientas}
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }\FunctionTok{cookie{-}consent}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }\FunctionTok{comments}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+
+\CommentTok{\# ========================================================================}
+\CommentTok{\# FORMATOS DE SALIDA}
+\CommentTok{\# ========================================================================}
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }\FunctionTok{pdf}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }\FunctionTok{docx}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+
+\CommentTok{\# ========================================================================}
+\CommentTok{\# OPCIONES AVANZADAS}
+\CommentTok{\# ========================================================================}
+\CommentTok{\# Bibliografía global, filtros, extensiones, etc.}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Secciones Principales}\label{secciones-principales}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2727}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3939}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Sección
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Propósito
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Obligatoria
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{project} & Define tipo y estructura del proyecto & Sí \\
+\texttt{website} & Configuración específica de sitios web & Sí (para
+websites) \\
+\texttt{format} & Formatos de salida y sus opciones & Recomendada \\
+\texttt{editor} & Configuración del editor & Opcional \\
+\texttt{execute} & Opciones de ejecución de código & Opcional \\
+\end{longtable}
+
+\section{Sección: Project}\label{secciuxf3n-project}
+
+Esta sección define las características fundamentales del proyecto.
+
+\subsection{Opciones Básicas}\label{opciones-buxe1sicas}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}\CommentTok{              \# Tipo de proyecto}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ \_site}\CommentTok{          \# Directorio de salida}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{\texorpdfstring{\texttt{type}: Tipo de
+Proyecto}{type: Tipo de Proyecto}}\label{type-tipo-de-proyecto}
+
+\textbf{Opciones disponibles:}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2800}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Valor
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Descripción
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Uso
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{website} & Sitio web con múltiples páginas & Blogs, sitios
+académicos, portfolios \\
+\texttt{book} & Libro con capítulos & Documentación técnica, libros
+académicos \\
+\texttt{default} & Proyecto simple sin estructura especial & Documentos
+individuales \\
+\end{longtable}
+
+\textbf{Ejemplo para cada tipo:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Sitio web}
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+
+\CommentTok{\# Libro}
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ book}
+\AttributeTok{  }
+\CommentTok{\# Proyecto simple}
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ default}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{\texorpdfstring{\texttt{output-dir}: Directorio de
+Salida}{output-dir: Directorio de Salida}}\label{output-dir-directorio-de-salida}
+
+Define dónde se generan los archivos compilados.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ \_site}\CommentTok{          \# Directorio por defecto}
+
+\CommentTok{\# Alternativas comunes:}
+\CommentTok{\# output{-}dir: docs           \# Para GitHub Pages con /docs}
+\CommentTok{\# output{-}dir: public         \# Convención de algunos frameworks}
+\CommentTok{\# output{-}dir: dist           \# Build/distribución}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Importante:} Si cambias \texttt{output-dir}, asegúrate de
+actualizar: - \texttt{.gitignore} (agregar el nuevo directorio) -
+Configuración de despliegue (Netlify, GitHub Pages, etc.)
+
+\subsection{\texorpdfstring{\texttt{resources}: Archivos
+Adicionales}{resources: Archivos Adicionales}}\label{resources-archivos-adicionales}
+
+\textbf{Site Resources} permite asegurar que archivos adicionales (como
+imágenes, documentos, datos, configuraciones especiales, etc.) se copien
+automáticamente al directorio de salida del sitio (\texttt{\_site})
+durante el renderizado. Quarto ya copia de forma automática los archivos
+referenciados en tus documentos (imágenes, CSS, etc.), pero con esta
+opción puedes forzar la inclusión de archivos no referenciados
+directamente.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{resources}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"assets/img/sidebar.jpg"}\CommentTok{      \# Archivo individual}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"data/"}\CommentTok{                       \# Directorio completo}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"*.pdf"}\CommentTok{                       \# Patrón glob}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"CNAME"}\CommentTok{                       \# Dominio personalizado (GitHub Pages)}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{".nojekyll"}\CommentTok{                   \# Desactivar Jekyll (GitHub Pages)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Cuándo usar \texttt{resources}:}
+
+\begin{itemize}
+\tightlist
+\item
+  Archivos no referenciados directamente en documentos
+\item
+  Archivos de configuración de hosting (CNAME, robots.txt)
+\item
+  Datasets descargables
+\item
+  Documentos PDF, Excel, etc.
+\end{itemize}
+
+\textbf{Archivos copiados automáticamente (sin necesidad de
+declararlos):}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{404.html}
+\item
+  \texttt{robots.txt}
+\item
+  \texttt{\_redirects} (Netlify)
+\item
+  \texttt{CNAME} (GitHub Pages)
+\item
+  \texttt{.nojekyll} (GitHub Pages)
+\end{itemize}
+
+\subsubsection{Ejemplos prácticos}\label{ejemplos-pruxe1cticos}
+
+\paragraph{1. Sitio con datos
+descargables.}\label{sitio-con-datos-descargables}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{resources}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"data/"}\CommentTok{                  \# Todos los datasets en carpeta data}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"downloads/*.zip"}\CommentTok{        \# Archivos comprimidos descargables}
+\end{Highlighting}
+\end{Shaded}
+
+Los usuarios podrán acceder a
+\texttt{https://tusitio.com/data/mi-datos.csv}.
+
+\paragraph{2. Publicar en GitHub Pages con dominio
+personalizado.}\label{publicar-en-github-pages-con-dominio-personalizado}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{resources}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"CNAME"}\CommentTok{                  \# Archivo con tu dominio (ej: misitio.com)}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{".nojekyll"}\CommentTok{              \# Evita que GitHub procese con Jekyll}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{3. Incluir documentos PDF o Excel para
+descarga.}\label{incluir-documentos-pdf-o-excel-para-descarga}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{resources}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"reports/*.pdf"}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"datasets/*.xlsx"}
+\end{Highlighting}
+\end{Shaded}
+
+Y en una página:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Descarga el }\CommentTok{[}\OtherTok{reporte completo}\CommentTok{](/reports/informe{-}2025.pdf)}\NormalTok{.}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{4. Recursos solo en una página
+específica.}\label{recursos-solo-en-una-puxe1gina-especuxedfica}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# informe.qmd}
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Informe Anual 2025"}
+\FunctionTok{resources}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"supplements/anexo{-}datos.xlsx"}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"supplements/graficos{-}extra.pdf"}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+Solo estas páginas tendrán los archivos adicionales copiados.
+
+\subsection{\texorpdfstring{\texttt{pre-render} y \texttt{post-render}:
+Scripts
+Personalizados}{pre-render y post-render: Scripts Personalizados}}\label{pre-render-y-post-render-scripts-personalizados}
+
+\textbf{Ejecutar scripts antes o después del renderizado:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{pre{-}render}\KeywordTok{:}\AttributeTok{ scripts/setup.sh}\CommentTok{         \# Ejecutar antes de renderizar}
+\AttributeTok{  }\FunctionTok{post{-}render}\KeywordTok{:}\AttributeTok{ scripts/cleanup.sh}\CommentTok{      \# Ejecutar después de renderizar}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Ejemplo de \texttt{pre-render} (preparar datos):}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#!/bin/bash}
+\CommentTok{\# scripts/setup.sh}
+
+\BuiltInTok{echo} \StringTok{"Preparando datos..."}
+\ExtensionTok{python}\NormalTok{ scripts/fetch\_data.py}
+\BuiltInTok{echo} \StringTok{"Datos listos."}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Ejemplo de \texttt{post-render} (optimizar imágenes):}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#!/bin/bash}
+\CommentTok{\# scripts/cleanup.sh}
+
+\BuiltInTok{echo} \StringTok{"Optimizando imágenes..."}
+\FunctionTok{find}\NormalTok{ \_site }\AttributeTok{{-}name} \StringTok{"*.png"} \AttributeTok{{-}exec}\NormalTok{ optipng \{\} }\DataTypeTok{\textbackslash{};}
+\BuiltInTok{echo} \StringTok{"Optimización completa."}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{\texorpdfstring{\texttt{render}: Control de
+Renderizado}{render: Control de Renderizado}}\label{render-control-de-renderizado}
+
+\textbf{Especificar qué archivos renderizar:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{render}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"*.qmd"}\CommentTok{                    \# Todos los .qmd}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"!drafts/"}\CommentTok{                 \# Excepto directorio drafts/}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"!templates/"}\CommentTok{              \# Excepto templates/}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Casos de uso:}
+
+\begin{itemize}
+\tightlist
+\item
+  Excluir directorios de trabajo en progreso
+\item
+  Renderizar solo archivos específicos durante desarrollo
+\item
+  Ignorar templates o plantillas
+\end{itemize}
+
+\section{Sección: Website}\label{secciuxf3n-website}
+
+Esta sección contiene toda la configuración específica de sitios web.
+
+\subsection{Información Básica}\label{informaciuxf3n-buxe1sica}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Edison Achalma B.Sc. Econ."}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Investigador y educador que aplica la ciencia de datos }\SpecialCharTok{\textbackslash{} }
+\StringTok{  de forma que se dé prioridad a la equidad social."}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://methodica.netlify.app/}
+\AttributeTok{  }\FunctionTok{repo{-}url}\KeywordTok{:}\AttributeTok{ https://github.com/achalmed/methodica}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{\texorpdfstring{\texttt{title}: Título del
+Sitio}{title: Título del Sitio}}\label{title-tuxedtulo-del-sitio}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Sitio Web"}
+\CommentTok{  \# O con subtítulo:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Sitio Web"}
+\AttributeTok{  }\FunctionTok{subtitle}\KeywordTok{:}\AttributeTok{ }\StringTok{"Un blog sobre econometría"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Aparece en la navbar (si no se especifica logo)
+\item
+  Se usa como título por defecto en Open Graph
+\item
+  Máximo recomendado: 60 caracteres
+\end{itemize}
+
+\subsubsection{\texorpdfstring{\texttt{description}: Descripción del
+Sitio}{description: Descripción del Sitio}}\label{description-descripciuxf3n-del-sitio}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Sitio web académico sobre econometría y estadística"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Usada en metadatos SEO
+\item
+  Aparece en resultados de búsqueda
+\item
+  Recomendado: 150-160 caracteres
+\end{itemize}
+
+\subsubsection{\texorpdfstring{\texttt{site-url}: URL del
+Sitio}{site-url: URL del Sitio}}\label{site-url-url-del-sitio}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://misitio.com}
+\CommentTok{  \# NO incluir trailing slash al final}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Obligatorio para:}
+
+\begin{itemize}
+\tightlist
+\item
+  Open Graph y Twitter Cards (imágenes de vista previa)
+\item
+  RSS feeds
+\item
+  Sitemap.xml
+\item
+  Canonical URLs
+\end{itemize}
+
+\textbf{Sin \texttt{site-url}:} Las rutas relativas en Open Graph no
+funcionarán correctamente.
+
+\subsubsection{\texorpdfstring{\texttt{repo-url}: Repositorio de
+Código}{repo-url: Repositorio de Código}}\label{repo-url-repositorio-de-cuxf3digo}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{repo{-}url}\KeywordTok{:}\AttributeTok{ https://github.com/usuario/repositorio}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Beneficios:}
+
+\begin{itemize}
+\tightlist
+\item
+  Botón automático ``Edit this page'' en cada página
+\item
+  Enlace al repositorio en la navbar (con \texttt{repo-actions})
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{repo{-}url}\KeywordTok{:}\AttributeTok{ https://github.com/usuario/repo}
+\AttributeTok{  }\FunctionTok{repo{-}actions}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\AttributeTok{edit}\KeywordTok{,}\AttributeTok{ issue}\KeywordTok{]}\CommentTok{    \# Botones de editar y reportar issue}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Favicon e Imágenes}\label{favicon-e-imuxe1genes}
+
+El \textbf{Favicon} es el pequeño ícono que aparece en la pestaña del
+navegador, en los marcadores y en otros lugares donde se representa tu
+sitio web. Configurarlo mejora la identidad visual y el reconocimiento
+de tu sitio.
+
+\subsubsection{\texorpdfstring{\texttt{favicon}: Ícono del
+Sitio}{favicon: Ícono del Sitio}}\label{favicon-uxedcono-del-sitio}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{favicon}\KeywordTok{:}\AttributeTok{ assets/img/favicon.png}
+\CommentTok{  \# O:}
+\CommentTok{  \# favicon: favicon.ico}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Formatos recomendados:}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{.ico} (máxima compatibilidad)
+\item
+  \texttt{.png} (calidad, transparencia)
+\item
+  \texttt{.svg} (escalable)
+\end{itemize}
+
+\textbf{Tamaño recomendado:} 32x32 px mínimo, 64x64 px ideal.
+
+\subsubsection{\texorpdfstring{\texttt{image}: Imagen de Vista Previa
+por
+Defecto}{image: Imagen de Vista Previa por Defecto}}\label{image-imagen-de-vista-previa-por-defecto}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /assets/img/default{-}preview.jpg}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Usada cuando:}
+
+\begin{itemize}
+\tightlist
+\item
+  Una página no tiene su propia imagen especificada
+\item
+  Se comparte un enlace en redes sociales
+\item
+  Open Graph/Twitter Cards necesitan una imagen
+\end{itemize}
+
+\textbf{Especificaciones:}
+
+\begin{itemize}
+\tightlist
+\item
+  Tamaño ideal: 1200x630 px (ratio 1.91:1)
+\item
+  Formato: JPG o PNG
+\item
+  Máximo: 8 MB
+\end{itemize}
+
+\subsection{Navbar: Barra de
+Navegación}\label{navbar-barra-de-navegaciuxf3n}
+
+La navbar es la barra superior del sitio.
+
+\subsubsection{Estructura Básica}\label{estructura-buxe1sica}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Sitio"}\CommentTok{           \# Título en la navbar (opcional)}
+\AttributeTok{    }\FunctionTok{logo}\KeywordTok{:}\AttributeTok{ assets/img/logo.png}\CommentTok{   \# Logo (opcional)}
+\AttributeTok{    }\FunctionTok{background}\KeywordTok{:}\AttributeTok{ primary}\CommentTok{         \# Color de fondo}
+\AttributeTok{    }\FunctionTok{foreground}\KeywordTok{:}\AttributeTok{ light}\CommentTok{           \# Color del texto}
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}\CommentTok{                       \# Items del lado izquierdo}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Inicio"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.qmd}
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}\CommentTok{                      \# Items del lado derecho}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"About"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ about.qmd}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Items de Navegación}\label{items-de-navegaciuxf3n}
+
+\textbf{Enlace simple:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Enlace con ícono:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/usuario}
+\AttributeTok{      }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"GitHub"}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Menú desplegable:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Recursos"}
+\AttributeTok{      }\FunctionTok{menu}\KeywordTok{:}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Tutoriales"}
+\AttributeTok{          }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ tutoriales/}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Datasets"}
+\AttributeTok{          }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ datasets/}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"{-}{-}{-}"}\CommentTok{              \# Separador}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Documentación"}
+\AttributeTok{          }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ docs/}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Menú con íconos:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"More"}
+\AttributeTok{      }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ ellipsis{-}h}
+\AttributeTok{      }\FunctionTok{menu}\KeywordTok{:}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Econometría"}
+\AttributeTok{          }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://epsilon{-}y{-}beta.netlify.app/}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Filosofía"}
+\AttributeTok{          }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://dialectica{-}y{-}mercado.netlify.app/}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Logo}\label{logo}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{logo}\KeywordTok{:}\AttributeTok{ assets/img/logo.png}
+\AttributeTok{  }\FunctionTok{logo{-}alt}\KeywordTok{:}\AttributeTok{ }\StringTok{"Logo del sitio"}\CommentTok{        \# Texto alternativo}
+\AttributeTok{  }\FunctionTok{logo{-}href}\KeywordTok{:}\AttributeTok{ index.html}\CommentTok{              \# Enlace del logo (por defecto: home)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Recomendaciones:}
+
+\begin{itemize}
+\tightlist
+\item
+  Tamaño: 40-50 px de alto
+\item
+  Formato: PNG con transparencia o SVG
+\item
+  Si usas logo, el título se oculta automáticamente (a menos que uses
+  \texttt{title:\ false})
+\end{itemize}
+
+\subsubsection{Colores y Apariencia}\label{colores-y-apariencia}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{background}\KeywordTok{:}\AttributeTok{ primary}\CommentTok{                \# Color de fondo}
+\AttributeTok{  }\FunctionTok{foreground}\KeywordTok{:}\AttributeTok{ light}\CommentTok{                  \# Color del texto}
+\AttributeTok{  }
+\CommentTok{  \# Opciones de background:}
+\CommentTok{  \# primary, secondary, success, danger, warning, info, light, dark}
+\CommentTok{  \# O código hexadecimal: "\#1a1a1a"}
+\AttributeTok{  }
+\CommentTok{  \# Opciones de foreground:}
+\CommentTok{  \# light, dark}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Búsqueda}\label{buxfasqueda}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{search}\KeywordTok{:}\AttributeTok{ }\CharTok{true}\CommentTok{                       \# Habilitar búsqueda}
+\CommentTok{  \# O con opciones avanzadas:}
+\AttributeTok{  }\FunctionTok{search}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{location}\KeywordTok{:}\AttributeTok{ navbar}\CommentTok{                 \# navbar (por defecto) o sidebar}
+\AttributeTok{    }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ overlay}\CommentTok{                    \# overlay (por defecto) o textbox}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Collapse (Menú Móvil)}\label{collapse-menuxfa-muxf3vil}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{collapse{-}below}\KeywordTok{:}\AttributeTok{ lg}\CommentTok{                 \# Colapsar en pantallas menores a lg}
+\CommentTok{  \# Opciones: sm, md, lg, xl}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Ejemplo Completo de
+Navbar}\label{ejemplo-completo-de-navbar}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Sitio Académico"}
+\AttributeTok{    }\FunctionTok{logo}\KeywordTok{:}\AttributeTok{ assets/img/logo.png}
+\AttributeTok{    }\FunctionTok{background}\KeywordTok{:}\AttributeTok{ primary}
+\AttributeTok{    }\FunctionTok{foreground}\KeywordTok{:}\AttributeTok{ light}
+\AttributeTok{    }\FunctionTok{search}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{collapse{-}below}\KeywordTok{:}\AttributeTok{ lg}
+\AttributeTok{    }
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Inicio"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.qmd}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Publicaciones"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ publications/}
+\AttributeTok{        }
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Recursos"}
+\AttributeTok{        }\FunctionTok{menu}\KeywordTok{:}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Tutoriales"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ tutoriales/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Datasets"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ datasets/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"{-}{-}{-}"}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Código"}
+\AttributeTok{            }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/usuario}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/usuario}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"GitHub"}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ twitter}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://twitter.com/usuario}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"Twitter"}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Sidebar: Barra Lateral}\label{sidebar-barra-lateral}
+
+La sidebar aparece en el lado izquierdo o derecho del contenido.
+
+\subsubsection{Estructura Básica}\label{estructura-buxe1sica-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{sidebar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{style}\KeywordTok{:}\AttributeTok{ }\StringTok{"docked"}\CommentTok{                  \# docked (fija) o floating (flotante)}
+\AttributeTok{    }\FunctionTok{background}\KeywordTok{:}\AttributeTok{ light}\CommentTok{                \# Color de fondo}
+\AttributeTok{    }\FunctionTok{collapse{-}level}\KeywordTok{:}\AttributeTok{ }\DecValTok{2}\CommentTok{                \# Nivel de colapso automático}
+\AttributeTok{    }\FunctionTok{contents}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{section}\KeywordTok{:}\AttributeTok{ }\StringTok{"Introducción"}
+\AttributeTok{        }\FunctionTok{contents}\KeywordTok{:}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ intro.qmd}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ setup.qmd}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{section}\KeywordTok{:}\AttributeTok{ }\StringTok{"Análisis"}
+\AttributeTok{        }\FunctionTok{contents}\KeywordTok{:}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ analysis1.qmd}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ analysis2.qmd}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Múltiples Sidebars}\label{muxfaltiples-sidebars}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{sidebar}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{      }\FunctionTok{contents}\KeywordTok{:}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ blog/index.qmd}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ blog/post1.qmd}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ blog/post2.qmd}
+\AttributeTok{        }
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Tutoriales"}
+\AttributeTok{      }\FunctionTok{contents}\KeywordTok{:}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ tutoriales/index.qmd}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ tutoriales/tutorial1.qmd}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Estilos de Sidebar}\label{estilos-de-sidebar}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sidebar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{style}\KeywordTok{:}\AttributeTok{ docked}\CommentTok{                      \# Fija al contenido}
+\CommentTok{  \# style: floating                  \# Flotante sobre el contenido}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Herramientas de Sidebar}\label{herramientas-de-sidebar}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sidebar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{tools}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/usuario}
+\AttributeTok{      }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"GitHub"}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ twitter}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://twitter.com/usuario}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Page Footer}\label{page-footer}
+
+El footer aparece al final de todas las páginas.
+
+\subsubsection{Estructura Básica}\label{estructura-buxe1sica-2}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{page{-}footer}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}\AttributeTok{ }\StringTok{"© 2026 Mi Nombre"}
+\FunctionTok{    center}\KeywordTok{: }\CharTok{|}
+\NormalTok{      \textless{}a href="privacy.html"\textgreater{}Privacy\textless{}/a\textgreater{}}
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"About"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ about.html}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Contact"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ contact.html}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Con HTML y Markdown}\label{con-html-y-markdown}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{page{-}footer}\KeywordTok{:}
+\FunctionTok{  left}\KeywordTok{: }\CharTok{\textgreater{}{-}}
+\NormalTok{    © 2026 Edison Achalma · Made with [Quarto](https://quarto.org)}
+    
+\FunctionTok{  center}\KeywordTok{: }\CharTok{|}
+\NormalTok{    \textless{}a class="link{-}dark" href="https://github.com/usuario"\textgreater{}}
+\NormalTok{      \textless{}i class="bi bi{-}github"\textgreater{}\textless{}/i\textgreater{}}
+\NormalTok{    \textless{}/a\textgreater{}}
+    
+\AttributeTok{  }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"License"}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ license.html}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ rss}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.xml}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Footer Completo}\label{footer-completo}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{page{-}footer}\KeywordTok{:}
+\FunctionTok{  left}\KeywordTok{: }\CharTok{\textgreater{}{-}}
+\NormalTok{    © 2026 Edison Achalma · Made with [Quarto](https://quarto.org)}
+    
+\FunctionTok{  center}\KeywordTok{: }\CharTok{|}
+\NormalTok{    \textless{}a class="link{-}dark me{-}1" href="https://github.com/usuario"\textgreater{}}
+\NormalTok{      \textless{}i class="bi bi{-}github"\textgreater{}\textless{}/i\textgreater{}}
+\NormalTok{    \textless{}/a\textgreater{}}
+\NormalTok{    \textless{}a class="link{-}dark me{-}1" href="https://twitter.com/usuario"\textgreater{}}
+\NormalTok{      \textless{}i class="bi bi{-}twitter"\textgreater{}\textless{}/i\textgreater{}}
+\NormalTok{    \textless{}/a\textgreater{}}
+    
+\AttributeTok{  }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Accessibility"}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ accessibility.html}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Contact"}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ contact.html}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"License"}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ license.html}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ rss}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.xml}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Anuncios (Announcement
+Bar)}\label{anuncios-announcement-bar}
+
+La \textbf{Announcement Bar} (barra de anuncio) es una barra prominente
+y personalizable que se muestra en la parte superior del sitio web. Es
+ideal para resaltar información importante como alertas,
+actualizaciones, promociones, eventos o mensajes temporales.
+
+\subsubsection{Configuración Completa}\label{configuraciuxf3n-completa}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{announcement}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ info{-}circle}\CommentTok{               \# Ícono de Bootstrap}
+\AttributeTok{    }\FunctionTok{dismissable}\KeywordTok{:}\AttributeTok{ }\CharTok{true}\CommentTok{               \# Puede cerrarse}
+\AttributeTok{    }\FunctionTok{content}\KeywordTok{:}\AttributeTok{ }\StringTok{"**Importante:** Nueva versión disponible"}
+\AttributeTok{    }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ primary}\CommentTok{                   \# Color}
+\AttributeTok{    }\FunctionTok{position}\KeywordTok{:}\AttributeTok{ below{-}navbar}\CommentTok{          \# Ubicación}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{\texorpdfstring{Opciones de
+\texttt{type}}{Opciones de type}}\label{opciones-de-type}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{type}\KeywordTok{:}\AttributeTok{ primary}\CommentTok{      \# Azul}
+\FunctionTok{type}\KeywordTok{:}\AttributeTok{ secondary}\CommentTok{    \# Gris}
+\FunctionTok{type}\KeywordTok{:}\AttributeTok{ success}\CommentTok{      \# Verde}
+\FunctionTok{type}\KeywordTok{:}\AttributeTok{ danger}\CommentTok{       \# Rojo}
+\FunctionTok{type}\KeywordTok{:}\AttributeTok{ warning}\CommentTok{      \# Amarillo}
+\FunctionTok{type}\KeywordTok{:}\AttributeTok{ info}\CommentTok{         \# Azul claro}
+\FunctionTok{type}\KeywordTok{:}\AttributeTok{ light}\CommentTok{        \# Blanco}
+\FunctionTok{type}\KeywordTok{:}\AttributeTok{ dark}\CommentTok{         \# Negro}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{\texorpdfstring{Opciones de
+\texttt{position}}{Opciones de position}}\label{opciones-de-position}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{position}\KeywordTok{:}\AttributeTok{ below{-}navbar}\CommentTok{    \# Debajo de la navbar (por defecto)}
+\FunctionTok{position}\KeywordTok{:}\AttributeTok{ above{-}navbar}\CommentTok{    \# Encima de la navbar}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Íconos Disponibles}\label{uxedconos-disponibles}
+
+Cualquier ícono de \href{https://icons.getbootstrap.com/}{Bootstrap
+Icons}:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{info-circle}
+\item
+  \texttt{bell}
+\item
+  \texttt{megaphone}
+\item
+  \texttt{gift}
+\item
+  \texttt{exclamation-triangle}
+\item
+  \texttt{calendar-check}
+\item
+  \texttt{heart}
+\end{itemize}
+
+\subsubsection{Ejemplos por Tipo de
+Anuncio}\label{ejemplos-por-tipo-de-anuncio}
+
+\textbf{Alerta importante:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{announcement}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ exclamation{-}triangle}
+\AttributeTok{  }\FunctionTok{dismissable}\KeywordTok{:}\AttributeTok{ }\CharTok{false}
+\AttributeTok{  }\FunctionTok{content}\KeywordTok{:}\AttributeTok{ }\StringTok{"**Atención:** Mantenimiento programado el 15 de enero"}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ danger}
+\AttributeTok{  }\FunctionTok{position}\KeywordTok{:}\AttributeTok{ above{-}navbar}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Evento o promoción:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{announcement}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ calendar{-}check}
+\AttributeTok{  }\FunctionTok{dismissable}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{  }\FunctionTok{content}\KeywordTok{:}\AttributeTok{ }\StringTok{"Webinar gratuito el 20 de enero. \textbackslash{}}
+\StringTok{  [Regístrate aquí](https://example.com)"}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ success}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Actualización:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{announcement}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ info{-}circle}
+\AttributeTok{  }\FunctionTok{dismissable}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{  }\FunctionTok{content}\KeywordTok{:}\AttributeTok{ }\StringTok{"Nueva versión disponible. \textbackslash{}}
+\StringTok{  [Ver cambios](https://example.com/changelog)"}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ info}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Open Graph}\label{open-graph}
+
+\textbf{Open Graph} mejora la presentación de tus páginas cuando se
+comparten en plataformas como Facebook, LinkedIn, Slack, Discord,
+WhatsApp, iMessage y muchas más, mostrando título, descripción, imagen
+de vista previa y otros metadatos enriquecidos.
+
+\subsubsection{Configuración
+Completa}\label{configuraciuxf3n-completa-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{open{-}graph}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Sitio Web"}
+\AttributeTok{    }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Descripción del sitio"}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /assets/img/og{-}image.jpg}
+\AttributeTok{    }\FunctionTok{image{-}width}\KeywordTok{:}\AttributeTok{ }\DecValTok{1200}
+\AttributeTok{    }\FunctionTok{image{-}height}\KeywordTok{:}\AttributeTok{ }\DecValTok{630}
+\AttributeTok{    }\FunctionTok{locale}\KeywordTok{:}\AttributeTok{ es\_ES}
+\AttributeTok{    }\FunctionTok{site{-}name}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Sitio"}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Opciones}\label{opciones}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Opción & Descripción & Recomendación \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{title} & Título del sitio & Máx. 60 caracteres \\
+\texttt{description} & Descripción & 150-160 caracteres \\
+\texttt{image} & Imagen de vista previa & 1200x630 px, ratio 1.91:1 \\
+\texttt{image-width} & Ancho de la imagen & 1200 \\
+\texttt{image-height} & Alto de la imagen & 630 \\
+\texttt{locale} & Idioma y región & es\_ES, en\_US, etc. \\
+\texttt{site-name} & Nombre del sitio & Nombre corto \\
+\end{longtable}
+
+\subsubsection{Imágenes de vista previa (orden de
+prioridad)}\label{imuxe1genes-de-vista-previa-orden-de-prioridad}
+
+Exactamente igual que en Twitter Cards:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Metadato \texttt{image} en la página (URL completa o ruta relativa).
+\item
+  Imagen con clase \texttt{.preview-image} en el contenido:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AlertTok{![Portada](/images/cover.jpg)}\NormalTok{\{.preview{-}image\}}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Archivos con nombres: \texttt{preview.png}, \texttt{feature.png},
+  \texttt{cover.png}, \texttt{thumbnail.png}.
+\item
+  Imagen por defecto del sitio:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ images/default{-}og{-}preview.jpg}
+\end{Highlighting}
+\end{Shaded}
+\end{enumerate}
+
+Para desactivar la imagen en una página específica:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{image}\KeywordTok{:}\AttributeTok{ }\CharTok{false}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Ejemplos prácticos}\label{ejemplos-pruxe1cticos-1}
+
+\paragraph{1. Configuración mínima
+recomendada.}\label{configuraciuxf3n-muxednima-recomendada}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://misitio.com}
+\AttributeTok{  }\FunctionTok{open{-}graph}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{2. Configuración profesional
+(global).}\label{configuraciuxf3n-profesional-global}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://misitio.com}
+\AttributeTok{  }\FunctionTok{open{-}graph}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{locale}\KeywordTok{:}\AttributeTok{ es\_ES}
+\AttributeTok{    }\FunctionTok{site{-}name}\KeywordTok{:}\AttributeTok{ Mi Sitio con Quarto}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ images/default{-}og.jpg}\CommentTok{ \# Img por defecto (1200x630 px recomendado)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{3. Personalización por página (en el front-matter de
+page.qmd).}\label{personalizaciuxf3n-por-puxe1gina-en-el-front-matter-de-page.qmd}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Guía Avanzada de Quarto"}
+\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Domina todas las funciones de Quarto en 2025"}
+\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /images/guia{-}avanzada{-}og.png}
+\FunctionTok{open{-}graph}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"¡La Guía Definitiva de Quarto 2025!"}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Todo lo nuevo y avanzado en una sola guía"}
+\AttributeTok{  }\FunctionTok{image{-}width}\KeywordTok{:}\AttributeTok{ }\DecValTok{1200}
+\AttributeTok{  }\FunctionTok{image{-}height}\KeywordTok{:}\AttributeTok{ }\DecValTok{630}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Importante:} Requiere \texttt{site-url} definido para rutas
+relativas.
+
+\subsection{Preview Images}\label{preview-images}
+
+Las \textbf{Preview Images} (imágenes de vista previa) son las imágenes
+que se muestran cuando una página de tu sitio se comparte en redes
+sociales (Twitter/X Cards, Open Graph) o en mensajeros como Slack,
+WhatsApp, etc. Quarto busca automáticamente estas imágenes siguiendo un
+orden de prioridad específico, lo que facilita su configuración.
+
+Estas imágenes se usan tanto para \textbf{Twitter Cards} como para
+\textbf{Open Graph}.
+
+\subsubsection{Configuración básica}\label{configuraciuxf3n-buxe1sica}
+
+La forma más simple es definir una imagen por defecto a nivel de sitio
+en \texttt{\_quarto.yml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://misitio.com}\CommentTok{      \# Obligatorio para rutas relativas}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ images/default{-}preview.jpg}\CommentTok{  \# Imagen por defecto para todo el sitio}
+\end{Highlighting}
+\end{Shaded}
+
+Con esto, todas las páginas que no especifiquen su propia imagen usarán
+esta.
+
+\subsubsection{Configuración completa (todas las opciones y
+métodos)}\label{configuraciuxf3n-completa-todas-las-opciones-y-muxe9todos}
+
+Quarto busca la imagen de vista previa en el siguiente orden de
+prioridad:
+
+\paragraph{1. Imagen explícita en el front-matter de la página (método
+recomendado).}\label{imagen-expluxedcita-en-el-front-matter-de-la-puxe1gina-muxe9todo-recomendado}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# En page.qmd}
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Artículo Genial"}
+\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Una guía completa sobre Quarto"}
+\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /images/mi{-}articulo{-}preview.jpg}\CommentTok{     \# Ruta relativa al proyecto}
+\CommentTok{\# o URL completa:}
+\CommentTok{\# image: https://misitio.com/images/mi{-}articulo{-}preview.jpg}
+\FunctionTok{image{-}width}\KeywordTok{:}\AttributeTok{ }\DecValTok{1200}\CommentTok{                          \# Opcional: ancho en píxeles}
+\FunctionTok{image{-}height}\KeywordTok{:}\AttributeTok{ }\DecValTok{630}\CommentTok{                          \# Opcional: alto en píxeles}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{2. Imagen con clase especial en el contenido
+Markdown.}\label{imagen-con-clase-especial-en-el-contenido-markdown}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AlertTok{![Portada del artículo](/images/portada.jpg)}\NormalTok{\{.preview{-}image width="1200" height="630"\}}
+\end{Highlighting}
+\end{Shaded}
+
+Quarto selecciona la \textbf{primera} imagen con la clase
+\texttt{.preview-image}.
+
+\paragraph{3. Imagen por nombre
+automático.}\label{imagen-por-nombre-automuxe1tico}
+
+Si no hay ninguna de las anteriores, Quarto busca en la página
+renderizada un archivo con uno de estos nombres: - \texttt{preview.png}
+- \texttt{feature.png} - \texttt{cover.png} - \texttt{thumbnail.png}
+
+\paragraph{\texorpdfstring{4. Imagen por defecto del sitio (en
+\texttt{\_quarto.yml}).}{4. Imagen por defecto del sitio (en \_quarto.yml).}}\label{imagen-por-defecto-del-sitio-en-_quarto.yml}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ images/default{-}preview.jpg}\CommentTok{      \# Usada cuando ninguna página tiene su propia imagen}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{5. Desactivar imagen en una página
+específica.}\label{desactivar-imagen-en-una-puxe1gina-especuxedfica}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Página sin vista previa"}
+\FunctionTok{image}\KeywordTok{:}\AttributeTok{ }\CharTok{false}\CommentTok{                           \# Evita que se use cualquier imagen}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Ejemplos prácticos}\label{ejemplos-pruxe1cticos-2}
+
+\paragraph{1. Configuración global básica + página
+individual.}\label{configuraciuxf3n-global-buxe1sica-puxe1gina-individual}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# \_quarto.yml}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://misitio.com}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ images/default{-}og{-}preview.jpg}\CommentTok{  \# Imagen por defecto (1200x630 px)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# blog/nuevo{-}articulo.qmd}
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Lanzamiento de Quarto 1.5"}
+\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Nuevas funciones increíbles"}
+\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /images/quarto{-}1.5{-}preview.png}\CommentTok{  \# Imagen específica para este post}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{2. Usando clase .preview-image en el
+contenido.}\label{usando-clase-.preview-image-en-el-contenido}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\# Mi Guía Definitiva}
+
+\AlertTok{![Esta será la imagen de vista previa](/images/guia{-}completa.jpg)}\NormalTok{\{.preview{-}image\}}
+
+\NormalTok{¡Bienvenido a la guía más completa de Quarto!}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{3. Página con dimensiones específicas (mejora
+presentación).}\label{puxe1gina-con-dimensiones-especuxedficas-mejora-presentaciuxf3n}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Análisis de Datos con Quarto"}
+\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /images/analisis{-}datos{-}preview.jpg}
+\FunctionTok{image{-}width}\KeywordTok{:}\AttributeTok{ }\DecValTok{1200}
+\FunctionTok{image{-}height}\KeywordTok{:}\AttributeTok{ }\DecValTok{630}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{4. Sitio con imagen por defecto y algunas páginas
+personalizadas.}\label{sitio-con-imagen-por-defecto-y-algunas-puxe1ginas-personalizadas}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# \_quarto.yml}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://misitio.com}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ images/site{-}default{-}preview.jpg}\CommentTok{  \# Usada en el 90\% de las páginas}
+\AttributeTok{  }\FunctionTok{twitter{-}card}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{  }\FunctionTok{open{-}graph}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+Páginas normales: usan la imagen por defecto.\\
+Páginas importantes (blog posts, anuncios): definen su propia
+\texttt{image:}.
+
+\subsection{Twitter Cards}\label{twitter-cards}
+
+\textbf{Twitter Cards} (ahora también conocidas como X Cards) permiten
+que los enlaces a tu sitio web se muestren de forma enriquecida cuando
+se comparten en X/Twitter, incluyendo título, descripción, imagen de
+vista previa y estilo de tarjeta.
+
+\subsubsection{Configuración
+Completa}\label{configuraciuxf3n-completa-2}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{twitter{-}card}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{creator}\KeywordTok{:}\AttributeTok{ }\StringTok{"@usuario"}
+\AttributeTok{    }\FunctionTok{site}\KeywordTok{:}\AttributeTok{ }\StringTok{"@sitio\_oficial"}
+\AttributeTok{    }\FunctionTok{card{-}style}\KeywordTok{:}\AttributeTok{ summary\_large\_image}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Opciones}\label{opciones-1}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1173}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1564}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.4302}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2961}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Opción
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ubicación
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Descripción
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ejemplo / Valores posibles
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{twitter-card} & \texttt{website:} & Activa la generación
+automática & \texttt{true} \\
+\texttt{creator} & Dentro de \texttt{twitter-card:} & \texttt{@username}
+del autor del contenido & \texttt{"@juanperez"} (comillas si incluye
+\texttt{@}) \\
+\texttt{site} & Dentro de \texttt{twitter-card:} & \texttt{@username} de
+la cuenta oficial del sitio & \texttt{"@quarto\_pub"} \\
+\texttt{card-style} & Dentro de \texttt{twitter-card:} & Estilo de la
+tarjeta & \texttt{summary} o \texttt{summary\_large\_image} \\
+\texttt{title} & Global o por página & Sobrescribe el título solo para
+la tarjeta & ``¡Nueva guía de Quarto!'' \\
+\texttt{description} & Global o por página & Sobrescribe la descripción
+& ``Aprende todo sobre sitios web con Quarto'' \\
+\texttt{image} & Global o por página & Ruta/URL de la imagen de vista
+previa & ``/images/preview.png'' o URL completa \\
+\texttt{image-width} & Global o por página & Ancho recomendado de la
+imagen & 1200 \\
+\texttt{image-height} & Global o por página & Alto recomendado de la
+imagen & \\
+\end{longtable}
+
+\textbf{Estilos de tarjeta:}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{summary}: Imagen pequeña al lado
+\item
+  \texttt{summary\_large\_image}: Imagen grande arriba (recomendado)
+\end{itemize}
+
+\subsubsection{Imágenes de vista previa (orden de
+prioridad)}\label{imuxe1genes-de-vista-previa-orden-de-prioridad-1}
+
+Quarto busca la imagen en este orden:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Metadato \texttt{image} en la página (URL completa o ruta relativa).
+\item
+  Imagen con clase \texttt{.preview-image} en el contenido:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AlertTok{![Mi imagen](/images/cover.jpg)}\NormalTok{\{.preview{-}image\}}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Archivos con nombres: \texttt{preview.png}, \texttt{feature.png},
+  \texttt{cover.png}, \texttt{thumbnail.png}.
+\item
+  Imagen por defecto del sitio (configurada globalmente):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ images/default{-}preview.jpg}
+\end{Highlighting}
+\end{Shaded}
+\end{enumerate}
+
+Para desactivar la imagen en una página específica:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{image}\KeywordTok{:}\AttributeTok{ }\CharTok{false}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Ejemplos prácticos}\label{ejemplos-pruxe1cticos-3}
+
+\paragraph{1. Configuración mínima
+recomendada.}\label{configuraciuxf3n-muxednima-recomendada-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://misitio.com}
+\AttributeTok{  }\FunctionTok{twitter{-}card}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{2. Configuración profesional
+(global).}\label{configuraciuxf3n-profesional-global-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://misitio.com}
+\AttributeTok{  }\FunctionTok{twitter{-}card}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{creator}\KeywordTok{:}\AttributeTok{ }\StringTok{"@autor\_principal"}
+\AttributeTok{    }\FunctionTok{site}\KeywordTok{:}\AttributeTok{ }\StringTok{"@mi\_sitio\_quarto"}
+\AttributeTok{    }\FunctionTok{card{-}style}\KeywordTok{:}\AttributeTok{ summary\_large\_image}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ images/default{-}card.jpg}\CommentTok{   \# Imagen por defecto}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{3. Personalización por página (en el front-matter de
+page.qmd).}\label{personalizaciuxf3n-por-puxe1gina-en-el-front-matter-de-page.qmd-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Guía Definitiva de Quarto"}
+\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Aprende a crear sitios increíbles"}
+\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /images/guia{-}quarto{-}preview.png}
+\FunctionTok{twitter{-}card}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"¡Nueva Guía de Quarto 2025!"}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Todo lo que necesitas para dominar Quarto"}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /images/guia{-}quarto{-}large.jpg}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Nota:} Twitter Cards también usa la configuración de Open Graph
+para título, descripción e imagen.
+
+\subsection{Google Analytics}\label{google-analytics}
+
+Integración con Google Analytics.
+
+\subsubsection{Configuración Básica}\label{configuraciuxf3n-buxe1sica-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XXXXXXXXXX"}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Configuración
+Completa}\label{configuraciuxf3n-completa-3}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{tracking{-}id}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XXXXXXXXXX"}
+\AttributeTok{    }\FunctionTok{storage}\KeywordTok{:}\AttributeTok{ cookies}\CommentTok{                 \# cookies o none}
+\AttributeTok{    }\FunctionTok{anonymize{-}ip}\KeywordTok{:}\AttributeTok{ }\CharTok{true}\CommentTok{               \# Anonimizar IPs (RGPD)}
+\AttributeTok{    }\FunctionTok{version}\KeywordTok{:}\AttributeTok{ }\DecValTok{4}\CommentTok{                       \# Versión (3 o 4)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Opciones}\label{opciones-2}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1778}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2889}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Opción
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Descripción
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Valores
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Recomendación
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{tracking-id} & ID de seguimiento & G-XXXXXXX (GA4) o UA-XXXXX
+(antiguo) & Obligatorio \\
+\texttt{storage} & Almacenamiento & \texttt{cookies} (por defecto) o
+\texttt{none} & \texttt{cookies} normal, \texttt{none} para
+privacidad \\
+\texttt{anonymize-ip} & Anonimizar IPs & \texttt{true} o \texttt{false}
+& \texttt{true} para RGPD/privacidad \\
+\texttt{version} & Versión de GA & \texttt{3} o \texttt{4} & Se detecta
+automáticamente \\
+\end{longtable}
+
+\textbf{Recomendación para Europa:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{google{-}analytics}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{tracking{-}id}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XXXXXXXXXX"}
+\AttributeTok{  }\FunctionTok{anonymize{-}ip}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Ejemplos prácticos}\label{ejemplos-pruxe1cticos-4}
+
+\paragraph{1. Configuración mínima (recomendada para la
+mayoría).}\label{configuraciuxf3n-muxednima-recomendada-para-la-mayoruxeda}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XXXXXXXXXX"}\CommentTok{   \# Solo el ID, todo lo demás por defecto}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{2. Configuración respetuosa con la privacidad (recomendada en
+Europa).}\label{configuraciuxf3n-respetuosa-con-la-privacidad-recomendada-en-europa}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{tracking{-}id}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XXXXXXXXXX"}
+\AttributeTok{    }\FunctionTok{anonymize{-}ip}\KeywordTok{:}\AttributeTok{ }\CharTok{true}\CommentTok{                \# Cumple mejor con RGPD}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{3. Sin cookies propias (máxima
+privacidad).}\label{sin-cookies-propias-muxe1xima-privacidad}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{tracking{-}id}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XXXXXXXXXX"}
+\AttributeTok{    }\FunctionTok{anonymize{-}ip}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{storage}\KeywordTok{:}\AttributeTok{ none}\CommentTok{                     \# No usa cookies de identificación}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{4. Combinación con Cookie Consent (ideal para cumplimiento
+legal).}\label{combinaciuxf3n-con-cookie-consent-ideal-para-cumplimiento-legal}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{tracking{-}id}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XXXXXXXXXX"}
+\AttributeTok{    }\FunctionTok{anonymize{-}ip}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{cookie{-}consent}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ express}\CommentTok{                     \# Bloquea cookies hasta que el usuario acepte}
+\AttributeTok{    }\FunctionTok{style}\KeywordTok{:}\AttributeTok{ headline}
+\AttributeTok{    }\FunctionTok{palette}\KeywordTok{:}\AttributeTok{ dark}
+\end{Highlighting}
+\end{Shaded}
+
+Con \texttt{cookie-consent} activado, Google Analytics \textbf{solo se
+cargará} si el usuario acepta las cookies de seguimiento.
+
+\subsection{Cookie Consent}\label{cookie-consent}
+
+Solicitar consentimiento para cookies (RGPD).
+
+\subsubsection{Configuración
+Completa}\label{configuraciuxf3n-completa-4}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{cookie{-}consent}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ express}\CommentTok{                    \# implied o express}
+\AttributeTok{    }\FunctionTok{style}\KeywordTok{:}\AttributeTok{ headline}\CommentTok{                  \# simple, interstitial, standalone}
+\AttributeTok{    }\FunctionTok{palette}\KeywordTok{:}\AttributeTok{ dark}\CommentTok{                    \# light o dark}
+\AttributeTok{    }\FunctionTok{language}\KeywordTok{:}\AttributeTok{ es}\CommentTok{                     \# Código de idioma}
+\AttributeTok{    }\FunctionTok{policy{-}url}\KeywordTok{:}\AttributeTok{ /politica{-}cookies}\CommentTok{    \# URL de política}
+\AttributeTok{    }\FunctionTok{prefs{-}text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Preferencias de Cookies"}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{\texorpdfstring{Opciones de
+\texttt{type}}{Opciones de type}}\label{opciones-de-type-1}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3043}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6957}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Valor
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Comportamiento
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{implied} & Informa pero no bloquea cookies (notificación) \\
+\texttt{express} & Bloquea cookies hasta que el usuario acepte
+explícitamente \\
+\end{longtable}
+
+\textbf{Recomendación:} \texttt{express} para cumplir con RGPD.
+
+\subsubsection{\texorpdfstring{Opciones de
+\texttt{style}}{Opciones de style}}\label{opciones-de-style}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Valor & Apariencia \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{simple} & Diálogo pequeño en esquina inferior derecha \\
+\texttt{headline} & Barra completa en la parte superior \\
+\texttt{interstitial} & Overlay semitransparente \\
+\texttt{standalone} & Overlay opaco \\
+\end{longtable}
+
+\subsubsection{Integración con Google
+Analytics}\label{integraciuxf3n-con-google-analytics}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{cookie{-}consent}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ express}
+\AttributeTok{    }\FunctionTok{style}\KeywordTok{:}\AttributeTok{ headline}
+\AttributeTok{    }
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{tracking{-}id}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XXXXXXXXXX"}
+\AttributeTok{    }\FunctionTok{anonymize{-}ip}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Resultado:} Google Analytics solo se cargará si el usuario
+acepta las cookies de tracking.
+
+\subsection{Comentarios}\label{comentarios}
+
+Integración de sistemas de comentarios.
+
+\subsubsection{Utterances (GitHub
+Issues)}\label{utterances-github-issues}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{comments}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{utterances}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{repo}\KeywordTok{:}\AttributeTok{ usuario/repositorio}
+\AttributeTok{      }\FunctionTok{issue{-}term}\KeywordTok{:}\AttributeTok{ title}\CommentTok{              \# title, pathname, url, og:title}
+\AttributeTok{      }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ github{-}light}\CommentTok{            \# Tema}
+\AttributeTok{      }\FunctionTok{label}\KeywordTok{:}\AttributeTok{ }\StringTok{"comments"}\CommentTok{              \# Etiqueta en issues}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Opciones de \texttt{issue-term}:}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{title}: Usa el título del post como título del issue
+\item
+  \texttt{pathname}: Usa la ruta del post
+\item
+  \texttt{url}: Usa la URL completa
+\item
+  \texttt{og:title}: Usa el título de Open Graph
+\end{itemize}
+
+\textbf{Temas disponibles:}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{github-light}, \texttt{github-dark}
+\item
+  \texttt{preferred-color-scheme} (automático)
+\item
+  \texttt{github-dark-orange}, \texttt{icy-dark}, \texttt{dark-blue},
+  \texttt{photon-dark}
+\item
+  \texttt{boxy-light}, \texttt{gruvbox-dark}
+\end{itemize}
+
+\subsubsection{Giscus (GitHub
+Discussions)}\label{giscus-github-discussions}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{comments}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{giscus}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{repo}\KeywordTok{:}\AttributeTok{ usuario/repositorio}
+\AttributeTok{      }\FunctionTok{repo{-}id}\KeywordTok{:}\AttributeTok{ }\StringTok{"R\_xxxxx"}
+\AttributeTok{      }\FunctionTok{category}\KeywordTok{:}\AttributeTok{ }\StringTok{"Announcements"}
+\AttributeTok{      }\FunctionTok{category{-}id}\KeywordTok{:}\AttributeTok{ }\StringTok{"DIC\_xxxxx"}
+\AttributeTok{      }\FunctionTok{mapping}\KeywordTok{:}\AttributeTok{ pathname}
+\AttributeTok{      }\FunctionTok{reactions{-}enabled}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{      }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ light}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Hypothesis}\label{hypothesis}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{comments}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{hypothesis}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Headers y Footers
+Personalizados}\label{headers-y-footers-personalizados}
+
+Agregar contenido Markdown en posiciones específicas.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\FunctionTok{  body{-}header}\KeywordTok{: }\CharTok{|}
+\NormalTok{    Esta página es parte de [Mi Proyecto](https://example.com)}
+    
+\FunctionTok{  body{-}footer}\KeywordTok{: }\CharTok{|}
+\NormalTok{    © 2026 Mi Nombre}
+    
+\FunctionTok{  margin{-}header}\KeywordTok{: }\CharTok{|}
+\NormalTok{    ![Logo](/assets/img/logo.png)}
+    
+\FunctionTok{  margin{-}footer}\KeywordTok{: }\CharTok{|}
+\NormalTok{    *Última actualización: 2026{-}01{-}02*}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Ubicaciones:}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{body-header}: Inicio del cuerpo (debajo del título)
+\item
+  \texttt{body-footer}: Final del cuerpo
+\item
+  \texttt{margin-header}: Arriba del margen derecho (TOC)
+\item
+  \texttt{margin-footer}: Debajo del margen derecho
+\end{itemize}
+
+\section{Sección: Format}\label{secciuxf3n-format}
+
+Define los formatos de salida y sus opciones.
+
+\subsection{Formato HTML}\label{formato-html}
+
+\subsubsection{Configuración Básica}\label{configuraciuxf3n-buxe1sica-2}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ cosmo}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}fold}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Tema}\label{tema}
+
+\textbf{Temas predefinidos de Bootswatch:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ cosmo}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Temas disponibles:}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{default}, \texttt{cerulean}, \texttt{cosmo}, \texttt{cyborg},
+  \texttt{darkly}, \texttt{flatly}
+\item
+  \texttt{journal}, \texttt{litera}, \texttt{lumen}, \texttt{lux},
+  \texttt{materia}, \texttt{minty}
+\item
+  \texttt{morph}, \texttt{pulse}, \texttt{quartz}, \texttt{sandstone},
+  \texttt{simplex}, \texttt{sketchy}
+\item
+  \texttt{slate}, \texttt{solar}, \texttt{spacelab}, \texttt{superhero},
+  \texttt{united}, \texttt{vapor}
+\item
+  \texttt{yeti}, \texttt{zephyr}
+\end{itemize}
+
+\textbf{Tema claro y oscuro:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{light}\KeywordTok{:}\AttributeTok{ flatly}
+\AttributeTok{      }\FunctionTok{dark}\KeywordTok{:}\AttributeTok{ darkly}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Tema personalizado:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ cosmo}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ assets/custom.scss}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{CSS Adicional}\label{css-adicional}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{css}\KeywordTok{:}\AttributeTok{ assets/styles.css}
+\CommentTok{    \# O múltiples archivos:}
+\AttributeTok{    }\FunctionTok{css}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ assets/styles.css}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ assets/colors.css}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Tabla de Contenidos}\label{tabla-de-contenidos}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{toc{-}depth}\KeywordTok{:}\AttributeTok{ }\DecValTok{3}
+\AttributeTok{    }\FunctionTok{toc{-}expand}\KeywordTok{:}\AttributeTok{ }\DecValTok{2}
+\AttributeTok{    }\FunctionTok{toc{-}title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Contenidos"}
+\AttributeTok{    }\FunctionTok{toc{-}location}\KeywordTok{:}\AttributeTok{ left}\CommentTok{               \# left, right, body}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Código}\label{cuxf3digo}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{code{-}fold}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}summary}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mostrar código"}
+\AttributeTok{    }\FunctionTok{code{-}copy}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}overflow}\KeywordTok{:}\AttributeTok{ scroll}\CommentTok{            \# scroll, wrap}
+\AttributeTok{    }\FunctionTok{code{-}line{-}numbers}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{highlight{-}style}\KeywordTok{:}\AttributeTok{ github}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Navegación}\label{navegaciuxf3n}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{page{-}navigation}\KeywordTok{:}\AttributeTok{ }\CharTok{true}\CommentTok{            \# Botones Siguiente/Anterior}
+\AttributeTok{    }\FunctionTok{smooth{-}scroll}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{link{-}external{-}newwindow}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{link{-}external{-}icon}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Includes (Archivos
+Adicionales)}\label{includes-archivos-adicionales}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{include{-}in{-}header}\KeywordTok{:}\AttributeTok{ assets/gtm{-}head.html}
+\AttributeTok{    }\FunctionTok{include{-}before{-}body}\KeywordTok{:}\AttributeTok{ assets/banner.html}
+\AttributeTok{    }\FunctionTok{include{-}after{-}body}\KeywordTok{:}\AttributeTok{ assets/gtm{-}body.html}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Casos de uso:}
+
+\begin{itemize}
+\tightlist
+\item
+  Google Tag Manager
+\item
+  Scripts personalizados
+\item
+  Analytics adicionales
+\item
+  Banners o avisos
+\end{itemize}
+
+\subsubsection{Configuración Completa de
+HTML}\label{configuraciuxf3n-completa-de-html}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\CommentTok{    \# Tema}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{light}\KeywordTok{:}\AttributeTok{ cosmo}
+\AttributeTok{      }\FunctionTok{dark}\KeywordTok{:}\AttributeTok{ darkly}
+\AttributeTok{    }\FunctionTok{css}\KeywordTok{:}\AttributeTok{ assets/styles.css}
+\AttributeTok{    }
+\CommentTok{    \# Tabla de contenidos}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{toc{-}depth}\KeywordTok{:}\AttributeTok{ }\DecValTok{3}
+\AttributeTok{    }\FunctionTok{toc{-}expand}\KeywordTok{:}\AttributeTok{ }\DecValTok{2}
+\AttributeTok{    }\FunctionTok{toc{-}location}\KeywordTok{:}\AttributeTok{ left}
+\AttributeTok{    }
+\CommentTok{    \# Código}
+\AttributeTok{    }\FunctionTok{code{-}fold}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}copy}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}line{-}numbers}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}overflow}\KeywordTok{:}\AttributeTok{ scroll}
+\AttributeTok{    }\FunctionTok{highlight{-}style}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{    }
+\CommentTok{    \# Navegación}
+\AttributeTok{    }\FunctionTok{page{-}navigation}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{smooth{-}scroll}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{link{-}external{-}newwindow}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }
+\CommentTok{    \# Citas}
+\AttributeTok{    }\FunctionTok{citations{-}hover}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{footnotes{-}hover}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }
+\CommentTok{    \# Includes}
+\AttributeTok{    }\FunctionTok{include{-}in{-}header}\KeywordTok{:}\AttributeTok{ assets/gtm{-}head.html}
+\AttributeTok{    }\FunctionTok{include{-}after{-}body}\KeywordTok{:}\AttributeTok{ assets/gtm{-}body.html}
+\AttributeTok{    }
+\CommentTok{    \# Grid (ancho de columnas)}
+\AttributeTok{    }\FunctionTok{grid}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{body{-}width}\KeywordTok{:}\AttributeTok{ 1000px}
+\AttributeTok{      }\FunctionTok{sidebar{-}width}\KeywordTok{:}\AttributeTok{ 300px}
+\AttributeTok{      }\FunctionTok{margin{-}width}\KeywordTok{:}\AttributeTok{ 200px}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Formato PDF}\label{formato-pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{pdf}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{documentclass}\KeywordTok{:}\AttributeTok{ article}
+\AttributeTok{    }\FunctionTok{papersize}\KeywordTok{:}\AttributeTok{ a4}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{number{-}sections}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{colorlinks}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{pdf{-}engine}\KeywordTok{:}\AttributeTok{ xelatex}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Formato DOCX}\label{formato-docx}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{docx}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{number{-}sections}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{reference{-}doc}\KeywordTok{:}\AttributeTok{ template.docx}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Múltiples Formatos}\label{muxfaltiples-formatos}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ cosmo}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }
+\AttributeTok{  }\FunctionTok{pdf}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{documentclass}\KeywordTok{:}\AttributeTok{ article}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }
+\AttributeTok{  }\FunctionTok{docx}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Configuraciones Avanzadas}\label{configuraciones-avanzadas}
+
+\subsection{Filtros}\label{filtros}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{filters}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ quarto}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Metadata Compartidos}\label{metadata-compartidos}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{author}\KeywordTok{:}\AttributeTok{ }\StringTok{"Edison Achalma"}
+\FunctionTok{date}\KeywordTok{:}\AttributeTok{ }\StringTok{"2026{-}01{-}02"}
+\FunctionTok{lang}\KeywordTok{:}\AttributeTok{ es}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Estos metadatos se aplican a todos los documentos.}
+
+\subsection{Bibliografía Global}\label{bibliografuxeda-global}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{bibliography}\KeywordTok{:}\AttributeTok{ references.bib}
+\FunctionTok{csl}\KeywordTok{:}\AttributeTok{ apa{-}6th{-}edition.csl}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Variables de Entorno}\label{variables-de-entorno}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{environment}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{QUARTO\_PYTHON}\KeywordTok{:}\AttributeTok{ /usr/bin/python3}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Análisis de Tu
+Configuración}\label{anuxe1lisis-de-tu-configuraciuxf3n}
+
+Voy a analizar tu \texttt{\_quarto.yml} sección por sección.
+
+\subsection{Tu Configuración Actual}\label{tu-configuraciuxf3n-actual}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ \_site}
+\AttributeTok{  }\FunctionTok{resources}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ assets/img/sidebar.jpg}
+
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Edison Achalma B.Sc. Econ."}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Investigador y educador que aplica la ciencia de datos }\SpecialCharTok{\textbackslash{} }
+\StringTok{  de forma que se dé prioridad a la equidad social."}
+\AttributeTok{  }\FunctionTok{favicon}\KeywordTok{:}\AttributeTok{ assets/img/favicon.png }
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /assets/img/default{-}preview.jpg}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{announcement}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{content}\KeywordTok{:}\AttributeTok{ }\StringTok{"¡Bienvenidos a mi mundo! ¡Felices fiestas! Gracias por  }\SpecialCharTok{\textbackslash{} }
+\StringTok{    visitar 🎄"}
+\AttributeTok{    }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ gift}
+\AttributeTok{    }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ primary}
+\AttributeTok{    }\FunctionTok{dismissable}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{position}\KeywordTok{:}\AttributeTok{ below{-}navbar}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{open{-}graph}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Edison Achalma B.Sc. Econ."}
+\AttributeTok{    }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Investigador y educador que aplica la ciencia de    }\SpecialCharTok{\textbackslash{} }
+\StringTok{    datos de forma que se dé prioridad a la equidad social."}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /assets/img/sidebar.jpg}
+\AttributeTok{    }\FunctionTok{image{-}width}\KeywordTok{:}\AttributeTok{ }\DecValTok{1200}
+\AttributeTok{    }\FunctionTok{image{-}height}\KeywordTok{:}\AttributeTok{ }\DecValTok{630}
+\AttributeTok{    }\FunctionTok{locale}\KeywordTok{:}\AttributeTok{ es\_ES}
+\AttributeTok{    }\FunctionTok{site{-}name}\KeywordTok{:}\AttributeTok{ }\StringTok{"Actus mercator"}
+\AttributeTok{    }
+\AttributeTok{  }\FunctionTok{twitter{-}card}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{creator}\KeywordTok{:}\AttributeTok{ }\StringTok{"@achalmaedison"}
+\AttributeTok{    }\FunctionTok{card{-}style}\KeywordTok{:}\AttributeTok{ summary\_large\_image}
+\AttributeTok{    }
+\AttributeTok{  }\FunctionTok{comments}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{utterances}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{repo}\KeywordTok{:}\AttributeTok{ achalmed/methodica}
+\AttributeTok{      }\FunctionTok{label}\KeywordTok{:}\AttributeTok{ utterances}
+\AttributeTok{      }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ body{-}light}
+\AttributeTok{      }\FunctionTok{issue{-}term}\KeywordTok{:}\AttributeTok{ title}
+\AttributeTok{      }
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://methodica.netlify.app/}
+\AttributeTok{  }\FunctionTok{repo{-}url}\KeywordTok{:}\AttributeTok{ https://github.com/achalmed/methodica}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ About}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"About Me"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://achalmaedison.netlify.app/about/}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"More"}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"More"}
+\AttributeTok{        }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ ellipsis{-}h}
+\AttributeTok{        }\FunctionTok{menu}\KeywordTok{:}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Econometria"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://epsilon{-}y{-}beta.netlify.app/}
+\CommentTok{          \# ... más items}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/achalmed}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ twitter}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://x.com/achalmaedison}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ rss}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.xml}
+\AttributeTok{        }
+\AttributeTok{  }\FunctionTok{page{-}footer}\KeywordTok{:}
+\FunctionTok{    left}\KeywordTok{: }\CharTok{\textgreater{}{-}}
+\NormalTok{      © 2026 Edison Achalma · Made with [Quarto](https://quarto.org)}
+\FunctionTok{    center}\KeywordTok{: }\CharTok{|}
+\NormalTok{      \textless{}a class="link{-}dark me{-}1" href="/accessibility.html"\textgreater{}\textless{}/a\textgreater{}}
+\NormalTok{      \# ... más enlaces}
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Accessibility"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://achalmaedison.netlify.app/accessibility}
+\CommentTok{      \# ... más items}
+
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{light}\KeywordTok{:}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ cosmo}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/theme\_light.scss}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/colors.scss}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/fonts.scss}
+\AttributeTok{    }\FunctionTok{css}\KeywordTok{:}\AttributeTok{ assets/styles.css}
+\AttributeTok{    }\FunctionTok{include{-}in{-}header}\KeywordTok{:}\AttributeTok{ assets/gtm{-}head.html}
+\AttributeTok{    }\FunctionTok{include{-}after{-}body}\KeywordTok{:}\AttributeTok{ assets/gtm{-}body.html}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Análisis Detallado}\label{anuxe1lisis-detallado}
+
+\subsubsection{Sección: Project}\label{secciuxf3n-project-1}
+
+\textbf{Estado:} Correcto y bien configurado.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}\CommentTok{                      \# Correcto}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ \_site}\CommentTok{                  \# Estándar}
+\AttributeTok{  }\FunctionTok{resources}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ assets/img/sidebar.jpg}\CommentTok{         \# Solo un archivo}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Sugerencias:}
+
+\begin{itemize}
+\tightlist
+\item
+  Considera agregar otros recursos si los necesitas:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{resources}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ assets/img/sidebar.jpg}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"data/"}\CommentTok{                          \# Si tienes datasets}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"CNAME"}\CommentTok{                          \# Si usas dominio personalizado}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Sección: Website - Información
+Básica}\label{secciuxf3n-website---informaciuxf3n-buxe1sica}
+
+\textbf{Estado:} Excelente.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Edison Achalma B.Sc. Econ."}\CommentTok{              \# Bien}
+\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"..."}\CommentTok{                                \# Bien (descriptiva)}
+\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://methodica.netlify.app/}\CommentTok{         \# Correcto}
+\FunctionTok{repo{-}url}\KeywordTok{:}\AttributeTok{ https://github.com/achalmed/methodica}\CommentTok{  \# Bien}
+\FunctionTok{favicon}\KeywordTok{:}\AttributeTok{ assets/img/favicon.png}\CommentTok{                  \# Correcto}
+\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /assets/img/default{-}preview.jpg}\CommentTok{           \# Bien}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Nota importante:} La ruta de \texttt{image} comienza con
+\texttt{/} (absoluta desde la raíz), lo cual es correcto.
+
+\subsubsection{Anuncio}\label{anuncio}
+
+\textbf{Estado:} Bien configurado.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{announcement}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{content}\KeywordTok{:}\AttributeTok{ }\StringTok{"¡Bienvenidos a mi mundo! Gracias por visitar 🎄"}
+\AttributeTok{  }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ gift}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ primary}
+\AttributeTok{  }\FunctionTok{dismissable}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{  }\FunctionTok{position}\KeywordTok{:}\AttributeTok{ below{-}navbar}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Sugerencia:} El mensaje parece temporal (fiestas). Considera
+actualizarlo o quitarlo después de las fiestas.
+
+\textbf{Alternativa neutra:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{announcement}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ info{-}circle}
+\AttributeTok{  }\FunctionTok{content}\KeywordTok{:}\AttributeTok{ }\StringTok{"**Nuevo:** Explora mi colección de tutoriales de econometría"}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ info}
+\AttributeTok{  }\FunctionTok{dismissable}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Open Graph}\label{open-graph-1}
+
+\textbf{Estado:} Excelente configuración.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{open{-}graph}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Edison Achalma B.Sc. Econ."}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"..."}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /assets/img/sidebar.jpg}\CommentTok{                 \# Bien}
+\AttributeTok{  }\FunctionTok{image{-}width}\KeywordTok{:}\AttributeTok{ }\DecValTok{1200}\CommentTok{                              \# Perfecto}
+\AttributeTok{  }\FunctionTok{image{-}height}\KeywordTok{:}\AttributeTok{ }\DecValTok{630}\CommentTok{                              \# Perfecto (ratio 1.91:1)}
+\AttributeTok{  }\FunctionTok{locale}\KeywordTok{:}\AttributeTok{ es\_ES}\CommentTok{                                  \# Correcto}
+\AttributeTok{  }\FunctionTok{site{-}name}\KeywordTok{:}\AttributeTok{ }\StringTok{"Actus mercator"}\CommentTok{                    \# Bien}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Nota:} \texttt{site-name} (``Actus mercator'') difiere del
+\texttt{title} del sitio (``Edison Achalma\ldots{}''). Esto es
+intencional. Está bien si quieres un nombre más corto para redes
+sociales.
+
+\subsubsection{Twitter Card}\label{twitter-card}
+
+\textbf{Estado:} Correcto.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{twitter{-}card}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{creator}\KeywordTok{:}\AttributeTok{ }\StringTok{"@achalmaedison"}
+\AttributeTok{  }\FunctionTok{card{-}style}\KeywordTok{:}\AttributeTok{ summary\_large\_image}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Sugerencia opcional:} Agregar \texttt{site}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{twitter{-}card}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{creator}\KeywordTok{:}\AttributeTok{ }\StringTok{"@achalmaedison"}
+\AttributeTok{  }\FunctionTok{site}\KeywordTok{:}\AttributeTok{ }\StringTok{"@achalmaedison"}\CommentTok{              \# Cuenta oficial del sitio}
+\AttributeTok{  }\FunctionTok{card{-}style}\KeywordTok{:}\AttributeTok{ summary\_large\_image}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Comentarios}\label{comentarios-1}
+
+\textbf{Estado:} Bien configurado.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{comments}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{utterances}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{repo}\KeywordTok{:}\AttributeTok{ achalmed/methodica}
+\AttributeTok{    }\FunctionTok{label}\KeywordTok{:}\AttributeTok{ utterances}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ body{-}light}\CommentTok{                            \# Tema claro}
+\AttributeTok{    }\FunctionTok{issue{-}term}\KeywordTok{:}\AttributeTok{ title}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Sugerencias:} 1. Verifica que el repositorio
+\texttt{achalmed/methodica} existe y tiene Utterances instalado. 2. Si
+usas tema claro/oscuro en tu sitio, considera
+\texttt{theme:\ preferred-color-scheme} para que se adapte
+automáticamente.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{comments}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{utterances}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{repo}\KeywordTok{:}\AttributeTok{ achalmed/methodica}
+\AttributeTok{    }\FunctionTok{label}\KeywordTok{:}\AttributeTok{ }\StringTok{"comments"}\CommentTok{                \# Más descriptivo}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ preferred{-}color{-}scheme}\CommentTok{    \# Se adapta al tema del usuario}
+\AttributeTok{    }\FunctionTok{issue{-}term}\KeywordTok{:}\AttributeTok{ title}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Google Analytics y Cookie
+Consent}\label{google-analytics-y-cookie-consent}
+
+\textbf{Estado:} Comentado (deshabilitado).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#google{-}analytics:}
+\CommentTok{ \# tracking{-}id: "G{-}XGH6TP6RB3"}
+\CommentTok{ \# storage: cookies}
+\CommentTok{ \# anonymize{-}ip: true}
+
+\CommentTok{\#cookie{-}consent:}
+\CommentTok{ \# type: express}
+\CommentTok{ \# style: simple}
+\CommentTok{ \# palette: light}
+\CommentTok{ \# language: es}
+\CommentTok{ \# policy{-}url: https://achalmaedison.netlify.app/}
+\CommentTok{ \# prefs{-}text: "Preferencias de Cookies"}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Sugerencia:} Si deseas analytics, descomenta y configura:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{google{-}analytics}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{tracking{-}id}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XGH6TP6RB3"}
+\AttributeTok{  }\FunctionTok{anonymize{-}ip}\KeywordTok{:}\AttributeTok{ }\CharTok{true}\CommentTok{                 \# Recomendado para privacidad}
+\AttributeTok{  }
+\FunctionTok{cookie{-}consent}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ express}\CommentTok{                      \# Cumplir con RGPD}
+\AttributeTok{  }\FunctionTok{style}\KeywordTok{:}\AttributeTok{ headline}\CommentTok{                    \# Más visible}
+\AttributeTok{  }\FunctionTok{language}\KeywordTok{:}\AttributeTok{ es}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Navbar}\label{navbar}
+
+\textbf{Estado:} Bien estructurada.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ About}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://achalmaedison.netlify.app/about/}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"More"}
+\AttributeTok{      }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ ellipsis{-}h}
+\AttributeTok{      }\FunctionTok{menu}\KeywordTok{:}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Econometria"}
+\AttributeTok{          }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://epsilon{-}y{-}beta.netlify.app/}
+\CommentTok{        \# ... más items}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/achalmed}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ twitter}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://x.com/achalmaedison}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ rss}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.xml}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Sugerencias:} 1. Agregar \texttt{aria-label} a íconos sin texto:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{  }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/achalmed}
+\AttributeTok{  }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"GitHub Profile"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Considerar agregar items en \texttt{left} si tienes páginas
+  principales del sitio:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Publicaciones"}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ publications/}
+\AttributeTok{  }\FunctionTok{right}\KeywordTok{:}
+\CommentTok{    \# ... (mantener lo actual)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Page Footer}\label{page-footer-1}
+
+\textbf{Estado:} Bien configurado.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{page{-}footer}\KeywordTok{:}
+\FunctionTok{  left}\KeywordTok{: }\CharTok{\textgreater{}{-}}
+\NormalTok{    © 2026 Edison Achalma · Made with [Quarto](https://quarto.org)}
+\FunctionTok{  center}\KeywordTok{: }\CharTok{|}
+\NormalTok{    \textless{}a class="link{-}dark me{-}1" href="/accessibility.html"\textgreater{}\textless{}/a\textgreater{}}
+\NormalTok{    \# ... más íconos}
+\AttributeTok{  }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Accessibility"}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://achalmaedison.netlify.app/accessibility}
+\CommentTok{    \# ... más enlaces}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Nota:} Los enlaces en \texttt{right} apuntan a
+\texttt{https://achalmaedison.netlify.app/} (otro sitio). Si son páginas
+de este sitio, usa rutas relativas:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Accessibility"}
+\AttributeTok{    }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ accessibility.html}\CommentTok{         \# Ruta local}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Contact"}
+\AttributeTok{    }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ contact.html}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Formato HTML}\label{formato-html-1}
+
+\textbf{Estado:} Excelente configuración avanzada.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{light}\KeywordTok{:}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ cosmo}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/theme\_light.scss}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/colors.scss}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/fonts.scss}
+\AttributeTok{    }\FunctionTok{css}\KeywordTok{:}\AttributeTok{ assets/styles.css}
+\AttributeTok{    }\FunctionTok{include{-}in{-}header}\KeywordTok{:}\AttributeTok{ assets/gtm{-}head.html}
+\AttributeTok{    }\FunctionTok{include{-}after{-}body}\KeywordTok{:}\AttributeTok{ assets/gtm{-}body.html}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Observaciones:}
+
+\begin{itemize}
+\tightlist
+\item
+  Tema personalizado bien estructurado (base + SCSS personalizados)
+\item
+  Google Tag Manager integrado (gtm-head.html, gtm-body.html)
+\item
+  CSS adicional para estilos personalizados
+\end{itemize}
+
+\textbf{Sugerencia opcional:} Agregar tema oscuro:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{light}\KeywordTok{:}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ cosmo}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/theme\_light.scss}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/colors.scss}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/fonts.scss}
+\AttributeTok{      }\FunctionTok{dark}\KeywordTok{:}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ darkly}\CommentTok{                     \# Tema oscuro base}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/theme\_dark.scss}\CommentTok{     \# Personalizaciones oscuras}
+\AttributeTok{    }\FunctionTok{css}\KeywordTok{:}\AttributeTok{ assets/styles.css}
+\AttributeTok{    }\FunctionTok{include{-}in{-}header}\KeywordTok{:}\AttributeTok{ assets/gtm{-}head.html}
+\AttributeTok{    }\FunctionTok{include{-}after{-}body}\KeywordTok{:}\AttributeTok{ assets/gtm{-}body.html}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Configuración Optimizada}\label{configuraciuxf3n-optimizada}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# ========================================================================}
+\CommentTok{\# CONFIGURACIÓN DE PROYECTO}
+\CommentTok{\# ========================================================================}
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ \_site}
+\AttributeTok{  }\FunctionTok{resources}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ assets/img/sidebar.jpg}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"CNAME"}\CommentTok{                        \# Si usas dominio personalizado}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\StringTok{".nojekyll"}\CommentTok{                    \# Para GitHub Pages}
+
+\CommentTok{\# ========================================================================}
+\CommentTok{\# CONFIGURACIÓN DEL SITIO WEB}
+\CommentTok{\# ========================================================================}
+\FunctionTok{website}\KeywordTok{:}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{  \# Información Básica}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Edison Achalma B.Sc. Econ."}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Investigador y educador que aplica la ciencia de datos }\SpecialCharTok{\textbackslash{} }
+\StringTok{  de forma que se dé prioridad a la equidad social."}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://methodica.netlify.app/}
+\AttributeTok{  }\FunctionTok{repo{-}url}\KeywordTok{:}\AttributeTok{ https://github.com/achalmed/methodica}
+\AttributeTok{  }
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{  \# Imágenes}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\AttributeTok{  }\FunctionTok{favicon}\KeywordTok{:}\AttributeTok{ assets/img/favicon.png}
+\AttributeTok{  }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /assets/img/default{-}preview.jpg}
+\AttributeTok{  }
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{  \# Anuncio}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\AttributeTok{  }\FunctionTok{announcement}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ info{-}circle}
+\AttributeTok{    }\FunctionTok{content}\KeywordTok{:}\AttributeTok{ }\StringTok{"**Nuevo:** Explora la colección de recursos de econometría"}
+\AttributeTok{    }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ info}
+\AttributeTok{    }\FunctionTok{dismissable}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{position}\KeywordTok{:}\AttributeTok{ below{-}navbar}
+\AttributeTok{  }
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{  \# Open Graph (Redes Sociales)}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\AttributeTok{  }\FunctionTok{open{-}graph}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Edison Achalma B.Sc. Econ."}
+\AttributeTok{    }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Investigador y educador que aplica la ciencia de datos \textbackslash{}}
+\StringTok{    de forma que se dé prioridad a la equidad social."}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /assets/img/sidebar.jpg}
+\AttributeTok{    }\FunctionTok{image{-}width}\KeywordTok{:}\AttributeTok{ }\DecValTok{1200}
+\AttributeTok{    }\FunctionTok{image{-}height}\KeywordTok{:}\AttributeTok{ }\DecValTok{630}
+\AttributeTok{    }\FunctionTok{locale}\KeywordTok{:}\AttributeTok{ es\_ES}
+\AttributeTok{    }\FunctionTok{site{-}name}\KeywordTok{:}\AttributeTok{ }\StringTok{"Actus mercator"}
+\AttributeTok{  }
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{  \# Twitter Card}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\AttributeTok{  }\FunctionTok{twitter{-}card}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{creator}\KeywordTok{:}\AttributeTok{ }\StringTok{"@achalmaedison"}
+\AttributeTok{    }\FunctionTok{site}\KeywordTok{:}\AttributeTok{ }\StringTok{"@achalmaedison"}
+\AttributeTok{    }\FunctionTok{card{-}style}\KeywordTok{:}\AttributeTok{ summary\_large\_image}
+\AttributeTok{  }
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{  \# Google Analytics}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{tracking{-}id}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XGH6TP6RB3"}
+\AttributeTok{    }\FunctionTok{anonymize{-}ip}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{  }
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{  \# Cookie Consent}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\AttributeTok{  }\FunctionTok{cookie{-}consent}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ express}
+\AttributeTok{    }\FunctionTok{style}\KeywordTok{:}\AttributeTok{ headline}
+\AttributeTok{    }\FunctionTok{palette}\KeywordTok{:}\AttributeTok{ dark}
+\AttributeTok{    }\FunctionTok{language}\KeywordTok{:}\AttributeTok{ es}
+\AttributeTok{    }\FunctionTok{policy{-}url}\KeywordTok{:}\AttributeTok{ /privacy}
+\AttributeTok{    }\FunctionTok{prefs{-}text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Preferencias de Cookies"}
+\AttributeTok{  }
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{  \# Comentarios}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\AttributeTok{  }\FunctionTok{comments}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{utterances}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{repo}\KeywordTok{:}\AttributeTok{ achalmed/methodica}
+\AttributeTok{      }\FunctionTok{label}\KeywordTok{:}\AttributeTok{ }\StringTok{"comments"}
+\AttributeTok{      }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ preferred{-}color{-}scheme}
+\AttributeTok{      }\FunctionTok{issue{-}term}\KeywordTok{:}\AttributeTok{ title}
+\AttributeTok{  }
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{  \# Navegación}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Inicio"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.qmd}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+\AttributeTok{        }
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"About"}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"About Me"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://achalmaedison.netlify.app/about/}
+\AttributeTok{        }
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"More"}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"More Resources"}
+\AttributeTok{        }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ ellipsis{-}h}
+\AttributeTok{        }\FunctionTok{menu}\KeywordTok{:}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Econometría"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://epsilon{-}y{-}beta.netlify.app/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Filosofía"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://dialectica{-}y{-}mercado.netlify.app/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Finanzas"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://pecunia{-}fluxus.netlify.app/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Gestión empresarial"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://actus{-}mercator.netlify.app/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Gestión pública"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://res{-}publica.netlify.app/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Metodología de la investigación"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://methodica.netlify.app/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Macroeconomía"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://aequilibria.netlify.app/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Matemáticas"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://axiomata.netlify.app/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Microeconomía"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://optimums.netlify.app/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Programación y Software"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://numerus{-}scriptum.netlify.app/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Seguridad informática"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://chaska{-}x.netlify.app/}
+\AttributeTok{            }
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/achalmed}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"GitHub Profile"}
+\AttributeTok{        }
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ twitter}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://x.com/achalmaedison}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"Twitter/X Profile"}
+\AttributeTok{        }
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ rss}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.xml}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"RSS Feed"}
+\AttributeTok{  }
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{  \# Footer}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\AttributeTok{  }\FunctionTok{page{-}footer}\KeywordTok{:}
+\FunctionTok{    left}\KeywordTok{: }\CharTok{\textgreater{}{-}}
+\NormalTok{      © 2026 Edison Achalma · Made with [Quarto](https://quarto.org)}
+      
+\FunctionTok{    center}\KeywordTok{: }\CharTok{|}
+\NormalTok{      \textless{}a class="link{-}dark me{-}1" href="/accessibility.html" title="Accessibility commitment" target="\_blank" rel="noopener"\textgreater{}\textless{}/a\textgreater{}}
+\NormalTok{      \textless{}a class="link{-}dark me{-}1" href="https://fosstodon.org/@achalmaedison" title="Mastodon" target="\_blank" rel="noopener"\textgreater{}\textless{}/a\textgreater{}}
+\NormalTok{      \textless{}a class="link{-}dark me{-}1" href="https://github.com/achalmed" title="GitHub" target="\_blank" rel="noopener"\textgreater{}\textless{}/a\textgreater{}}
+\NormalTok{      \textless{}a class="link{-}dark me{-}1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="\_blank" rel="noopener"\textgreater{}\textless{}/a\textgreater{}}
+      
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Accessibility"}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"Accessibility Commitment"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ accessibility.html}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Contact"}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"Contact Form"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ contact.html}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Privacy"}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"Privacy Policy"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ privacy.html}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"License"}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"License Details"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ license.html}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ rss}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.xml}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"RSS Feed"}
+
+\CommentTok{\# ========================================================================}
+\CommentTok{\# FORMATOS DE SALIDA}
+\CommentTok{\# ========================================================================}
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\CommentTok{    \# Tema}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{light}\KeywordTok{:}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ cosmo}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/theme\_light.scss}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/colors.scss}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/fonts.scss}
+\AttributeTok{      }\FunctionTok{dark}\KeywordTok{:}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ darkly}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/theme\_dark.scss}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/colors.scss}
+\AttributeTok{        }\KeywordTok{{-}}\AttributeTok{ assets/fonts.scss}
+\AttributeTok{        }
+\CommentTok{    \# CSS Adicional}
+\AttributeTok{    }\FunctionTok{css}\KeywordTok{:}\AttributeTok{ assets/styles.css}
+\AttributeTok{    }
+\CommentTok{    \# Includes (Google Tag Manager)}
+\AttributeTok{    }\FunctionTok{include{-}in{-}header}\KeywordTok{:}\AttributeTok{ assets/gtm{-}head.html}
+\AttributeTok{    }\FunctionTok{include{-}after{-}body}\KeywordTok{:}\AttributeTok{ assets/gtm{-}body.html}
+\AttributeTok{    }
+\CommentTok{    \# Navegación}
+\AttributeTok{    }\FunctionTok{page{-}navigation}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{smooth{-}scroll}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }
+\CommentTok{    \# Tabla de Contenidos}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{toc{-}depth}\KeywordTok{:}\AttributeTok{ }\DecValTok{3}
+\AttributeTok{    }\FunctionTok{toc{-}location}\KeywordTok{:}\AttributeTok{ right}
+\AttributeTok{    }
+\CommentTok{    \# Código}
+\AttributeTok{    }\FunctionTok{code{-}fold}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}copy}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}line{-}numbers}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Cambios principales en la versión optimizada:} 1. Tema oscuro
+añadido 2. Google Analytics y Cookie Consent activados 3.
+\texttt{aria-label} en todos los íconos 4. Anuncio actualizado (no
+temporal) 5. Enlaces del footer a rutas locales 6. \texttt{site} añadido
+a Twitter Card 7. \texttt{page-navigation:\ true} para mejor UX 8.
+Comentarios más descriptivos
+
+\section{Casos de Uso Completos}\label{casos-de-uso-completos}
+
+\subsection{Caso 1: Blog Académico
+Personal}\label{caso-1-blog-acaduxe9mico-personal}
+
+\textbf{Escenario:} Blog de investigación con posts, publicaciones,
+about.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# ========================================================================}
+\CommentTok{\# BLOG ACADÉMICO PERSONAL}
+\CommentTok{\# ========================================================================}
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ \_site}
+
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Dr. María López"}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Investigación en neurociencia cognitiva"}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://marialopez.com}
+\AttributeTok{  }\FunctionTok{favicon}\KeywordTok{:}\AttributeTok{ assets/favicon.png}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Inicio"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.qmd}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Publicaciones"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ publications.qmd}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"CV"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ cv.qmd}
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/mlopez}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"GitHub"}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ twitter}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://twitter.com/mlopez}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"Twitter"}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{page{-}footer}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{center}\KeywordTok{:}\AttributeTok{ }\StringTok{"© 2026 María López"}
+
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ minty}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Caso 2: Sitio de Documentación
+Técnica}\label{caso-2-sitio-de-documentaciuxf3n-tuxe9cnica}
+
+\textbf{Escenario:} Documentación de software con sidebar.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# ========================================================================}
+\CommentTok{\# DOCUMENTACIÓN TÉCNICA}
+\CommentTok{\# ========================================================================}
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ docs}
+
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"MiPaquete Docs"}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://docs.mipaquete.com}
+\AttributeTok{  }\FunctionTok{repo{-}url}\KeywordTok{:}\AttributeTok{ https://github.com/org/mipaquete}
+\AttributeTok{  }\FunctionTok{repo{-}actions}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\AttributeTok{edit}\KeywordTok{,}\AttributeTok{ issue}\KeywordTok{]}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{sidebar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{style}\KeywordTok{:}\AttributeTok{ }\StringTok{"docked"}
+\AttributeTok{    }\FunctionTok{background}\KeywordTok{:}\AttributeTok{ light}
+\AttributeTok{    }\FunctionTok{contents}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{section}\KeywordTok{:}\AttributeTok{ }\StringTok{"Getting Started"}
+\AttributeTok{        }\FunctionTok{contents}\KeywordTok{:}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ docs/installation.qmd}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ docs/quickstart.qmd}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{section}\KeywordTok{:}\AttributeTok{ }\StringTok{"User Guide"}
+\AttributeTok{        }\FunctionTok{contents}\KeywordTok{:}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ docs/basics.qmd}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ docs/advanced.qmd}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{section}\KeywordTok{:}\AttributeTok{ }\StringTok{"API Reference"}
+\AttributeTok{        }\FunctionTok{contents}\KeywordTok{:}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ docs/api/index.qmd}
+\AttributeTok{          }
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/org/mipaquete}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"GitHub Repository"}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Changelog"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ changelog.qmd}
+
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ cosmo}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}copy}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}line{-}numbers}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Caso 3: Portfolio Personal}\label{caso-3-portfolio-personal}
+
+\textbf{Escenario:} Portfolio de proyectos con galería.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# ========================================================================}
+\CommentTok{\# PORTFOLIO PERSONAL}
+\CommentTok{\# ========================================================================}
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ \_site}
+
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Juan Pérez"}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Data Scientist \& Visualización"}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://juanperez.com}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Proyectos"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ projects/}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"About"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ about.qmd}
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ linkedin}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://linkedin.com/in/jperez}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"LinkedIn"}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/jperez}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"GitHub"}
+
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ lux}
+\AttributeTok{    }\FunctionTok{page{-}layout}\KeywordTok{:}\AttributeTok{ full}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Caso 4: Sitio
+Multilingüe}\label{caso-4-sitio-multilinguxfce}
+
+\textbf{Escenario:} Sitio en español e inglés.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# ========================================================================}
+\CommentTok{\# SITIO MULTILINGÜE}
+\CommentTok{\# ========================================================================}
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ \_site}
+
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Sitio / My Site"}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Inicio / Home"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.qmd}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"ES"}
+\AttributeTok{        }\FunctionTok{menu}\KeywordTok{:}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog (ES)"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ es/blog/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"About (ES)"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ es/about.qmd}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"EN"}
+\AttributeTok{        }\FunctionTok{menu}\KeywordTok{:}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog (EN)"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ en/blog/}
+\AttributeTok{          }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"About (EN)"}
+\AttributeTok{            }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ en/about.qmd}
+
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ flatly}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Caso 5: Blog de Empresa}\label{caso-5-blog-de-empresa}
+
+\textbf{Escenario:} Blog corporativo con branding.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# ========================================================================}
+\CommentTok{\# BLOG CORPORATIVO}
+\CommentTok{\# ========================================================================}
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ \_site}
+
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"TechCorp Blog"}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Insights y noticias de TechCorp"}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://blog.techcorp.com}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{logo}\KeywordTok{:}\AttributeTok{ assets/logo.png}
+\AttributeTok{    }\FunctionTok{background}\KeywordTok{:}\AttributeTok{ }\StringTok{"\#1a1a1a"}
+\AttributeTok{    }\FunctionTok{foreground}\KeywordTok{:}\AttributeTok{ light}
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Productos"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://techcorp.com/products}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Contacto"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://techcorp.com/contact}
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Website Principal"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://techcorp.com}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{page{-}footer}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}\AttributeTok{ }\StringTok{"© 2026 TechCorp. Todos los derechos reservados."}
+\FunctionTok{    center}\KeywordTok{: }\CharTok{|}
+\NormalTok{      \textless{}a href="/privacy"\textgreater{}Privacy\textless{}/a\textgreater{} | }
+\NormalTok{      \textless{}a href="/terms"\textgreater{}Terms\textless{}/a\textgreater{}}
+
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ assets/corporate{-}theme.scss}
+\AttributeTok{    }\FunctionTok{css}\KeywordTok{:}\AttributeTok{ assets/branding.css}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Optimización y Best
+Practices}\label{optimizaciuxf3n-y-best-practices}
+
+\subsection{1. Estructura y
+Organización}\label{estructura-y-organizaciuxf3n}
+
+\textbf{Bien organizado:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# ========================================================================}
+\CommentTok{\# SECCIÓN CLARA CON COMENTARIO}
+\CommentTok{\# ========================================================================}
+\FunctionTok{website}\KeywordTok{:}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{  \# Subsección}
+\CommentTok{  \# {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"..."}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Mal organizado:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"..."}
+\FunctionTok{navbar}\KeywordTok{:}
+\FunctionTok{left}\KeywordTok{:}
+\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"..."}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{2. Comentarios Útiles}\label{comentarios-uxfatiles}
+
+\textbf{Buenos comentarios:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Deshabilitado temporalmente (problemas con CORS)}
+\CommentTok{\# google{-}analytics: "G{-}XXXXXX"}
+
+\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://misitio.com}\CommentTok{    \# Requerido para Open Graph}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Malos comentarios:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Sitio"}\CommentTok{    \# Esto es el título}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{3. Validación YAML}\label{validaciuxf3n-yaml}
+
+\textbf{Errores comunes:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Incorrecto: falta quote en string con \textquotesingle{}:\textquotesingle{}}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ Mi Sitio: Un Blog}
+
+\CommentTok{\# Correcto:}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Mi Sitio: Un Blog"}
+
+\CommentTok{\# Incorrecto: indentación incorrecta}
+\FunctionTok{navbar}\KeywordTok{:}
+\FunctionTok{left}\KeywordTok{:}
+\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{  }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+
+\CommentTok{\# Correcto:}
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Validar YAML:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Usar yamllint}
+\ExtensionTok{yamllint}\NormalTok{ \_quarto.yml}
+
+\CommentTok{\# O validador online}
+\CommentTok{\# https://www.yamllint.com/}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{4. Rutas Consistentes}\label{rutas-consistentes}
+
+\textbf{Usar rutas relativas desde la raíz:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Correcto:}
+\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /assets/img/logo.png}
+
+\CommentTok{\# Evitar rutas absolutas del sistema:}
+\CommentTok{\# Incorrecto:}
+\CommentTok{\# image: /home/usuario/proyecto/assets/img/logo.png}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{5. Seguridad y Privacidad}\label{seguridad-y-privacidad}
+
+\textbf{Configuración recomendada para Europa (RGPD):}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{tracking{-}id}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XXXXXX"}
+\AttributeTok{    }\FunctionTok{anonymize{-}ip}\KeywordTok{:}\AttributeTok{ }\CharTok{true}\CommentTok{           \# Anonimizar IPs}
+\AttributeTok{    }
+\AttributeTok{  }\FunctionTok{cookie{-}consent}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ express}\CommentTok{                \# Bloquear hasta consentimiento}
+\AttributeTok{    }\FunctionTok{style}\KeywordTok{:}\AttributeTok{ headline}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{6. Accesibilidad}\label{accesibilidad}
+
+\textbf{Siempre incluir \texttt{aria-label} en íconos:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/usuario}
+\AttributeTok{      }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"GitHub Profile"}\CommentTok{    \# Importante para screen readers}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{7. SEO Básico}\label{seo-buxe1sico}
+
+\textbf{Mínimo requerido:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"..."}\CommentTok{                   \# Máx. 60 caracteres}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"..."}\CommentTok{             \# 150{-}160 caracteres}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://...}\CommentTok{          \# URL completa}
+\AttributeTok{  }\FunctionTok{favicon}\KeywordTok{:}\AttributeTok{ assets/favicon.png}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{open{-}graph}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /assets/og{-}image.jpg}\CommentTok{  \# 1200x630 px}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{8. Versionado con Git}\label{versionado-con-git}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Commit cada cambio significativo en \_quarto.yml}
+\FunctionTok{git}\NormalTok{ add \_quarto.yml}
+\FunctionTok{git}\NormalTok{ commit }\AttributeTok{{-}m} \StringTok{"feat(config): Add dark theme support"}
+
+\CommentTok{\# Antes de cambios grandes, crear backup}
+\FunctionTok{cp}\NormalTok{ \_quarto.yml \_quarto.yml.backup}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{9. Testing}\label{testing}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Siempre probar después de cambios}
+\ExtensionTok{quarto}\NormalTok{ preview}
+
+\CommentTok{\# Verificar que no hay errores}
+\ExtensionTok{quarto}\NormalTok{ render}
+
+\CommentTok{\# Verificar configuración efectiva}
+\ExtensionTok{quarto}\NormalTok{ inspect index.qmd}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{10. Documentación}\label{documentaciuxf3n}
+
+\textbf{Mantener un README.md con notas:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\# Configuración del Sitio}
+
+\FunctionTok{\# Estructura de Archivos}
+\SpecialStringTok{{-} }\InformationTok{\textasciigrave{}\_quarto.yml\textasciigrave{}}\NormalTok{: Configuración principal}
+\SpecialStringTok{{-} }\InformationTok{\textasciigrave{}assets/\textasciigrave{}}\NormalTok{: Imágenes, CSS, JS}
+\SpecialStringTok{{-} }\InformationTok{\textasciigrave{}blog/\textasciigrave{}}\NormalTok{: Posts del blog}
+
+\FunctionTok{\# Temas Personalizados}
+\SpecialStringTok{{-} }\InformationTok{\textasciigrave{}theme\_light.scss\textasciigrave{}}\NormalTok{: Tema claro}
+\SpecialStringTok{{-} }\InformationTok{\textasciigrave{}theme\_dark.scss\textasciigrave{}}\NormalTok{: Tema oscuro}
+
+\FunctionTok{\# Deployment}
+\SpecialStringTok{{-} }\NormalTok{Netlify: https://methodica.netlify.app}
+\SpecialStringTok{{-} }\NormalTok{Dominio: (pendiente)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Troubleshooting}\label{troubleshooting}
+
+\subsection{Problema 1: Navbar No
+Aparece}\label{problema-1-navbar-no-aparece}
+
+\textbf{Síntomas:}
+
+\begin{itemize}
+\tightlist
+\item
+  No hay barra de navegación
+\item
+  Solo aparece el título
+\end{itemize}
+
+\textbf{Causas y soluciones:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Causa 1: Falta la sección navbar}
+\CommentTok{\# Solución: Agregar navbar}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Inicio"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.qmd}
+
+\CommentTok{\# Causa 2: Sintaxis incorrecta}
+\CommentTok{\# Incorrecto:}
+\FunctionTok{navbar}\KeywordTok{:}
+\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{  }
+\CommentTok{\# Correcto:}
+\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{    }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{      }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Problema 2: Imágenes Open Graph No Se
+Muestran}\label{problema-2-imuxe1genes-open-graph-no-se-muestran}
+
+\textbf{Síntomas:}
+
+\begin{itemize}
+\tightlist
+\item
+  Al compartir en redes sociales, no aparece imagen de vista previa
+\end{itemize}
+
+\textbf{Checklist:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# 1. Verificar que site{-}url está definido}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://misitio.com}\CommentTok{    \# Obligatorio}
+
+\CommentTok{\# 2. Usar ruta absoluta desde raíz}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{open{-}graph}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ /assets/img/og{-}image.jpg}\CommentTok{  \# Empieza con /}
+
+\CommentTok{\# 3. Verificar dimensiones de imagen}
+\CommentTok{\# {-} Tamaño: 1200x630 px}
+\CommentTok{\# {-} Ratio: 1.91:1}
+\CommentTok{\# {-} Formato: JPG o PNG}
+\CommentTok{\# {-} Máximo: 8 MB}
+
+\CommentTok{\# 4. Verificar que el archivo existe}
+\AttributeTok{ls assets/img/og{-}image.jpg}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Forzar actualización de caché en redes sociales:}
+
+\begin{itemize}
+\tightlist
+\item
+  Facebook: https://developers.facebook.com/tools/debug/
+\item
+  Twitter: https://cards-dev.twitter.com/validator
+\item
+  LinkedIn: https://www.linkedin.com/post-inspector/
+\end{itemize}
+
+\subsection{Problema 3: Tema Personalizado No Se
+Aplica}\label{problema-3-tema-personalizado-no-se-aplica}
+
+\textbf{Síntomas:}
+
+\begin{itemize}
+\tightlist
+\item
+  CSS personalizado no tiene efecto
+\item
+  Tema se ve como el predeterminado
+\end{itemize}
+
+\textbf{Soluciones:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Verificar rutas de archivos}
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ cosmo}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ assets/custom.scss}\CommentTok{    \# Verificar que existe}
+\AttributeTok{    }\FunctionTok{css}\KeywordTok{:}\AttributeTok{ assets/styles.css}\CommentTok{    \# Verificar que existe}
+
+\CommentTok{\# Verificar que los archivos existen}
+\AttributeTok{ls assets/custom.scss}
+\AttributeTok{ls assets/styles.css}
+
+\CommentTok{\# Limpiar caché y re{-}renderizar}
+\AttributeTok{rm {-}rf .quarto}
+\AttributeTok{quarto render}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Problema 4: Google Analytics No
+Funciona}\label{problema-4-google-analytics-no-funciona}
+
+\textbf{Síntomas:}
+
+\begin{itemize}
+\tightlist
+\item
+  Google Analytics no registra visitas
+\end{itemize}
+
+\textbf{Checklist:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# 1. Verificar ID de tracking}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}\AttributeTok{ }\StringTok{"G{-}XXXXXXXXXX"}\CommentTok{  \# Verificar formato}
+\CommentTok{  \# GA4: empieza con G{-}}
+\CommentTok{  \# Universal Analytics (antiguo): empieza con UA{-}}
+
+\CommentTok{\# 2. Esperar 24{-}48 horas}
+\CommentTok{\# Los datos pueden tardar en aparecer}
+
+\CommentTok{\# 3. Verificar con herramientas de desarrollo}
+\CommentTok{\# {-} Abrir DevTools (F12)}
+\CommentTok{\# {-} Network tab}
+\CommentTok{\# {-} Buscar "analytics" o "gtag"}
+\CommentTok{\# {-} Debe haber requests a google{-}analytics.com}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Problema 5: Cookie Consent No
+Aparece}\label{problema-5-cookie-consent-no-aparece}
+
+\textbf{Síntomas:}
+
+\begin{itemize}
+\tightlist
+\item
+  No se muestra el banner de cookies
+\end{itemize}
+
+\textbf{Soluciones:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# 1. Verificar configuración}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{cookie{-}consent}\KeywordTok{:}\AttributeTok{ }\CharTok{true}\CommentTok{    \# O configuración completa}
+\AttributeTok{  }
+\CommentTok{\# 2. Limpiar localStorage del navegador}
+\CommentTok{\# {-} DevTools \textgreater{} Application \textgreater{} Local Storage}
+\CommentTok{\# {-} Eliminar todas las entradas}
+\CommentTok{\# {-} Recargar página}
+
+\CommentTok{\# 3. Verificar que no hay conflictos con otros scripts}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Problema 6: Comentarios (Utterances) No
+Aparecen}\label{problema-6-comentarios-utterances-no-aparecen}
+
+\textbf{Síntomas:}
+
+\begin{itemize}
+\tightlist
+\item
+  No se muestra la sección de comentarios
+\end{itemize}
+
+\textbf{Checklist:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# 1. Verificar configuración}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{comments}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{utterances}\KeywordTok{:}
+\AttributeTok{      }\FunctionTok{repo}\KeywordTok{:}\AttributeTok{ usuario/repositorio}\CommentTok{    \# Formato correcto}
+\AttributeTok{      }\FunctionTok{issue{-}term}\KeywordTok{:}\AttributeTok{ title}
+\AttributeTok{      }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ github{-}light}
+
+\CommentTok{\# 2. Verificar que el repositorio existe}
+\CommentTok{\# https://github.com/usuario/repositorio}
+
+\CommentTok{\# 3. Verificar que Utterances está instalado}
+\CommentTok{\# https://github.com/apps/utterances}
+\CommentTok{\# Debe estar instalado en el repositorio}
+
+\CommentTok{\# 4. Verificar permisos}
+\CommentTok{\# El repositorio debe ser público o Utterances debe tener acceso}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Problema 7: Error ``Cannot Find
+Module''}\label{problema-7-error-cannot-find-module}
+
+\textbf{Síntomas:}
+
+\begin{verbatim}
+Error: Cannot find module 'assets/custom.scss'
+\end{verbatim}
+
+\textbf{Solución:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Verificar que el archivo existe}
+\FunctionTok{ls}\NormalTok{ assets/custom.scss}
+
+\CommentTok{\# Si no existe, crearlo o eliminar la referencia}
+\CommentTok{\# Si existe, verificar la ruta en \_quarto.yml}
+
+\CommentTok{\# Ruta correcta (relativa a \_quarto.yml):}
+\ExtensionTok{theme:}
+  \ExtensionTok{{-}}\NormalTok{ cosmo}
+  \ExtensionTok{{-}}\NormalTok{ assets/custom.scss    }\CommentTok{\# Correcto}
+
+\CommentTok{\# Ruta incorrecta:}
+\CommentTok{\# {-} /assets/custom.scss   \# NO usar / al inicio en theme}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Problema 8: Sitio No Se Actualiza en
+Netlify}\label{problema-8-sitio-no-se-actualiza-en-netlify}
+
+\textbf{Síntomas:}
+
+\begin{itemize}
+\tightlist
+\item
+  Cambios locales funcionan
+\item
+  Netlify muestra versión antigua
+\end{itemize}
+
+\textbf{Soluciones:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# 1. Verificar que cambios están en Git}
+\FunctionTok{git}\NormalTok{ status}
+\FunctionTok{git}\NormalTok{ add \_quarto.yml}
+\FunctionTok{git}\NormalTok{ commit }\AttributeTok{{-}m} \StringTok{"Update config"}
+\FunctionTok{git}\NormalTok{ push}
+
+\CommentTok{\# 2. Verificar build en Netlify}
+\CommentTok{\# {-} Ir a Netlify Dashboard}
+\CommentTok{\# {-} Site \textgreater{} Deploys}
+\CommentTok{\# {-} Ver logs del último deploy}
+\CommentTok{\# {-} Buscar errores}
+
+\CommentTok{\# 3. Limpiar caché de Netlify}
+\CommentTok{\# {-} Netlify Dashboard}
+\CommentTok{\# {-} Site settings \textgreater{} Build \& deploy}
+\CommentTok{\# {-} Clear cache and retry deploy}
+
+\CommentTok{\# 4. Verificar configuración de build}
+\CommentTok{\# netlify.toml o configuración en UI:}
+\CommentTok{\# Build command: quarto render}
+\CommentTok{\# Publish directory: \_site}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Comandos Útiles}\label{comandos-uxfatiles}
+
+\subsection{Comandos Básicos}\label{comandos-buxe1sicos}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Previsualizar sitio localmente}
+\ExtensionTok{quarto}\NormalTok{ preview}
+
+\CommentTok{\# Renderizar sitio completo}
+\ExtensionTok{quarto}\NormalTok{ render}
+
+\CommentTok{\# Renderizar solo archivo específico}
+\ExtensionTok{quarto}\NormalTok{ render index.qmd}
+
+\CommentTok{\# Renderizar con ejecución de código}
+\ExtensionTok{quarto}\NormalTok{ render }\AttributeTok{{-}{-}execute}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Comandos de Inspección}\label{comandos-de-inspecciuxf3n}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Ver configuración efectiva de un archivo}
+\ExtensionTok{quarto}\NormalTok{ inspect index.qmd}
+
+\CommentTok{\# Ver metadata del proyecto}
+\ExtensionTok{quarto}\NormalTok{ inspect}
+
+\CommentTok{\# Verificar versión de Quarto}
+\ExtensionTok{quarto} \AttributeTok{{-}{-}version}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Comandos de Limpieza}\label{comandos-de-limpieza}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Limpiar caché}
+\FunctionTok{rm} \AttributeTok{{-}rf}\NormalTok{ .quarto}
+
+\CommentTok{\# Limpiar output}
+\FunctionTok{rm} \AttributeTok{{-}rf}\NormalTok{ \_site}
+
+\CommentTok{\# Limpiar todo y re{-}renderizar}
+\FunctionTok{rm} \AttributeTok{{-}rf}\NormalTok{ .quarto \_site }\KeywordTok{\&\&} \ExtensionTok{quarto}\NormalTok{ render}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Comandos de Publicación}\label{comandos-de-publicaciuxf3n}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Publicar en Quarto Pub}
+\ExtensionTok{quarto}\NormalTok{ publish quarto{-}pub}
+
+\CommentTok{\# Publicar en GitHub Pages}
+\ExtensionTok{quarto}\NormalTok{ publish gh{-}pages}
+
+\CommentTok{\# Publicar en Netlify}
+\ExtensionTok{quarto}\NormalTok{ publish netlify}
+
+\CommentTok{\# Publicar en RStudio Connect}
+\ExtensionTok{quarto}\NormalTok{ publish connect}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Comandos de Desarrollo}\label{comandos-de-desarrollo}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Modo preview con auto{-}reload}
+\ExtensionTok{quarto}\NormalTok{ preview }\AttributeTok{{-}{-}watch}
+
+\CommentTok{\# Renderizar solo archivos modificados}
+\ExtensionTok{quarto}\NormalTok{ render }\AttributeTok{{-}{-}render{-}modified}
+
+\CommentTok{\# Renderizar con perfil específico}
+\ExtensionTok{quarto}\NormalTok{ render }\AttributeTok{{-}{-}profile}\NormalTok{ production}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Conclusión}\label{conclusiuxf3n}
+
+\subsection{\texorpdfstring{Checklist Mínimo para
+\texttt{\_quarto.yml}}{Checklist Mínimo para \_quarto.yml}}\label{checklist-muxednimo-para-_quarto.yml}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Obligatorio}
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"..."}
+\AttributeTok{  }
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ cosmo}
+
+\CommentTok{\# Altamente recomendado}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"..."}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://...}
+\AttributeTok{  }\FunctionTok{favicon}\KeywordTok{:}\AttributeTok{ assets/favicon.png}
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }
+\CommentTok{\# Recomendado para SEO}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{open{-}graph}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }\FunctionTok{twitter{-}card}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }
+\CommentTok{\# Opcional pero útil}
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{google{-}analytics}\KeywordTok{:}\AttributeTok{ }\StringTok{"..."}
+\AttributeTok{  }\FunctionTok{cookie{-}consent}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }\FunctionTok{comments}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\AttributeTok{  }\FunctionTok{page{-}footer}\KeywordTok{:}\AttributeTok{ }\KeywordTok{\{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Template Rápido
+(Copiar/Pegar)}\label{template-ruxe1pido-copiarpegar}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# ========================================================================}
+\CommentTok{\# TEMPLATE RÁPIDO \_quarto.yml}
+\CommentTok{\# ========================================================================}
+
+\FunctionTok{project}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ website}
+\AttributeTok{  }\FunctionTok{output{-}dir}\KeywordTok{:}\AttributeTok{ \_site}
+
+\FunctionTok{website}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"TU TÍTULO"}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Tu descripción del sitio"}
+\AttributeTok{  }\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ https://tusitio.com}
+\AttributeTok{  }\FunctionTok{favicon}\KeywordTok{:}\AttributeTok{ assets/favicon.png}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{navbar}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{left}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Inicio"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ index.qmd}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{text}\KeywordTok{:}\AttributeTok{ }\StringTok{"Blog"}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ blog/}
+\AttributeTok{    }\FunctionTok{right}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{icon}\KeywordTok{:}\AttributeTok{ github}
+\AttributeTok{        }\FunctionTok{href}\KeywordTok{:}\AttributeTok{ https://github.com/usuario}
+\AttributeTok{        }\FunctionTok{aria{-}label}\KeywordTok{:}\AttributeTok{ }\StringTok{"GitHub"}
+\AttributeTok{  }
+\AttributeTok{  }\FunctionTok{page{-}footer}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{center}\KeywordTok{:}\AttributeTok{ }\StringTok{"© 2026 Tu Nombre"}
+
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ cosmo}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}fold}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{code{-}copy}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Recursos Adicionales}\label{recursos-adicionales}
+
+\textbf{Documentación oficial:}
+
+\begin{itemize}
+\tightlist
+\item
+  Quarto Websites: https://quarto.org/docs/websites/
+\item
+  Quarto Reference: https://quarto.org/docs/reference/
+\end{itemize}
+
+\textbf{Herramientas:}
+
+\begin{itemize}
+\tightlist
+\item
+  YAML Validator: https://www.yamllint.com/
+\item
+  Open Graph Debugger: https://developers.facebook.com/tools/debug/
+\item
+  Twitter Card Validator: https://cards-dev.twitter.com/validator
+\end{itemize}
+
+\section{Publicaciones Similares}\label{publicaciones-similares}
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y
+recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo
+algunas sugerencias:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia}{Ideas
+  De Investigacion Para Economia}
+\item
+  \href{https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion}{Pautas
+  De Presentacion Del Informe De Investigacion}
+\item
+  \href{https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion}{Recursos
+  De Bibliografia Y Documentacion}
+\item
+  \href{https://methodica.netlify.app/posts/2025-02-09-recursos-para-traducción-y-correccion/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2025-02-09-recursos-para-traducción-y-correccion}{Recursos
+  Para Traducción Y Correccion}
+\item
+  \href{https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero}{Tipos
+  De Elementos En Zotero}
+\end{enumerate}
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y
+útiles. ¡Disfruta de la lectura!
+
+
+
+
+
+
+\end{document}

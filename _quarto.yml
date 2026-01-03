@@ -101,7 +101,7 @@ website:
         href: index.xml
   page-footer:
     left: >-
-      &#169; 2025 Edison Achalma &#8729; Made with [Quarto](https://quarto.org)
+      &#169; 2026 Edison Achalma &#8729; Made with [Quarto](https://quarto.org)
     center: |
       <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a>
       <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>

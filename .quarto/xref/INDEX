@@ -32,5 +32,15 @@
     "index.html": "1f13d0a3",
     "index.tex": "516ae6ed",
     "index.docx": "b89b366d"
+  },
+  "posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.qmd": {
+    "index.html": "ca7d4a26",
+    "index.tex": "a98cf667",
+    "index.docx": "7fe5462f"
+  },
+  "posts/2026-01.02-configuracion-de-quarto-yml/index.qmd": {
+    "index.html": "b03a9ed5",
+    "index.tex": "4e556578",
+    "index.docx": "37bfdd36"
   }
 }
