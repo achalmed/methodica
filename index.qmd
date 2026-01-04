@@ -16,7 +16,7 @@ listing:
     date-format: short
     # sort-ui: false
     filter-ui: false
-    fields: [title, author, description, date, image, reading-time]
+    fields: [title, author, categories, description, date, image, reading-time]
     image-placeholder: assets/img/sidebar.jpg
     image-align: right
     # page-size: 5
