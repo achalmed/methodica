@@ -348,9 +348,11 @@ execute:
   # - true: Nunca re-ejecutar (usa resultados guardados)
   # - false: Siempre re-ejecutar
   # - auto: Re-ejecutar solo si el código cambió
+  # quarto render --refresh (para actualizar)
   
   enabled: false                  # Deshabilitar ejecución por defecto
   # Para ejecutar: quarto render --execute
+  # quarto render numerus-scriptum/python/2021-05-31-02-variables-expresiones-y-statements-con-python/index.qmd --execute
   
   # --- SALIDA ---
   echo: true                      # Mostrar código fuente
@@ -364,5 +366,9 @@ execute:
   keep-ipynb: true                # Mantener notebook .ipynb
   
   # --- CACHÉ ---
-  cache: true                     # Usar caché para resultados
+  # Instalar
+  # python3 -m pip install jupyter-cache o, conda install -c conda-forge jupyter-cache
+  cache: false                     # Usar caché para resultados
   # Para limpiar caché: quarto render --cache-refresh
+  # Mantén cache: true si te gusta trabajar con caché incremental
+  # O cambia a freeze: true si estás preparando para publicación estática (muy común en blogs de Quarto)
