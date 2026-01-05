@@ -1,0 +1,875 @@
+/* ============================================================================
+   TEMA OSCURO - DISEÑO ACADÉMICO PROFESIONAL NOCTURNO
+   ============================================================================
+   
+   Tema optimizado para:
+   - Lectura nocturna y entornos con poca luz
+   - Reducción de luz azul para confort visual
+   - Contraste reducido pero legible
+   - Estética moderna y profesional
+   
+   Inspiración: Editores de código profesionales con ajustes académicos
+   
+   Autor: Edison Achalma
+   Fecha: Enero 2025
+   ============================================================================
+*/
+
+/*-- scss:defaults --*/
+/* ----------------------------------------------------------------------------
+   IMPORTACIÓN DE SISTEMAS BASE
+   ----------------------------------------------------------------------------
+*/
+
+// Importar sistema de colores y tipografía
+@import "colors";
+@import "fonts";
+
+/* ----------------------------------------------------------------------------
+   COLORES PRINCIPALES DEL TEMA OSCURO
+   ----------------------------------------------------------------------------
+*/
+
+// Aplicar colores del sistema para tema oscuro
+$primary: $spc-dark-primary !default;
+$secondary: $spc-dark-secondary !default;
+
+// Colores de fondo
+$body-bg: $spc-dark-bg !default;
+$body-color: $spc-dark-text-primary !default;
+
+// Enlaces
+$link-color: $spc-dark-secondary !default;
+$link-decoration: underline !default;
+$link-hover-color: $spc-dark-secondary-light !default;
+$link-hover-decoration: none !default;
+
+// Tablas
+$table-bg: transparent !default;
+$table-border-color: $spc-dark-border !default;
+$table-striped-bg: $spc-dark-bg-elevated !default;
+$table-hover-bg: $spc-dark-bg-accent !default;
+$table-group-separator-color: $spc-dark-border-light !default;
+$table-caption-color: $spc-dark-text-primary !default;
+
+// Código
+$code-bg: $spc-dark-code-bg !default;
+$code-color: $spc-dark-code-text !default;
+$code-border: $spc-dark-code-border !default;
+$pre-color: $spc-dark-text-primary !default;
+
+// Bordes globales
+$border-color: $spc-dark-border !default;
+
+/*-- scss:rules --*/
+/* ----------------------------------------------------------------------------
+   REGLAS GLOBALES - Aplicación del tema oscuro
+   ----------------------------------------------------------------------------
+*/
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 1: CONFIGURACIÓN BASE DEL DOCUMENTO
+   ══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Custom properties para modo oscuro */
+  --spc-bg: #{$spc-dark-bg};
+  --spc-bg-dark: #{$spc-dark-bg-elevated};
+  --spc-bg-accent: #{$spc-dark-bg-accent};
+  
+  --spc-text-primary: #{$spc-dark-text-primary};
+  --spc-text-secondary: #{$spc-dark-text-secondary};
+  --spc-text-muted: #{$spc-dark-text-muted};
+  --spc-text-light: #{$spc-dark-text-light};
+  
+  --spc-primary: #{$spc-dark-primary};
+  --spc-primary-light: #{$spc-dark-primary-light};
+  --spc-primary-lighter: #{$spc-dark-primary-lighter};
+  --spc-primary-lightest: #{$spc-dark-primary-lightest};
+  
+  --spc-secondary: #{$spc-dark-secondary};
+  --spc-secondary-light: #{$spc-dark-secondary-light};
+  --spc-secondary-lighter: #{$spc-dark-secondary-lighter};
+  --spc-secondary-lightest: #{$spc-dark-secondary-lightest};
+  
+  --spc-accent: #{$spc-dark-accent};
+  --spc-accent-light: #{$spc-dark-accent-light};
+  --spc-accent-lighter: #{$spc-dark-accent-lighter};
+  --spc-accent-lightest: #{$spc-dark-accent-lightest};
+  
+  --spc-border: #{$spc-dark-border};
+  --spc-border-light: #{$spc-dark-border-light};
+  --spc-border-dark: #{$spc-dark-border-dark};
+  
+  --spc-success: #{$spc-dark-success};
+  --spc-success-bg: #{$spc-dark-success-bg};
+  --spc-warning: #{$spc-dark-warning};
+  --spc-warning-bg: #{$spc-dark-warning-bg};
+  --spc-danger: #{$spc-dark-danger};
+  --spc-danger-bg: #{$spc-dark-danger-bg};
+  --spc-info: #{$spc-dark-info};
+  --spc-info-bg: #{$spc-dark-info-bg};
+  
+  --spc-code-bg: #{$spc-dark-code-bg};
+  --spc-code-border: #{$spc-dark-code-border};
+  --spc-code-text: #{$spc-dark-code-text};
+  
+  --spc-selection-bg: #{$spc-dark-selection-bg};
+  --spc-selection-text: #{$spc-dark-selection-text};
+  
+  --spc-shadow-sm: #{$spc-dark-shadow-sm};
+  --spc-shadow-md: #{$spc-dark-shadow-md};
+  --spc-shadow-lg: #{$spc-dark-shadow-lg};
+  
+  /* Reducir contraste para confort nocturno */
+  color-scheme: dark;
+}
+
+/* Configuración base del body */
+body {
+  background-color: $body-bg;
+  color: $body-color;
+  
+  /* Transición suave al cambiar de tema */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Selección de texto */
+::selection {
+  background-color: $spc-dark-selection-bg;
+  color: $spc-dark-selection-text;
+}
+
+::-moz-selection {
+  background-color: $spc-dark-selection-bg;
+  color: $spc-dark-selection-text;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 2: NAVEGACIÓN (NAVBAR)
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Navbar principal */
+.navbar {
+  background: rgba($spc-dark-bg, 0.9);
+  border-bottom: 1px solid $spc-dark-border-light;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* Transiciones */
+  transition: all 0.3s ease;
+}
+
+/* Navbar con scroll */
+.navbar.scrolled {
+  background: rgba($spc-dark-bg-elevated, 0.95);
+  box-shadow: $spc-dark-shadow-sm;
+}
+
+/* Título del navbar */
+.navbar-title {
+  font-family: $headings-font-family;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $spc-dark-primary;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  
+  transition: all 0.25s ease;
+  
+  &:hover {
+    color: $spc-dark-primary-light;
+    border-bottom: 2px solid $spc-dark-primary;
+    padding-bottom: 2px;
+  }
+}
+
+/* Enlaces del navbar */
+.navbar-nav .nav-link {
+  font-family: $font-family-sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: $spc-dark-secondary !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  
+  /* Espaciado */
+  margin: 0 0.75rem;
+  padding: 0.5rem 0.25rem !important;
+  
+  /* Borde inferior animado */
+  border-bottom: 2px solid transparent;
+  
+  /* Transición */
+  transition: all 0.25s ease;
+  
+  &:hover,
+  &:focus {
+    color: $spc-dark-secondary-light !important;
+    border-bottom-color: $spc-dark-secondary;
+  }
+  
+  &.active {
+    color: $spc-dark-primary !important;
+    border-bottom-color: $spc-dark-primary;
+  }
+}
+
+/* Menú desplegable del navbar */
+.navbar-nav .dropdown-menu {
+  background: $spc-dark-bg-elevated;
+  border: 1px solid $spc-dark-border;
+  border-radius: 8px;
+  box-shadow: $spc-dark-shadow-md;
+  
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+}
+
+.navbar-nav .dropdown-item {
+  font-family: $font-family-sans-serif;
+  font-size: 0.9375rem;
+  color: $spc-dark-text-primary;
+  padding: 0.5rem 1.25rem;
+  
+  transition: all 0.2s ease;
+  
+  &:hover,
+  &:focus {
+    background: $spc-dark-bg-accent;
+    color: $spc-dark-primary;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 3: CONTENIDO PRINCIPAL
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Contenedor principal */
+main {
+  background: $body-bg;
+  min-height: 80vh;
+}
+
+/* Artículo/contenido */
+article {
+  background: $spc-dark-bg;
+  
+  /* Sombra más pronunciada en modo oscuro */
+  /* box-shadow: $spc-dark-shadow-md; */
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 4: TIPOGRAFÍA APLICADA
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: $spc-dark-text-primary;
+  
+  /* Transición para animaciones */
+  transition: color 0.3s ease;
+}
+
+/* Hover en encabezados que son enlaces */
+h1 a:hover, h2 a:hover, h3 a:hover,
+h4 a:hover, h5 a:hover, h6 a:hover {
+  color: $spc-dark-primary;
+}
+
+/* Párrafos */
+p {
+  color: $spc-dark-text-primary;
+}
+
+/* Texto secundario/muted */
+.text-secondary {
+  color: $spc-dark-text-secondary !important;
+}
+
+.text-muted {
+  color: $spc-dark-text-muted !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 5: ENLACES
+   ══════════════════════════════════════════════════════════════════════════ */
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: rgba($link-color, 0.5);
+  
+  transition: all 0.25s ease;
+  
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    opacity: 0.9;
+  }
+}
+
+/* Enlaces en contenido principal con mejor visibilidad */
+.article-body a,
+.post-content a {
+  font-weight: 500;
+  color: $spc-dark-secondary;
+  text-decoration: underline;
+  text-decoration-color: rgba($spc-dark-secondary, 0.4);
+  text-decoration-thickness: 2px;
+  
+  &:hover {
+    text-decoration-color: $spc-dark-secondary;
+    color: $spc-dark-secondary-light;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 6: CÓDIGO
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Código inline */
+p code:not(.sourceCode),
+li code:not(.sourceCode),
+td code:not(.sourceCode) {
+  color: $code-color;
+  background-color: $code-bg;
+  border: 1px solid $code-border;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-size: 0.875em;
+  
+  /* Evitar ruptura de palabras */
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+/* Bloques de código */
+div.sourceCode {
+  background-color: $code-bg;
+  border: 1px solid $code-border;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  
+  /* Sombra más pronunciada en oscuro */
+  box-shadow: $spc-dark-shadow-md;
+  
+  /* Scroll horizontal si es necesario */
+  overflow-x: auto;
+}
+
+pre.sourceCode {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: $pre-color;
+}
+
+/* Botones de código (copiar, etc.) */
+.code-copy-button {
+  background: $spc-dark-bg-accent;
+  border: 1px solid $spc-dark-border;
+  border-radius: 4px;
+  color: $spc-dark-text-secondary;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: $spc-dark-primary;
+    color: $spc-dark-bg;
+    border-color: $spc-dark-primary;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 7: CITAS (BLOCKQUOTES)
+   ══════════════════════════════════════════════════════════════════════════ */
+
+blockquote {
+  color: $spc-dark-text-secondary;
+  font-style: oblique;
+  border-left: 4px solid $spc-dark-accent;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  
+  /* Fondo sutil */
+  background: $spc-dark-accent-lightest;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  
+  p {
+    color: inherit;
+  }
+  
+  footer,
+  cite {
+    color: $spc-dark-text-muted;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    margin-top: 0.75rem;
+    
+    &::before {
+      content: "— ";
+    }
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 8: TABLAS
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Tablas */
+.table,
+table {
+  background: $table-bg;
+  color: $body-color;
+  
+  /* Bordes */
+  > :not(caption) > * > * {
+    border-bottom-color: $table-border-color;
+  }
+  
+  /* Encabezado */
+  > thead {
+    background: $spc-dark-bg-accent;
+    border-bottom: 2px solid $table-border-color;
+    
+    > tr > th {
+      color: $spc-dark-text-primary;
+      font-weight: 600;
+      padding: 0.75rem 1rem;
+    }
+  }
+  
+  /* Cuerpo */
+  > tbody > tr {
+    transition: background-color 0.2s ease;
+    
+    > td {
+      padding: 0.75rem 1rem;
+      color: $spc-dark-text-primary;
+    }
+    
+    /* Filas alternas */
+    &:nth-of-type(even) {
+      background-color: $table-striped-bg;
+    }
+    
+    /* Hover */
+    &:hover {
+      background-color: $table-hover-bg;
+    }
+  }
+}
+
+/* Separadores de grupo en tabla */
+.table > :not(:first-child) {
+  border-top-color: $table-group-separator-color;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 9: PIE DE PÁGINA (FOOTER)
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Footer principal */
+.nav-footer {
+  background: $spc-dark-bg-elevated;
+  border-top: 1px solid $spc-dark-border-light;
+  padding: 2rem 1rem;
+  
+  /* Tipografía */
+  font-family: $font-family-sans-serif;
+  font-size: 0.875rem;
+  color: $spc-dark-text-secondary;
+}
+
+/* Enlaces del footer */
+.nav-footer a {
+  color: $spc-dark-secondary;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  
+  &:hover {
+    color: $spc-dark-secondary-light;
+    text-decoration: underline;
+  }
+}
+
+/* Iconos sociales en el footer */
+.nav-footer-center i,
+.nav-footer-center svg {
+  color: $spc-dark-secondary !important;
+  font-size: 1.25rem;
+  transition: all 0.25s ease;
+  
+  &:hover {
+    color: $spc-dark-secondary-light !important;
+    transform: translateY(-2px);
+  }
+}
+
+/* Enlaces del lado derecho del footer */
+.nav-footer .nav-link {
+  color: $spc-dark-text-secondary;
+  font-weight: 500;
+  
+  &:hover {
+    color: $spc-dark-primary;
+    text-decoration: underline;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 10: ELEMENTOS DE LISTA (CARDS, etc.)
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Cards/Tarjetas */
+.card {
+  background: $spc-dark-bg-elevated;
+  border: 1px solid $spc-dark-border;
+  border-radius: 8px;
+  box-shadow: $spc-dark-shadow-sm;
+  
+  transition: all 0.3s ease;
+  
+  &:hover {
+    box-shadow: $spc-dark-shadow-md;
+    transform: translateY(-4px);
+    border-color: $spc-dark-border-dark;
+  }
+}
+
+/* Imagen de la card */
+.card-img,
+.card-img-top {
+  border-radius: 8px 8px 0 0;
+  /* Reducir brillo de imágenes en modo oscuro */
+  filter: brightness(0.9);
+  
+  transition: filter 0.3s ease;
+}
+
+.card:hover .card-img,
+.card:hover .card-img-top {
+  filter: brightness(1);
+}
+
+/* Cuerpo de la card */
+.card-body {
+  background: $spc-dark-bg-elevated;
+  padding: 1.5rem;
+}
+
+/* Título de la card */
+.card-title {
+  color: $spc-dark-text-primary;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.card:hover .card-title {
+  color: $spc-dark-primary;
+}
+
+/* Texto de la card */
+.card-text {
+  color: $spc-dark-text-secondary;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 11: CATEGORÍAS Y ETIQUETAS
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Categorías/Tags */
+.quarto-category,
+.listing-category {
+  background: transparent;
+  border: 1px solid $spc-dark-border;
+  color: $spc-dark-text-secondary;
+  
+  transition: all 0.25s ease;
+  
+  &:hover {
+    background-color: $spc-dark-primary;
+    color: $spc-dark-bg !important;
+    border-color: $spc-dark-primary;
+    transform: translateY(-2px);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 12: BOTONES
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Botones primarios */
+.btn-primary {
+  background-color: $spc-dark-secondary;
+  border-color: $spc-dark-secondary;
+  color: $spc-dark-bg;
+  font-weight: 600;
+  
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: $spc-dark-secondary-light;
+    border-color: $spc-dark-secondary-light;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba($spc-dark-secondary, 0.4);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Botones secundarios */
+.btn-secondary {
+  background: transparent;
+  border: 2px solid $spc-dark-primary;
+  color: $spc-dark-primary;
+  font-weight: 600;
+  
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: $spc-dark-primary;
+    color: $spc-dark-bg;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 13: PAGINACIÓN
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Paginación */
+.page-link {
+  color: $spc-dark-primary;
+  border-color: $spc-dark-border;
+  background: $spc-dark-bg-elevated;
+  
+  transition: all 0.25s ease;
+  
+  &:hover {
+    color: $spc-dark-bg;
+    background-color: $spc-dark-primary;
+    border-color: $spc-dark-primary;
+  }
+  
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($spc-dark-primary, 0.25);
+  }
+}
+
+.page-item.active .page-link {
+  background-color: $spc-dark-primary;
+  border-color: $spc-dark-primary;
+  color: $spc-dark-bg;
+}
+
+.page-item.disabled .page-link {
+  color: $spc-dark-text-muted;
+  background-color: $spc-dark-bg;
+  border-color: $spc-dark-border-light;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 14: TABLA DE CONTENIDOS (TOC)
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* TOC */
+.sidebar nav[role="doc-toc"] {
+  background: $spc-dark-bg-elevated;
+  border: 1px solid $spc-dark-border;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.sidebar nav[role="doc-toc"] ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar nav[role="doc-toc"] li {
+  padding: 0.25rem 0;
+}
+
+.sidebar nav[role="doc-toc"] a {
+  color: $spc-dark-text-secondary;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  
+  transition: all 0.2s ease;
+  
+  &:hover {
+    color: $spc-dark-primary;
+  }
+  
+  &.active {
+    color: $spc-dark-primary;
+    font-weight: 600;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 15: SCROLLBARS PERSONALIZADOS
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Scrollbar personalizado para navegadores webkit */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: $spc-dark-bg;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $spc-dark-border-dark;
+  border-radius: 10px;
+  border: 3px solid $spc-dark-bg;
+  
+  &:hover {
+    background: $spc-dark-primary;
+  }
+}
+
+/* Scrollbar para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $spc-dark-border-dark $spc-dark-bg;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 16: RESPONSIVIDAD
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Ajustes para móviles */
+@media screen and (max-width: 991.98px) {
+  /* Footer en columna */
+  .nav-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav-footer-center {
+    order: 1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .nav-footer-right {
+    order: 2;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-footer-left {
+    order: 3;
+  }
+  
+  /* Iconos sociales */
+  .about-entity .about-links {
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+  
+  /* Navbar */
+  .navbar .quarto-navbar-tools {
+    text-align: left;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECCIÓN 17: UTILIDADES FINALES
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Enfoque visible para accesibilidad */
+:focus-visible {
+  outline: 2px solid $spc-dark-secondary;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reducir animaciones para usuarios que lo prefieran */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Imágenes - reducir brillo globalmente en modo oscuro */
+img {
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+  
+  &:hover {
+    filter: brightness(1);
+  }
+}
+
+/* Excepciones: logos y elementos UI no deben oscurecerse */
+.navbar-brand img,
+.logo img,
+.icon img,
+svg {
+  filter: none !important;
+}
+
+/* ============================================================================
+   NOTAS DE IMPLEMENTACIÓN
+   ============================================================================
+   
+   1. PALETA DE COLORES:
+      - Fondos oscuros (gris carbón) para reducir luz azul
+      - Textos cálidos (blanco crema) para legibilidad
+      - Azul glaciar para elementos interactivos
+      - Coral suave para acentos
+      - Verde jade para destacados
+   
+   2. CONTRASTE:
+      - Contraste reducido pero legible (WCAG AA)
+      - Evita blancos puros (#FFF) que causan fatiga
+      - Usa tonos cálidos para reducir luz azul
+   
+   3. INTERACTIVIDAD:
+      - Transiciones suaves en todos los elementos
+      - Hover states claramente diferenciados
+      - Sombras más pronunciadas para depth
+   
+   4. ACCESIBILIDAD:
+      - Contraste WCAG AA en todos los textos
+      - Soporte para prefers-reduced-motion
+      - Enfoque visible para navegación por teclado
+      - Scrollbars personalizados pero accesibles
+   
+   5. IMÁGENES:
+      - Brillo reducido globalmente (90%)
+      - Brillo normal en hover para interacción
+      - Excepciones para logos e iconos
+   
+   6. USO:
+      - Activar manualmente en _quarto.yml con theme: dark
+      - O usar automáticamente con prefers-color-scheme
+      - Compatible con toggle manual de tema
+   
+   ============================================================================
+*/
