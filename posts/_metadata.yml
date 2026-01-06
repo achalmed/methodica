@@ -214,7 +214,7 @@ format:
       theme: neutral              # Tema para diagramas mermaid
     
     # --- TEMA ---
-    theme: litera                 # Tema Bootstrap
+    #theme: litera                 # Tema Bootstrap
     # Temas disponibles: default, cerulean, cosmo, cyborg, darkly, flatly,
     # journal, litera, lumen, lux, materia, minty, morph, pulse, quartz,
     # sandstone, simplex, sketchy, slate, solar, spacelab, superhero,
