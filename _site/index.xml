@@ -30725,49 +30725,53 @@ documentos académicos,”</span> January. <a href="https://methodica.netlify.ap
   <description><![CDATA[ 
 
 <style>
-:root {
---primary-color: ;
-}
-#title-block-header {
-width: 100%;
-overflow: hidden;
-position: relative;
-}
-.title-block-content {
-position: relative;
-padding-top: 60px;
+  :root {
+    --primary-color: ;
+  }
 
-padding-bottom: 60px;
+  #title-block-header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
 
-max-width: 752px;
-margin: 0 auto;
-z-index: 1;
-}
-#particles-js {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 0;
-}
-.bg-image {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-z-index: 0;
-}
+  .title-block-content {
+    position: relative;
+    padding-top: 60px;
+    /* Reducido de 130px */
+    padding-bottom: 60px;
+    /* Reducido de 130px */
+    max-width: 752px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
 </style>
 
 
 
 
-<p>Esta guía proporciona una descripción detallada de los tipos de elementos soportados por Zotero, basada en la documentación oficial de Zotero.</p>
-<section id="artwork-obra-de-arte" class="level2">
-<h2 class="anchored" data-anchor-id="artwork-obra-de-arte">1. Artwork (Obra de arte)</h2>
+<p>Esta publicación proporciona una descripción detallada de los tipos de elementos soportados por Zotero, basada en la documentación oficial de Zotero.</p>
+<section id="artwork-obra-de-arte" class="level1">
+<h1>Artwork (Obra de arte)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -30803,8 +30807,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="audio-recording-grabación-de-audio" class="level2">
-<h2 class="anchored" data-anchor-id="audio-recording-grabación-de-audio">2. Audio Recording (Grabación de audio)</h2>
+<section id="audio-recording-grabación-de-audio" class="level1">
+<h1>Audio Recording (Grabación de audio)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -30843,8 +30847,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="bill-proyecto-de-ley" class="level2">
-<h2 class="anchored" data-anchor-id="bill-proyecto-de-ley">3. Bill (Proyecto de ley)</h2>
+<section id="bill-proyecto-de-ley" class="level1">
+<h1>Bill (Proyecto de ley)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -30875,8 +30879,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="blog-post-entrada-de-blog" class="level2">
-<h2 class="anchored" data-anchor-id="blog-post-entrada-de-blog">4. Blog Post (Entrada de blog)</h2>
+<section id="blog-post-entrada-de-blog" class="level1">
+<h1>Blog Post (Entrada de blog)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -30901,8 +30905,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="book-libro" class="level2">
-<h2 class="anchored" data-anchor-id="book-libro">5. Book (Libro)</h2>
+<section id="book-libro" class="level1">
+<h1>Book (Libro)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -30937,8 +30941,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="book-section-sección-de-libro" class="level2">
-<h2 class="anchored" data-anchor-id="book-section-sección-de-libro">6. Book Section (Sección de libro)</h2>
+<section id="book-section-sección-de-libro" class="level1">
+<h1>Book Section (Sección de libro)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -30961,8 +30965,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="case-caso-legal" class="level2">
-<h2 class="anchored" data-anchor-id="case-caso-legal">7. Case (Caso legal)</h2>
+<section id="case-caso-legal" class="level1">
+<h1>Case (Caso legal)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -30991,8 +30995,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="conference-paper-artículo-en-conferencia" class="level2">
-<h2 class="anchored" data-anchor-id="conference-paper-artículo-en-conferencia">8. Conference Paper (Artículo en conferencia)</h2>
+<section id="conference-paper-artículo-en-conferencia" class="level1">
+<h1>Conference Paper (Artículo en conferencia)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31023,8 +31027,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="dictionary-entry-entrada-de-diccionario" class="level2">
-<h2 class="anchored" data-anchor-id="dictionary-entry-entrada-de-diccionario">9. Dictionary Entry (Entrada de diccionario)</h2>
+<section id="dictionary-entry-entrada-de-diccionario" class="level1">
+<h1>Dictionary Entry (Entrada de diccionario)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31045,8 +31049,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="document-documento" class="level2">
-<h2 class="anchored" data-anchor-id="document-documento">10. Document (Documento)</h2>
+<section id="document-documento" class="level1">
+<h1>Document (Documento)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31069,8 +31073,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="email-correo-electrónico" class="level2">
-<h2 class="anchored" data-anchor-id="email-correo-electrónico">11. Email (Correo electrónico)</h2>
+<section id="email-correo-electrónico" class="level1">
+<h1>Email (Correo electrónico)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31093,8 +31097,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="encyclopedia-article-artículo-de-enciclopedia" class="level2">
-<h2 class="anchored" data-anchor-id="encyclopedia-article-artículo-de-enciclopedia">12. Encyclopedia Article (Artículo de enciclopedia)</h2>
+<section id="encyclopedia-article-artículo-de-enciclopedia" class="level1">
+<h1>Encyclopedia Article (Artículo de enciclopedia)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31115,8 +31119,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="film-película" class="level2">
-<h2 class="anchored" data-anchor-id="film-película">13. Film (Película)</h2>
+<section id="film-película" class="level1">
+<h1>Film (Película)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31144,8 +31148,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="forum-post-publicación-en-foro" class="level2">
-<h2 class="anchored" data-anchor-id="forum-post-publicación-en-foro">14. Forum Post (Publicación en foro)</h2>
+<section id="forum-post-publicación-en-foro" class="level1">
+<h1>Forum Post (Publicación en foro)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31170,8 +31174,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="hearing-audiencia" class="level2">
-<h2 class="anchored" data-anchor-id="hearing-audiencia">15. Hearing (Audiencia)</h2>
+<section id="hearing-audiencia" class="level1">
+<h1>Hearing (Audiencia)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31202,8 +31206,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="instant-message-mensaje-instantáneo" class="level2">
-<h2 class="anchored" data-anchor-id="instant-message-mensaje-instantáneo">16. Instant Message (Mensaje instantáneo)</h2>
+<section id="instant-message-mensaje-instantáneo" class="level1">
+<h1>Instant Message (Mensaje instantáneo)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31226,8 +31230,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="interview-entrevista" class="level2">
-<h2 class="anchored" data-anchor-id="interview-entrevista">17. Interview (Entrevista)</h2>
+<section id="interview-entrevista" class="level1">
+<h1>Interview (Entrevista)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31251,8 +31255,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="journal-article-artículo-de-revista-académica" class="level2">
-<h2 class="anchored" data-anchor-id="journal-article-artículo-de-revista-académica">18. Journal Article (Artículo de revista académica)</h2>
+<section id="journal-article-artículo-de-revista-académica" class="level1">
+<h1>Journal Article (Artículo de revista académica)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31283,8 +31287,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="letter-carta" class="level2">
-<h2 class="anchored" data-anchor-id="letter-carta">19. Letter (Carta)</h2>
+<section id="letter-carta" class="level1">
+<h1>Letter (Carta)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31308,8 +31312,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="magazine-article-artículo-de-revista" class="level2">
-<h2 class="anchored" data-anchor-id="magazine-article-artículo-de-revista">20. Magazine Article (Artículo de revista)</h2>
+<section id="magazine-article-artículo-de-revista" class="level1">
+<h1>Magazine Article (Artículo de revista)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31335,8 +31339,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="manuscript-manuscrito" class="level2">
-<h2 class="anchored" data-anchor-id="manuscript-manuscrito">21. Manuscript (Manuscrito)</h2>
+<section id="manuscript-manuscrito" class="level1">
+<h1>Manuscript (Manuscrito)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31361,8 +31365,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="map-mapa" class="level2">
-<h2 class="anchored" data-anchor-id="map-mapa">22. Map (Mapa)</h2>
+<section id="map-mapa" class="level1">
+<h1>Map (Mapa)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31387,8 +31391,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="newspaper-article-artículo-de-periódico" class="level2">
-<h2 class="anchored" data-anchor-id="newspaper-article-artículo-de-periódico">23. Newspaper Article (Artículo de periódico)</h2>
+<section id="newspaper-article-artículo-de-periódico" class="level1">
+<h1>Newspaper Article (Artículo de periódico)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31416,8 +31420,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="patent-patente" class="level2">
-<h2 class="anchored" data-anchor-id="patent-patente">24. Patent (Patente)</h2>
+<section id="patent-patente" class="level1">
+<h1>Patent (Patente)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31449,8 +31453,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="podcast-podcast" class="level2">
-<h2 class="anchored" data-anchor-id="podcast-podcast">25. Podcast (Podcast)</h2>
+<section id="podcast-podcast" class="level1">
+<h1>Podcast (Podcast)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31477,8 +31481,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="presentation-presentación" class="level2">
-<h2 class="anchored" data-anchor-id="presentation-presentación">26. Presentation (Presentación)</h2>
+<section id="presentation-presentación" class="level1">
+<h1>Presentation (Presentación)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31503,8 +31507,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="radio-broadcast-emisión-de-radio" class="level2">
-<h2 class="anchored" data-anchor-id="radio-broadcast-emisión-de-radio">27. Radio Broadcast (Emisión de radio)</h2>
+<section id="radio-broadcast-emisión-de-radio" class="level1">
+<h1>Radio Broadcast (Emisión de radio)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31532,8 +31536,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="report-informe" class="level2">
-<h2 class="anchored" data-anchor-id="report-informe">28. Report (Informe)</h2>
+<section id="report-informe" class="level1">
+<h1>Report (Informe)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31562,8 +31566,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="software-software" class="level2">
-<h2 class="anchored" data-anchor-id="software-software">29. Software (Software)</h2>
+<section id="software-software" class="level1">
+<h1>Software (Software)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31589,8 +31593,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="statute-ley" class="level2">
-<h2 class="anchored" data-anchor-id="statute-ley">30. Statute (Ley)</h2>
+<section id="statute-ley" class="level1">
+<h1>Statute (Ley)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31622,8 +31626,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="thesis-tesis" class="level2">
-<h2 class="anchored" data-anchor-id="thesis-tesis">31. Thesis (Tesis)</h2>
+<section id="thesis-tesis" class="level1">
+<h1>Thesis (Tesis)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31649,8 +31653,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="tv-broadcast-emisión-de-televisión" class="level2">
-<h2 class="anchored" data-anchor-id="tv-broadcast-emisión-de-televisión">32. TV Broadcast (Emisión de televisión)</h2>
+<section id="tv-broadcast-emisión-de-televisión" class="level1">
+<h1>TV Broadcast (Emisión de televisión)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31678,8 +31682,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="video-recording-grabación-de-video" class="level2">
-<h2 class="anchored" data-anchor-id="video-recording-grabación-de-video">33. Video Recording (Grabación de video)</h2>
+<section id="video-recording-grabación-de-video" class="level1">
+<h1>Video Recording (Grabación de video)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31705,8 +31709,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="webpage-página-web" class="level2">
-<h2 class="anchored" data-anchor-id="webpage-página-web">34. Webpage (Página web)</h2>
+<section id="webpage-página-web" class="level1">
+<h1>Webpage (Página web)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31730,8 +31734,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="attachment-archivo-adjunto" class="level2">
-<h2 class="anchored" data-anchor-id="attachment-archivo-adjunto">35. Attachment (Archivo adjunto)</h2>
+<section id="attachment-archivo-adjunto" class="level1">
+<h1>Attachment (Archivo adjunto)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31750,8 +31754,8 @@ z-index: 0;
 </ul></li>
 </ul>
 </section>
-<section id="note-nota" class="level2">
-<h2 class="anchored" data-anchor-id="note-nota">36. Note (Nota)</h2>
+<section id="note-nota" class="level1">
+<h1>Note (Nota)</h1>
 <ul>
 <li><strong>Cuándo utilizar</strong>:
 <ul>
@@ -31828,8 +31832,8 @@ z-index: 0;
 <li><strong>Director/Editorial Director/Illustrator</strong>: Roles de creadores adicionales.</li>
 </ul>
 </section>
-<section id="consejos-generales" class="level1">
-<h1>Consejos Generales</h1>
+<section id="recomendación" class="level1">
+<h1>Recomendación</h1>
 <ul>
 <li><strong>Selección del tipo de elemento</strong>: Elegir el tipo más específico posible para mejorar la precisión de las citas.</li>
 <li><strong>Uso de “Extra”</strong>: Aprovechar este campo para información no cubierta por los campos estándar.</li>

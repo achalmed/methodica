@@ -2,16 +2,14 @@
 copyrightnotice: 2025
 copyrightext: All rights reserved
 title: Tipos de elementos y campos en Zotero
-shorttitle: GUÍA DE TIPOS DE ELEMENTOS EN ZOTERO
-abstract: This article provides a comprehensive guide to the item types supported
+shorttitle: TIPOS DE ELEMENTOS EN ZOTERO
+abstract: This publication provides a comprehensive guide to the item types supported
   by Zotero, a widely used reference management tool. It details the purpose, fields,
   and appropriate use of each item type, such as Artwork, Book, Journal Article, and
   more, based on official Zotero documentation. The guide emphasizes the importance
   of selecting the correct item type to ensure accurate citations and compliance with
   APA standards. It also covers the use of the "Extra" field for unsupported types
   and additional metadata, offering practical tips for academic researchers and students.
-  The article aligns with SEO best practices to enhance discoverability while maintaining
-  academic rigor for scholarly publications.
 keywords:
 - Zotero item types
 - reference management
@@ -49,9 +47,9 @@ draft: false
 image: ../featured.jpg
 ---
 
-Esta guía proporciona una descripción detallada de los tipos de elementos soportados por Zotero, basada en la documentación oficial de Zotero.
+Esta publicación proporciona una descripción detallada de los tipos de elementos soportados por Zotero, basada en la documentación oficial de Zotero.
 
-## 1. Artwork (Obra de arte)
+# Artwork (Obra de arte)
 
 -   **Cuándo utilizar**:
     -   Para registrar obras de arte como pinturas al óleo, esculturas, fotografías o cualquier tipo de imagen visual, incluidas figuras científicas (por ejemplo, gráficos o diagramas).
@@ -80,7 +78,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es ideal para citar obras de arte o imágenes visuales, diferenciándolas de documentos genéricos. La documentación recomienda usar el campo "Medium" para describir el material o tipo de obra, y "Artwork Size" para dimensiones físicas. Si la obra no encaja perfectamente, se puede adaptar usando el campo "Extra" para detalles específicos.
 
-## 2. Audio Recording (Grabación de audio)
+# Audio Recording (Grabación de audio)
 
 -   **Cuándo utilizar**:
     -   Para música, grabaciones de voz, efectos de sonido, grabaciones de archivo o figuras científicas basadas en audio.
@@ -112,7 +110,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo cubre cualquier grabación de audio, desde música hasta grabaciones históricas. El campo "Format" es clave para especificar el medio físico o digital. Los creadores como "Performer" o "Composer" son esenciales para citas precisas. Para roles adicionales (por ejemplo, productores), usar el campo "Extra" con el formato "Director: Nombre \|\| Apellido".
 
-## 3. Bill (Proyecto de ley)
+# Bill (Proyecto de ley)
 
 -   **Cuándo utilizar**:
     -   Para propuestas de legislación presentadas ante un cuerpo legislativo.
@@ -136,7 +134,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es específico para legislación propuesta. El campo "Bill Number" es crucial para identificar el proyecto, y "History" permite rastrear su progreso. La documentación sugiere usar "Extra" para campos legales adicionales no soportados, como "Event Place".
 
-## 4. Blog Post (Entrada de blog)
+# Blog Post (Entrada de blog)
 
 -   **Cuándo utilizar**:
     -   Para artículos o entradas publicadas en un blog personal.
@@ -154,7 +152,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es ideal para blogs personales, diferenciándolos de artículos de medios establecidos. El campo "Blog Title" es esencial para contextualizar la entrada. La documentación recomienda usar "Webpage" si no se ajusta a otros tipos más específicos.
 
-## 5. Book (Libro)
+# Book (Libro)
 
 -   **Cuándo utilizar**:
     -   Para libros publicados, incluidas monografías, antologías o textos académicos.
@@ -182,7 +180,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es versátil y puede adaptarse a muchos ítems inusuales. La documentación recomienda usar "Type" o "Extra" para especificar subtipos (por ejemplo, "Novela" o "Biografía"). El campo "Edition" debe contener solo números, y "Series" es clave para colecciones editoriales.
 
-## 6. Book Section (Sección de libro)
+# Book Section (Sección de libro)
 
 -   **Cuándo utilizar**:
     -   Para capítulos, prólogos, introducciones, apéndices, comentarios u otras secciones de un libro.
@@ -198,7 +196,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es específico para citar partes de libros. El campo "Book Title" es obligatorio para contextualizar la sección, y "Pages" es crucial para ubicar la cita. La documentación sugiere usar "Extra" para campos como "Chapter Number".
 
-## 7. Case (Caso legal)
+# Case (Caso legal)
 
 -   **Cuándo utilizar**:
     -   Para casos legales, ya sean publicados o inéditos.
@@ -220,7 +218,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es específico para citas legales. Los campos "Case Name" y "Court" son esenciales, y "History" permite rastrear el progreso del caso. La documentación recomienda consultar la sección de "Legal Citations" para soporte adicional.
 
-## 8. Conference Paper (Artículo en conferencia)
+# Conference Paper (Artículo en conferencia)
 
 -   **Cuándo utilizar**:
     -   Para trabajos presentados en conferencias y publicados en actas formales (por ejemplo, como libro o revista).
@@ -244,7 +242,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para artículos publicados en actas, no para presentaciones orales. Los campos "Proceedings Title" y "Conference Name" son clave para contextualizar. Si la conferencia y la publicación tienen lugares diferentes, usar "Extra" para "Event Place".
 
-## 9. Dictionary Entry (Entrada de diccionario)
+# Dictionary Entry (Entrada de diccionario)
 
 -   **Cuándo utilizar**:
     -   Para entradas publicadas en un diccionario.
@@ -258,7 +256,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es específico para diccionarios. El campo "Dictionary Title" es esencial, y "Pages" puede usarse para entradas largas. La documentación sugiere usar "Book Section" si la entrada es más extensa o compleja.
 
-## 10. Document (Documento)
+# Document (Documento)
 
 -   **Cuándo utilizar**:
     -   Para documentos genéricos no cubiertos por otros tipos.
@@ -274,7 +272,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es un último recurso debido a su falta de campos específicos. La documentación recomienda usar "Book", "Report" o "Manuscript" para mejores resultados en citas.
 
-## 11. Email (Correo electrónico)
+# Email (Correo electrónico)
 
 -   **Cuándo utilizar**:
     -   Para mensajes enviados por correo electrónico u otras formas de comunicación personal.
@@ -290,7 +288,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es adecuado para comunicaciones personales digitales. El campo "Subject" actúa como título, y "Recipient" es importante para el contexto. La documentación sugiere usar "Letter" para comunicaciones similares no electrónicas.
 
-## 12. Encyclopedia Article (Artículo de enciclopedia)
+# Encyclopedia Article (Artículo de enciclopedia)
 
 -   **Cuándo utilizar**:
     -   Para artículos o capítulos publicados en una enciclopedia.
@@ -304,7 +302,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para enciclopedias, con "Encyclopedia Title" como campo clave. Similar a "Book Section", pero optimizado para enciclopedias. Usar "Extra" para detalles adicionales.
 
-## 13. Film (Película)
+# Film (Película)
 
 -   **Cuándo utilizar**:
     -   Para películas artísticas, incluyendo ficción, no ficción y documentales.
@@ -325,7 +323,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para películas con enfoque artístico. El campo "Director" es clave, y roles como "Producer" deben especificarse en "Extra". La documentación recomienda usar etiquetas en "Extra" para roles adicionales.
 
-## 14. Forum Post (Publicación en foro)
+# Forum Post (Publicación en foro)
 
 -   **Cuándo utilizar**:
     -   Para publicaciones en foros en línea, incluidas redes sociales como tweets o comentarios de Facebook.
@@ -343,7 +341,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo cubre publicaciones en foros y redes sociales. El campo "Post Type" permite especificar el formato (por ejemplo, "Tweet"). La documentación sugiere usar "Webpage" para publicaciones en línea más genéricas.
 
-## 15. Hearing (Audiencia)
+# Hearing (Audiencia)
 
 -   **Cuándo utilizar**:
     -   Para informes o registros de audiencias formales de un cuerpo legislativo.
@@ -367,7 +365,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para audiencias legislativas formales. Los campos "Committee" y "Document Number" son esenciales. La documentación recomienda usar "Legal Citations" para más detalles.
 
-## 16. Instant Message (Mensaje instantáneo)
+# Instant Message (Mensaje instantáneo)
 
 -   **Cuándo utilizar**:
     -   Para mensajes enviados por servicios de mensajería instantánea o chat.
@@ -383,7 +381,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para comunicaciones personales en tiempo real. Similar a "Email", pero enfocado en chats. La documentación sugiere usar "Letter" para comunicaciones similares no digitales.
 
-## 17. Interview (Entrevista)
+# Interview (Entrevista)
 
 -   **Cuándo utilizar**:
     -   Para grabaciones, transcripciones o registros de entrevistas.
@@ -400,7 +398,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para entrevistas formales o publicadas. El campo "Interview With" es clave, y "Medium" especifica el formato. La documentación recomienda usar "Extra" para detalles como "Event Date".
 
-## 18. Journal Article (Artículo de revista académica)
+# Journal Article (Artículo de revista académica)
 
 -   **Cuándo utilizar**:
     -   Para artículos publicados en revistas académicas, ya sea en formato impreso u online.
@@ -424,7 +422,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para artículos académicos revisados por pares. Los campos "Publication", "Volume" e "Issue" son esenciales. La documentación recomienda usar "Extra" para campos como "PMID" o "Status" (por ejemplo, "in press").
 
-## 19. Letter (Carta)
+# Letter (Carta)
 
 -   **Cuándo utilizar**:
     -   Para cartas enviadas entre personas u organizaciones, especialmente comunicaciones históricas o personales.
@@ -441,7 +439,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para comunicaciones personales no electrónicas. El campo "Type" permite especificar el propósito de la carta. La documentación sugiere usar "Manuscript" para cartas históricas con valor archivístico.
 
-## 20. Magazine Article (Artículo de revista)
+# Magazine Article (Artículo de revista)
 
 -   **Cuándo utilizar**:
     -   Para artículos publicados en revistas populares, comerciales o no académicas.
@@ -460,7 +458,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para revistas no académicas. Los campos "Publication" y "Date" son clave. La documentación recomienda usar "Journal Article" para publicaciones académicas y "Newspaper Article" para diarios.
 
-## 21. Manuscript (Manuscrito)
+# Manuscript (Manuscrito)
 
 -   **Cuándo utilizar**:
     -   Para manuscritos inéditos, ya sean históricos o modernos (por ejemplo, trabajos no publicados, borradores o artículos en proceso).
@@ -478,7 +476,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es versátil para documentos inéditos. El campo "Type" es crucial para especificar el estado. La documentación recomienda usar "Extra" para detalles archivísticos adicionales.
 
-## 22. Map (Mapa)
+# Map (Mapa)
 
 -   **Cuándo utilizar**:
     -   Para mapas o modelos geográficos.
@@ -496,7 +494,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para recursos cartográficos. El campo "Scale" es único y esencial. La documentación sugiere usar "Type" para géneros específicos y "Extra" para detalles adicionales.
 
-## 23. Newspaper Article (Artículo de periódico)
+# Newspaper Article (Artículo de periódico)
 
 -   **Cuándo utilizar**:
     -   Para artículos publicados en periódicos, ya sea en formato impreso u online.
@@ -517,7 +515,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para artículos de prensa. Los campos "Publication" y "Section" son clave para contextualizar. La documentación recomienda usar "Magazine Article" para revistas no académicas.
 
-## 24. Patent (Patente)
+# Patent (Patente)
 
 -   **Cuándo utilizar**:
     -   Para patentes otorgadas por una invención.
@@ -542,7 +540,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para patentes formales. Los campos "Patent Number" e "Issuing Authority" son esenciales. La documentación recomienda usar "Extra" para campos legales adicionales.
 
-## 25. Podcast (Podcast)
+# Podcast (Podcast)
 
 -   **Cuándo utilizar**:
     -   Para episodios de programas de audio o video distribuidos en línea, generalmente por suscripción.
@@ -562,7 +560,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para podcasts distribuidos en línea. El campo "Program Title" contextualiza el episodio, y "Episode Number" es útil para identificación. La documentación sugiere usar "Audio Recording" para grabaciones no distribuidas como podcasts.
 
-## 26. Presentation (Presentación)
+# Presentation (Presentación)
 
 -   **Cuándo utilizar**:
     -   Para presentaciones en conferencias, simposios o reuniones, no publicadas en actas.
@@ -580,7 +578,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para presentaciones no publicadas. El campo "Type" permite especificar el formato, y "Meeting Name" es clave para el contexto. La documentación sugiere usar "Extra" para "Event Date" si es diferente de la fecha de publicación.
 
-## 27. Radio Broadcast (Emisión de radio)
+# Radio Broadcast (Emisión de radio)
 
 -   **Cuándo utilizar**:
     -   Para programas de radio, como noticias, series de entretenimiento o grabaciones archivadas.
@@ -601,7 +599,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para emisiones de radio, incluidas grabaciones archivadas. El campo "Network" es importante para contextualizar. La documentación recomienda usar "Extra" para roles como "Producer".
 
-## 28. Report (Informe)
+# Report (Informe)
 
 -   **Cuándo utilizar**:
     -   Para informes publicados por organizaciones, gobiernos o instituciones, incluidos preprints y documentos de trabajo.
@@ -623,7 +621,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es versátil para informes institucionales. Los campos "Report Number" e "Institution" son clave. La documentación sugiere usar "Extra" para campos como "Status" (por ejemplo, "preprint").
 
-## 29. Software (Software)
+# Software (Software)
 
 -   **Cuándo utilizar**:
     -   Para programas de computadora, aplicaciones o software.
@@ -642,7 +640,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para software y aplicaciones. El campo "Version" es crucial para identificación. La documentación recomienda usar "Extra" para detalles adicionales.
 
-## 30. Statute (Ley)
+# Statute (Ley)
 
 -   **Cuándo utilizar**:
     -   Para leyes o legislación aprobada.
@@ -667,7 +665,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para legislación aprobada. Los campos "Name of Act" y "Public Law Number" son esenciales. La documentación recomienda usar "Legal Citations" para más detalles.
 
-## 31. Thesis (Tesis)
+# Thesis (Tesis)
 
 -   **Cuándo utilizar**:
     -   Para tesis de grado, ya sean publicadas o inéditas.
@@ -686,7 +684,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para tesis académicas. El campo "Type" debe incluir "tesis" o "disertación". La documentación recomienda usar "Extra" para campos como "Submitted Date".
 
-## 32. TV Broadcast (Emisión de televisión)
+# TV Broadcast (Emisión de televisión)
 
 -   **Cuándo utilizar**:
     -   Para episodios de series de televisión o programas emitidos.
@@ -707,7 +705,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para emisiones de televisión. El campo "Program Title" es clave para contextualizar. La documentación recomienda usar "Extra" para roles como "Producer".
 
-## 33. Video Recording (Grabación de video)
+# Video Recording (Grabación de video)
 
 -   **Cuándo utilizar**:
     -   Para videos que no encajan en "Film", "TV Broadcast" o "Podcast" (por ejemplo, videos de YouTube o figuras científicas).
@@ -726,7 +724,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para videos genéricos. El campo "Format" es importante para especificar el medio. La documentación recomienda usar "Film" para películas artísticas.
 
-## 34. Webpage (Página web)
+# Webpage (Página web)
 
 -   **Cuándo utilizar**:
     -   Para páginas web genéricas que no encajan en tipos más específicos como "Blog Post" o "Report".
@@ -743,7 +741,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es genérico para contenido en línea. El campo "Website Title" es clave para contextualizar. La documentación recomienda usar tipos más específicos siempre que sea posible.
 
-## 35. Attachment (Archivo adjunto)
+# Attachment (Archivo adjunto)
 
 -   **Cuándo utilizar**:
     -   Para archivos independientes (por ejemplo, PDF, JPEG, DOCX) no asociados a un ítem principal.
@@ -755,7 +753,7 @@ Esta guía proporciona una descripción detallada de los tipos de elementos sopo
 -   **Información oficial de Zotero**:
     -   Este tipo es para archivos sueltos, pero la documentación desaconseja su uso. Se recomienda asociar archivos a ítems completos (por ejemplo, "Journal Article" con un PDF adjunto).
 
-## 36. Note (Nota)
+# Note (Nota)
 
 -   **Cuándo utilizar**:
     -   Para notas independientes usadas para organización o anotaciones.
@@ -811,7 +809,7 @@ Campos comunes:
 -   **Original Date**: Fecha original de publicación (formato ISO).
 -   **Director/Editorial Director/Illustrator**: Roles de creadores adicionales.
 
-# Consejos Generales
+# Recomendación
 
 -   **Selección del tipo de elemento**: Elegir el tipo más específico posible para mejorar la precisión de las citas.
 -   **Uso de "Extra"**: Aprovechar este campo para información no cubierta por los campos estándar.
