@@ -23,23 +23,23 @@
   {
     "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html",
     "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html",
-    "title": "Recursos para gestión bibliográfica",
+    "title": "Recursos Académicos para Investigación",
     "section": "",
-    "text": "En la era digital actual, el acceso a recursos bibliográficos y documentales en línea es crucial para la comunidad académica. Este artículo ofrece una guía exhaustiva de plataformas y herramientas diseñadas para asistir en diversas fases de la investigación académica."
+    "text": "En la era digital actual, el acceso a recursos bibliográficos y documentales en línea es fundamental para la comunidad académica global. Esta publicación reúne las plataformas, herramientas y recursos más relevantes para todas las fases del proceso de investigación académica, desde la identificación del tema hasta la publicación de resultados."
   },
   {
     "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#portales-y-blogs-especializados",
     "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#portales-y-blogs-especializados",
-    "title": "Recursos para gestión bibliográfica",
+    "title": "Recursos Académicos para Investigación",
     "section": "Portales y Blogs Especializados",
-    "text": "Portales y Blogs Especializados\n\nRandall Romero-Aguilar: Home\nKevin Sheppard: Index\nBlog El Foro y el Bazar - Universidad Francisco Marroquín: Link\nPunto de Vista Económico: Blog\nCorporate Finance Institute: FMVA®, CBCA™, CMSA®, BIDA™\nQuantEcon: Recursos cuantitativos\nXavi Sala-i-Martin: Home page\nDepartamento de Análisis Económico y Economía Cuantitativa (DANAE): Grado\nChristopher A. Neilson: Página personal\nEconometría Ralf Becker: Materiales\nMiguel Jiménez: Material de apoyo\nEscuela INDICOPI ECP: Inicio\nWalter Enders: Home\nUniversidad Carlos III - Economía: Grados\nHL Mata: Profesor de Economía\nUNI Mis cursos: PITVIRTUAL"
+    "text": "Portales y Blogs Especializados\n\nPortales Académicos Personales\n\nRandall Romero-Aguilar - Recursos de economía computacional y programación\nKevin Sheppard - Econometría y análisis de series temporales\nXavi Sala-i-Martin - Economía del crecimiento y desarrollo\nChristopher A. Neilson - Economía aplicada y políticas públicas\nWalter Enders - Series temporales y econometría aplicada\nHL Mata - Recursos de enseñanza en economía\n\n\n\nBlogs y Publicaciones Especializadas\n\nBlog El Foro y el Bazar - UFM - Análisis económico y libertad\nPunto de Vista Económico - Análisis y opinión económica\nEconAcademics - Agregador de blogs de economistas\n\n\n\nInstituciones y Departamentos\n\nCorporate Finance Institute - Finanzas corporativas (FMVA®, CBCA™, CMSA®, BIDA™)\nDANAE - UCM - Departamento de Análisis Económico\nUniversidad Carlos III - Economía - Programas de economía\nEscuela INDECOPI ECP - Competencia y propiedad intelectual"
   },
   {
     "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#cursos-y-materiales-educativos",
     "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#cursos-y-materiales-educativos",
-    "title": "Recursos para gestión bibliográfica",
+    "title": "Recursos Académicos para Investigación",
     "section": "Cursos y Materiales Educativos",
-    "text": "Cursos y Materiales Educativos\n\nMOOC de Economía: CAF\nEcosistema CAF: Capacitaciones\nUniversidad de Chile - U-Cursos: Plataforma\nCursos de la Universidad de Buenos Aires: Modelos y Optimización I"
+    "text": "Cursos y Materiales Educativos\n\nPlataformas de Aprendizaje\n\nMOOC de Economía - CAF - Cursos masivos en línea\nEcosistema CAF - Capacitaciones en desarrollo\nUniversidad de Chile - U-Cursos - Plataforma educativa\nUBA - Modelos y Optimización I - Cursos de grado\n\n\n\nRecursos Didácticos\n\nQuantEcon - Economía cuantitativa con Python y Julia\nEconometría Ralf Becker - Materiales de econometría\nMiguel Jiménez - Cursos - Material de apoyo en economía\nUNI Mis Cursos - Plataforma virtual"
   },
   {
     "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#herramientas-y-repositorios",
@@ -1433,5 +1433,222 @@
     "title": "Configuración de _quarto.yml para Proyectos Quarto",
     "section": "Preview Images",
     "text": "Preview Images\nLas Preview Images (imágenes de vista previa) son las imágenes que se muestran cuando una página de tu sitio se comparte en redes sociales (Twitter/X Cards, Open Graph) o en mensajeros como Slack, WhatsApp, etc. Quarto busca automáticamente estas imágenes siguiendo un orden de prioridad específico, lo que facilita su configuración.\nEstas imágenes se usan tanto para Twitter Cards como para Open Graph.\n\nConfiguración básica\nLa forma más simple es definir una imagen por defecto a nivel de sitio en _quarto.yml:\nwebsite:\n  site-url: https://misitio.com      # Obligatorio para rutas relativas\n  image: images/default-preview.jpg  # Imagen por defecto para todo el sitio\nCon esto, todas las páginas que no especifiquen su propia imagen usarán esta.\n\n\nConfiguración completa (todas las opciones y métodos)\nQuarto busca la imagen de vista previa en el siguiente orden de prioridad:\n\n1. Imagen explícita en el front-matter de la página (método recomendado)\n# En page.qmd\n---\ntitle: \"Mi Artículo Genial\"\ndescription: \"Una guía completa sobre Quarto\"\nimage: /images/mi-articulo-preview.jpg     # Ruta relativa al proyecto\n# o URL completa:\n# image: https://misitio.com/images/mi-articulo-preview.jpg\nimage-width: 1200                          # Opcional: ancho en píxeles\nimage-height: 630                          # Opcional: alto en píxeles\n---\n\n\n2. Imagen con clase especial en el contenido Markdown\n![Portada del artículo](/images/portada.jpg){.preview-image width=\"1200\" height=\"630\"}\nQuarto selecciona la primera imagen con la clase .preview-image.\n\n\n3. Imagen por nombre automático\nSi no hay ninguna de las anteriores, Quarto busca en la página renderizada un archivo con uno de estos nombres: - preview.png - feature.png - cover.png - thumbnail.png\n\n\n4. Imagen por defecto del sitio (en _quarto.yml)\nwebsite:\n  image: images/default-preview.jpg      # Usada cuando ninguna página tiene su propia imagen\n\n\n5. Desactivar imagen en una página específica\n---\ntitle: \"Página sin vista previa\"\nimage: false                           # Evita que se use cualquier imagen\n---\n\n\n\nEjemplos prácticos\n\n1. Configuración global básica + página individual\n# _quarto.yml\nwebsite:\n  site-url: https://misitio.com\n  image: images/default-og-preview.jpg  # Imagen por defecto (1200x630 px)\n# blog/nuevo-articulo.qmd\n---\ntitle: \"Lanzamiento de Quarto 1.5\"\ndescription: \"Nuevas funciones increíbles\"\nimage: /images/quarto-1.5-preview.png  # Imagen específica para este post\n---\n\n\n2. Usando clase .preview-image en el contenido\n# Mi Guía Definitiva\n\n![Esta será la imagen de vista previa](/images/guia-completa.jpg){.preview-image}\n\n¡Bienvenido a la guía más completa de Quarto!\n\n\n3. Página con dimensiones específicas (mejora presentación)\n---\ntitle: \"Análisis de Datos con Quarto\"\nimage: /images/analisis-datos-preview.jpg\nimage-width: 1200\nimage-height: 630\n---\n\n\n4. Sitio con imagen por defecto y algunas páginas personalizadas\n# _quarto.yml\nwebsite:\n  site-url: https://misitio.com\n  image: images/site-default-preview.jpg  # Usada en el 90% de las páginas\n  twitter-card: true\n  open-graph: true\nPáginas normales: usan la imagen por defecto.\nPáginas importantes (blog posts, anuncios): definen su propia image:."
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#repositorios-y-bases-de-datos-especializadas",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#repositorios-y-bases-de-datos-especializadas",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Repositorios y Bases de Datos Especializadas",
+    "text": "Repositorios y Bases de Datos Especializadas\n\nRed RePEc (Research Papers in Economics)\n\nRePEc - Red principal de economía\nEconPapers - Acceso a documentos\nIDEAS/RePEc - Base de datos principal\nNEP: New Economics Papers - Novedades bibliográficas\nMPRA - Munich Personal RePEc Archive\nRePEc Author Service - Perfil de autores\nEDIRC/RePEc - Directorio de instituciones\nRePEc Genealogy - Genealogía de economistas\nLogEc - Estadísticas de descarga\nCitEc - Citas en economía\nRePEc Biblio - Bibliografía\nRePEc Plagiarism - Detección de plagio\n\n\n\nOtras Bases de Datos en Economía\n\nEconStor - Documentos de trabajo en economía\nINOMICS - Portal para economistas\nSSRN - Social Science Research Network"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#revistas-especializadas",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#revistas-especializadas",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Revistas Especializadas",
+    "text": "Revistas Especializadas\n\nRevista CEPAL - Comisión Económica para América Latina\nEl Trimestre Económico - Revista de economía\nThe Econometric Society - Sociedad de econometría"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#bases-de-datos-multidisciplinarias",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#bases-de-datos-multidisciplinarias",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Bases de Datos Multidisciplinarias",
+    "text": "Bases de Datos Multidisciplinarias\n\nAcceso Abierto\n\nDOAJ - Directory of Open Access Journals\nBASE - Bielefeld Academic Search Engine\nCORE - Agregador de artículos de acceso abierto\nZenodo - Repositorio de investigación abierta\nOSF - Open Science Framework\nfigshare - Compartir datos de investigación\nDryad - Repositorio de datos\n\n\n\nBases de Datos Regionales\n\nLatindex - Sistema regional para América Latina\nSciELO.org - Scientific Electronic Library Online\nLA Referencia - Red latinoamericana\nRedalyc - Red de revistas científicas de América Latina\nDialnet - Portal bibliográfico hispano\n\n\n\nBases de Datos Especializadas\n\nERIC - Education Resources Information Center\nCiteSeerX - Ciencias de la computación\ndblp - Informática y computer science\nCyberLeninka - Artículos científicos en ruso e inglés"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#buscadores-académicos",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#buscadores-académicos",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Buscadores Académicos",
+    "text": "Buscadores Académicos\n\nWorldCat.org - Catálogo global de bibliotecas\nSemantic Scholar - Búsqueda con IA\nRefSeek - Buscador académico\nJURN - Búsqueda en revistas de artes y humanidades\nCrossref Metadata Search - Metadatos de publicaciones\nDataCite - Búsqueda de conjuntos de datos"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#bibliotecas-digitales",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#bibliotecas-digitales",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Bibliotecas Digitales",
+    "text": "Bibliotecas Digitales\n\nWorld Digital Library - Biblioteca digital mundial\nOpen Library - Biblioteca abierta\nBuscador Recolecta - Ciencia abierta en España"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#plataformas-comerciales",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#plataformas-comerciales",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Plataformas Comerciales",
+    "text": "Plataformas Comerciales\n\nProQuest - Base de datos académica\nScopus - Base de datos de Elsevier\nSpringer - Editorial científica\nTaylor & Francis Online - Revistas científicas\nSage Inc - Publicaciones científicas\nKnovel - Ingeniería y ciencias aplicadas\nGale - Recursos educativos"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#repositorios-de-tesis",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#repositorios-de-tesis",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Repositorios de Tesis",
+    "text": "Repositorios de Tesis\n\nInternacional\n\nOATD - Open Access Theses and Dissertations\nDart Europe - Tesis doctorales europeas\nTDX - Tesis Doctorales en Xarxa (España)\nTeseo - Tesis doctorales españolas\n\n\n\nLatinoamérica y Perú\n\nRENATI SUNEDU - Registro Nacional de Trabajos de Investigación\nCybertesis UNMSM - Universidad Nacional Mayor de San Marcos\nAlicia-Concytec - Repositorio nacional del Perú"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#revistas-especializadas-en-investigación-educativa",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#revistas-especializadas-en-investigación-educativa",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Revistas Especializadas en Investigación Educativa",
+    "text": "Revistas Especializadas en Investigación Educativa\n\nREDIE - Revista Electrónica de Investigación Educativa"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#gestores-bibliográficos",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#gestores-bibliográficos",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Gestores Bibliográficos",
+    "text": "Gestores Bibliográficos\n\nSoftware de Escritorio\n\nZotero - Gestor gratuito y de código abierto\nJabRef - Especializado en BibTeX\n\n\n\nHerramientas en Línea\n\nConnected Papers - Exploración visual de literatura\nORCID - Identificador de investigador"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#herramientas-de-escritura",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#herramientas-de-escritura",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Herramientas de Escritura",
+    "text": "Herramientas de Escritura\n\nCorrección y Estilo\n\nLanguageTool - Corrector gramatical multilingüe\nQuillBot - Parafraseo y mejora de textos\nWriteWise - Asistente de escritura\n\n\n\nInteracción con PDFs\n\nChatPDF - Chat con documentos PDF\nSciSpace - Análisis de papers científicos\n\n\n\nBúsqueda Inteligente\n\nConsensus - Motor de búsqueda académica con IA\nElicit - Búsqueda y análisis de papers\nScholarcy - Resúmenes automatizados"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#normas-y-estándares",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#normas-y-estándares",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Normas y Estándares",
+    "text": "Normas y Estándares\n\nNormas APA 7ma edición - Guía completa\nAPAsiónate con APA - Curso en línea"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#acceso-a-contenido",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#acceso-a-contenido",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Acceso a Contenido",
+    "text": "Acceso a Contenido\n\nSci-Hub - Acceso a artículos científicos (nota: verificar legalidad en tu jurisdicción)"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#evaluación-de-investigación",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#evaluación-de-investigación",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Evaluación de Investigación",
+    "text": "Evaluación de Investigación\n\nSciVal - Análisis de desempeño en investigación"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#bases-de-datos-médicas",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#bases-de-datos-médicas",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Bases de Datos Médicas",
+    "text": "Bases de Datos Médicas\n\nPubMed - Base de datos principal en medicina\nNLM Catalog - National Center for Biotechnology Information"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#revistas-médicas-de-alto-impacto",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#revistas-médicas-de-alto-impacto",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Revistas Médicas de Alto Impacto",
+    "text": "Revistas Médicas de Alto Impacto\n\nThe New England Journal of Medicine - Revista médica líder\nIndex Medicus - Índice de revistas médicas"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#recursos-adicionales",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#recursos-adicionales",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Recursos Adicionales",
+    "text": "Recursos Adicionales\n\nPLOS - Public Library of Science (acceso abierto)\nHindawi Journals - Revistas de acceso abierto en ciencias"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#editores-y-plantillas",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#editores-y-plantillas",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Editores y Plantillas",
+    "text": "Editores y Plantillas\n\nEditores en Línea\n\nOverleaf - Editor colaborativo en la nube\n\n\n\nRepositorios de Plantillas\n\nLaTeX Templates - Colección extensa de plantillas\nInfinitos Contrastes - Plantillas comentadas\nAlephsub0 - Recursos en español"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#tutoriales-y-documentación",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#tutoriales-y-documentación",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Tutoriales y Documentación",
+    "text": "Tutoriales y Documentación\n\nManual de LaTeX - Guías en español\ntexblog - Blog con tutoriales\nAltermundus - Recursos avanzados"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#herramientas-para-gráficos-y-diagramas",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#herramientas-para-gráficos-y-diagramas",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Herramientas para Gráficos y Diagramas",
+    "text": "Herramientas para Gráficos y Diagramas\n\nTikZ y PGF\n\nTikZ.org - Página oficial\nTikZiT - Editor gráfico\nPGF/TikZ Manual - Documentación completa\nTeXample.net - Galería de ejemplos\nPGFplots.net - Gráficos científicos\n\n\n\nTablas\n\nTablesGenerator - Generador de tablas LaTeX"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#recursos-en-español",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#recursos-en-español",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Recursos en Español",
+    "text": "Recursos en Español\n\nCiencia Social Abierta - Recursos académicos abiertos"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#guías-para-elaboración-de-tesis",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#guías-para-elaboración-de-tesis",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Guías para Elaboración de Tesis",
+    "text": "Guías para Elaboración de Tesis\n\nRecursos Universitarios\n\nLa Ruta del Tesista - PUCP - Guía paso a paso\nEscribir la Tesis - U. Chile - Recursos de escritura\n\n\n\nCursos en Línea\n\nCómo hacer una tesis - Coursera - Curso completo"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#centros-de-escritura",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#centros-de-escritura",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Centros de Escritura",
+    "text": "Centros de Escritura\n\nCentro de Escritura Javeriano - Cursos de escritura académica\nLEO Uniandes - Recursos académicos"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#asistentes-conversacionales",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#asistentes-conversacionales",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Asistentes Conversacionales",
+    "text": "Asistentes Conversacionales\n\nModelos de Lenguaje Principal\n\nChatGPT - OpenAI\nClaude - Anthropic\nGemini - Google\nDeepSeek - Modelo de IA avanzado\nGrok - xAI\nMeta AI - Meta\n\n\n\nBuscadores con IA\n\nPerplexity - Búsqueda conversacional\nBing AI - Microsoft\nDuck.ai - DuckDuckGo\nCici AI - Asistente diario"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#generación-de-contenido",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#generación-de-contenido",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Generación de Contenido",
+    "text": "Generación de Contenido\n\nTexto y Presentaciones\n\nTome - Creación de presentaciones con IA\nGamma - Presentaciones y documentos\nJasper - Copywriting con IA\n\n\n\nImágenes y Video\n\nDALL·E - Generación de imágenes (OpenAI)\nMidjourney - Arte generativo\nStable Diffusion - Modelo de código abierto\nFliki - Creación de videos\nKaiber - Videos con IA\nRunway - Herramientas de video\n\n\n\nAudio\n\nEnhance Speech - Adobe - Mejora de audio\nRask.ai - Traducción y doblaje de videos"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#herramientas-especializadas",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#herramientas-especializadas",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Herramientas Especializadas",
+    "text": "Herramientas Especializadas\n\nPara Programación\n\nGitHub Copilot - Asistente de código\nBlackbox - Generación de código\n\n\n\nPara Reuniones y Transcripción\n\nFireflies.ai - Transcripción y notas de reuniones\nOtter.ai - Transcripción en tiempo real\n\n\n\nDesarrollo y APIs\n\nGoogle AI Studio - Experimentación con modelos"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#directorios-de-herramientas-ia",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#directorios-de-herramientas-ia",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Directorios de Herramientas IA",
+    "text": "Directorios de Herramientas IA\n\nToolify - Directorio completo\nAIFINDY - Catálogo de herramientas\nThere’s An AI For That - Base de datos de IA\nFuture Tools - Herramientas curadas"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#plataformas-educativas-globales",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#plataformas-educativas-globales",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Plataformas Educativas Globales",
+    "text": "Plataformas Educativas Globales\n\nMOOCs y Cursos en Línea\n\nCoursera - Cursos universitarios\nedX - Educación de instituciones líderes\nKhan Academy - Educación gratuita\nMIT OpenCourseWare - Cursos del MIT\n\n\n\nPlataformas de Investigación\n\nResearchGate - Red social académica\nAcademia.edu - Compartir investigación\nMendeley - Gestor de referencias y red social"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#datos-y-estadísticas",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#datos-y-estadísticas",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Datos y Estadísticas",
+    "text": "Datos y Estadísticas\n\nFuentes de Datos\n\nWorld Bank Open Data - Datos del Banco Mundial\nOECD Data - Organización para la Cooperación y el Desarrollo\nEurostat - Estadísticas europeas\nINEI - Instituto Nacional de Estadística (Perú)\nOur World in Data - Datos sobre problemas globales\n\n\n\nHerramientas de Análisis\n\nGoogle Dataset Search - Buscador de conjuntos de datos\nKaggle - Competencias y datasets\nData.gov - Datos del gobierno de EE.UU."
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#recursos-para-ciencias-sociales",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#recursos-para-ciencias-sociales",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Recursos para Ciencias Sociales",
+    "text": "Recursos para Ciencias Sociales\n\nICPSR - Inter-university Consortium for Political and Social Research\nQualitative Data Repository - Datos cualitativos\nUK Data Service - Datos sociales y económicos"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#recomendaciones-de-uso",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#recomendaciones-de-uso",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Recomendaciones de Uso",
+    "text": "Recomendaciones de Uso\nPara comenzar una investigación:\n\nIdentificar el tema y revisar los repositorios especializados (RePEc para economía, PubMed para salud)\nUtilizar buscadores académicos como Semantic Scholar o Perplexity AI\nOrganizar referencias con Zotero o JabRef\n\nPara la escritura:\n\nEstructurar el documento con LaTeX usando plantillas de Overleaf\nRevisar estilo y gramática con LanguageTool\nConsultar las normas APA actualizadas\n\nPara análisis y visualización:\n\nExplorar datos en repositorios abiertos\nUtilizar herramientas de IA para análisis preliminares\nCrear gráficos profesionales con TikZ/PGFplots"
+  },
+  {
+    "objectID": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#contribución-comunitaria",
+    "href": "posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html#contribución-comunitaria",
+    "title": "Recursos Académicos para Investigación",
+    "section": "Contribución Comunitaria",
+    "text": "Contribución Comunitaria\nEsta publicación está diseñada para ser un documento vivo que evoluciona con las necesidades de la comunidad académica. Se invita a los lectores a:\n\nCompartir recursos adicionales que consideren valiosos\nReportar enlaces rotos o desactualizados\nSugerir nuevas categorías o secciones\nTraducir o adaptar contenido para diferentes contextos"
   }
 ]

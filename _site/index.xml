@@ -32000,268 +32000,598 @@ textos,”</span> February. <a href="https://methodica.netlify.app/posts/2025-02
   <media:content url="https://methodica.netlify.app/posts/featured.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Recursos para gestión bibliográfica</title>
+  <title>Recursos Académicos para Investigación</title>
   <dc:creator>Edison Achalma</dc:creator>
   <link>https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/</link>
   <description><![CDATA[ 
 
 <style>
-:root {
---primary-color: ;
-}
-#title-block-header {
-width: 100%;
-overflow: hidden;
-position: relative;
-}
-.title-block-content {
-position: relative;
-padding-top: 60px;
+  :root {
+    --primary-color: ;
+  }
 
-padding-bottom: 60px;
+  #title-block-header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
 
-max-width: 752px;
-margin: 0 auto;
-z-index: 1;
-}
-#particles-js {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 0;
-}
-.bg-image {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-z-index: 0;
-}
+  .title-block-content {
+    position: relative;
+    padding-top: 60px;
+    /* Reducido de 130px */
+    padding-bottom: 60px;
+    /* Reducido de 130px */
+    max-width: 752px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
 </style>
 
 
 
 
-<section id="introducción" class="level1">
-<h1>Introducción</h1>
-<p>En la era digital actual, el acceso a recursos bibliográficos y documentales en línea es crucial para la comunidad académica. Este artículo ofrece una guía exhaustiva de plataformas y herramientas diseñadas para asistir en diversas fases de la investigación académica.</p>
-</section>
-<section id="economía" class="level1">
-<h1>Economía</h1>
+<p>En la era digital actual, el acceso a recursos bibliográficos y documentales en línea es fundamental para la comunidad académica global. Esta publicación reúne las plataformas, herramientas y recursos más relevantes para todas las fases del proceso de investigación académica, desde la identificación del tema hasta la publicación de resultados.</p>
+<section id="economía-y-ciencias-sociales" class="level1">
+<h1>Economía y Ciencias Sociales</h1>
 <section id="portales-y-blogs-especializados" class="level2">
 <h2 class="anchored" data-anchor-id="portales-y-blogs-especializados">Portales y Blogs Especializados</h2>
+<section id="portales-académicos-personales" class="level3">
+<h3 class="anchored" data-anchor-id="portales-académicos-personales">Portales Académicos Personales</h3>
 <ul>
-<li><strong>Randall Romero-Aguilar</strong>: <a href="https://randall-romero.com/">Home</a></li>
-<li><strong>Kevin Sheppard</strong>: <a href="https://www.kevinsheppard.com/">Index</a></li>
-<li><strong>Blog El Foro y el Bazar - Universidad Francisco Marroquín</strong>: <a href="https://bazar.ufm.edu/">Link</a></li>
-<li><strong>Punto de Vista Económico</strong>: <a href="https://puntodevistaeconomico.com/">Blog</a></li>
-<li><strong>Corporate Finance Institute</strong>: <a href="https://corporatefinanceinstitute.com/">FMVA®, CBCA™, CMSA®, BIDA™</a></li>
-<li><strong>QuantEcon</strong>: <a href="https://quantecon.org/">Recursos cuantitativos</a></li>
-<li><strong>Xavi Sala-i-Martin</strong>: <a href="https://www.salaimartin.com/">Home page</a></li>
-<li><strong>Departamento de Análisis Económico y Economía Cuantitativa (DANAE)</strong>: <a href="https://www.ucm.es/fundamentos-analisis-economico2/grado">Grado</a></li>
-<li><strong>Christopher A. Neilson</strong>: <a href="https://christopherneilson.github.io/">Página personal</a></li>
-<li><strong>Econometría Ralf Becker</strong>: <a href="https://datasquad.github.io/ralffbecker/index.html">Materiales</a></li>
-<li><strong>Miguel Jiménez</strong>: <a href="https://migueljimenezg.github.io/cursos/index.html">Material de apoyo</a></li>
-<li><strong>Escuela INDICOPI ECP</strong>: <a href="https://www.escuela-indecopi.edu.pe/">Inicio</a></li>
-<li><strong>Walter Enders</strong>: <a href="https://wenders.people.ua.edu/">Home</a></li>
-<li><strong>Universidad Carlos III - Economía</strong>: <a href="https://economia.uc3m.es/grados/">Grados</a></li>
-<li><strong>HL Mata</strong>: <a href="http://webdelprofesor.ula.ve/economia/hmata/">Profesor de Economía</a></li>
-<li><strong>UNI Mis cursos</strong>: <a href="https://pit-virtual.uni.edu.pe/my/courses.php">PITVIRTUAL</a></li>
+<li><strong><a href="https://randall-romero.com/">Randall Romero-Aguilar</a></strong> - Recursos de economía computacional y programación</li>
+<li><strong><a href="https://www.kevinsheppard.com/">Kevin Sheppard</a></strong> - Econometría y análisis de series temporales</li>
+<li><strong><a href="https://www.salaimartin.com/">Xavi Sala-i-Martin</a></strong> - Economía del crecimiento y desarrollo</li>
+<li><strong><a href="https://christopherneilson.github.io/">Christopher A. Neilson</a></strong> - Economía aplicada y políticas públicas</li>
+<li><strong><a href="https://wenders.people.ua.edu/">Walter Enders</a></strong> - Series temporales y econometría aplicada</li>
+<li><strong><a href="http://webdelprofesor.ula.ve/economia/hmata/">HL Mata</a></strong> - Recursos de enseñanza en economía</li>
 </ul>
+</section>
+<section id="blogs-y-publicaciones-especializadas" class="level3">
+<h3 class="anchored" data-anchor-id="blogs-y-publicaciones-especializadas">Blogs y Publicaciones Especializadas</h3>
+<ul>
+<li><strong><a href="https://bazar.ufm.edu/">Blog El Foro y el Bazar - UFM</a></strong> - Análisis económico y libertad</li>
+<li><strong><a href="https://puntodevistaeconomico.com/">Punto de Vista Económico</a></strong> - Análisis y opinión económica</li>
+<li><strong><a href="https://www.econacademics.org/">EconAcademics</a></strong> - Agregador de blogs de economistas</li>
+</ul>
+</section>
+<section id="instituciones-y-departamentos" class="level3">
+<h3 class="anchored" data-anchor-id="instituciones-y-departamentos">Instituciones y Departamentos</h3>
+<ul>
+<li><strong><a href="https://corporatefinanceinstitute.com/">Corporate Finance Institute</a></strong> - Finanzas corporativas (FMVA®, CBCA™, CMSA®, BIDA™)</li>
+<li><strong><a href="https://www.ucm.es/fundamentos-analisis-economico2/grado">DANAE - UCM</a></strong> - Departamento de Análisis Económico</li>
+<li><strong><a href="https://economia.uc3m.es/grados/">Universidad Carlos III - Economía</a></strong> - Programas de economía</li>
+<li><strong><a href="https://www.escuela-indecopi.edu.pe/">Escuela INDECOPI ECP</a></strong> - Competencia y propiedad intelectual</li>
+</ul>
+</section>
 </section>
 <section id="cursos-y-materiales-educativos" class="level2">
 <h2 class="anchored" data-anchor-id="cursos-y-materiales-educativos">Cursos y Materiales Educativos</h2>
+<section id="plataformas-de-aprendizaje" class="level3">
+<h3 class="anchored" data-anchor-id="plataformas-de-aprendizaje">Plataformas de Aprendizaje</h3>
 <ul>
-<li><strong>MOOC de Economía</strong>: <a href="https://www.caf.com/es/actualidad/capacitacion/2023/08/mooc-de-economia/">CAF</a></li>
-<li><strong>Ecosistema CAF</strong>: <a href="https://capacitaciones.caf.com/">Capacitaciones</a></li>
-<li><strong>Universidad de Chile - U-Cursos</strong>: <a href="https://uchile.cl/presentacion/vicerrectoria-de-asuntos-economicos-y-gestion-institucional/convenio-de-desempeno/sistemas-de-gestion/u-cursos">Plataforma</a></li>
-<li><strong>Cursos de la Universidad de Buenos Aires</strong>: <a href="https://campusgrado.fi.uba.ar/course/view.php?id=303">Modelos y Optimización I</a></li>
+<li><strong><a href="https://www.caf.com/es/actualidad/capacitacion/2023/08/mooc-de-economia/">MOOC de Economía - CAF</a></strong> - Cursos masivos en línea</li>
+<li><strong><a href="https://capacitaciones.caf.com/">Ecosistema CAF</a></strong> - Capacitaciones en desarrollo</li>
+<li><strong><a href="https://uchile.cl/presentacion/vicerrectoria-de-asuntos-economicos-y-gestion-institucional/convenio-de-desempeno/sistemas-de-gestion/u-cursos">Universidad de Chile - U-Cursos</a></strong> - Plataforma educativa</li>
+<li><strong><a href="https://campusgrado.fi.uba.ar/course/view.php?id=303">UBA - Modelos y Optimización I</a></strong> - Cursos de grado</li>
 </ul>
 </section>
-<section id="herramientas-y-repositorios" class="level2">
-<h2 class="anchored" data-anchor-id="herramientas-y-repositorios">Herramientas y Repositorios</h2>
+<section id="recursos-didácticos" class="level3">
+<h3 class="anchored" data-anchor-id="recursos-didácticos">Recursos Didácticos</h3>
 <ul>
-<li><strong>EconPapers</strong>: <a href="https://econpapers.repec.org/">Acceso</a></li>
-<li><strong>RePEc - Research Papers in Economics</strong>: <a href="http://repec.org/">Sitio</a></li>
-<li><strong>NEP: New Economics Papers</strong>: <a href="https://nep.repec.org/">Actualizaciones</a></li>
-<li><strong>EconAcademics</strong>: <a href="https://www.econacademics.org/">Agregador de blogs</a></li>
-<li><strong>EconStor</strong>: <a href="https://www.econstor.eu/">Documentos de Trabajo</a></li>
-<li><strong>INOMICS</strong>: <a href="https://inomics.com/">Recursos para Economistas</a></li>
-<li><strong>Munich Personal RePEc Archive</strong>: <a href="https://mpra.ub.uni-muenchen.de/">MPRA</a></li>
-<li><strong>RePEc Author Service</strong>: <a href="https://authors.repec.org/">Perfil de autor</a></li>
-<li><strong>Economics and Finance Research | IDEAS/RePEc</strong>: <a href="https://ideas.repec.org/">Listado</a></li>
-<li><strong>Economics Departments, Institutes and Research Centers in the World | EDIRC/RePEc</strong>: <a href="https://edirc.repec.org/">Directorio</a></li>
-<li><strong>RePEc Genealogy</strong>: <a href="https://genealogy.repec.org/">Genealogía de Economistas</a></li>
-<li><strong>LogEc: Download Statistics</strong>: <a href="https://logec.repec.org/">Estadísticas</a></li>
-<li><strong>CitEc : Citation in Economics</strong>: <a href="https://citec.repec.org/">Citas</a></li>
-<li><strong>RePEc Biblio</strong>: <a href="https://biblio.repec.org/">Bibliografía</a></li>
-<li><strong>RePEc plagiarism page</strong>: <a href="https://plagiarism.repec.org/">Detección de plagio</a></li>
+<li><strong><a href="https://quantecon.org/">QuantEcon</a></strong> - Economía cuantitativa con Python y Julia</li>
+<li><strong><a href="https://datasquad.github.io/ralffbecker/index.html">Econometría Ralf Becker</a></strong> - Materiales de econometría</li>
+<li><strong><a href="https://migueljimenezg.github.io/cursos/index.html">Miguel Jiménez - Cursos</a></strong> - Material de apoyo en economía</li>
+<li><strong><a href="https://pit-virtual.uni.edu.pe/my/courses.php">UNI Mis Cursos</a></strong> - Plataforma virtual</li>
 </ul>
 </section>
 </section>
-<section id="tesis-y-recursos-bibliográficos" class="level1">
-<h1>Tesis y Recursos Bibliográficos</h1>
-<section id="bases-de-datos-y-portales" class="level2">
-<h2 class="anchored" data-anchor-id="bases-de-datos-y-portales">Bases de Datos y Portales</h2>
+<section id="repositorios-y-bases-de-datos-especializadas" class="level2">
+<h2 class="anchored" data-anchor-id="repositorios-y-bases-de-datos-especializadas">Repositorios y Bases de Datos Especializadas</h2>
+<section id="red-repec-research-papers-in-economics" class="level3">
+<h3 class="anchored" data-anchor-id="red-repec-research-papers-in-economics">Red RePEc (Research Papers in Economics)</h3>
 <ul>
-<li><strong>Latindex</strong>: <a href="https://www.latindex.org/">Sistema regional de información</a></li>
-<li><strong>DOAJ - Directory of Open Access Journals</strong>: <a href="https://doaj.org/">Directorio</a></li>
-<li><strong>Dialnet</strong>: <a href="https://dialnet.unirioja.es/">Búsqueda</a></li>
-<li><strong>WorldCat.org</strong>: <a href="https://search.worldcat.org/es">Buscador global</a></li>
-<li><strong>BASE (Bielefeld Academic Search Engine)</strong>: <a href="https://www.base-search.net/">Inicio de búsqueda</a></li>
-<li><strong>ERIC - Education Resources Information Center</strong>: <a href="https://eric.ed.gov/">Educación</a></li>
-<li><strong>Hindawi Journals</strong>: <a href="https://www.hindawi.com/journals/">Revistas de acceso abierto</a></li>
-<li><strong>CiteSeerX</strong>: <a href="https://citeseerx.ist.psu.edu/">Búsqueda de documentos</a></li>
-<li><strong>MHS</strong>: <a href="https://jurn.org/">Buscador de artículos</a></li>
-<li><strong>PLOS - Public Library of Science</strong>: <a href="https://plos.org/">Artículos científicos</a></li>
-<li><strong>Crossref Metadata Search</strong>: <a href="https://search.crossref.org/">Metadatos</a></li>
-<li><strong>SSRN</strong>: <a href="https://www.ssrn.com/index.cfm/en/">Social Science Research Network</a></li>
-<li><strong>ProQuest</strong>: <a href="https://www.proquest.com/?defaultdiss=true">Investigación académica</a></li>
-<li><strong>Buscador Recolecta</strong>: <a href="https://buscador.recolecta.fecyt.es/">Búsqueda de información</a></li>
-<li><strong>CORE</strong>: <a href="https://core.ac.uk/">Acceso abierto</a></li>
-<li><strong>Zenodo</strong>: <a href="https://zenodo.org/">Compartir datos</a></li>
-<li><strong>dblp</strong>: <a href="https://dblp.uni-trier.de/">Bibliografía de ciencias de la computación</a></li>
-<li><strong>Semantic Scholar</strong>: <a href="https://www.semanticscholar.org/">Búsqueda académica con IA</a></li>
-<li><strong>OSF - Open Science Framework</strong>: <a href="https://osf.io/">Proyectos de ciencia abierta</a></li>
-<li><strong>DataCite</strong>: <a href="https://datacite.org/">Datos de investigación</a></li>
-<li><strong>CyberLeninka</strong>: <a href="https://cyberleninka.org/">Artículos académicos</a></li>
-<li><strong>REDIE | Revista Electrónica de Investigación Educativa</strong>: <a href="https://redie.uabc.mx/redie/search">Búsqueda</a></li>
-<li><strong>TDX (Tesis Doctorales en Xarxa)</strong>: <a href="https://www.tesisenred.net/">Tesis en red</a></li>
-<li><strong>Tesis Doctorales en Red - Teseo</strong>: <a href="https://www.educacion.gob.es/teseo/irGestionarConsulta.do">Consulta de tesis</a></li>
-<li><strong>Dart Europe E-Theses Portal</strong>: <a href="https://www.dart-europe.eu/">Tesis europeas</a></li>
-<li><strong>OATD – Open Access Theses and Dissertations</strong>: <a href="https://oatd.org/">Tesis y disertaciones</a></li>
-<li><strong>World Digital Library</strong>: <a href="https://www.loc.gov/collections/world-digital-library/about-this-collection/">Colecciones digitales</a></li>
-<li><strong>LA Referencia</strong>: <a href="https://www.lareferencia.info/es/">Portal de acceso abierto</a></li>
-<li><strong>Cybertesis</strong>: <a href="https://cybertesis.unmsm.edu.pe/">Tesis peruanas</a></li>
-<li><strong>RENATI SUNEDU</strong>: <a href="https://renati.sunedu.gob.pe/">Registro Nacional</a></li>
-<li><strong>figshare</strong>: <a href="https://figshare.com/">Compartir investigación</a></li>
-<li><strong>Dryad</strong>: <a href="https://datadryad.org/stash">Preservación de datos</a></li>
-<li><strong>Biblioteca Abierta</strong>: <a href="https://openlibrary.org/?lang=es">Libros digitales</a></li>
-<li><strong>SciELO.org</strong>: <a href="https://www.scielo.org/">Publicaciones científicas</a></li>
+<li><strong><a href="http://repec.org/">RePEc</a></strong> - Red principal de economía</li>
+<li><strong><a href="https://econpapers.repec.org/">EconPapers</a></strong> - Acceso a documentos</li>
+<li><strong><a href="https://ideas.repec.org/">IDEAS/RePEc</a></strong> - Base de datos principal</li>
+<li><strong><a href="https://nep.repec.org/">NEP: New Economics Papers</a></strong> - Novedades bibliográficas</li>
+<li><strong><a href="https://mpra.ub.uni-muenchen.de/">MPRA</a></strong> - Munich Personal RePEc Archive</li>
+<li><strong><a href="https://authors.repec.org/">RePEc Author Service</a></strong> - Perfil de autores</li>
+<li><strong><a href="https://edirc.repec.org/">EDIRC/RePEc</a></strong> - Directorio de instituciones</li>
+<li><strong><a href="https://genealogy.repec.org/">RePEc Genealogy</a></strong> - Genealogía de economistas</li>
+<li><strong><a href="https://logec.repec.org/">LogEc</a></strong> - Estadísticas de descarga</li>
+<li><strong><a href="https://citec.repec.org/">CitEc</a></strong> - Citas en economía</li>
+<li><strong><a href="https://biblio.repec.org/">RePEc Biblio</a></strong> - Bibliografía</li>
+<li><strong><a href="https://plagiarism.repec.org/">RePEc Plagiarism</a></strong> - Detección de plagio</li>
 </ul>
 </section>
-<section id="herramientas-de-gestión-de-referencias" class="level2">
-<h2 class="anchored" data-anchor-id="herramientas-de-gestión-de-referencias">Herramientas de Gestión de Referencias</h2>
+<section id="otras-bases-de-datos-en-economía" class="level3">
+<h3 class="anchored" data-anchor-id="otras-bases-de-datos-en-economía">Otras Bases de Datos en Economía</h3>
 <ul>
-<li><strong>JabRef</strong>: <a href="https://www.jabref.org/">Gestión de referencias</a></li>
-<li><strong>Zotero</strong>: <a href="https://www.zotero.org/">Asistente personal de investigación</a></li>
-<li><strong>Connected Papers</strong>: <a href="https://www.connectedpapers.com/">Exploración visual</a></li>
-<li><strong>Sci-Hub</strong>: <a href="https://sci-hub.hkvisa.net/">Acceso a artículos científicos</a></li>
-<li><strong>RefSeek</strong>: <a href="https://www.refseek.com/">Búsqueda académica</a></li>
-<li><strong>Redalyc</strong>: <a href="https://www.redalyc.org/">Sistema de Información Científica</a></li>
-<li><strong>ORCID</strong>: <a href="https://orcid.org/">Perfil de investigación</a></li>
-<li><strong>Scopus</strong>: <a href="https://www.scopus.com/standard/marketing.uri">Base de datos bibliográfica</a></li>
-<li><strong>Normas APA</strong>: <a href="https://normas-apa.org/">7ma edición</a></li>
-<li><strong>Alicia-concytec</strong>: <a href="https://alicia.concytec.gob.pe/vufind/">Búsqueda de publicaciones</a></li>
-<li><strong>QuillBot</strong>: <a href="https://quillbot.com/">Herramienta de parafraseo</a></li>
-<li><strong>LanguageTool</strong>: <a href="https://languagetool.org/">Corrector gramatical</a></li>
-<li><strong>ChatPDF</strong>: <a href="https://www.chatpdf.com/">Conversación con PDFs</a></li>
-<li><strong>SciSpace</strong>: <a href="https://typeset.io/">Chat con PDFs científicos</a></li>
-<li><strong>Consensus</strong>: <a href="https://consensus.app/">Motor de búsqueda académica</a></li>
-<li><strong>Elicit</strong>: <a href="https://elicit.com/?workflow=table-of-papers">Búsqueda de papers científicos</a></li>
-<li><strong>Sage Inc</strong>: <a href="https://us.sagepub.com/en-us/sam/home">Publicaciones científicas</a></li>
-<li><strong>Taylor &amp; Francis Online</strong>: <a href="https://www.tandfonline.com/">Revistas revisadas por pares</a></li>
-<li><strong>Knovel</strong>: <a href="https://app.knovel.com/kn">Ingeniería y ciencias aplicadas</a></li>
-<li><strong>Springer</strong>: <a href="https://www.springer.com/la">Publicaciones internacionales</a></li>
-<li><strong>Gale</strong>: <a href="https://www.gale.com/">Recursos educativos</a></li>
-<li><strong>SciVal</strong>: <a href="https://www.elsevier.com/products/scival">Evaluación de desempeño en investigación</a></li>
-<li><strong>Scholarcy</strong>: <a href="https://www.scholarcy.com/">Resúmenes automatizados</a></li>
-<li><strong>WriteWise</strong>: <a href="https://web.writewise.io/?nab=5">Herramienta de escritura</a></li>
-<li><strong>Centro de Escritura Javeriano</strong>: <a href="https://centrodeescriturajaveriano.thinkific.com/enrollments">Cursos</a></li>
-<li><strong>Revista CEPAL</strong>: <a href="https://www.cepal.org/es/publicaciones/tipo/revista-cepal">Publicaciones de la CEPAL</a></li>
-<li><strong>El Trimestre Económico</strong>: <a href="https://www.eltrimestreeconomico.com.mx/index.php/te">Revista</a></li>
-<li><strong>The Econometric Society</strong>: <a href="https://www.econometricsociety.org/">Sociedad de Econometría</a></li>
+<li><strong><a href="https://www.econstor.eu/">EconStor</a></strong> - Documentos de trabajo en economía</li>
+<li><strong><a href="https://inomics.com/">INOMICS</a></strong> - Portal para economistas</li>
+<li><strong><a href="https://www.ssrn.com/index.cfm/en/">SSRN</a></strong> - Social Science Research Network</li>
 </ul>
 </section>
 </section>
-<section id="medicina-y-ciencias-de-la-salud" class="level1">
-<h1>Medicina y Ciencias de la Salud</h1>
-<section id="bases-de-datos-y-revistas" class="level2">
-<h2 class="anchored" data-anchor-id="bases-de-datos-y-revistas">Bases de Datos y Revistas</h2>
+<section id="revistas-especializadas" class="level2">
+<h2 class="anchored" data-anchor-id="revistas-especializadas">Revistas Especializadas</h2>
 <ul>
-<li><strong>PubMed</strong>: <a href="https://pubmed.ncbi.nlm.nih.gov/">Investigaciones médicas</a></li>
-<li><strong>The New England Journal of Medicine</strong>: <a href="https://www.nejm.org/">Publicaciones clínicas</a></li>
-<li><strong>Index Medicus</strong>: <a href="http://www2.bg.ump.edu.pl/czasopisma/medicus.php?lang=eng">Títulos abreviados</a></li>
-<li><strong>NLM Catalog - National Center for Biotechnology Information</strong>: <a href="https://www.ncbi.nlm.nih.gov/">Recursos médicos</a></li>
+<li><strong><a href="https://www.cepal.org/es/publicaciones/tipo/revista-cepal">Revista CEPAL</a></strong> - Comisión Económica para América Latina</li>
+<li><strong><a href="https://www.eltrimestreeconomico.com.mx/index.php/te">El Trimestre Económico</a></strong> - Revista de economía</li>
+<li><strong><a href="https://www.econometricsociety.org/">The Econometric Society</a></strong> - Sociedad de econometría</li>
 </ul>
 </section>
 </section>
-<section id="ruta-del-tesista" class="level1">
-<h1>Ruta del Tesista</h1>
+<section id="bases-de-datos-bibliográficas" class="level1">
+<h1>Bases de Datos Bibliográficas</h1>
+<section id="bases-de-datos-multidisciplinarias" class="level2">
+<h2 class="anchored" data-anchor-id="bases-de-datos-multidisciplinarias">Bases de Datos Multidisciplinarias</h2>
+<section id="acceso-abierto" class="level3">
+<h3 class="anchored" data-anchor-id="acceso-abierto">Acceso Abierto</h3>
 <ul>
-<li><strong>La Ruta del Tesista - PUCP</strong>: <a href="https://posgrado.pucp.edu.pe/informacion-para-estudiantes/la-ruta-del-tesista/">Guía paso a paso</a></li>
-<li><strong>Cómo hacer una tesis - Coursera</strong>: <a href="https://www.coursera.org/learn/como-hacer-una-tesis">Curso</a></li>
-<li><strong>Escribir la Tesis - Universidad de Chile</strong>: <a href="https://aprendizaje.uchile.cl/recursos-para-leer-escribir-y-hablar-en-la-universidad/escribir-la-tesis/">Recursos</a></li>
-<li><strong>APAsiónate con APA 7.a ed.</strong>: <a href="https://centrodeescriturajaveriano.thinkific.com/courses/normas-apa-septima-edicion">Curso</a></li>
-<li><strong>LEO Uniandes</strong>: <a href="https://leo.uniandes.edu.co/">Recursos académicos</a></li>
+<li><strong><a href="https://doaj.org/">DOAJ</a></strong> - Directory of Open Access Journals</li>
+<li><strong><a href="https://www.base-search.net/">BASE</a></strong> - Bielefeld Academic Search Engine</li>
+<li><strong><a href="https://core.ac.uk/">CORE</a></strong> - Agregador de artículos de acceso abierto</li>
+<li><strong><a href="https://zenodo.org/">Zenodo</a></strong> - Repositorio de investigación abierta</li>
+<li><strong><a href="https://osf.io/">OSF</a></strong> - Open Science Framework</li>
+<li><strong><a href="https://figshare.com/">figshare</a></strong> - Compartir datos de investigación</li>
+<li><strong><a href="https://datadryad.org/stash">Dryad</a></strong> - Repositorio de datos</li>
 </ul>
 </section>
-<section id="latex-y-herramientas-académicas" class="level1">
-<h1>LaTeX y Herramientas Académicas</h1>
-<section id="plantillas-y-tutoriales" class="level2">
-<h2 class="anchored" data-anchor-id="plantillas-y-tutoriales">Plantillas y Tutoriales</h2>
+<section id="bases-de-datos-regionales" class="level3">
+<h3 class="anchored" data-anchor-id="bases-de-datos-regionales">Bases de Datos Regionales</h3>
 <ul>
-<li><strong>Overleaf</strong>: <a href="https://www.overleaf.com/">Editor de LaTeX en línea</a></li>
-<li><strong>LaTeX Templates</strong>: <a href="http://www.latextemplates.com/">Colección de plantillas</a></li>
-<li><strong>Manualdelatex.com</strong>: <a href="https://manualdelatex.com/tutoriales">Tutoriales</a></li>
-<li><strong>Altermundus</strong>: <a href="https://altermundus.fr/">Recursos LaTeX</a></li>
-<li><strong>texblog</strong>: <a href="https://texblog.org/about/">Blog sobre LaTeX</a></li>
-<li><strong>Tutoriales paso a paso de LaTeX</strong>: <a href="https://manualdelatex.com/tutoriales">Guías</a></li>
-<li><strong>Ciencia Social Abierta</strong>: <a href="https://cienciasocialabierta.netlify.app/">Recursos académicos</a></li>
-<li><strong>Infinitos Contrastes</strong>: <a href="https://imalexissaez.github.io/2021/09/01/algunas-plantillas-de-latex-interesantes/">Plantillas LaTeX</a></li>
-<li><strong>Recursos LaTeX – Alephsub0</strong>: <a href="https://alephsub0.org/recursos/">Más recursos</a></li>
+<li><strong><a href="https://www.latindex.org/">Latindex</a></strong> - Sistema regional para América Latina</li>
+<li><strong><a href="https://www.scielo.org/">SciELO.org</a></strong> - Scientific Electronic Library Online</li>
+<li><strong><a href="https://www.lareferencia.info/es/">LA Referencia</a></strong> - Red latinoamericana</li>
+<li><strong><a href="https://www.redalyc.org/">Redalyc</a></strong> - Red de revistas científicas de América Latina</li>
+<li><strong><a href="https://dialnet.unirioja.es/">Dialnet</a></strong> - Portal bibliográfico hispano</li>
 </ul>
 </section>
-<section id="herramientas-para-crear-gráficos-y-tablas" class="level2">
-<h2 class="anchored" data-anchor-id="herramientas-para-crear-gráficos-y-tablas">Herramientas para Crear Gráficos y Tablas</h2>
+<section id="bases-de-datos-especializadas" class="level3">
+<h3 class="anchored" data-anchor-id="bases-de-datos-especializadas">Bases de Datos Especializadas</h3>
 <ul>
-<li><strong>TikZ</strong>: <a href="https://tikz.org/">Dibujos con LaTeX</a></li>
-<li><strong>TablesGenerator</strong>: <a href="https://www.tablesgenerator.com/">Crear tablas</a></li>
-<li><strong>TikZiT</strong>: <a href="https://tikzit.github.io/">Editor de TikZ</a></li>
-<li><strong>PGF/TikZ Manual</strong>: <a href="https://tikz.dev/">Documentación completa</a></li>
-<li><strong>TeXample.net</strong>: <a href="https://texample.net/">Ejemplos de LaTeX y TikZ</a></li>
-<li><strong>PGFplots.net</strong>: <a href="https://pgfplots.net/">Gráficos con LaTeX</a></li>
+<li><strong><a href="https://eric.ed.gov/">ERIC</a></strong> - Education Resources Information Center</li>
+<li><strong><a href="https://citeseerx.ist.psu.edu/">CiteSeerX</a></strong> - Ciencias de la computación</li>
+<li><strong><a href="https://dblp.uni-trier.de/">dblp</a></strong> - Informática y computer science</li>
+<li><strong><a href="https://cyberleninka.org/">CyberLeninka</a></strong> - Artículos científicos en ruso e inglés</li>
 </ul>
 </section>
 </section>
-<section id="inteligencia-artificial-ia" class="level1">
-<h1>Inteligencia Artificial (IA)</h1>
-<section id="plataformas-y-herramientas" class="level2">
-<h2 class="anchored" data-anchor-id="plataformas-y-herramientas">Plataformas y Herramientas</h2>
+<section id="buscadores-académicos" class="level2">
+<h2 class="anchored" data-anchor-id="buscadores-académicos">Buscadores Académicos</h2>
 <ul>
-<li><strong>DeepSeek</strong>: <a href="https://www.deepseek.com/">IA avanzada</a></li>
-<li><strong>Grok / X</strong>: <a href="https://x.com/i/grok">AI de xAI</a></li>
-<li><strong>ChatGPT</strong>: <a href="https://chat.openai.com/chat">Conversación con IA</a></li>
-<li><strong>Meta AI</strong>: <a href="https://www.meta.ai/">Inteligencia de Meta</a></li>
-<li><strong>Bing AI</strong>: <a href="https://www.bing.com/search?q=Bing+AI&amp;showconv=1">Motor de búsqueda con IA</a></li>
-<li><strong>Perplexity</strong>: <a href="https://www.perplexity.ai/">Búsqueda con IA</a></li>
-<li><strong>Toolify</strong>: <a href="https://www.toolify.ai/es/">Directorio de herramientas de IA</a></li>
-<li><strong>AIFINDY</strong>: <a href="https://aifindy.com/">Directorio de IA</a></li>
-<li><strong>Tome</strong>: <a href="https://tome.app/achalmaedison">Creación de presentaciones</a></li>
-<li><strong>Fliki</strong>: <a href="https://app.fliki.ai/studio/drive">Creación de videos</a></li>
-<li><strong>DALL·E</strong>: <a href="https://labs.openai.com/">Generación de imágenes</a></li>
-<li><strong>Cici AI</strong>: <a href="https://www.ciciai.com/chat/">Asistente diario</a></li>
-<li><strong>Blackbox</strong>: <a href="https://www.blackbox.ai/">Generación de código con IA</a></li>
-<li><strong>Gamma</strong>: <a href="https://gamma.app/generate">Generación de contenido</a></li>
-<li><strong>Enhance Speech from Adobe</strong>: <a href="https://podcast.adobe.com/enhance">Mejora de audio</a></li>
-<li><strong>Kaiber</strong>: <a href="https://kaiber.ai/?referrer_id=9a750dd5-0328-4011-9480-6c76a4d3f484">Creación de videos</a></li>
-<li><strong>Rask.ai</strong>: <a href="https://www.rask.ai/?via=domingo">Localización y doblaje de videos</a></li>
-<li><strong>Jasper</strong>: <a href="https://www.jasper.ai/">Asistente de marketing</a></li>
-<li><strong>Fireflies.ai</strong>: <a href="https://app.fireflies.ai/">Transcripción de reuniones</a></li>
-<li><strong>Runway</strong>: <a href="https://app.runwayml.com/video-tools/teams/achalmed18/dashboard">Herramientas de video</a></li>
-<li><strong>Google AI Studio</strong>: <a href="https://aistudio.google.com/live">Proyectos de IA</a></li>
-<li><strong>Duck.ai</strong>: <a href="https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&amp;ia=chat&amp;duckai=1&amp;atb=v463-1">Chat con IA</a></li>
-<li><strong>GitHub Copilot</strong>: <a href="https://github.com/copilot?">Asistencia de código</a></li>
+<li><strong><a href="https://search.worldcat.org/es">WorldCat.org</a></strong> - Catálogo global de bibliotecas</li>
+<li><strong><a href="https://www.semanticscholar.org/">Semantic Scholar</a></strong> - Búsqueda con IA</li>
+<li><strong><a href="https://www.refseek.com/">RefSeek</a></strong> - Buscador académico</li>
+<li><strong><a href="https://jurn.org/">JURN</a></strong> - Búsqueda en revistas de artes y humanidades</li>
+<li><strong><a href="https://search.crossref.org/">Crossref Metadata Search</a></strong> - Metadatos de publicaciones</li>
+<li><strong><a href="https://datacite.org/">DataCite</a></strong> - Búsqueda de conjuntos de datos</li>
+</ul>
+</section>
+<section id="bibliotecas-digitales" class="level2">
+<h2 class="anchored" data-anchor-id="bibliotecas-digitales">Bibliotecas Digitales</h2>
+<ul>
+<li><strong><a href="https://www.loc.gov/collections/world-digital-library/about-this-collection/">World Digital Library</a></strong> - Biblioteca digital mundial</li>
+<li><strong><a href="https://openlibrary.org/?lang=es">Open Library</a></strong> - Biblioteca abierta</li>
+<li><strong><a href="https://buscador.recolecta.fecyt.es/">Buscador Recolecta</a></strong> - Ciencia abierta en España</li>
+</ul>
+</section>
+<section id="plataformas-comerciales" class="level2">
+<h2 class="anchored" data-anchor-id="plataformas-comerciales">Plataformas Comerciales</h2>
+<ul>
+<li><strong><a href="https://www.proquest.com/?defaultdiss=true">ProQuest</a></strong> - Base de datos académica</li>
+<li><strong><a href="https://www.scopus.com/standard/marketing.uri">Scopus</a></strong> - Base de datos de Elsevier</li>
+<li><strong><a href="https://www.springer.com/la">Springer</a></strong> - Editorial científica</li>
+<li><strong><a href="https://www.tandfonline.com/">Taylor &amp; Francis Online</a></strong> - Revistas científicas</li>
+<li><strong><a href="https://us.sagepub.com/en-us/sam/home">Sage Inc</a></strong> - Publicaciones científicas</li>
+<li><strong><a href="https://app.knovel.com/kn">Knovel</a></strong> - Ingeniería y ciencias aplicadas</li>
+<li><strong><a href="https://www.gale.com/">Gale</a></strong> - Recursos educativos</li>
+</ul>
+</section>
+</section>
+<section id="tesis-y-trabajos-de-investigación" class="level1">
+<h1>Tesis y Trabajos de Investigación</h1>
+<section id="repositorios-de-tesis" class="level2">
+<h2 class="anchored" data-anchor-id="repositorios-de-tesis">Repositorios de Tesis</h2>
+<section id="internacional" class="level3">
+<h3 class="anchored" data-anchor-id="internacional">Internacional</h3>
+<ul>
+<li><strong><a href="https://oatd.org/">OATD</a></strong> - Open Access Theses and Dissertations</li>
+<li><strong><a href="https://www.dart-europe.eu/">Dart Europe</a></strong> - Tesis doctorales europeas</li>
+<li><strong><a href="https://www.tesisenred.net/">TDX</a></strong> - Tesis Doctorales en Xarxa (España)</li>
+<li><strong><a href="https://www.educacion.gob.es/teseo/irGestionarConsulta.do">Teseo</a></strong> - Tesis doctorales españolas</li>
+</ul>
+</section>
+<section id="latinoamérica-y-perú" class="level3">
+<h3 class="anchored" data-anchor-id="latinoamérica-y-perú">Latinoamérica y Perú</h3>
+<ul>
+<li><strong><a href="https://renati.sunedu.gob.pe/">RENATI SUNEDU</a></strong> - Registro Nacional de Trabajos de Investigación</li>
+<li><strong><a href="https://cybertesis.unmsm.edu.pe/">Cybertesis UNMSM</a></strong> - Universidad Nacional Mayor de San Marcos</li>
+<li><strong><a href="https://alicia.concytec.gob.pe/vufind/">Alicia-Concytec</a></strong> - Repositorio nacional del Perú</li>
+</ul>
+</section>
+</section>
+<section id="revistas-especializadas-en-investigación-educativa" class="level2">
+<h2 class="anchored" data-anchor-id="revistas-especializadas-en-investigación-educativa">Revistas Especializadas en Investigación Educativa</h2>
+<ul>
+<li><strong><a href="https://redie.uabc.mx/redie/search">REDIE</a></strong> - Revista Electrónica de Investigación Educativa</li>
+</ul>
+</section>
+</section>
+<section id="gestión-de-referencias-y-herramientas-de-escritura" class="level1">
+<h1>Gestión de Referencias y Herramientas de Escritura</h1>
+<section id="gestores-bibliográficos" class="level2">
+<h2 class="anchored" data-anchor-id="gestores-bibliográficos">Gestores Bibliográficos</h2>
+<section id="software-de-escritorio" class="level3">
+<h3 class="anchored" data-anchor-id="software-de-escritorio">Software de Escritorio</h3>
+<ul>
+<li><strong><a href="https://www.zotero.org/">Zotero</a></strong> - Gestor gratuito y de código abierto</li>
+<li><strong><a href="https://www.jabref.org/">JabRef</a></strong> - Especializado en BibTeX</li>
+</ul>
+</section>
+<section id="herramientas-en-línea" class="level3">
+<h3 class="anchored" data-anchor-id="herramientas-en-línea">Herramientas en Línea</h3>
+<ul>
+<li><strong><a href="https://www.connectedpapers.com/">Connected Papers</a></strong> - Exploración visual de literatura</li>
+<li><strong><a href="https://orcid.org/">ORCID</a></strong> - Identificador de investigador</li>
+</ul>
+</section>
+</section>
+<section id="herramientas-de-escritura" class="level2">
+<h2 class="anchored" data-anchor-id="herramientas-de-escritura">Herramientas de Escritura</h2>
+<section id="corrección-y-estilo" class="level3">
+<h3 class="anchored" data-anchor-id="corrección-y-estilo">Corrección y Estilo</h3>
+<ul>
+<li><strong><a href="https://languagetool.org/">LanguageTool</a></strong> - Corrector gramatical multilingüe</li>
+<li><strong><a href="https://quillbot.com/">QuillBot</a></strong> - Parafraseo y mejora de textos</li>
+<li><strong><a href="https://web.writewise.io/?nab=5">WriteWise</a></strong> - Asistente de escritura</li>
+</ul>
+</section>
+<section id="interacción-con-pdfs" class="level3">
+<h3 class="anchored" data-anchor-id="interacción-con-pdfs">Interacción con PDFs</h3>
+<ul>
+<li><strong><a href="https://www.chatpdf.com/">ChatPDF</a></strong> - Chat con documentos PDF</li>
+<li><strong><a href="https://typeset.io/">SciSpace</a></strong> - Análisis de papers científicos</li>
+</ul>
+</section>
+<section id="búsqueda-inteligente" class="level3">
+<h3 class="anchored" data-anchor-id="búsqueda-inteligente">Búsqueda Inteligente</h3>
+<ul>
+<li><strong><a href="https://consensus.app/">Consensus</a></strong> - Motor de búsqueda académica con IA</li>
+<li><strong><a href="https://elicit.com/?workflow=table-of-papers">Elicit</a></strong> - Búsqueda y análisis de papers</li>
+<li><strong><a href="https://www.scholarcy.com/">Scholarcy</a></strong> - Resúmenes automatizados</li>
+</ul>
+</section>
+</section>
+<section id="normas-y-estándares" class="level2">
+<h2 class="anchored" data-anchor-id="normas-y-estándares">Normas y Estándares</h2>
+<ul>
+<li><strong><a href="https://normas-apa.org/">Normas APA 7ma edición</a></strong> - Guía completa</li>
+<li><strong><a href="https://centrodeescriturajaveriano.thinkific.com/courses/normas-apa-septima-edicion">APAsiónate con APA</a></strong> - Curso en línea</li>
+</ul>
+</section>
+<section id="acceso-a-contenido" class="level2">
+<h2 class="anchored" data-anchor-id="acceso-a-contenido">Acceso a Contenido</h2>
+<ul>
+<li><strong><a href="https://sci-hub.hkvisa.net/">Sci-Hub</a></strong> - Acceso a artículos científicos (nota: verificar legalidad en tu jurisdicción)</li>
+</ul>
+</section>
+<section id="evaluación-de-investigación" class="level2">
+<h2 class="anchored" data-anchor-id="evaluación-de-investigación">Evaluación de Investigación</h2>
+<ul>
+<li><strong><a href="https://www.elsevier.com/products/scival">SciVal</a></strong> - Análisis de desempeño en investigación</li>
+</ul>
+</section>
+</section>
+<section id="ciencias-de-la-salud" class="level1">
+<h1>Ciencias de la Salud</h1>
+<section id="bases-de-datos-médicas" class="level2">
+<h2 class="anchored" data-anchor-id="bases-de-datos-médicas">Bases de Datos Médicas</h2>
+<ul>
+<li><strong><a href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a></strong> - Base de datos principal en medicina</li>
+<li><strong><a href="https://www.ncbi.nlm.nih.gov/">NLM Catalog</a></strong> - National Center for Biotechnology Information</li>
+</ul>
+</section>
+<section id="revistas-médicas-de-alto-impacto" class="level2">
+<h2 class="anchored" data-anchor-id="revistas-médicas-de-alto-impacto">Revistas Médicas de Alto Impacto</h2>
+<ul>
+<li><strong><a href="https://www.nejm.org/">The New England Journal of Medicine</a></strong> - Revista médica líder</li>
+<li><strong><a href="http://www2.bg.ump.edu.pl/czasopisma/medicus.php?lang=eng">Index Medicus</a></strong> - Índice de revistas médicas</li>
+</ul>
+</section>
+<section id="recursos-adicionales" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-adicionales">Recursos Adicionales</h2>
+<ul>
+<li><strong><a href="https://plos.org/">PLOS</a></strong> - Public Library of Science (acceso abierto)</li>
+<li><strong><a href="https://www.hindawi.com/journals/">Hindawi Journals</a></strong> - Revistas de acceso abierto en ciencias</li>
+</ul>
+</section>
+</section>
+<section id="latex-y-herramientas-de-edición-académica" class="level1">
+<h1>LaTeX y Herramientas de Edición Académica</h1>
+<section id="editores-y-plantillas" class="level2">
+<h2 class="anchored" data-anchor-id="editores-y-plantillas">Editores y Plantillas</h2>
+<section id="editores-en-línea" class="level3">
+<h3 class="anchored" data-anchor-id="editores-en-línea">Editores en Línea</h3>
+<ul>
+<li><strong><a href="https://www.overleaf.com/">Overleaf</a></strong> - Editor colaborativo en la nube</li>
+</ul>
+</section>
+<section id="repositorios-de-plantillas" class="level3">
+<h3 class="anchored" data-anchor-id="repositorios-de-plantillas">Repositorios de Plantillas</h3>
+<ul>
+<li><strong><a href="http://www.latextemplates.com/">LaTeX Templates</a></strong> - Colección extensa de plantillas</li>
+<li><strong><a href="https://imalexissaez.github.io/2021/09/01/algunas-plantillas-de-latex-interesantes/">Infinitos Contrastes</a></strong> - Plantillas comentadas</li>
+<li><strong><a href="https://alephsub0.org/recursos/">Alephsub0</a></strong> - Recursos en español</li>
+</ul>
+</section>
+</section>
+<section id="tutoriales-y-documentación" class="level2">
+<h2 class="anchored" data-anchor-id="tutoriales-y-documentación">Tutoriales y Documentación</h2>
+<ul>
+<li><strong><a href="https://manualdelatex.com/tutoriales">Manual de LaTeX</a></strong> - Guías en español</li>
+<li><strong><a href="https://texblog.org/about/">texblog</a></strong> - Blog con tutoriales</li>
+<li><strong><a href="https://altermundus.fr/">Altermundus</a></strong> - Recursos avanzados</li>
+</ul>
+</section>
+<section id="herramientas-para-gráficos-y-diagramas" class="level2">
+<h2 class="anchored" data-anchor-id="herramientas-para-gráficos-y-diagramas">Herramientas para Gráficos y Diagramas</h2>
+<section id="tikz-y-pgf" class="level3">
+<h3 class="anchored" data-anchor-id="tikz-y-pgf">TikZ y PGF</h3>
+<ul>
+<li><strong><a href="https://tikz.org/">TikZ.org</a></strong> - Página oficial</li>
+<li><strong><a href="https://tikzit.github.io/">TikZiT</a></strong> - Editor gráfico</li>
+<li><strong><a href="https://tikz.dev/">PGF/TikZ Manual</a></strong> - Documentación completa</li>
+<li><strong><a href="https://texample.net/">TeXample.net</a></strong> - Galería de ejemplos</li>
+<li><strong><a href="https://pgfplots.net/">PGFplots.net</a></strong> - Gráficos científicos</li>
+</ul>
+</section>
+<section id="tablas" class="level3">
+<h3 class="anchored" data-anchor-id="tablas">Tablas</h3>
+<ul>
+<li><strong><a href="https://www.tablesgenerator.com/">TablesGenerator</a></strong> - Generador de tablas LaTeX</li>
+</ul>
+</section>
+</section>
+<section id="recursos-en-español" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-en-español">Recursos en Español</h2>
+<ul>
+<li><strong><a href="https://cienciasocialabierta.netlify.app/">Ciencia Social Abierta</a></strong> - Recursos académicos abiertos</li>
+</ul>
+</section>
+</section>
+<section id="metodología-de-investigación" class="level1">
+<h1>Metodología de Investigación</h1>
+<section id="guías-para-elaboración-de-tesis" class="level2">
+<h2 class="anchored" data-anchor-id="guías-para-elaboración-de-tesis">Guías para Elaboración de Tesis</h2>
+<section id="recursos-universitarios" class="level3">
+<h3 class="anchored" data-anchor-id="recursos-universitarios">Recursos Universitarios</h3>
+<ul>
+<li><strong><a href="https://posgrado.pucp.edu.pe/informacion-para-estudiantes/la-ruta-del-tesista/">La Ruta del Tesista - PUCP</a></strong> - Guía paso a paso</li>
+<li><strong><a href="https://aprendizaje.uchile.cl/recursos-para-leer-escribir-y-hablar-en-la-universidad/escribir-la-tesis/">Escribir la Tesis - U. Chile</a></strong> - Recursos de escritura</li>
+</ul>
+</section>
+<section id="cursos-en-línea" class="level3">
+<h3 class="anchored" data-anchor-id="cursos-en-línea">Cursos en Línea</h3>
+<ul>
+<li><strong><a href="https://www.coursera.org/learn/como-hacer-una-tesis">Cómo hacer una tesis - Coursera</a></strong> - Curso completo</li>
+</ul>
+</section>
+</section>
+<section id="centros-de-escritura" class="level2">
+<h2 class="anchored" data-anchor-id="centros-de-escritura">Centros de Escritura</h2>
+<ul>
+<li><strong><a href="https://centrodeescriturajaveriano.thinkific.com/enrollments">Centro de Escritura Javeriano</a></strong> - Cursos de escritura académica</li>
+<li><strong><a href="https://leo.uniandes.edu.co/">LEO Uniandes</a></strong> - Recursos académicos</li>
+</ul>
+</section>
+</section>
+<section id="inteligencia-artificial-para-investigación" class="level1">
+<h1>Inteligencia Artificial para Investigación</h1>
+<section id="asistentes-conversacionales" class="level2">
+<h2 class="anchored" data-anchor-id="asistentes-conversacionales">Asistentes Conversacionales</h2>
+<section id="modelos-de-lenguaje-principal" class="level3">
+<h3 class="anchored" data-anchor-id="modelos-de-lenguaje-principal">Modelos de Lenguaje Principal</h3>
+<ul>
+<li><strong><a href="https://chat.openai.com/chat">ChatGPT</a></strong> - OpenAI</li>
+<li><strong><a href="https://claude.ai">Claude</a></strong> - Anthropic</li>
+<li><strong><a href="https://gemini.google.com/">Gemini</a></strong> - Google</li>
+<li><strong><a href="https://www.deepseek.com/">DeepSeek</a></strong> - Modelo de IA avanzado</li>
+<li><strong><a href="https://x.com/i/grok">Grok</a></strong> - xAI</li>
+<li><strong><a href="https://www.meta.ai/">Meta AI</a></strong> - Meta</li>
+</ul>
+</section>
+<section id="buscadores-con-ia" class="level3">
+<h3 class="anchored" data-anchor-id="buscadores-con-ia">Buscadores con IA</h3>
+<ul>
+<li><strong><a href="https://www.perplexity.ai/">Perplexity</a></strong> - Búsqueda conversacional</li>
+<li><strong><a href="https://www.bing.com/search?q=Bing+AI&amp;showconv=1">Bing AI</a></strong> - Microsoft</li>
+<li><strong><a href="https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&amp;ia=chat&amp;duckai=1&amp;atb=v463-1">Duck.ai</a></strong> - DuckDuckGo</li>
+<li><strong><a href="https://www.ciciai.com/chat/">Cici AI</a></strong> - Asistente diario</li>
+</ul>
+</section>
+</section>
+<section id="generación-de-contenido" class="level2">
+<h2 class="anchored" data-anchor-id="generación-de-contenido">Generación de Contenido</h2>
+<section id="texto-y-presentaciones" class="level3">
+<h3 class="anchored" data-anchor-id="texto-y-presentaciones">Texto y Presentaciones</h3>
+<ul>
+<li><strong><a href="https://tome.app/">Tome</a></strong> - Creación de presentaciones con IA</li>
+<li><strong><a href="https://gamma.app/generate">Gamma</a></strong> - Presentaciones y documentos</li>
+<li><strong><a href="https://www.jasper.ai/">Jasper</a></strong> - Copywriting con IA</li>
+</ul>
+</section>
+<section id="imágenes-y-video" class="level3">
+<h3 class="anchored" data-anchor-id="imágenes-y-video">Imágenes y Video</h3>
+<ul>
+<li><strong><a href="https://labs.openai.com/">DALL·E</a></strong> - Generación de imágenes (OpenAI)</li>
+<li><strong><a href="https://www.midjourney.com/">Midjourney</a></strong> - Arte generativo</li>
+<li><strong><a href="https://stability.ai/">Stable Diffusion</a></strong> - Modelo de código abierto</li>
+<li><strong><a href="https://app.fliki.ai/studio/drive">Fliki</a></strong> - Creación de videos</li>
+<li><strong><a href="https://kaiber.ai/">Kaiber</a></strong> - Videos con IA</li>
+<li><strong><a href="https://app.runwayml.com/video-tools/">Runway</a></strong> - Herramientas de video</li>
+</ul>
+</section>
+<section id="audio" class="level3">
+<h3 class="anchored" data-anchor-id="audio">Audio</h3>
+<ul>
+<li><strong><a href="https://podcast.adobe.com/enhance">Enhance Speech - Adobe</a></strong> - Mejora de audio</li>
+<li><strong><a href="https://www.rask.ai/">Rask.ai</a></strong> - Traducción y doblaje de videos</li>
+</ul>
+</section>
+</section>
+<section id="herramientas-especializadas" class="level2">
+<h2 class="anchored" data-anchor-id="herramientas-especializadas">Herramientas Especializadas</h2>
+<section id="para-programación" class="level3">
+<h3 class="anchored" data-anchor-id="para-programación">Para Programación</h3>
+<ul>
+<li><strong><a href="https://github.com/copilot">GitHub Copilot</a></strong> - Asistente de código</li>
+<li><strong><a href="https://www.blackbox.ai/">Blackbox</a></strong> - Generación de código</li>
+</ul>
+</section>
+<section id="para-reuniones-y-transcripción" class="level3">
+<h3 class="anchored" data-anchor-id="para-reuniones-y-transcripción">Para Reuniones y Transcripción</h3>
+<ul>
+<li><strong><a href="https://app.fireflies.ai/">Fireflies.ai</a></strong> - Transcripción y notas de reuniones</li>
+<li><strong><a href="https://otter.ai/">Otter.ai</a></strong> - Transcripción en tiempo real</li>
+</ul>
+</section>
+<section id="desarrollo-y-apis" class="level3">
+<h3 class="anchored" data-anchor-id="desarrollo-y-apis">Desarrollo y APIs</h3>
+<ul>
+<li><strong><a href="https://aistudio.google.com/">Google AI Studio</a></strong> - Experimentación con modelos</li>
+</ul>
+</section>
+</section>
+<section id="directorios-de-herramientas-ia" class="level2">
+<h2 class="anchored" data-anchor-id="directorios-de-herramientas-ia">Directorios de Herramientas IA</h2>
+<ul>
+<li><strong><a href="https://www.toolify.ai/es/">Toolify</a></strong> - Directorio completo</li>
+<li><strong><a href="https://aifindy.com/">AIFINDY</a></strong> - Catálogo de herramientas</li>
+<li><strong><a href="https://theresanaiforthat.com/">There’s An AI For That</a></strong> - Base de datos de IA</li>
+<li><strong><a href="https://www.futuretools.io/">Future Tools</a></strong> - Herramientas curadas</li>
+</ul>
+</section>
+</section>
+<section id="recursos-multidisciplinarios" class="level1">
+<h1>Recursos Multidisciplinarios</h1>
+<section id="plataformas-educativas-globales" class="level2">
+<h2 class="anchored" data-anchor-id="plataformas-educativas-globales">Plataformas Educativas Globales</h2>
+<section id="moocs-y-cursos-en-línea" class="level3">
+<h3 class="anchored" data-anchor-id="moocs-y-cursos-en-línea">MOOCs y Cursos en Línea</h3>
+<ul>
+<li><strong><a href="https://www.coursera.org/">Coursera</a></strong> - Cursos universitarios</li>
+<li><strong><a href="https://www.edx.org/">edX</a></strong> - Educación de instituciones líderes</li>
+<li><strong><a href="https://www.khanacademy.org/">Khan Academy</a></strong> - Educación gratuita</li>
+<li><strong><a href="https://ocw.mit.edu/">MIT OpenCourseWare</a></strong> - Cursos del MIT</li>
+</ul>
+</section>
+<section id="plataformas-de-investigación" class="level3">
+<h3 class="anchored" data-anchor-id="plataformas-de-investigación">Plataformas de Investigación</h3>
+<ul>
+<li><strong><a href="https://www.researchgate.net/">ResearchGate</a></strong> - Red social académica</li>
+<li><strong><a href="https://www.academia.edu/">Academia.edu</a></strong> - Compartir investigación</li>
+<li><strong><a href="https://www.mendeley.com/">Mendeley</a></strong> - Gestor de referencias y red social</li>
+</ul>
+</section>
+</section>
+<section id="datos-y-estadísticas" class="level2">
+<h2 class="anchored" data-anchor-id="datos-y-estadísticas">Datos y Estadísticas</h2>
+<section id="fuentes-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="fuentes-de-datos">Fuentes de Datos</h3>
+<ul>
+<li><strong><a href="https://data.worldbank.org/">World Bank Open Data</a></strong> - Datos del Banco Mundial</li>
+<li><strong><a href="https://data.oecd.org/">OECD Data</a></strong> - Organización para la Cooperación y el Desarrollo</li>
+<li><strong><a href="https://ec.europa.eu/eurostat">Eurostat</a></strong> - Estadísticas europeas</li>
+<li><strong><a href="https://www.inei.gob.pe/">INEI</a></strong> - Instituto Nacional de Estadística (Perú)</li>
+<li><strong><a href="https://ourworldindata.org/">Our World in Data</a></strong> - Datos sobre problemas globales</li>
+</ul>
+</section>
+<section id="herramientas-de-análisis" class="level3">
+<h3 class="anchored" data-anchor-id="herramientas-de-análisis">Herramientas de Análisis</h3>
+<ul>
+<li><strong><a href="https://datasetsearch.research.google.com/">Google Dataset Search</a></strong> - Buscador de conjuntos de datos</li>
+<li><strong><a href="https://www.kaggle.com/">Kaggle</a></strong> - Competencias y datasets</li>
+<li><strong><a href="https://data.gov/">Data.gov</a></strong> - Datos del gobierno de EE.UU.</li>
+</ul>
+</section>
+</section>
+<section id="recursos-para-ciencias-sociales" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-para-ciencias-sociales">Recursos para Ciencias Sociales</h2>
+<ul>
+<li><strong><a href="https://www.icpsr.umich.edu/">ICPSR</a></strong> - Inter-university Consortium for Political and Social Research</li>
+<li><strong><a href="https://qdr.syr.edu/">Qualitative Data Repository</a></strong> - Datos cualitativos</li>
+<li><strong><a href="https://ukdataservice.ac.uk/">UK Data Service</a></strong> - Datos sociales y económicos</li>
 </ul>
 </section>
 </section>
 <section id="conclusión" class="level1">
 <h1>Conclusión</h1>
-<p>Este artículo ha consolidado una amplia gama de recursos imprescindibles para el desarrollo de investigación académica. Desde plataformas especializadas en diversas disciplinas hasta herramientas de gestión de referencias, apoyo en la redacción de tesis, y recursos para el uso de LaTeX y la inteligencia artificial, este compendio busca ser un punto de partida para aquellos en búsqueda de mejorar y acelerar su trabajo investigativo. Si conoces otros recursos valiosos, te invitamos a compartirlos en los comentarios para enriquecer esta guía de forma colaborativa.</p>
+<p>Esta guía representa un compendio exhaustivo de recursos digitales para la investigación académica contemporánea. Desde bases de datos especializadas hasta herramientas de inteligencia artificial, cada sección ha sido diseñada para cubrir aspectos específicos del proceso investigativo.</p>
+<section id="recomendaciones-de-uso" class="level2">
+<h2 class="anchored" data-anchor-id="recomendaciones-de-uso">Recomendaciones de Uso</h2>
+<p><strong>Para comenzar una investigación:</strong></p>
+<ol type="1">
+<li>Identificar el tema y revisar los repositorios especializados (RePEc para economía, PubMed para salud)</li>
+<li>Utilizar buscadores académicos como Semantic Scholar o Perplexity AI</li>
+<li>Organizar referencias con Zotero o JabRef</li>
+</ol>
+<p><strong>Para la escritura:</strong></p>
+<ol type="1">
+<li>Estructurar el documento con LaTeX usando plantillas de Overleaf</li>
+<li>Revisar estilo y gramática con LanguageTool</li>
+<li>Consultar las normas APA actualizadas</li>
+</ol>
+<p><strong>Para análisis y visualización:</strong></p>
+<ol type="1">
+<li>Explorar datos en repositorios abiertos</li>
+<li>Utilizar herramientas de IA para análisis preliminares</li>
+<li>Crear gráficos profesionales con TikZ/PGFplots</li>
+</ol>
+</section>
+<section id="contribución-comunitaria" class="level2">
+<h2 class="anchored" data-anchor-id="contribución-comunitaria">Contribución Comunitaria</h2>
+<p>Esta publicación está diseñada para ser un documento vivo que evoluciona con las necesidades de la comunidad académica. Se invita a los lectores a:</p>
+<ul>
+<li>Compartir recursos adicionales que consideren valiosos</li>
+<li>Reportar enlaces rotos o desactualizados</li>
+<li>Sugerir nuevas categorías o secciones</li>
+<li>Traducir o adaptar contenido para diferentes contextos</li>
+</ul>
+</section>
+</section>
+<section id="referencias-y-lecturas-adicionales" class="level1">
+<h1>Referencias y Lecturas Adicionales</h1>
+<ul>
+<li>Hernández Sampieri, R., Fernández Collado, C., &amp; Baptista Lucio, P. (2014). <em>Metodología de la investigación</em> (6ª ed.). McGraw-Hill.</li>
+<li>Booth, W. C., Colomb, G. G., &amp; Williams, J. M. (2016). <em>The craft of research</em> (4th ed.). University of Chicago Press.</li>
+<li>Carlino, P. (2005). <em>Escribir, leer y aprender en la universidad</em>. Fondo de Cultura Económica.</li>
+<li>Swales, J. M., &amp; Feak, C. B. (2012). <em>Academic writing for graduate students</em> (3rd ed.). University of Michigan Press.</li>
+<li>Pinto, M., &amp; Sales, D. (2015). <em>ALFIN en América Latina</em>. De Gruyter.</li>
+<li>Case, D. O., &amp; Given, L. M. (2016). <em>Looking for information: A survey of research on information seeking, needs, and behavior</em> (4th ed.). Emerald Group Publishing.</li>
+</ul>
+<p><em>“La investigación es ver lo que todos han visto y pensar lo que nadie ha pensado.”</em> - Albert Szent-Györgyi</p>
 </section>
 <section id="publicaciones-similares" class="level1">
 <h1>Publicaciones Similares</h1>
@@ -32279,8 +32609,8 @@ z-index: 0;
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2025" class="csl-entry quarto-appendix-citeas">
-Achalma, Edison. 2025. <span>“Recursos para gestión
-bibliográfica,”</span> January. <a href="https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/">https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/</a>.
+Achalma, Edison. 2025. <span>“Recursos Académicos para
+Investigación,”</span> January. <a href="https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/">https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/</a>.
 </div></div></section></div> ]]></description>
   <category>Metodología de Investigación</category>
   <guid>https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/</guid>
