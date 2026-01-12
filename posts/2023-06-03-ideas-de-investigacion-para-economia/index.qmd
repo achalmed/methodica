@@ -176,6 +176,7 @@ En esta publicación presento algunos temas de investigación en economía
 **Evaluación de la Eficiencia del Gasto Público en Educación en los Distritos de Ayacucho, Periodo 2015-2023**
 
 ## Datos Generales
+
 - **Área de investigación:** Economía de la Educación, Finanzas Públicas
 - **Línea de investigación:** Economía, Administración Pública
 - **Tipo de investigación:** Aplicada, Evaluativa, Transversal
@@ -314,9 +315,9 @@ El modelo DEA propuesto considera:
 
 **Especificación básica (Panel de datos):**
 
-```
+$$
 ln(PBI_it) = β₀ + β₁·ln(InvVial_it) + β₂·X_it + α_i + τ_t + ε_it
-```
+$$
 
 Donde:
 
@@ -425,11 +426,12 @@ Donde:
 
 **Modelo VECM (si existe cointegración):**
 
-```
+$$
 ΔY_t = α(Y_{t-1} - βX_{t-1}) + Σγ_iΔY_{t-i} + Σδ_iΔX_{t-i} + ε_t
-```
+$$
 
 Donde:
+
 - Y_t: ln(PBI regional)
 - X_t: ln(Inversión pública)
 - α: Velocidad de ajuste
@@ -438,9 +440,9 @@ Donde:
 
 **Modelo VAR (si no hay cointegración):**
 
-```
+$$
 Y_t = c + ΣA_i·Y_{t-i} + ε_t
-```
+$$
 
 Donde Y_t es un vector que incluye PBI e inversión pública.
 
@@ -835,10 +837,10 @@ Se espera encontrar:
 
 **Modelo Logit:**
 
-```
+$$
 P(Pobre_i = 1) = Λ(β₀ + β₁·Edad_i + β₂·Educación_i + β₃·TamañoHogar_i + 
                      β₄·RamaActividad_i + β₅·Informalidad_i + β₆·Área_i + ε_i)
-```
+$$
 
 Donde:
 
@@ -869,40 +871,8 @@ Donde:
 - Ravallion, M. (1996). *Issues in measuring and modelling poverty*. The Economic Journal, 106(438), 1328-1343.
 
 
-# MATRIZ 10: Determinantes Microeconómicos de la Pobreza
 
-## Título
-
-**Determinantes Microeconómicos de la Pobreza en el Departamento de Ayacucho, Periodo 2000-2020**
-
-| ELEMENTO | CONTENIDO |
-|----------|-----------|
-| **PROBLEMA GENERAL** | ¿Cuáles son los determinantes microeconómicos de la probabilidad de ser pobre en Ayacucho durante el periodo 2000-2020? |
-| **OBJETIVO GENERAL** | Identificar los determinantes microeconómicos de la probabilidad de ser pobre en Ayacucho mediante un modelo de probabilidad. |
-| **HIPÓTESIS GENERAL** | Las variables demográficas, de capital humano y de actividad económica son determinantes significativos de la probabilidad de ser pobre. |
-
-## Operacionalización de Variables
-
-| VARIABLE | DIMENSIÓN | INDICADOR | INSTRUMENTO |
-|----------|-----------|-----------|-------------|
-| **V.D: Pobreza** | Condición | - Variable dummy (1=pobre, 0=no pobre) | Análisis ENAHO (INEI) |
-| **V.I: Demográficas** | Jefe de hogar | - Edad<br>- Sexo<br>- Estado civil | Análisis ENAHO |
-| | Hogar | - Tamaño del hogar<br>- N° niños menores 12 años | Análisis ENAHO |
-| | Localización | - Área (urbano/rural)<br>- Región natural | Análisis ENAHO |
-| **V.I: Capital Humano** | Educación | - Años de educación jefe<br>- Nivel educativo | Análisis ENAHO |
-| **V.I: Actividad Económica** | Empleo | - N° perceptores de ingreso<br>- Rama de actividad<br>- Informalidad | Análisis ENAHO |
-
-## Metodología
-
-- **Tipo:** Aplicada, Explicativa
-- **Diseño:** Retrospectivo, panel de hogares
-- **Técnicas:** Modelo Logit/Probit, efectos marginales
-- **Software:** Stata, R, SPSS
-
-
-
-
-# MATRIZ 11: Factores de Desnutrición Infantil
+# Matriz 11: Factores de Desnutrición Infantil
 
 ## Título
 
@@ -933,7 +903,7 @@ Donde:
 - **Software:** SPSS, Stata
 
 
-# MATRIZ 12: Recaudación de Impuestos Prediales
+# Matriz 12: Recaudación de Impuestos Prediales
 
 ## Título
 **Influencia de la Recaudación de Impuestos Prediales en la Recaudación Tributaria de la Municipalidad Distrital de Huamanga, 2021**
@@ -963,7 +933,7 @@ Donde:
 - **Software:** SPSS, Excel
 
 
-# MATRIZ 13: Choques Externos e Ingresos Tributarios
+# Matriz 13: Choques Externos e Ingresos Tributarios
 
 ## Título
 

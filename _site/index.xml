@@ -33661,7 +33661,7 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 <section id="modelo-econométrico-propuesto" class="level2">
 <h2 class="anchored" data-anchor-id="modelo-econométrico-propuesto">Modelo Econométrico Propuesto</h2>
 <p><strong>Especificación básica (Panel de datos):</strong></p>
-<pre><code>ln(PBI_it) = β₀ + β₁·ln(InvVial_it) + β₂·X_it + α_i + τ_t + ε_it</code></pre>
+<p><img src="https://latex.codecogs.com/png.latex?%0Aln(PBI_it)%20=%20%CE%B2%E2%82%80%20+%20%CE%B2%E2%82%81%C2%B7ln(InvVial_it)%20+%20%CE%B2%E2%82%82%C2%B7X_it%20+%20%CE%B1_i%20+%20%CF%84_t%20+%20%CE%B5_it%0A"></p>
 <p>Donde:</p>
 <ul>
 <li>PBI_it: Producto Bruto Interno del distrito i en el año t</li>
@@ -33918,10 +33918,17 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 <section id="modelo-econométrico-propuesto-1" class="level2">
 <h2 class="anchored" data-anchor-id="modelo-econométrico-propuesto-1">Modelo Econométrico Propuesto</h2>
 <p><strong>Modelo VECM (si existe cointegración):</strong></p>
-<pre><code>ΔY_t = α(Y_{t-1} - βX_{t-1}) + Σγ_iΔY_{t-i} + Σδ_iΔX_{t-i} + ε_t</code></pre>
-<p>Donde: - Y_t: ln(PBI regional) - X_t: ln(Inversión pública) - α: Velocidad de ajuste - β: Coeficiente de cointegración (relación de largo plazo) - γ, δ: Efectos de corto plazo</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%CE%94Y_t%20=%20%CE%B1(Y_%7Bt-1%7D%20-%20%CE%B2X_%7Bt-1%7D)%20+%20%CE%A3%CE%B3_i%CE%94Y_%7Bt-i%7D%20+%20%CE%A3%CE%B4_i%CE%94X_%7Bt-i%7D%20+%20%CE%B5_t%0A"></p>
+<p>Donde:</p>
+<ul>
+<li>Y_t: ln(PBI regional)</li>
+<li>X_t: ln(Inversión pública)</li>
+<li>α: Velocidad de ajuste</li>
+<li>β: Coeficiente de cointegración (relación de largo plazo)</li>
+<li>γ, δ: Efectos de corto plazo</li>
+</ul>
 <p><strong>Modelo VAR (si no hay cointegración):</strong></p>
-<pre><code>Y_t = c + ΣA_i·Y_{t-i} + ε_t</code></pre>
+<p><img src="https://latex.codecogs.com/png.latex?%0AY_t%20=%20c%20+%20%CE%A3A_i%C2%B7Y_%7Bt-i%7D%20+%20%CE%B5_t%0A"></p>
 <p>Donde Y_t es un vector que incluye PBI e inversión pública.</p>
 </section>
 <section id="referencias-principales-4" class="level2">
@@ -35063,8 +35070,7 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 <section id="modelo-econométrico-propuesto-2" class="level2">
 <h2 class="anchored" data-anchor-id="modelo-econométrico-propuesto-2">Modelo Econométrico Propuesto</h2>
 <p><strong>Modelo Logit:</strong></p>
-<pre><code>P(Pobre_i = 1) = Λ(β₀ + β₁·Edad_i + β₂·Educación_i + β₃·TamañoHogar_i + 
-                     β₄·RamaActividad_i + β₅·Informalidad_i + β₆·Área_i + ε_i)</code></pre>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(Pobre_i%20=%201)%20=%20%CE%9B(%CE%B2%E2%82%80%20+%20%CE%B2%E2%82%81%C2%B7Edad_i%20+%20%CE%B2%E2%82%82%C2%B7Educaci%C3%B3n_i%20+%20%CE%B2%E2%82%83%C2%B7Tama%C3%B1oHogar_i%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%CE%B2%E2%82%84%C2%B7RamaActividad_i%20+%20%CE%B2%E2%82%85%C2%B7Informalidad_i%20+%20%CE%B2%E2%82%86%C2%B7%C3%81rea_i%20+%20%CE%B5_i)%0A"></p>
 <p>Donde:</p>
 <ul>
 <li>Λ = Función logística</li>
@@ -35098,109 +35104,10 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 </ul>
 </section>
 </section>
-<section id="matriz-10-determinantes-microeconómicos-de-la-pobreza" class="level1">
-<h1>MATRIZ 10: Determinantes Microeconómicos de la Pobreza</h1>
+<section id="matriz-11-factores-de-desnutrición-infantil" class="level1">
+<h1>Matriz 11: Factores de Desnutrición Infantil</h1>
 <section id="título-10" class="level2">
 <h2 class="anchored" data-anchor-id="título-10">Título</h2>
-<p><strong>Determinantes Microeconómicos de la Pobreza en el Departamento de Ayacucho, Periodo 2000-2020</strong></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 47%">
-<col style="width: 52%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>ELEMENTO</th>
-<th>CONTENIDO</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>PROBLEMA GENERAL</strong></td>
-<td>¿Cuáles son los determinantes microeconómicos de la probabilidad de ser pobre en Ayacucho durante el periodo 2000-2020?</td>
-</tr>
-<tr class="even">
-<td><strong>OBJETIVO GENERAL</strong></td>
-<td>Identificar los determinantes microeconómicos de la probabilidad de ser pobre en Ayacucho mediante un modelo de probabilidad.</td>
-</tr>
-<tr class="odd">
-<td><strong>HIPÓTESIS GENERAL</strong></td>
-<td>Las variables demográficas, de capital humano y de actividad económica son determinantes significativos de la probabilidad de ser pobre.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="operacionalización-de-variables" class="level2">
-<h2 class="anchored" data-anchor-id="operacionalización-de-variables">Operacionalización de Variables</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 22%">
-<col style="width: 24%">
-<col style="width: 24%">
-<col style="width: 28%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>VARIABLE</th>
-<th>DIMENSIÓN</th>
-<th>INDICADOR</th>
-<th>INSTRUMENTO</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>V.D: Pobreza</strong></td>
-<td>Condición</td>
-<td>- Variable dummy (1=pobre, 0=no pobre)</td>
-<td>Análisis ENAHO (INEI)</td>
-</tr>
-<tr class="even">
-<td><strong>V.I: Demográficas</strong></td>
-<td>Jefe de hogar</td>
-<td>- Edad<br>- Sexo<br>- Estado civil</td>
-<td>Análisis ENAHO</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Hogar</td>
-<td>- Tamaño del hogar<br>- N° niños menores 12 años</td>
-<td>Análisis ENAHO</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Localización</td>
-<td>- Área (urbano/rural)<br>- Región natural</td>
-<td>Análisis ENAHO</td>
-</tr>
-<tr class="odd">
-<td><strong>V.I: Capital Humano</strong></td>
-<td>Educación</td>
-<td>- Años de educación jefe<br>- Nivel educativo</td>
-<td>Análisis ENAHO</td>
-</tr>
-<tr class="even">
-<td><strong>V.I: Actividad Económica</strong></td>
-<td>Empleo</td>
-<td>- N° perceptores de ingreso<br>- Rama de actividad<br>- Informalidad</td>
-<td>Análisis ENAHO</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="metodología-10" class="level2">
-<h2 class="anchored" data-anchor-id="metodología-10">Metodología</h2>
-<ul>
-<li><strong>Tipo:</strong> Aplicada, Explicativa</li>
-<li><strong>Diseño:</strong> Retrospectivo, panel de hogares</li>
-<li><strong>Técnicas:</strong> Modelo Logit/Probit, efectos marginales</li>
-<li><strong>Software:</strong> Stata, R, SPSS</li>
-</ul>
-</section>
-</section>
-<section id="matriz-11-factores-de-desnutrición-infantil" class="level1">
-<h1>MATRIZ 11: Factores de Desnutrición Infantil</h1>
-<section id="título-11" class="level2">
-<h2 class="anchored" data-anchor-id="título-11">Título</h2>
 <p><strong>Factores Asociados a la Desnutrición en Niños Menores de 5 Años en el Perú</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -35229,8 +35136,8 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 </tbody>
 </table>
 </section>
-<section id="operacionalización-de-variables-1" class="level2">
-<h2 class="anchored" data-anchor-id="operacionalización-de-variables-1">Operacionalización de Variables</h2>
+<section id="operacionalización-de-variables" class="level2">
+<h2 class="anchored" data-anchor-id="operacionalización-de-variables">Operacionalización de Variables</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 26%">
@@ -35274,8 +35181,8 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 </tbody>
 </table>
 </section>
-<section id="metodología-11" class="level2">
-<h2 class="anchored" data-anchor-id="metodología-11">Metodología</h2>
+<section id="metodología-10" class="level2">
+<h2 class="anchored" data-anchor-id="metodología-10">Metodología</h2>
 <ul>
 <li><strong>Tipo:</strong> Aplicada, Explicativa</li>
 <li><strong>Diseño:</strong> Descriptivo-correlacional, longitudinal</li>
@@ -35287,9 +35194,9 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 </section>
 </section>
 <section id="matriz-12-recaudación-de-impuestos-prediales" class="level1">
-<h1>MATRIZ 12: Recaudación de Impuestos Prediales</h1>
-<section id="título-12" class="level2">
-<h2 class="anchored" data-anchor-id="título-12">Título</h2>
+<h1>Matriz 12: Recaudación de Impuestos Prediales</h1>
+<section id="título-11" class="level2">
+<h2 class="anchored" data-anchor-id="título-11">Título</h2>
 <p><strong>Influencia de la Recaudación de Impuestos Prediales en la Recaudación Tributaria de la Municipalidad Distrital de Huamanga, 2021</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -35318,8 +35225,8 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 </tbody>
 </table>
 </section>
-<section id="operacionalización-de-variables-2" class="level2">
-<h2 class="anchored" data-anchor-id="operacionalización-de-variables-2">Operacionalización de Variables</h2>
+<section id="operacionalización-de-variables-1" class="level2">
+<h2 class="anchored" data-anchor-id="operacionalización-de-variables-1">Operacionalización de Variables</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 22%">
@@ -35363,8 +35270,8 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 </tbody>
 </table>
 </section>
-<section id="metodología-12" class="level2">
-<h2 class="anchored" data-anchor-id="metodología-12">Metodología</h2>
+<section id="metodología-11" class="level2">
+<h2 class="anchored" data-anchor-id="metodología-11">Metodología</h2>
 <ul>
 <li><strong>Tipo:</strong> Descriptivo-correlacional</li>
 <li><strong>Diseño:</strong> No experimental, transversal</li>
@@ -35376,9 +35283,9 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 </section>
 </section>
 <section id="matriz-13-choques-externos-e-ingresos-tributarios" class="level1">
-<h1>MATRIZ 13: Choques Externos e Ingresos Tributarios</h1>
-<section id="título-13" class="level2">
-<h2 class="anchored" data-anchor-id="título-13">Título</h2>
+<h1>Matriz 13: Choques Externos e Ingresos Tributarios</h1>
+<section id="título-12" class="level2">
+<h2 class="anchored" data-anchor-id="título-12">Título</h2>
 <p><strong>Choques Externos e Internos sobre la Dinámica de los Ingresos Tributarios en el Perú, Periodo 2000-2019</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -35407,8 +35314,8 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 </tbody>
 </table>
 </section>
-<section id="operacionalización-de-variables-3" class="level2">
-<h2 class="anchored" data-anchor-id="operacionalización-de-variables-3">Operacionalización de Variables</h2>
+<section id="operacionalización-de-variables-2" class="level2">
+<h2 class="anchored" data-anchor-id="operacionalización-de-variables-2">Operacionalización de Variables</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -35446,8 +35353,8 @@ investigación,”</span> June. <a href="https://methodica.netlify.app/posts/202
 </tbody>
 </table>
 </section>
-<section id="metodología-13" class="level2">
-<h2 class="anchored" data-anchor-id="metodología-13">Metodología</h2>
+<section id="metodología-12" class="level2">
+<h2 class="anchored" data-anchor-id="metodología-12">Metodología</h2>
 <ul>
 <li><strong>Tipo:</strong> No experimental, longitudinal</li>
 <li><strong>Diseño:</strong> Series de tiempo (20 años)</li>

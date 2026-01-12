@@ -1824,7 +1824,7 @@
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#modelo-econométrico-propuesto",
     "title": "Ideas de investigación en economía",
     "section": "Modelo Econométrico Propuesto",
-    "text": "Modelo Econométrico Propuesto\nEspecificación básica (Panel de datos):\nln(PBI_it) = β₀ + β₁·ln(InvVial_it) + β₂·X_it + α_i + τ_t + ε_it\nDonde:\n\nPBI_it: Producto Bruto Interno del distrito i en el año t\nInvVial_it: Inversión en infraestructura vial\nX_it: Vector de variables de control (población, educación, etc.)\nα_i: Efectos fijos distritales\nτ_t: Efectos fijos temporales\nε_it: Término de error"
+    "text": "Modelo Econométrico Propuesto\nEspecificación básica (Panel de datos):\n\\[\nln(PBI_it) = β₀ + β₁·ln(InvVial_it) + β₂·X_it + α_i + τ_t + ε_it\n\\]\nDonde:\n\nPBI_it: Producto Bruto Interno del distrito i en el año t\nInvVial_it: Inversión en infraestructura vial\nX_it: Vector de variables de control (población, educación, etc.)\nα_i: Efectos fijos distritales\nτ_t: Efectos fijos temporales\nε_it: Término de error"
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#referencias-principales-3",
@@ -1880,7 +1880,7 @@
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#modelo-econométrico-propuesto-1",
     "title": "Ideas de investigación en economía",
     "section": "Modelo Econométrico Propuesto",
-    "text": "Modelo Econométrico Propuesto\nModelo VECM (si existe cointegración):\nΔY_t = α(Y_{t-1} - βX_{t-1}) + Σγ_iΔY_{t-i} + Σδ_iΔX_{t-i} + ε_t\nDonde: - Y_t: ln(PBI regional) - X_t: ln(Inversión pública) - α: Velocidad de ajuste - β: Coeficiente de cointegración (relación de largo plazo) - γ, δ: Efectos de corto plazo\nModelo VAR (si no hay cointegración):\nY_t = c + ΣA_i·Y_{t-i} + ε_t\nDonde Y_t es un vector que incluye PBI e inversión pública."
+    "text": "Modelo Econométrico Propuesto\nModelo VECM (si existe cointegración):\n\\[\nΔY_t = α(Y_{t-1} - βX_{t-1}) + Σγ_iΔY_{t-i} + Σδ_iΔX_{t-i} + ε_t\n\\]\nDonde:\n\nY_t: ln(PBI regional)\nX_t: ln(Inversión pública)\nα: Velocidad de ajuste\nβ: Coeficiente de cointegración (relación de largo plazo)\nγ, δ: Efectos de corto plazo\n\nModelo VAR (si no hay cointegración):\n\\[\nY_t = c + ΣA_i·Y_{t-i} + ε_t\n\\]\nDonde Y_t es un vector que incluye PBI e inversión pública."
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#referencias-principales-4",
@@ -2139,7 +2139,7 @@
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#modelo-econométrico-propuesto-2",
     "title": "Ideas de investigación en economía",
     "section": "Modelo Econométrico Propuesto",
-    "text": "Modelo Econométrico Propuesto\nModelo Logit:\nP(Pobre_i = 1) = Λ(β₀ + β₁·Edad_i + β₂·Educación_i + β₃·TamañoHogar_i + \n                     β₄·RamaActividad_i + β₅·Informalidad_i + β₆·Área_i + ε_i)\nDonde:\n\nΛ = Función logística\nPobre_i = 1 si el hogar es pobre, 0 si no\nEdad, Educación, etc. = Variables explicativas\n\nEspecificación alternativa: Modelo Probit\nInterpretación:\n\nCoeficientes β: Efecto en el logit (log-odds)\nEfectos marginales: Cambio en probabilidad ante cambio unitario en X"
+    "text": "Modelo Econométrico Propuesto\nModelo Logit:\n\\[\nP(Pobre_i = 1) = Λ(β₀ + β₁·Edad_i + β₂·Educación_i + β₃·TamañoHogar_i +\n                     β₄·RamaActividad_i + β₅·Informalidad_i + β₆·Área_i + ε_i)\n\\]\nDonde:\n\nΛ = Función logística\nPobre_i = 1 si el hogar es pobre, 0 si no\nEdad, Educación, etc. = Variables explicativas\n\nEspecificación alternativa: Modelo Probit\nInterpretación:\n\nCoeficientes β: Efecto en el logit (log-odds)\nEfectos marginales: Cambio en probabilidad ante cambio unitario en X"
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#hipótesis-de-signo-esperado",
@@ -2160,63 +2160,63 @@
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#título-10",
     "title": "Ideas de investigación en economía",
     "section": "Título",
-    "text": "Título\nDeterminantes Microeconómicos de la Pobreza en el Departamento de Ayacucho, Periodo 2000-2020\n\n\n\n\n\n\n\nELEMENTO\nCONTENIDO\n\n\n\n\nPROBLEMA GENERAL\n¿Cuáles son los determinantes microeconómicos de la probabilidad de ser pobre en Ayacucho durante el periodo 2000-2020?\n\n\nOBJETIVO GENERAL\nIdentificar los determinantes microeconómicos de la probabilidad de ser pobre en Ayacucho mediante un modelo de probabilidad.\n\n\nHIPÓTESIS GENERAL\nLas variables demográficas, de capital humano y de actividad económica son determinantes significativos de la probabilidad de ser pobre."
+    "text": "Título\nFactores Asociados a la Desnutrición en Niños Menores de 5 Años en el Perú\n\n\n\n\n\n\n\nELEMENTO\nCONTENIDO\n\n\n\n\nPROBLEMA GENERAL\n¿De qué manera la pobreza y el analfabetismo influyen en la desnutrición de niños menores de 5 años en los departamentos del Perú (2009-2019)?\n\n\nOBJETIVO GENERAL\nDeterminar la influencia de la pobreza y el analfabetismo en la desnutrición de niños menores de 5 años en los departamentos del Perú.\n\n\nHIPÓTESIS GENERAL\nLa pobreza y el analfabetismo influyen significativamente en la desnutrición de niños menores de 5 años en el Perú."
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#operacionalización-de-variables",
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#operacionalización-de-variables",
     "title": "Ideas de investigación en economía",
     "section": "Operacionalización de Variables",
-    "text": "Operacionalización de Variables\n\n\n\n\n\n\n\n\n\nVARIABLE\nDIMENSIÓN\nINDICADOR\nINSTRUMENTO\n\n\n\n\nV.D: Pobreza\nCondición\n- Variable dummy (1=pobre, 0=no pobre)\nAnálisis ENAHO (INEI)\n\n\nV.I: Demográficas\nJefe de hogar\n- Edad- Sexo- Estado civil\nAnálisis ENAHO\n\n\n\nHogar\n- Tamaño del hogar- N° niños menores 12 años\nAnálisis ENAHO\n\n\n\nLocalización\n- Área (urbano/rural)- Región natural\nAnálisis ENAHO\n\n\nV.I: Capital Humano\nEducación\n- Años de educación jefe- Nivel educativo\nAnálisis ENAHO\n\n\nV.I: Actividad Económica\nEmpleo\n- N° perceptores de ingreso- Rama de actividad- Informalidad\nAnálisis ENAHO"
+    "text": "Operacionalización de Variables\n\n\n\n\n\n\n\n\n\nVARIABLE\nTIPO\nDIMENSIÓN\nINDICADOR\n\n\n\n\nDesnutrición\nDependiente\nNutricional\n- Tasa de desnutrición crónica (%)\n\n\nPobreza\nIndependiente\nEconómica\n- Tasa de pobreza (%)\n\n\nAnalfabetismo\nIndependiente\nEducativa\n- Tasa de analfabetismo (%)\n\n\nInflación\nControl\nEconómica\n- IPC (Índice de Precios al Consumidor)"
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#metodología-10",
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#metodología-10",
     "title": "Ideas de investigación en economía",
     "section": "Metodología",
-    "text": "Metodología\n\nTipo: Aplicada, Explicativa\nDiseño: Retrospectivo, panel de hogares\nTécnicas: Modelo Logit/Probit, efectos marginales\nSoftware: Stata, R, SPSS"
+    "text": "Metodología\n\nTipo: Aplicada, Explicativa\nDiseño: Descriptivo-correlacional, longitudinal\nPoblación: 24 departamentos del Perú (2009-2019)\nAnálisis: Correlación, regresión múltiple\nFuentes: INEI (ENDES, ENAHO), MINSA\nSoftware: SPSS, Stata"
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#título-11",
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#título-11",
     "title": "Ideas de investigación en economía",
     "section": "Título",
-    "text": "Título\nFactores Asociados a la Desnutrición en Niños Menores de 5 Años en el Perú\n\n\n\n\n\n\n\nELEMENTO\nCONTENIDO\n\n\n\n\nPROBLEMA GENERAL\n¿De qué manera la pobreza y el analfabetismo influyen en la desnutrición de niños menores de 5 años en los departamentos del Perú (2009-2019)?\n\n\nOBJETIVO GENERAL\nDeterminar la influencia de la pobreza y el analfabetismo en la desnutrición de niños menores de 5 años en los departamentos del Perú.\n\n\nHIPÓTESIS GENERAL\nLa pobreza y el analfabetismo influyen significativamente en la desnutrición de niños menores de 5 años en el Perú."
+    "text": "Título\nInfluencia de la Recaudación de Impuestos Prediales en la Recaudación Tributaria de la Municipalidad Distrital de Huamanga, 2021\n\n\n\n\n\n\n\nELEMENTO\nCONTENIDO\n\n\n\n\nPROBLEMA GENERAL\n¿De qué manera el impuesto predial se relaciona con la recaudación tributaria en la Municipalidad Distrital de Huamanga-2021?\n\n\nOBJETIVO GENERAL\nAnalizar si el impuesto predial se relaciona con la recaudación tributaria en la municipalidad distrital de Huamanga-2021.\n\n\nHIPÓTESIS GENERAL\nEl impuesto predial se relaciona significativamente con la recaudación tributaria en la Municipalidad Distrital de Huamanga-2021."
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#operacionalización-de-variables-1",
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#operacionalización-de-variables-1",
     "title": "Ideas de investigación en economía",
     "section": "Operacionalización de Variables",
-    "text": "Operacionalización de Variables\n\n\n\n\n\n\n\n\n\nVARIABLE\nTIPO\nDIMENSIÓN\nINDICADOR\n\n\n\n\nDesnutrición\nDependiente\nNutricional\n- Tasa de desnutrición crónica (%)\n\n\nPobreza\nIndependiente\nEconómica\n- Tasa de pobreza (%)\n\n\nAnalfabetismo\nIndependiente\nEducativa\n- Tasa de analfabetismo (%)\n\n\nInflación\nControl\nEconómica\n- IPC (Índice de Precios al Consumidor)"
+    "text": "Operacionalización de Variables\n\n\n\n\n\n\n\n\n\nVARIABLE\nDIMENSIÓN\nINDICADOR\nINSTRUMENTO\n\n\n\n\nV.I: Impuesto Predial\nRecaudación\n- Monto recaudado- N° contribuyentes\nAnálisis documental (Municipalidad)\n\n\n\nValorización\n- Auto valúo promedio- N° predios registrados\nAnálisis documental\n\n\nV.D: Recaudación Tributaria\nImpuestos municipales\n- Monto total impuestos- % ejecución\nAnálisis documental (SIAF-GL)\n\n\n\nTasas\n- Licencias de funcionamiento- Otras tasas\nAnálisis documental"
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#metodología-11",
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#metodología-11",
     "title": "Ideas de investigación en economía",
     "section": "Metodología",
-    "text": "Metodología\n\nTipo: Aplicada, Explicativa\nDiseño: Descriptivo-correlacional, longitudinal\nPoblación: 24 departamentos del Perú (2009-2019)\nAnálisis: Correlación, regresión múltiple\nFuentes: INEI (ENDES, ENAHO), MINSA\nSoftware: SPSS, Stata"
+    "text": "Metodología\n\nTipo: Descriptivo-correlacional\nDiseño: No experimental, transversal\nPoblación: Contribuyentes de Huamanga\nTécnicas: Correlación, regresión\nFuentes: Municipalidad, MEF, BCRP\nSoftware: SPSS, Excel"
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#título-12",
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#título-12",
     "title": "Ideas de investigación en economía",
     "section": "Título",
-    "text": "Título\nInfluencia de la Recaudación de Impuestos Prediales en la Recaudación Tributaria de la Municipalidad Distrital de Huamanga, 2021\n\n\n\n\n\n\n\nELEMENTO\nCONTENIDO\n\n\n\n\nPROBLEMA GENERAL\n¿De qué manera el impuesto predial se relaciona con la recaudación tributaria en la Municipalidad Distrital de Huamanga-2021?\n\n\nOBJETIVO GENERAL\nAnalizar si el impuesto predial se relaciona con la recaudación tributaria en la municipalidad distrital de Huamanga-2021.\n\n\nHIPÓTESIS GENERAL\nEl impuesto predial se relaciona significativamente con la recaudación tributaria en la Municipalidad Distrital de Huamanga-2021."
+    "text": "Título\nChoques Externos e Internos sobre la Dinámica de los Ingresos Tributarios en el Perú, Periodo 2000-2019\n\n\n\n\n\n\n\nELEMENTO\nCONTENIDO\n\n\n\n\nPROBLEMA GENERAL\n¿De qué manera los shocks externos e internos afectan los ingresos tributarios en Perú (2000-2019)?\n\n\nOBJETIVO GENERAL\nEvaluar la influencia del PBI y los precios de exportación en los ingresos tributarios de Perú (2000-2019).\n\n\nHIPÓTESIS GENERAL\nLos indicadores del PBI e IPX han influido positivamente en la dinámica de los ingresos tributarios de Perú (2000-2019)."
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#operacionalización-de-variables-2",
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#operacionalización-de-variables-2",
     "title": "Ideas de investigación en economía",
     "section": "Operacionalización de Variables",
-    "text": "Operacionalización de Variables\n\n\n\n\n\n\n\n\n\nVARIABLE\nDIMENSIÓN\nINDICADOR\nINSTRUMENTO\n\n\n\n\nV.I: Impuesto Predial\nRecaudación\n- Monto recaudado- N° contribuyentes\nAnálisis documental (Municipalidad)\n\n\n\nValorización\n- Auto valúo promedio- N° predios registrados\nAnálisis documental\n\n\nV.D: Recaudación Tributaria\nImpuestos municipales\n- Monto total impuestos- % ejecución\nAnálisis documental (SIAF-GL)\n\n\n\nTasas\n- Licencias de funcionamiento- Otras tasas\nAnálisis documental"
+    "text": "Operacionalización de Variables\n\n\n\n\n\n\n\n\n\nVARIABLE\nTIPO\nINDICADOR\nINSTRUMENTO\n\n\n\n\nV.D: Ingresos Tributarios\nDependiente\n- Ingresos tributarios del gobierno central (millones S/.)\nAnálisis documental (SUNAT, MEF, BCRP)\n\n\nV.I: Índice de Precios de Exportación\nIndependiente\n- IPX (índice base 100)\nAnálisis documental (BCRP)\n\n\nV.I: PBI Real\nIndependiente\n- PBI (millones S/. constantes)- Tasa de crecimiento\nAnálisis documental (BCRP, INEI)"
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#metodología-12",
     "href": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#metodología-12",
     "title": "Ideas de investigación en economía",
     "section": "Metodología",
-    "text": "Metodología\n\nTipo: Descriptivo-correlacional\nDiseño: No experimental, transversal\nPoblación: Contribuyentes de Huamanga\nTécnicas: Correlación, regresión\nFuentes: Municipalidad, MEF, BCRP\nSoftware: SPSS, Excel"
+    "text": "Metodología\n\nTipo: No experimental, longitudinal\nDiseño: Series de tiempo (20 años)\nTécnicas: VAR, VECM, Causalidad de Granger, Impulso-respuesta\nFuentes: BCRP, INEI, SUNAT\nSoftware: EViews, Stata, R"
   },
   {
     "objectID": "posts/2023-06-03-ideas-de-investigacion-para-economia/index.html#título-13",

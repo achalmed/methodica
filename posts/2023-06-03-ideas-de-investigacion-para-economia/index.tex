@@ -1036,9 +1036,9 @@ Propuesto}\label{modelo-economuxe9trico-propuesto}
 
 \textbf{Especificación básica (Panel de datos):}
 
-\begin{verbatim}
+\[
 ln(PBI_it) = β₀ + β₁·ln(InvVial_it) + β₂·X_it + α_i + τ_t + ε_it
-\end{verbatim}
+\]
 
 Donde:
 
@@ -1302,19 +1302,31 @@ Propuesto}\label{modelo-economuxe9trico-propuesto-1}
 
 \textbf{Modelo VECM (si existe cointegración):}
 
-\begin{verbatim}
+\[
 ΔY_t = α(Y_{t-1} - βX_{t-1}) + Σγ_iΔY_{t-i} + Σδ_iΔX_{t-i} + ε_t
-\end{verbatim}
+\]
 
-Donde: - Y\_t: ln(PBI regional) - X\_t: ln(Inversión pública) - α:
-Velocidad de ajuste - β: Coeficiente de cointegración (relación de largo
-plazo) - γ, δ: Efectos de corto plazo
+Donde:
+
+\begin{itemize}
+\tightlist
+\item
+  Y\_t: ln(PBI regional)
+\item
+  X\_t: ln(Inversión pública)
+\item
+  α: Velocidad de ajuste
+\item
+  β: Coeficiente de cointegración (relación de largo plazo)
+\item
+  γ, δ: Efectos de corto plazo
+\end{itemize}
 
 \textbf{Modelo VAR (si no hay cointegración):}
 
-\begin{verbatim}
+\[
 Y_t = c + ΣA_i·Y_{t-i} + ε_t
-\end{verbatim}
+\]
 
 Donde Y\_t es un vector que incluye PBI e inversión pública.
 
@@ -2405,10 +2417,10 @@ Propuesto}\label{modelo-economuxe9trico-propuesto-2}
 
 \textbf{Modelo Logit:}
 
-\begin{verbatim}
+\[
 P(Pobre_i = 1) = Λ(β₀ + β₁·Edad_i + β₂·Educación_i + β₃·TamañoHogar_i + 
                      β₄·RamaActividad_i + β₅·Informalidad_i + β₆·Área_i + ε_i)
-\end{verbatim}
+\]
 
 Donde:
 
@@ -2468,92 +2480,10 @@ Esperado}\label{hipuxf3tesis-de-signo-esperado}
   poverty}. The Economic Journal, 106(438), 1328-1343.
 \end{itemize}
 
-\section{MATRIZ 10: Determinantes Microeconómicos de la
-Pobreza}\label{matriz-10-determinantes-microeconuxf3micos-de-la-pobreza}
-
-\subsection{Título}\label{tuxedtulo-10}
-
-\textbf{Determinantes Microeconómicos de la Pobreza en el Departamento
-de Ayacucho, Periodo 2000-2020}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4762}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5238}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-ELEMENTO
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-CONTENIDO
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{PROBLEMA GENERAL} & ¿Cuáles son los determinantes
-microeconómicos de la probabilidad de ser pobre en Ayacucho durante el
-periodo 2000-2020? \\
-\textbf{OBJETIVO GENERAL} & Identificar los determinantes
-microeconómicos de la probabilidad de ser pobre en Ayacucho mediante un
-modelo de probabilidad. \\
-\textbf{HIPÓTESIS GENERAL} & Las variables demográficas, de capital
-humano y de actividad económica son determinantes significativos de la
-probabilidad de ser pobre. \\
-\end{longtable}
-
-\subsection{Operacionalización de
-Variables}\label{operacionalizaciuxf3n-de-variables}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2444}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2444}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2889}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-VARIABLE
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-DIMENSIÓN
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-INDICADOR
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-INSTRUMENTO
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{V.D: Pobreza} & Condición & - Variable dummy (1=pobre, 0=no
-pobre) & Análisis ENAHO (INEI) \\
-\textbf{V.I: Demográficas} & Jefe de hogar & - Edad- Sexo- Estado civil
-& Análisis ENAHO \\
-& Hogar & - Tamaño del hogar- N° niños menores 12 años & Análisis
-ENAHO \\
-& Localización & - Área (urbano/rural)- Región natural & Análisis
-ENAHO \\
-\textbf{V.I: Capital Humano} & Educación & - Años de educación jefe-
-Nivel educativo & Análisis ENAHO \\
-\textbf{V.I: Actividad Económica} & Empleo & - N° perceptores de
-ingreso- Rama de actividad- Informalidad & Análisis ENAHO \\
-\end{longtable}
-
-\subsection{Metodología}\label{metodologuxeda-10}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Tipo:} Aplicada, Explicativa
-\item
-  \textbf{Diseño:} Retrospectivo, panel de hogares
-\item
-  \textbf{Técnicas:} Modelo Logit/Probit, efectos marginales
-\item
-  \textbf{Software:} Stata, R, SPSS
-\end{itemize}
-
-\section{MATRIZ 11: Factores de Desnutrición
+\section{Matriz 11: Factores de Desnutrición
 Infantil}\label{matriz-11-factores-de-desnutriciuxf3n-infantil}
 
-\subsection{Título}\label{tuxedtulo-11}
+\subsection{Título}\label{tuxedtulo-10}
 
 \textbf{Factores Asociados a la Desnutrición en Niños Menores de 5 Años
 en el Perú}
@@ -2583,7 +2513,7 @@ Perú. \\
 \end{longtable}
 
 \subsection{Operacionalización de
-Variables}\label{operacionalizaciuxf3n-de-variables-1}
+Variables}\label{operacionalizaciuxf3n-de-variables}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2632}}
@@ -2613,7 +2543,7 @@ analfabetismo (\%) \\
 Consumidor) \\
 \end{longtable}
 
-\subsection{Metodología}\label{metodologuxeda-11}
+\subsection{Metodología}\label{metodologuxeda-10}
 
 \begin{itemize}
 \tightlist
@@ -2631,10 +2561,10 @@ Consumidor) \\
   \textbf{Software:} SPSS, Stata
 \end{itemize}
 
-\section{MATRIZ 12: Recaudación de Impuestos
+\section{Matriz 12: Recaudación de Impuestos
 Prediales}\label{matriz-12-recaudaciuxf3n-de-impuestos-prediales}
 
-\subsection{Título}\label{tuxedtulo-12}
+\subsection{Título}\label{tuxedtulo-11}
 
 \textbf{Influencia de la Recaudación de Impuestos Prediales en la
 Recaudación Tributaria de la Municipalidad Distrital de Huamanga, 2021}
@@ -2664,7 +2594,7 @@ Distrital de Huamanga-2021. \\
 \end{longtable}
 
 \subsection{Operacionalización de
-Variables}\label{operacionalizaciuxf3n-de-variables-2}
+Variables}\label{operacionalizaciuxf3n-de-variables-1}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}
@@ -2695,7 +2625,7 @@ total impuestos- \% ejecución & Análisis documental (SIAF-GL) \\
 documental \\
 \end{longtable}
 
-\subsection{Metodología}\label{metodologuxeda-12}
+\subsection{Metodología}\label{metodologuxeda-11}
 
 \begin{itemize}
 \tightlist
@@ -2713,10 +2643,10 @@ documental \\
   \textbf{Software:} SPSS, Excel
 \end{itemize}
 
-\section{MATRIZ 13: Choques Externos e Ingresos
+\section{Matriz 13: Choques Externos e Ingresos
 Tributarios}\label{matriz-13-choques-externos-e-ingresos-tributarios}
 
-\subsection{Título}\label{tuxedtulo-13}
+\subsection{Título}\label{tuxedtulo-12}
 
 \textbf{Choques Externos e Internos sobre la Dinámica de los Ingresos
 Tributarios en el Perú, Periodo 2000-2019}
@@ -2744,7 +2674,7 @@ positivamente en la dinámica de los ingresos tributarios de Perú
 \end{longtable}
 
 \subsection{Operacionalización de
-Variables}\label{operacionalizaciuxf3n-de-variables-3}
+Variables}\label{operacionalizaciuxf3n-de-variables-2}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
@@ -2774,7 +2704,7 @@ tributarios del gobierno central (millones S/.) & Análisis documental
 constantes)- Tasa de crecimiento & Análisis documental (BCRP, INEI) \\
 \end{longtable}
 
-\subsection{Metodología}\label{metodologuxeda-13}
+\subsection{Metodología}\label{metodologuxeda-12}
 
 \begin{itemize}
 \tightlist

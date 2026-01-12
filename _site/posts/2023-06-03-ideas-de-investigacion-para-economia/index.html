@@ -83,6 +83,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WGQX2XZN');</script>
 <!-- End Google Tag Manager -->
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../assets/styles.css">
 <meta property="og:title" content="Edison Achalma B.Sc. Econ.">
@@ -389,29 +418,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <li><a href="#hipótesis-de-signo-esperado" id="toc-hipótesis-de-signo-esperado" class="nav-link" data-scroll-target="#hipótesis-de-signo-esperado">Hipótesis de Signo Esperado</a></li>
   <li><a href="#referencias-principales-9" id="toc-referencias-principales-9" class="nav-link" data-scroll-target="#referencias-principales-9">Referencias Principales</a></li>
   </ul></li>
-  <li><a href="#matriz-10-determinantes-microeconómicos-de-la-pobreza" id="toc-matriz-10-determinantes-microeconómicos-de-la-pobreza" class="nav-link" data-scroll-target="#matriz-10-determinantes-microeconómicos-de-la-pobreza">MATRIZ 10: Determinantes Microeconómicos de la Pobreza</a>
+  <li><a href="#matriz-11-factores-de-desnutrición-infantil" id="toc-matriz-11-factores-de-desnutrición-infantil" class="nav-link" data-scroll-target="#matriz-11-factores-de-desnutrición-infantil">Matriz 11: Factores de Desnutrición Infantil</a>
   <ul class="collapse">
   <li><a href="#título-10" id="toc-título-10" class="nav-link" data-scroll-target="#título-10">Título</a></li>
   <li><a href="#operacionalización-de-variables" id="toc-operacionalización-de-variables" class="nav-link" data-scroll-target="#operacionalización-de-variables">Operacionalización de Variables</a></li>
   <li><a href="#metodología-10" id="toc-metodología-10" class="nav-link" data-scroll-target="#metodología-10">Metodología</a></li>
   </ul></li>
-  <li><a href="#matriz-11-factores-de-desnutrición-infantil" id="toc-matriz-11-factores-de-desnutrición-infantil" class="nav-link" data-scroll-target="#matriz-11-factores-de-desnutrición-infantil">MATRIZ 11: Factores de Desnutrición Infantil</a>
+  <li><a href="#matriz-12-recaudación-de-impuestos-prediales" id="toc-matriz-12-recaudación-de-impuestos-prediales" class="nav-link" data-scroll-target="#matriz-12-recaudación-de-impuestos-prediales">Matriz 12: Recaudación de Impuestos Prediales</a>
   <ul class="collapse">
   <li><a href="#título-11" id="toc-título-11" class="nav-link" data-scroll-target="#título-11">Título</a></li>
   <li><a href="#operacionalización-de-variables-1" id="toc-operacionalización-de-variables-1" class="nav-link" data-scroll-target="#operacionalización-de-variables-1">Operacionalización de Variables</a></li>
   <li><a href="#metodología-11" id="toc-metodología-11" class="nav-link" data-scroll-target="#metodología-11">Metodología</a></li>
   </ul></li>
-  <li><a href="#matriz-12-recaudación-de-impuestos-prediales" id="toc-matriz-12-recaudación-de-impuestos-prediales" class="nav-link" data-scroll-target="#matriz-12-recaudación-de-impuestos-prediales">MATRIZ 12: Recaudación de Impuestos Prediales</a>
+  <li><a href="#matriz-13-choques-externos-e-ingresos-tributarios" id="toc-matriz-13-choques-externos-e-ingresos-tributarios" class="nav-link" data-scroll-target="#matriz-13-choques-externos-e-ingresos-tributarios">Matriz 13: Choques Externos e Ingresos Tributarios</a>
   <ul class="collapse">
   <li><a href="#título-12" id="toc-título-12" class="nav-link" data-scroll-target="#título-12">Título</a></li>
   <li><a href="#operacionalización-de-variables-2" id="toc-operacionalización-de-variables-2" class="nav-link" data-scroll-target="#operacionalización-de-variables-2">Operacionalización de Variables</a></li>
   <li><a href="#metodología-12" id="toc-metodología-12" class="nav-link" data-scroll-target="#metodología-12">Metodología</a></li>
-  </ul></li>
-  <li><a href="#matriz-13-choques-externos-e-ingresos-tributarios" id="toc-matriz-13-choques-externos-e-ingresos-tributarios" class="nav-link" data-scroll-target="#matriz-13-choques-externos-e-ingresos-tributarios">MATRIZ 13: Choques Externos e Ingresos Tributarios</a>
-  <ul class="collapse">
-  <li><a href="#título-13" id="toc-título-13" class="nav-link" data-scroll-target="#título-13">Título</a></li>
-  <li><a href="#operacionalización-de-variables-3" id="toc-operacionalización-de-variables-3" class="nav-link" data-scroll-target="#operacionalización-de-variables-3">Operacionalización de Variables</a></li>
-  <li><a href="#metodología-13" id="toc-metodología-13" class="nav-link" data-scroll-target="#metodología-13">Metodología</a></li>
   </ul></li>
   <li><a href="#fuentes-de-datos" id="toc-fuentes-de-datos" class="nav-link" data-scroll-target="#fuentes-de-datos">Fuentes de Datos</a>
   <ul class="collapse">
@@ -1318,7 +1341,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section id="modelo-econométrico-propuesto" class="level2">
 <h2 class="anchored" data-anchor-id="modelo-econométrico-propuesto">Modelo Econométrico Propuesto</h2>
 <p><strong>Especificación básica (Panel de datos):</strong></p>
-<pre><code>ln(PBI_it) = β₀ + β₁·ln(InvVial_it) + β₂·X_it + α_i + τ_t + ε_it</code></pre>
+<p><span class="math display">\[
+ln(PBI_it) = β₀ + β₁·ln(InvVial_it) + β₂·X_it + α_i + τ_t + ε_it
+\]</span></p>
 <p>Donde:</p>
 <ul>
 <li>PBI_it: Producto Bruto Interno del distrito i en el año t</li>
@@ -1575,10 +1600,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section id="modelo-econométrico-propuesto-1" class="level2">
 <h2 class="anchored" data-anchor-id="modelo-econométrico-propuesto-1">Modelo Econométrico Propuesto</h2>
 <p><strong>Modelo VECM (si existe cointegración):</strong></p>
-<pre><code>ΔY_t = α(Y_{t-1} - βX_{t-1}) + Σγ_iΔY_{t-i} + Σδ_iΔX_{t-i} + ε_t</code></pre>
-<p>Donde: - Y_t: ln(PBI regional) - X_t: ln(Inversión pública) - α: Velocidad de ajuste - β: Coeficiente de cointegración (relación de largo plazo) - γ, δ: Efectos de corto plazo</p>
+<p><span class="math display">\[
+ΔY_t = α(Y_{t-1} - βX_{t-1}) + Σγ_iΔY_{t-i} + Σδ_iΔX_{t-i} + ε_t
+\]</span></p>
+<p>Donde:</p>
+<ul>
+<li>Y_t: ln(PBI regional)</li>
+<li>X_t: ln(Inversión pública)</li>
+<li>α: Velocidad de ajuste</li>
+<li>β: Coeficiente de cointegración (relación de largo plazo)</li>
+<li>γ, δ: Efectos de corto plazo</li>
+</ul>
 <p><strong>Modelo VAR (si no hay cointegración):</strong></p>
-<pre><code>Y_t = c + ΣA_i·Y_{t-i} + ε_t</code></pre>
+<p><span class="math display">\[
+Y_t = c + ΣA_i·Y_{t-i} + ε_t
+\]</span></p>
 <p>Donde Y_t es un vector que incluye PBI e inversión pública.</p>
 </section>
 <section id="referencias-principales-4" class="level2">
@@ -2720,8 +2756,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section id="modelo-econométrico-propuesto-2" class="level2">
 <h2 class="anchored" data-anchor-id="modelo-econométrico-propuesto-2">Modelo Econométrico Propuesto</h2>
 <p><strong>Modelo Logit:</strong></p>
-<pre><code>P(Pobre_i = 1) = Λ(β₀ + β₁·Edad_i + β₂·Educación_i + β₃·TamañoHogar_i + 
-                     β₄·RamaActividad_i + β₅·Informalidad_i + β₆·Área_i + ε_i)</code></pre>
+<p><span class="math display">\[
+P(Pobre_i = 1) = Λ(β₀ + β₁·Edad_i + β₂·Educación_i + β₃·TamañoHogar_i +
+                     β₄·RamaActividad_i + β₅·Informalidad_i + β₆·Área_i + ε_i)
+\]</span></p>
 <p>Donde:</p>
 <ul>
 <li>Λ = Función logística</li>
@@ -2755,109 +2793,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 </section>
-<section id="matriz-10-determinantes-microeconómicos-de-la-pobreza" class="level1">
-<h1>MATRIZ 10: Determinantes Microeconómicos de la Pobreza</h1>
+<section id="matriz-11-factores-de-desnutrición-infantil" class="level1">
+<h1>Matriz 11: Factores de Desnutrición Infantil</h1>
 <section id="título-10" class="level2">
 <h2 class="anchored" data-anchor-id="título-10">Título</h2>
-<p><strong>Determinantes Microeconómicos de la Pobreza en el Departamento de Ayacucho, Periodo 2000-2020</strong></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 47%">
-<col style="width: 52%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>ELEMENTO</th>
-<th>CONTENIDO</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>PROBLEMA GENERAL</strong></td>
-<td>¿Cuáles son los determinantes microeconómicos de la probabilidad de ser pobre en Ayacucho durante el periodo 2000-2020?</td>
-</tr>
-<tr class="even">
-<td><strong>OBJETIVO GENERAL</strong></td>
-<td>Identificar los determinantes microeconómicos de la probabilidad de ser pobre en Ayacucho mediante un modelo de probabilidad.</td>
-</tr>
-<tr class="odd">
-<td><strong>HIPÓTESIS GENERAL</strong></td>
-<td>Las variables demográficas, de capital humano y de actividad económica son determinantes significativos de la probabilidad de ser pobre.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="operacionalización-de-variables" class="level2">
-<h2 class="anchored" data-anchor-id="operacionalización-de-variables">Operacionalización de Variables</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 22%">
-<col style="width: 24%">
-<col style="width: 24%">
-<col style="width: 28%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>VARIABLE</th>
-<th>DIMENSIÓN</th>
-<th>INDICADOR</th>
-<th>INSTRUMENTO</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>V.D: Pobreza</strong></td>
-<td>Condición</td>
-<td>- Variable dummy (1=pobre, 0=no pobre)</td>
-<td>Análisis ENAHO (INEI)</td>
-</tr>
-<tr class="even">
-<td><strong>V.I: Demográficas</strong></td>
-<td>Jefe de hogar</td>
-<td>- Edad<br>- Sexo<br>- Estado civil</td>
-<td>Análisis ENAHO</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Hogar</td>
-<td>- Tamaño del hogar<br>- N° niños menores 12 años</td>
-<td>Análisis ENAHO</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Localización</td>
-<td>- Área (urbano/rural)<br>- Región natural</td>
-<td>Análisis ENAHO</td>
-</tr>
-<tr class="odd">
-<td><strong>V.I: Capital Humano</strong></td>
-<td>Educación</td>
-<td>- Años de educación jefe<br>- Nivel educativo</td>
-<td>Análisis ENAHO</td>
-</tr>
-<tr class="even">
-<td><strong>V.I: Actividad Económica</strong></td>
-<td>Empleo</td>
-<td>- N° perceptores de ingreso<br>- Rama de actividad<br>- Informalidad</td>
-<td>Análisis ENAHO</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="metodología-10" class="level2">
-<h2 class="anchored" data-anchor-id="metodología-10">Metodología</h2>
-<ul>
-<li><strong>Tipo:</strong> Aplicada, Explicativa</li>
-<li><strong>Diseño:</strong> Retrospectivo, panel de hogares</li>
-<li><strong>Técnicas:</strong> Modelo Logit/Probit, efectos marginales</li>
-<li><strong>Software:</strong> Stata, R, SPSS</li>
-</ul>
-</section>
-</section>
-<section id="matriz-11-factores-de-desnutrición-infantil" class="level1">
-<h1>MATRIZ 11: Factores de Desnutrición Infantil</h1>
-<section id="título-11" class="level2">
-<h2 class="anchored" data-anchor-id="título-11">Título</h2>
 <p><strong>Factores Asociados a la Desnutrición en Niños Menores de 5 Años en el Perú</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -2886,8 +2825,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tbody>
 </table>
 </section>
-<section id="operacionalización-de-variables-1" class="level2">
-<h2 class="anchored" data-anchor-id="operacionalización-de-variables-1">Operacionalización de Variables</h2>
+<section id="operacionalización-de-variables" class="level2">
+<h2 class="anchored" data-anchor-id="operacionalización-de-variables">Operacionalización de Variables</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 26%">
@@ -2931,8 +2870,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tbody>
 </table>
 </section>
-<section id="metodología-11" class="level2">
-<h2 class="anchored" data-anchor-id="metodología-11">Metodología</h2>
+<section id="metodología-10" class="level2">
+<h2 class="anchored" data-anchor-id="metodología-10">Metodología</h2>
 <ul>
 <li><strong>Tipo:</strong> Aplicada, Explicativa</li>
 <li><strong>Diseño:</strong> Descriptivo-correlacional, longitudinal</li>
@@ -2944,9 +2883,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 </section>
 <section id="matriz-12-recaudación-de-impuestos-prediales" class="level1">
-<h1>MATRIZ 12: Recaudación de Impuestos Prediales</h1>
-<section id="título-12" class="level2">
-<h2 class="anchored" data-anchor-id="título-12">Título</h2>
+<h1>Matriz 12: Recaudación de Impuestos Prediales</h1>
+<section id="título-11" class="level2">
+<h2 class="anchored" data-anchor-id="título-11">Título</h2>
 <p><strong>Influencia de la Recaudación de Impuestos Prediales en la Recaudación Tributaria de la Municipalidad Distrital de Huamanga, 2021</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -2975,8 +2914,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tbody>
 </table>
 </section>
-<section id="operacionalización-de-variables-2" class="level2">
-<h2 class="anchored" data-anchor-id="operacionalización-de-variables-2">Operacionalización de Variables</h2>
+<section id="operacionalización-de-variables-1" class="level2">
+<h2 class="anchored" data-anchor-id="operacionalización-de-variables-1">Operacionalización de Variables</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 22%">
@@ -3020,8 +2959,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tbody>
 </table>
 </section>
-<section id="metodología-12" class="level2">
-<h2 class="anchored" data-anchor-id="metodología-12">Metodología</h2>
+<section id="metodología-11" class="level2">
+<h2 class="anchored" data-anchor-id="metodología-11">Metodología</h2>
 <ul>
 <li><strong>Tipo:</strong> Descriptivo-correlacional</li>
 <li><strong>Diseño:</strong> No experimental, transversal</li>
@@ -3033,9 +2972,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 </section>
 <section id="matriz-13-choques-externos-e-ingresos-tributarios" class="level1">
-<h1>MATRIZ 13: Choques Externos e Ingresos Tributarios</h1>
-<section id="título-13" class="level2">
-<h2 class="anchored" data-anchor-id="título-13">Título</h2>
+<h1>Matriz 13: Choques Externos e Ingresos Tributarios</h1>
+<section id="título-12" class="level2">
+<h2 class="anchored" data-anchor-id="título-12">Título</h2>
 <p><strong>Choques Externos e Internos sobre la Dinámica de los Ingresos Tributarios en el Perú, Periodo 2000-2019</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -3064,8 +3003,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tbody>
 </table>
 </section>
-<section id="operacionalización-de-variables-3" class="level2">
-<h2 class="anchored" data-anchor-id="operacionalización-de-variables-3">Operacionalización de Variables</h2>
+<section id="operacionalización-de-variables-2" class="level2">
+<h2 class="anchored" data-anchor-id="operacionalización-de-variables-2">Operacionalización de Variables</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -3103,8 +3042,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </tbody>
 </table>
 </section>
-<section id="metodología-13" class="level2">
-<h2 class="anchored" data-anchor-id="metodología-13">Metodología</h2>
+<section id="metodología-12" class="level2">
+<h2 class="anchored" data-anchor-id="metodología-12">Metodología</h2>
 <ul>
 <li><strong>Tipo:</strong> No experimental, longitudinal</li>
 <li><strong>Diseño:</strong> Series de tiempo (20 años)</li>
