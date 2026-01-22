@@ -26,41 +26,45 @@ Incluye notas y tutoriales para mi futuro y espero que también para ti.&lt;br&g
   <description><![CDATA[ 
 
 <style>
-:root {
---primary-color: ;
-}
-#title-block-header {
-width: 100%;
-overflow: hidden;
-position: relative;
-}
-.title-block-content {
-position: relative;
-padding-top: 60px;
+  :root {
+    --primary-color: ;
+  }
 
-padding-bottom: 60px;
+  #title-block-header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
 
-max-width: 752px;
-margin: 0 auto;
-z-index: 1;
-}
-#particles-js {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 0;
-}
-.bg-image {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-z-index: 0;
-}
+  .title-block-content {
+    position: relative;
+    padding-top: 60px;
+    /* Reducido de 130px */
+    padding-bottom: 60px;
+    /* Reducido de 130px */
+    max-width: 752px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
 </style>
 
 
@@ -5945,7 +5949,7 @@ font-weight: bold;
 font-style: inherit;">: </span><span class="ch" style="color: #20794D;
 background-color: null;
 font-style: inherit;">|</span></span>
-<span id="cb88-12">    *Última actualización: 2 de enero de 2026*</span></code></pre></div></div>
+<span id="cb88-12">    *Última actualización: 22 de enero de 2026*</span></code></pre></div></div>
 <p><strong>Ubicaciones:</strong></p>
 <ul>
 <li><code>body-header</code>: Inicio del cuerpo (debajo del título)</li>
@@ -14522,7 +14526,7 @@ font-style: inherit;">true</span></span></code></pre></div></div>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2026" class="csl-entry quarto-appendix-citeas">
 Achalma, Edison. 2026. <span>“Configuración de `_quarto.yml` para
-Proyectos Quarto,”</span> January. <a href="https://methodica.netlify.app/posts/2026-01.02-configuracion-de-quarto-yml/">https://methodica.netlify.app/posts/2026-01.02-configuracion-de-quarto-yml/</a>.
+Proyectos Quarto,”</span> January. <a href="https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero/index.pdf">https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero/index.pdf</a>.
 </div></div></section></div> ]]></description>
   <category>Metodología de Investigación</category>
   <guid>https://methodica.netlify.app/posts/2026-01.02-configuracion-de-quarto-yml/</guid>

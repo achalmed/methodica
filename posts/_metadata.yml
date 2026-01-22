@@ -244,6 +244,35 @@ format:
     other-links:
       - text: Gravatar
         href: https://gravatar.com/achalmaedison
+
+    include-in-header:
+      text: |
+        <!-- Metadatos mejorados para Zotero -->
+        <meta name="citation_title" content="{{< meta title >}}">
+        <meta name="citation_author" content="Edison Achalma">
+        <meta name="citation_author_orcid" content="0000-0001-6996-3364">
+        <meta name="citation_publication_date" content="{{< meta date >}}">
+        <meta name="citation_language" content="es">
+        <meta name="citation_keywords" content="{{< meta keywords-string >}}">
+        <meta name="citation_abstract" content="{{< meta abstract >}}">
+        
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ScholarlyArticle",
+          "headline": "{{< meta title >}}",
+          "author": {
+            "@type": "Person",
+            "name": "Edison Achalma",
+            "@id": "https://orcid.org/0000-0001-6996-3364"
+          },
+          "datePublished": "{{< meta date >}}",
+          "description": "{{< meta abstract >}}",
+          "keywords": "{{< meta keywords-string >}}",
+          "inLanguage": "es"
+        }
+        </script>
     
   # ----------------------------------------------------------------------
   # Formato PDF (APA Quarto)
@@ -287,6 +316,9 @@ format:
     # donotrepeattitle: false
     # draftfirst: false
     # draftall: false
+
+    filters:
+      - ../../_metadata-pdf.lua 
     
   # ----------------------------------------------------------------------
   # Formato DOCX (APA Quarto)

@@ -8,6 +8,7 @@ keywords:
 - Quarto
 - _metadata.yml
 - Metadatos compartidos
+keywords-string: "Quarto, _metadata.yml, Metadatos compartidos"
 categories:
 - Metodología de Investigación
 tags:
@@ -32,7 +33,7 @@ citation:
   type: article-journal
   author:
   - Edison Achalma
-  pdf-url: https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero/index.pdf
+  url: https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero/index.pdf
 date: 01/02/2026
 draft: false
 image: ../featured.jpg

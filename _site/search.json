@@ -1124,7 +1124,7 @@
     "href": "posts/2026-01.02-configuracion-de-quarto-yml/index.html#headers-y-footers-personalizados",
     "title": "Configuración de _quarto.yml para Proyectos Quarto",
     "section": "Headers y Footers Personalizados",
-    "text": "Headers y Footers Personalizados\nAgregar contenido Markdown en posiciones específicas.\nwebsite:\n  body-header: |\n    Esta página es parte de [Mi Proyecto](https://example.com)\n    \n  body-footer: |\n    © 2026 Mi Nombre\n    \n  margin-header: |\n    ![Logo](/assets/img/logo.png)\n    \n  margin-footer: |\n    *Última actualización: 2 de enero de 2026*\nUbicaciones:\n\nbody-header: Inicio del cuerpo (debajo del título)\nbody-footer: Final del cuerpo\nmargin-header: Arriba del margen derecho (TOC)\nmargin-footer: Debajo del margen derecho"
+    "text": "Headers y Footers Personalizados\nAgregar contenido Markdown en posiciones específicas.\nwebsite:\n  body-header: |\n    Esta página es parte de [Mi Proyecto](https://example.com)\n    \n  body-footer: |\n    © 2026 Mi Nombre\n    \n  margin-header: |\n    ![Logo](/assets/img/logo.png)\n    \n  margin-footer: |\n    *Última actualización: 22 de enero de 2026*\nUbicaciones:\n\nbody-header: Inicio del cuerpo (debajo del título)\nbody-footer: Final del cuerpo\nmargin-header: Arriba del margen derecho (TOC)\nmargin-footer: Debajo del margen derecho"
   },
   {
     "objectID": "posts/2026-01.02-configuracion-de-quarto-yml/index.html#formato-html",

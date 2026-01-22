@@ -227,9 +227,14 @@ adicionales para una implementación óptima. }
 \par{   El autor no tiene conflictos de interés que revelar.    Los
 roles de autor se clasificaron utilizando la taxonomía de roles de
 colaborador (CRediT; https://credit.niso.org/) de la siguiente
-manera:  Edison Achalma:   conceptualización, redacción}
+manera:  Edison Achalma:   conceptualización, metodología, análisis
+formal, investigación, recursos, curación de
+datos, redacción, visualización, supervisión, administración del
+proyecto}
 \par{La correspondencia relativa a este artículo debe dirigirse a Edison
-Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
+Achalma, Escuela Profesional de Economía, Universidad Nacional de San
+Cristóbal de Huamanga, Portal Independencia N°
+57, Ayacucho, AYA 5001, Perú, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
 }
 
 \makeatletter
@@ -244,6 +249,20 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 
 
 
+\usepackage{hyperref}
+\hypersetup{
+  pdftitle={Configuración de _quarto.yml para Proyectos Quarto},
+  pdfauthor={Edison Achalma},
+  pdfsubject={Esta publiación proporciona una guía sobre la configuración del archivo _quarto.yml en proyectos Quarto, que actúa como el archivo principal para definir opciones globales aplicables a sitios web académicos, libros o proyectos simples. Se explica su diferencia con _metadata.yml, destacando el alcance global del primero frente al directorio específico del segundo. Se detallan las funciones principales, como el control del tipo de proyecto, estructura del sitio (navegación, footer, sidebar), apariencia (temas, CSS), metadatos SEO, integración de herramientas externas (Google Analytics, comentarios) y formatos de salida (HTML, PDF, DOCX). Se analiza la jerarquía de configuración, con énfasis en la prioridad (del front-matter del documento a los valores por defecto) y la herencia/combinación de opciones. La estructura del archivo se desglosa en secciones clave; project (tipo, output-dir, resources), website (título, navbar, sidebar, footer, anuncios, Open Graph, Twitter Cards), y format (opciones por formato). Además, se incluyen configuraciones avanzadas, un análisis de una configuración ejemplo, sugerencias de optimización, casos de uso prácticos (blog académico, documentación técnica, portfolio), mejores prácticas, troubleshooting y comandos útiles. El objetivo es capacitar a investigadores y desarrolladores para crear sitios web académicos y profesionales eficientes con Quarto, priorizando accesibilidad, SEO y privacidad (RGPD). Se enfatiza la validación YAML, testing y recursos adicionales para una implementación óptima.},
+  pdfkeywords={Quarto, _metadata.yml, Metadatos compartidos},
+  unicode=true,
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  pdfcreator={Quarto},
+  pdflang={es}
+}
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -276,8 +295,8 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 \@ifpackageloaded{float}{}{\usepackage{float}}
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
-\floatname{codelisting}{Listing}
-\newcommand*\listoflistings{\listof{codelisting}{Lista de Listings}}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listados}}
 \makeatother
 \makeatletter
 \makeatother
@@ -2251,7 +2270,7 @@ Agregar contenido Markdown en posiciones específicas.
 \NormalTok{    ![Logo](/assets/img/logo.png)}
     
 \FunctionTok{  margin{-}footer}\KeywordTok{: }\CharTok{|}
-\NormalTok{    *Última actualización: 2026{-}01{-}02*}
+\NormalTok{    *Última actualización: 2026{-}01{-}22*}
 \end{Highlighting}
 \end{Shaded}
 

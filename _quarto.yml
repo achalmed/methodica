@@ -12,14 +12,14 @@ website:
   image: /assets/img/default-preview.jpg  # Usada cuando ninguna página tiene su propia imagen
 
   # Anuncio
-  announcement:
+  #announcement:
     # Contenido obligatorio (puede incluir markdown)
-    content: "¡Bienvenidos a mi mundo! ¡Felices fiestas! Gracias por visitar 🎄"
+    #content: "¡Bienvenidos a mi mundo! ¡Felices fiestas! Gracias por visitar 🎄"
     # Apariencia (opcional)
-    icon: gift         # Icono de Bootstrap
-    type: primary               # Color del anuncio
-    dismissable: true           # Si se puede cerrar
-    position: below-navbar      # Ubicación
+    #icon: gift         # Icono de Bootstrap
+    #type: primary               # Color del anuncio
+    #dismissable: true           # Si se puede cerrar
+    #position: below-navbar      # Ubicación
     # Colores disponibles para 'type':
     # primary, secondary, success, danger, 
     # warning, info, light, dark
