@@ -15,6 +15,27 @@ Mi sitio web está construido con:
 - Hugo
 - Netlify
 
+## Numeración de volúmenes, números e issues 
+
+Publico de forma trimestral (4 números por año).
+La numeración se organiza de la siguiente manera:
+
+- **Volumen**: Corresponde al año de publicación (ejemplo: Vol. 2025 para todos los artículos publicados en 2025).
+
+- **Número / Issue**: Indica el trimestre calendario en que se publicó el fascículo:
+
+	- No. 1 → enero – marzo
+	- No. 2 → abril – junio
+	- No. 3 → julio – septiembre
+	- No. 4 → octubre – diciembre
+
+Ejemplos de citación recomendada:
+
+Autor (2025). Título del artículo. *Actus Mercator*, 2025(2), 45-60.
+Autor et al. (2022). Título. *Actus Mercator*, 2022(1), 12-25.
+
+Esta estructura permite identificar rápidamente el período de publicación y facilita la indexación en bases de datos académicas (SciELO, Redalyc, Latindex, RENATI, etc.).
+
 ## Cómo contribuir
 
 Si deseas contribuir a mi sitio web, puedes hacerlo de varias maneras, por ejemplo:
