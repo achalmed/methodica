@@ -9,6 +9,7 @@
 # =============================================================================
 # Directorios de Quarto
 /.quarto/
+/site_libs/
 #_site/
 _book/
 #_freeze/
@@ -480,11 +481,11 @@ config.local.*
 # *.gif
 # *.svg
 # *.ico
-# *.mp3
-# *.mp4
-# *.avi
-# *.mov
-# *.wmv
+*.mp3
+*.mp4
+*.avi
+*.mov
+*.wmv
 # *.pdf
 # *.eps
 # *.ps
