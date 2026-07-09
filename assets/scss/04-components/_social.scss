@@ -1,0 +1,19 @@
+// ============================================================================
+// 04-COMPONENTS / ICONOS SOCIALES — páginas about y home
+// ============================================================================
+// Propósito      : Iconos de redes en tinta secundaria que adoptan el acento
+//                  al hover.
+// Responsabilidad: .about-links y .link-dark. El layout de estos bloques lo
+//                  definen assets/css/pages/{home,about}.css.
+// Dependencias   : Tokens $lab-*.
+// Modificar si   : Cambia el tratamiento de los iconos sociales.
+// ============================================================================
+
+.about-links .about-link i {
+  color: $lab-ink-2 !important;
+  transition: color 0.2s ease, transform 0.2s ease;
+
+  &:hover { color: $lab-accent !important; }
+}
+
+.link-dark.me-1 i { color: $lab-ink-2 !important; }

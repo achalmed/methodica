@@ -1,0 +1,61 @@
+/*-- scss:defaults --*/
+/* ============================================================================
+   ENTRADA QUARTO — TEMA OSCURO "NIGHT OBSERVATORY"
+   ============================================================================
+   Grafito azulado profundo + azul glaciar. No es una inversión del tema
+   claro: superficies elevadas más luminosas que el fondo, acentos fríos,
+   sombras profundas y menos ruido visual. Pensado para lectura nocturna
+   de artículos con ecuaciones y código.
+
+   Este archivo NO contiene estilos: solo ensambla el Design System.
+   · defaults : paleta → tokens semánticos → tipografía/layout → Bootstrap.
+   · rules    : los MISMOS módulos que theme-light.scss (mismo orden), más
+                06-themes/_dark-adjustments (reglas exclusivas del oscuro).
+   Ver assets/scss/README.md para la guía de la arquitectura.
+   ============================================================================ */
+
+@import "00-settings/palette-dark";
+@import "00-settings/tokens-dark";
+@import "00-settings/typography";
+@import "00-settings/layout";
+@import "00-settings/bootstrap";
+
+/*-- scss:rules --*/
+/* ============================================================================
+   CAPA DE REGLAS — módulos compartidos parametrizados por tokens $lab-*
+   ============================================================================ */
+
+@import "01-tools/mixins";
+
+@import "02-base/fonts";
+@import "02-base/root";
+@import "02-base/reset";
+@import "02-base/typography";
+
+@import "03-layout/navbar";
+
+@import "04-components/title-block";
+@import "04-components/section-numbers";
+@import "04-components/listings";
+@import "04-components/code";
+@import "04-components/tables";
+@import "04-components/floats";
+@import "04-components/math";
+@import "04-components/citations";
+@import "04-components/callouts";
+
+@import "03-layout/toc";
+
+@import "04-components/buttons";
+@import "04-components/pagination";
+
+@import "03-layout/footer";
+
+@import "04-components/social";
+@import "04-components/search";
+
+@import "06-themes/dark-adjustments";
+
+@import "05-interactions/microinteractions";
+
+@import "03-layout/responsive";

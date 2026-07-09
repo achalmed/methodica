@@ -42,7 +42,6 @@
 
 <header id="title-block-header" class="quarto-title-block default page-columns"
   style="position: relative; width: 100%; margin: 0; padding: 0;">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Incluir imagen de fondo si existe featured.jpg, de lo contrario, partículas -->
   $if(featured.jpg)$
@@ -57,6 +56,11 @@
     $if(subtitle)$
     <p class="subtitle lead">$subtitle$</p>
     $endif$
+
+    $title-metadata.html()$
+
+    <!-- Categorías tras los metadatos: fila silenciosa junto a las acciones,
+         sin competir con el título -->
     $if(categories)$
     $if(quarto-template-params.title-block-categories)$
     <div class="quarto-categories">
@@ -66,8 +70,6 @@
     </div>
     $endif$
     $endif$
-
-    $title-metadata.html()$
 
     $if(links)$
     <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group"

@@ -1,0 +1,62 @@
+// ============================================================================
+// 04-COMPONENTS / CÓDIGO — instrumento de trabajo, no decoración
+// ============================================================================
+// Propósito      : Código inline, bloques resaltados, botón de copiar y
+//                  salidas de celdas (Jupyter/knitr).
+// Responsabilidad: Todo lo que huela a monospace dentro del contenido. Los
+//                  colores de sintaxis los pone highlight-style (a11y) en
+//                  _quarto.yml, no este módulo.
+// Dependencias   : Tokens $lab-* ($lab-quirk-copy-chrome: asimetría light).
+// Modificar si   : Cambia la presentación del código o sus salidas.
+// ============================================================================
+
+/* Código inline: pastilla verdosa con tinta técnica */
+p code:not(.sourceCode),
+li code:not(.sourceCode),
+td code:not(.sourceCode),
+h1 code, h2 code, h3 code {
+  color: $lab-inline-code-color;
+  background: $lab-green-bg;
+  border: 1px solid $lab-inline-code-border;
+  border-radius: 4px;
+  padding: 0.12em 0.35em;
+  font-size: 0.86em;
+}
+
+div.sourceCode {
+  background-color: $lab-code-bg;
+  border: 1px solid $lab-border;
+  border-radius: 8px;
+  box-shadow: var(--lab-shadow-sm);
+  margin: 1.4rem 0;
+}
+
+pre.sourceCode {
+  padding: 1rem 1.15rem;
+  font-size: 0.86em;
+  line-height: 1.6;
+}
+
+.code-copy-button {
+  /* Asimetría heredada: solo light define radio y transición del botón.
+     Revisar/unificar en Fase 2. */
+  @if $lab-quirk-copy-chrome {
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  &:hover { background-color: $lab-code-copy-hover-bg; }
+}
+
+/* Salidas de celdas (Jupyter/knitr) */
+.cell-output pre {
+  background: $lab-bg-surface;
+  border: 1px solid $lab-border;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  font-size: 0.85em;
+
+  @if $lab-cell-output-color != null {
+    color: $lab-cell-output-color;
+  }
+}

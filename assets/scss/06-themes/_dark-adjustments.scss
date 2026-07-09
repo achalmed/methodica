@@ -1,0 +1,40 @@
+// ============================================================================
+// 06-THEMES / AJUSTES EXCLUSIVOS DEL TEMA OSCURO
+// ============================================================================
+// Propósito      : Reglas que solo existen en "Night Observatory" y no son
+//                  una variación de color de un módulo compartido: atenuado
+//                  de imágenes, scrollbar oscuro y paginación deshabilitada.
+//                  (El dimming de miniaturas de listados se gestiona con el
+//                  flag $lab-dim-media dentro de 04-components/_listings.)
+// Responsabilidad: SOLO lo importa theme-dark.scss. Nunca theme-light.
+// Dependencias   : Tokens $lab-* del tema oscuro.
+// Modificar si   : Cambia el comportamiento nocturno de imágenes o scroll.
+// ============================================================================
+
+/* ── Imágenes: brillo reducido, se recupera al interactuar ───────────────── */
+main.content img:not(.quarto-cover-image) {
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+
+  &:hover { filter: brightness(1); }
+}
+
+.navbar img, .nav-footer img, svg { filter: none !important; }
+
+/* ── SCROLLBAR discreto ───────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: $lab-bg; }
+::-webkit-scrollbar-thumb {
+  background: $lab-border-strong;
+  border-radius: 8px;
+  border: 2px solid $lab-bg;
+
+  &:hover { background: $lab-muted; }
+}
+
+/* ── PAGINACIÓN: estado deshabilitado ────────────────────────────────────── */
+.page-item.disabled .page-link {
+  color: $lab-muted;
+  background: transparent;
+  border-color: $lab-border;
+}

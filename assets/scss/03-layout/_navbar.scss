@@ -1,0 +1,112 @@
+// ============================================================================
+// 03-LAYOUT / NAVBAR — fija, translúcida, con blur
+// ============================================================================
+// Propósito      : Barra de navegación "Quiet Laboratory": translúcida sobre
+//                  el contenido, se solidifica al hacer scroll y subraya el
+//                  enlace activo desde el centro.
+// Responsabilidad: .navbar y descendientes (marca, enlaces, herramientas,
+//                  dropdowns). El estado .lab-scrolled lo añade
+//                  assets/interactions.html.
+// Dependencias   : Tokens $lab-*, mixin lab-technical-label.
+// Modificar si   : Cambia la navegación principal o su comportamiento.
+// ============================================================================
+
+.navbar {
+  background: $lab-navbar-bg;
+  backdrop-filter: blur(12px) saturate(1.4);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  border-bottom: 1px solid transparent;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* estado con scroll (clase añadida por assets/interactions.html) */
+.navbar.lab-scrolled {
+  background: $lab-navbar-bg-scrolled;
+  border-bottom-color: $lab-border;
+  box-shadow: var(--lab-shadow-sm);
+}
+
+.navbar-title {
+  @include lab-technical-label(0.72rem, 0.14em, $weight: 500);
+  color: $lab-ink;
+}
+
+.navbar-brand:hover .navbar-title {
+  color: $lab-accent;
+}
+
+.navbar-nav .nav-link {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $lab-ink-2 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin: 0 0.35rem;
+  padding: 0.35rem 0.45rem !important;
+  border-radius: 4px;
+  position: relative;
+
+  /* subrayado animado desde el centro */
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0.45rem;
+    right: 0.45rem;
+    bottom: 0.1rem;
+    height: 1px;
+    background: $lab-accent;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $lab-accent !important;
+
+    &::after { transform: scaleX(1); }
+  }
+
+  &.active {
+    color: $lab-accent !important;
+
+    &::after { transform: scaleX(1); }
+  }
+}
+
+/* Herramientas del navbar (iconos sociales, toggle de tema, búsqueda) */
+.navbar .quarto-navbar-tools .quarto-navigation-tool {
+  color: $lab-ink-2;
+  transition: color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: $lab-accent;
+    transform: translateY(-1px);
+  }
+}
+
+/* Menú desplegable */
+.navbar-nav .dropdown-menu {
+  background: $lab-bg-elevated;
+  border: 1px solid $lab-border;
+  border-radius: 8px;
+  box-shadow: var(--lab-shadow-md);
+  padding: 0.4rem 0;
+  margin-top: 0.4rem;
+}
+
+.navbar-nav .dropdown-item {
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+  color: $lab-ink-2;
+  padding: 0.45rem 1.1rem;
+
+  &:hover,
+  &:focus {
+    background: $lab-bg-surface;
+    color: $lab-accent;
+  }
+}

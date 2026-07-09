@@ -1,0 +1,82 @@
+// ============================================================================
+// 04-COMPONENTS / FLOATS — figuras y tablas estilo APA (HTML)
+// ============================================================================
+// Propósito      : 1) Contener tablas anchas dentro de la columna de lectura
+//                     (sin invadir el TOC); el scroll horizontal solo aparece
+//                     cuando es inevitable. 2) Estilar la estructura APA que
+//                     genera _filters/apa-floats-html.lua:
+//                       .apa-float-label  → "Figura 1" / "Tabla 1"
+//                       .apa-float-title  → título en cursiva
+//                       .apa-float-note   → "Nota. …" bajo el float
+// Responsabilidad: Contenedores .quarto-float-* y clases .apa-float-*.
+//                  El estilo de la tabla en sí vive en _tables.scss.
+// Dependencias   : Tokens $lab-* (muted). Marcado de Quarto ≥1.4 (floats
+//                  <figure class="quarto-float-…"> con <figcaption> arriba).
+// Modificar si   : Cambia el marcado de floats de Quarto o el formato APA.
+// ============================================================================
+
+// --- Contención: la tabla nunca sobresale de la columna de lectura ---------
+// El wrapper directo de la <table> dentro del float recibe scroll horizontal
+// únicamente si el contenido no cabe (overflow-x: auto).
+figure.quarto-float-tbl > div {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+// Las celdas pueden partir palabras largas antes de forzar scroll.
+figure.quarto-float-tbl .table {
+  th,
+  td {
+    overflow-wrap: break-word;
+  }
+}
+
+// Tablas muy anchas (≥ 8 columnas): tipografía y padding compactos para que
+// quepan en la columna de 760px sin necesidad de scroll.
+figure.quarto-float-tbl:has(thead th:nth-child(8)) .table {
+  font-size: 0.8rem;
+
+  thead th {
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    padding: 0.45rem 0.4rem;
+  }
+
+  tbody td {
+    padding: 0.4rem 0.4rem;
+  }
+}
+
+// Las imágenes ya son responsivas vía .img-fluid (Bootstrap); esto solo
+// asegura que ningún float exceda la columna.
+.quarto-float img {
+  max-width: 100%;
+  height: auto;
+}
+
+// --- Estructura APA: número arriba, título en cursiva, nota abajo ----------
+.quarto-float-caption.quarto-float-caption-top {
+  text-align: left;
+  margin-bottom: 0.35rem;
+}
+
+.apa-float-label {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.apa-float-title {
+  font-style: italic;
+  margin-top: 0.15rem;
+}
+
+.apa-float-note {
+  font-size: 0.85rem;
+  color: $lab-muted;
+  text-align: left;
+  margin-top: 0.5rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,127 @@
+// ============================================================================
+// 03-LAYOUT / TOC — tabla de contenidos lateral
+// ============================================================================
+// Propósito      : TOC como instrumento de navegación silencioso: título en
+//                  etiqueta técnica, raíl hairline, sección activa en azul.
+//                  Refinado para artículos largos: sin scroll horizontal,
+//                  sangrías compactas y regulares por nivel, y partición de
+//                  palabras solo cuando es inevitable.
+// Responsabilidad: nav[role="doc-toc"] dentro del sidebar y el contenedor
+//                  #quarto-margin-sidebar. El ancho del panel lo define el
+//                  grid de cada sección (blog/posts/_metadata.yml:
+//                  margin-width).
+// Dependencias   : Tokens $lab-*, mixin lab-technical-label.
+// Modificar si   : Cambia la navegación interna de documentos.
+// ============================================================================
+
+/* El panel nunca desarrolla scroll horizontal: los títulos largos se parten
+   con guiones (lang=es) en vez de desbordar */
+#quarto-margin-sidebar,
+#quarto-sidebar-toc-left {
+  overflow-x: hidden;
+}
+
+.sidebar nav[role="doc-toc"] {
+  > h2, > .toc-title {
+    @include lab-technical-label(0.68rem, 0.14em, $weight: 500, $important: true);
+    color: $lab-muted;
+  }
+
+  > ul {
+    border-left: 1px solid $lab-border;
+  }
+
+  /* Títulos largos: ajuste de línea limpio, con guiones como último recurso */
+  li a {
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  a {
+    color: $lab-muted;
+    font-size: 0.85rem;
+    line-height: 1.35;
+    text-decoration: none;
+    border-left: 1px solid transparent;
+    margin-left: -1px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover { color: $lab-accent; }
+
+    &.active {
+      color: $lab-accent;
+      border-left-color: $lab-accent;
+      font-weight: 500;
+    }
+  }
+
+  /* ── Sangrías compactas y regulares (Quarto usa 1.2/2.4/3.6em) ──────────
+     Incrementos cortos y constantes: la jerarquía se lee sin robarle ancho
+     al texto. Los sub-niveles reducen ligeramente el cuerpo.
+     (Base para TOCs SIN numeración; los numerados usan el árbol de abajo.) */
+  ul > li > ul > li > a {
+    padding-left: 1.4em;
+    font-size: 0.8rem;
+  }
+
+  ul > li > ul > li > ul > li > a {
+    padding-left: 2.2em;
+    font-size: 0.78rem;
+  }
+
+  ul > li > ul > li > ul > li > ul > li > a {
+    padding-left: 3em;
+    font-size: 0.78rem;
+  }
+}
+
+/* ══ Árbol jerárquico (solo TOCs con numeración de secciones) ═══════════════
+   Cada entrada es una rejilla [número | texto]:
+   · las líneas envueltas se alinean con la primera letra del propio título
+     (sangría francesa: el texto vive en su columna, nunca bajo el número);
+   · cada nivel arranca exactamente bajo el TEXTO del nivel superior, porque
+     su sangría suma el ancho de columna de número de los niveles previos.
+
+   Métrica: --toc-num-wN = ancho de la columna de número del nivel N, en rem
+   (número mono a 0.82em del cuerpo del nivel; dimensionado para el caso real
+   más ancho: N1 "21" ≈ 2 cifras, N2 "19.4", N3 "18.1.3").
+   Un solo lugar para ajustar; nada de valores repetidos por selector.       */
+.sidebar nav[role="doc-toc"]:has(.header-section-number) {
+  --toc-gap: 0.3rem;      // separación columna número → columna texto
+  --toc-num-w1: 0.95rem;  // "21"      (2 caracteres @ 0.85rem)
+  --toc-num-w2: 1.65rem;  // "19.4"    (4 caracteres @ 0.8rem)
+  --toc-num-w3: 2.4rem;   // "18.1.3"  (6 caracteres @ 0.78rem)
+
+  /* Rejilla número|texto en toda entrada numerada (baseline compartida) */
+  li a:has(> .header-section-number) {
+    display: grid;
+    grid-template-columns: var(--toc-num-w1) minmax(0, 1fr);
+    column-gap: var(--toc-gap);
+    align-items: baseline;
+
+    .header-section-number { margin-right: 0; } // el gap ya separa
+  }
+
+  /* Sangría por nivel: base de Quarto (0.6rem) + columnas de los padres.
+     Aplica también a entradas sin número del mismo nivel (h4+ sin numerar):
+     arrancan en la columna de número, como una fila más del árbol. */
+  ul > li > ul > li > a {
+    padding-left: calc(0.6rem + var(--toc-num-w1) + var(--toc-gap));
+
+    &:has(> .header-section-number) {
+      grid-template-columns: var(--toc-num-w2) minmax(0, 1fr);
+    }
+  }
+
+  ul > li > ul > li > ul > li > a {
+    padding-left: calc(0.6rem + var(--toc-num-w1) + var(--toc-num-w2) + 2 * var(--toc-gap));
+
+    &:has(> .header-section-number) {
+      grid-template-columns: var(--toc-num-w3) minmax(0, 1fr);
+    }
+  }
+
+  ul > li > ul > li > ul > li > ul > li > a {
+    padding-left: calc(0.6rem + var(--toc-num-w1) + var(--toc-num-w2) + var(--toc-num-w3) + 3 * var(--toc-gap));
+  }
+}

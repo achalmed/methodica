@@ -1,0 +1,88 @@
+/* ============================================================================
+   PUBLICACIONES (BibBase) — estilo journal
+   ============================================================================
+   Cada entrada como registro bibliográfico limpio: año como cabecera de
+   sección con regla editorial, título con serif, autores en tono secundario
+   y enlaces (PDF, DOI, BibTeX) como pastillas técnicas.
+   ============================================================================ */
+
+/* Grupos por año: cabecera de volumen */
+.bibbase_group {
+  margin-top: 2.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--lab-border, #E5E5DD);
+}
+
+.bibbase_group i {
+  font-style: normal;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: var(--lab-muted, #5B6670);
+}
+
+/* Entrada individual: registro con sangría francesa sutil */
+.bibbase_paper {
+  margin: 0;
+  padding: 1.1rem 0.9rem;
+  border-bottom: 1px solid var(--lab-border, #E5E5DD);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.bibbase_paper:hover {
+  background-color: var(--lab-bg-surface, #F2F2EC);
+}
+
+.bibbase_paper_title {
+  font-family: "Petrona", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: var(--lab-ink, #101820);
+}
+
+.bibbase_paper_title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bibbase_paper_title a:hover {
+  color: var(--lab-accent, #0F5CA8);
+}
+
+.bibbase_paper_authors {
+  color: var(--lab-ink-2, #33404C);
+  font-size: 0.88rem;
+}
+
+/* Metadatos (revista, año) */
+.bibbase_paper_journal,
+.bibbase_paper_year {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--lab-muted, #5B6670);
+}
+
+/* Enlaces de acción (PDF, DOI, link, bibtex) como pastillas */
+.bibbase_paper a[onclick],
+.bibbase_paper .bibbase_paper_content > a,
+.bibbase_paper span.bibbase_paper_titleauthoryear + a {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--lab-accent, #0F5CA8);
+}
+
+/* Contenedores emergentes de BibBase (abstract, bibtex) */
+.bibbase_paper .well,
+.bibbase_paper pre {
+  background: var(--lab-code-bg, #F5F6F2);
+  border: 1px solid var(--lab-border, #E5E5DD);
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  font-size: 0.85em;
+  color: var(--lab-ink, #101820);
+}

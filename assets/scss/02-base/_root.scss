@@ -1,0 +1,33 @@
+// ============================================================================
+// 02-BASE / ROOT — publicación de tokens como custom properties
+// ============================================================================
+// Propósito      : Exponer los tokens $lab-* como variables CSS (--lab-*)
+//                  para que las hojas planas de assets/css/ (páginas,
+//                  bibbase) se adapten automáticamente a ambos temas.
+// Responsabilidad: SOLO el bloque de custom properties y color-scheme. El
+//                  selector de ámbito lo decide cada tema
+//                  ($lab-css-vars-scope en 00-settings/_tokens-*.scss).
+// Dependencias   : 00-settings/_tokens-{light|dark}.scss.
+// Modificar si   : Un CSS plano necesita consumir un token nuevo.
+// ============================================================================
+
+#{$lab-css-vars-scope} {
+  --lab-bg: #{$lab-bg};
+  --lab-bg-surface: #{$lab-bg-surface};
+  --lab-bg-elevated: #{$lab-bg-elevated};
+  --lab-ink: #{$lab-ink};
+  --lab-ink-2: #{$lab-ink-2};
+  --lab-muted: #{$lab-muted};
+  --lab-accent: #{$lab-accent};
+  --lab-accent-2: #{$lab-accent-2};
+  --lab-green: #{$lab-green};
+  --lab-green-bg: #{$lab-green-bg};
+  --lab-border: #{$lab-border};
+  --lab-border-strong: #{$lab-border-strong};
+  --lab-code-bg: #{$lab-code-bg};
+  --lab-shadow-sm: #{$lab-shadow-sm};
+  --lab-shadow-md: #{$lab-shadow-md};
+  --lab-glow: #{$lab-glow};
+  --lab-grid-line: #{$lab-grid-line};
+  color-scheme: #{$lab-color-scheme};
+}

@@ -1,0 +1,56 @@
+// ============================================================================
+// 04-COMPONENTS / TITLE BLOCK — encabezado de páginas y posts
+// ============================================================================
+// Propósito      : Título, metadatos (autor, fecha, DOI…) y categorías como
+//                  pastillas técnicas en el encabezado de cada documento.
+// Responsabilidad: .quarto-title* y .quarto-category/.listing-category. El
+//                  partial _partials/title-block-link-buttons decide la
+//                  estructura; aquí solo se estiliza.
+// Dependencias   : Tokens $lab-*, mixin lab-technical-label.
+// Modificar si   : Cambia el encabezado de documentos o sus categorías.
+// ============================================================================
+
+.quarto-title .title {
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.quarto-title-meta-heading {
+  @include lab-technical-label(0.68rem, 0.12em, $important: true);
+  color: $lab-muted !important;
+}
+
+.quarto-title-meta-contents {
+  font-size: 0.9rem;
+  color: $lab-ink-2;
+}
+
+/* Categorías del título como pastillas técnicas */
+.quarto-title .quarto-categories .quarto-category,
+.quarto-category,
+.listing-category {
+  @include lab-technical-label(0.58rem, 0.09em);
+  color: $lab-muted;
+  background: transparent;
+  border: 1px solid $lab-border;
+  border-radius: 999px;
+  padding: 0.2em 0.7em;
+  opacity: 1;
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  /* hover discreto: solo cambia tinta y borde, nunca rellena */
+  &:hover {
+    color: $lab-accent !important;
+    background: transparent;
+    border-color: $lab-accent;
+  }
+}
+
+/* En el encabezado de posts, las categorías van tras los metadatos como
+   fila silenciosa (el partial las coloca junto a las acciones) */
+.title-block-content .quarto-categories {
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid $lab-border;
+  gap: 0.4em;
+}

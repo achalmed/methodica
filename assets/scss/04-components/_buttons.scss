@@ -1,0 +1,50 @@
+// ============================================================================
+// 04-COMPONENTS / BOTONES
+// ============================================================================
+// Propósito      : Botón primario en azul de interacción con elevación al
+//                  hover; secundario como contorno silencioso que se invierte.
+// Responsabilidad: .btn y variantes primary/secondary/outline-secondary.
+// Dependencias   : Tokens $lab-* ($lab-on-accent, $lab-btn-primary-glow).
+// Modificar si   : Cambia el lenguaje de acción del sitio.
+// ============================================================================
+
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background: $lab-accent;
+  border-color: $lab-accent;
+  color: $lab-on-accent;
+
+  &:hover, &:focus {
+    background: $lab-accent-2;
+    border-color: $lab-accent-2;
+
+    @if $lab-btn-primary-hover-color != null {
+      color: $lab-btn-primary-hover-color;
+    }
+
+    transform: translateY(-1px);
+    box-shadow: $lab-btn-primary-glow;
+  }
+
+  &:active { transform: translateY(0); }
+}
+
+.btn-secondary,
+.btn-outline-secondary {
+  background: transparent;
+  border: 1px solid $lab-border-strong;
+  color: $lab-ink-2;
+
+  &:hover, &:focus {
+    background: $lab-ink;
+    border-color: $lab-ink;
+    color: $lab-bg;
+    transform: translateY(-1px);
+  }
+}

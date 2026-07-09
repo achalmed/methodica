@@ -1,0 +1,92 @@
+// ============================================================================
+// 00-SETTINGS / TOKENS SEMÁNTICOS — TEMA CLARO "Paper Lab"
+// ============================================================================
+// Propósito      : Asignar significado a la paleta cruda: cada token $lab-*
+//                  describe un ROL (fondo, tinta, acento, borde…), no un color.
+//                  Los módulos compartidos (02-base…05-interactions) solo
+//                  consumen estos tokens, nunca $spc-* directamente.
+// Responsabilidad: Definir el mismo contrato de tokens que _tokens-dark.scss
+//                  con los valores del tema claro, más las variables Bootstrap
+//                  exclusivas de este tema.
+// Dependencias   : 00-settings/_palette-light.scss.
+// Modificar si   : Cambia qué color cumple un rol en el tema claro, o se
+//                  añade un token nuevo (añadirlo TAMBIÉN en _tokens-dark).
+// ============================================================================
+
+// ── Ámbito del tema (selector donde se publican las custom properties) ──────
+$lab-css-vars-scope: ':root, body.quarto-light' !default;
+$lab-color-scheme: light !default;
+
+// ── Superficies ─────────────────────────────────────────────────────────────
+$lab-bg: $spc-bg !default;                    // fondo de página
+$lab-bg-surface: $spc-bg-dark !default;       // superficie secundaria
+$lab-bg-elevated: $spc-bg-elevated !default;  // cards, menús, paneles
+
+// ── Tinta ───────────────────────────────────────────────────────────────────
+$lab-ink: $spc-primary !default;              // texto principal
+$lab-ink-2: $spc-primary-light !default;      // texto secundario
+$lab-muted: $spc-text-muted !default;         // metadatos, fechas
+
+// ── Interacción (azul científico) ───────────────────────────────────────────
+$lab-accent: $spc-secondary !default;         // enlaces, foco, activo
+$lab-accent-2: $spc-secondary-light !default; // hover
+$lab-on-accent: #fff !default;                // texto sobre $lab-accent
+
+// ── Acento menor (verde) ────────────────────────────────────────────────────
+$lab-green: $spc-accent !default;
+$lab-green-bg: $spc-accent-light !default;
+
+// ── Estructura ──────────────────────────────────────────────────────────────
+$lab-border: $spc-border !default;
+$lab-border-strong: $spc-border-strong !default;
+$lab-code-bg: $spc-code-bg !default;
+$lab-selection: $spc-selection !default;
+
+// ── Elevación y atmósfera ───────────────────────────────────────────────────
+$lab-shadow-sm: 0 1px 2px rgba(16, 24, 32, 0.05) !default;
+$lab-shadow-md: 0 6px 24px -8px rgba(16, 24, 32, 0.12) !default;
+$lab-glow: rgba(15, 92, 168, 0.055) !default;      // luz que sigue el cursor
+$lab-grid-line: rgba(16, 24, 32, 0.045) !default;  // papel milimetrado del hero
+
+// ── Tokens de componente ────────────────────────────────────────────────────
+// Enlaces
+$lab-link-underline: rgba(15, 92, 168, 0.35) !default;
+
+// Navbar translúcida (se solidifica con .lab-scrolled)
+$lab-navbar-bg: color-mix(in srgb, $spc-bg 82%, transparent) !default;
+$lab-navbar-bg-scrolled: color-mix(in srgb, $spc-bg 94%, transparent) !default;
+
+// Código
+$lab-inline-code-color: #14524F !default;   // verde tinta sobre $lab-green-bg
+$lab-inline-code-border: color-mix(in srgb, $spc-accent 25%, transparent) !default;
+$lab-code-copy-hover-bg: color-mix(in srgb, $spc-secondary 12%, transparent) !default;
+$lab-cell-output-color: null !default;      // hereda del cuerpo en light
+
+// Tablas
+$lab-table-frame: $spc-primary !default;    // reglas superior/inferior
+$lab-table-color: null !default;            // light usa el color por defecto
+$lab-table-row-hover: color-mix(in srgb, $spc-secondary 4%, transparent) !default;
+
+// Botones
+$lab-btn-primary-glow: 0 4px 14px -4px rgba(15, 92, 168, 0.5) !default;
+$lab-btn-primary-hover-color: null !default; // hereda #fff del estado base
+
+// Paginación
+$lab-pagination-active-bg: $spc-primary !default;
+$lab-pagination-active-color: null !default; // Bootstrap ya pinta #fff
+
+// Callouts
+$lab-callout-bg: null !default;             // light conserva el fondo Quarto
+
+// Footer
+$lab-footer-bg: $spc-bg-dark !default;
+
+// ── Asimetrías del tema (flags; ver 06-themes/) ─────────────────────────────
+$lab-quirk-mono-subtitle: true !default;   // .subtitle en monospace (solo light)
+$lab-quirk-copy-chrome: true !default;     // radio+transición del copy button
+$lab-dim-media: false !default;            // atenuar imágenes (solo dark)
+
+// ── Variables Bootstrap exclusivas del tema claro ───────────────────────────
+// Navbar / footer: los pinta la capa de reglas
+$navbar-bg: transparent !default;
+$footer-bg: transparent !default;

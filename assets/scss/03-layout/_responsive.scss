@@ -1,0 +1,40 @@
+// ============================================================================
+// 03-LAYOUT / RESPONSIVE — ajustes móviles transversales
+// ============================================================================
+// Propósito      : Reordenar footer y enlaces de about en pantallas < 992px.
+// Responsabilidad: Solo overrides de layout bajo media queries que cruzan
+//                  varios módulos (footer + about + navbar). Los ajustes
+//                  responsive propios de una página viven en su CSS de
+//                  assets/css/pages/.
+// Dependencias   : Ninguna (solo estructura).
+// Modificar si   : Cambia el comportamiento móvil del esqueleto del sitio.
+// ============================================================================
+
+@media screen and (max-width: 991.98px) {
+  .about-entity .about-links {
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+
+  .nav-footer { flex-direction: row; }
+
+  .nav-footer-center {
+    order: 1 !important;
+    flex-basis: 100%;
+    margin: 0 0 -1.2em 0;
+  }
+
+  .nav-footer-right {
+    order: 2 !important;
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .nav-footer-left {
+    order: 3 !important;
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .navbar .quarto-navbar-tools { text-align: left; }
+}

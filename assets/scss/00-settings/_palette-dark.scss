@@ -1,0 +1,35 @@
+// ============================================================================
+// 00-SETTINGS / PALETA DARK — "Night Observatory"
+// ============================================================================
+// Propósito      : Paleta cruda del tema oscuro. Grafito azulado profundo,
+//                  azul glaciar, jade discreto. No es una inversión del claro.
+// Responsabilidad: SOLO valores de color literales ($spc-dark-*). Ningún
+//                  selector. El significado se asigna en _tokens-dark.scss.
+// Dependencias   : Ninguna.
+// Modificar si   : Cambia la identidad cromática del tema oscuro.
+//                  Contraste verificado WCAG AA para texto sobre sus fondos.
+// ============================================================================
+
+// Fondos
+$spc-dark-bg: #0E1116 !default;          // grafito azulado profundo
+$spc-dark-bg-elevated: #151B22 !default; // superficies elevadas
+$spc-dark-bg-accent: #1B232C !default;   // hover / paneles activos
+
+// Texto
+$spc-dark-text-primary: #E6E9ED !default;   // blanco humo (no puro)
+$spc-dark-text-secondary: #A9B4BF !default; // texto secundario
+$spc-dark-text-muted: #8A95A0 !default;     // metadatos (AA sobre fondo)
+
+// Azul glaciar (interacción)
+$spc-dark-primary: #7CB5E8 !default;
+$spc-dark-primary-light: #9DC9F2 !default;
+
+// Verde jade discreto
+$spc-dark-accent: #7BC4A2 !default;
+$spc-dark-accent-bg: #14211C !default;
+
+// Estructura
+$spc-dark-border: #262E38 !default;
+$spc-dark-border-strong: #38424E !default;
+$spc-dark-code-bg: #12171E !default;
+$spc-dark-selection: #2B4562 !default;

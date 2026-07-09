@@ -1,0 +1,35 @@
+// ============================================================================
+// 04-COMPONENTS / CITAS, NOTAS Y BIBLIOGRAFÍA
+// ============================================================================
+// Propósito      : Blockquotes con voz serif itálica, notas al pie en mono y
+//                  bibliografía con sangría francesa (APA).
+// Responsabilidad: blockquote, .footnote-ref y entradas CSL. El estilo de
+//                  BibBase (página de publicaciones) vive en
+//                  assets/css/components/bibbase.css.
+// Dependencias   : Tokens $lab-*, $headings-font-family.
+// Modificar si   : Cambia la presentación de citas o referencias.
+// ============================================================================
+
+blockquote, .blockquote {
+  font-family: $headings-font-family;
+  font-style: italic;
+  font-size: 1.02em;
+  color: $lab-ink-2;
+  border-left: 2px solid $lab-accent;
+  margin: 1.8rem 0;
+  padding: 0.35rem 0 0.35rem 1.4rem;
+}
+
+.footnote-ref {
+  font-family: $font-family-monospace;
+  text-decoration: none;
+  padding: 0 0.15em;
+}
+
+#refs .csl-entry,
+.references .csl-entry {
+  padding-left: 2rem;
+  text-indent: -2rem;
+  margin-bottom: 0.9rem;
+  font-size: 0.94rem;
+}

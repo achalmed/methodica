@@ -1,0 +1,54 @@
+// ============================================================================
+// 04-COMPONENTS / TABLAS — estilo journal
+// ============================================================================
+// Propósito      : Tablas académicas: reglas horizontales fuertes arriba y
+//                  abajo, sin líneas verticales, cabecera en versalitas sans.
+// Responsabilidad: .table y descendientes. Los colores de borde base los
+//                  aporta el mapeo Bootstrap (00-settings/_bootstrap.scss).
+// Dependencias   : Tokens $lab-* ($lab-table-color es null en light).
+// Modificar si   : Cambia la presentación de tablas de datos.
+// ============================================================================
+
+.table {
+  font-size: 0.92rem;
+
+  @if $lab-table-color != null {
+    color: $lab-table-color;
+  }
+
+  border-top: 2px solid $lab-table-frame;
+  border-bottom: 2px solid $lab-table-frame;
+
+  thead th {
+    font-family: $font-family-sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: $lab-ink-2;
+    border-bottom: 1px solid $lab-border-strong;
+    padding: 0.6rem 0.75rem;
+  }
+
+  tbody td {
+    padding: 0.55rem 0.75rem;
+    border-bottom-color: $lab-border;
+
+    @if $lab-table-color != null {
+      color: $lab-table-color;
+    }
+  }
+
+  tbody tr {
+    transition: background-color 0.15s ease;
+
+    &:hover { background-color: $lab-table-row-hover; }
+  }
+
+  caption {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: $lab-muted;
+    caption-side: top;
+  }
+}

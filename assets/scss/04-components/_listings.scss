@@ -1,0 +1,111 @@
+// ============================================================================
+// 04-COMPONENTS / LISTADOS — tarjetas y filas de post
+// ============================================================================
+// Propósito      : Tarjetas (.card) y listado "default" de Quarto
+//                  (div.quarto-post) para blog, cursos y proyectos.
+// Responsabilidad: Superficies, hover y metadatos de los listados. La
+//                  cabecera editorial de las páginas de listado vive en
+//                  assets/css/pages/listing.css.
+// Dependencias   : Tokens $lab-* ($lab-dim-media para el tema oscuro).
+// Modificar si   : Cambia la presentación de tarjetas o filas de listado.
+// ============================================================================
+
+.card {
+  background: $lab-bg-elevated;
+  border: 1px solid $lab-border;
+  border-radius: 10px;
+  box-shadow: var(--lab-shadow-sm);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: $lab-border-strong;
+    box-shadow: var(--lab-shadow-md);
+  }
+}
+
+.card-img,
+.card-img-top {
+  border-radius: 0;
+
+  // Tema oscuro: miniaturas atenuadas que recuperan brillo al interactuar
+  @if $lab-dim-media {
+    filter: brightness(0.88);
+    transition: filter 0.3s ease;
+  }
+}
+
+@if $lab-dim-media {
+  .card:hover .card-img,
+  .card:hover .card-img-top { filter: brightness(1); }
+}
+
+.card-body { padding: 1.25rem 1.35rem; }
+
+.card-title {
+  font-family: $headings-font-family;
+  color: $lab-ink;
+  transition: color 0.2s ease;
+}
+
+.card:hover .card-title { color: $lab-accent; }
+
+/* Listado "default" de Quarto (filas de post) */
+div.quarto-post {
+  border-bottom: 1px solid $lab-border;
+  padding: 1.6em 0;
+  gap: 1.5em;
+
+  .body h3.listing-title,
+  .body .listing-title {
+    font-family: $headings-font-family;
+    font-weight: 500;
+    line-height: 1.3;
+
+    a { text-decoration: none; color: $lab-ink; }
+
+    a:hover { color: $lab-accent; }
+  }
+
+  .body .listing-subtitle,
+  .body .description {
+    color: $lab-ink-2;
+    font-size: 0.93rem;
+  }
+
+  .metadata {
+    font-family: $font-family-monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: $lab-muted;
+  }
+
+  .thumbnail img {
+    border-radius: 8px;
+    border: 1px solid $lab-border;
+
+    @if $lab-dim-media {
+      filter: brightness(0.88);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+    } @else {
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+  }
+
+  &:hover .thumbnail img {
+    transform: scale(1.015);
+    @if $lab-dim-media {
+      filter: brightness(1);
+    }
+    box-shadow: var(--lab-shadow-md);
+  }
+}
+
+.listing-date,
+.listing-reading-time,
+.listing-author {
+  font-family: $font-family-monospace;
+  font-size: 0.74rem;
+  color: $lab-muted;
+}

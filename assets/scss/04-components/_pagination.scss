@@ -1,0 +1,34 @@
+// ============================================================================
+// 04-COMPONENTS / PAGINACIÓN
+// ============================================================================
+// Propósito      : Paginación de listados como instrumento numérico: mono,
+//                  transparente, se rellena de acento al hover.
+// Responsabilidad: .page-link / .page-item. El estado disabled del tema
+//                  oscuro vive en 06-themes/_dark-adjustments.scss.
+// Dependencias   : Tokens $lab-*.
+// Modificar si   : Cambia la navegación entre páginas de listados.
+// ============================================================================
+
+.page-link {
+  font-family: $font-family-monospace;
+  font-size: 0.85rem;
+  color: $lab-ink-2;
+  background: transparent;
+  border-color: $lab-border;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $lab-on-accent;
+    background-color: $lab-accent;
+    border-color: $lab-accent;
+  }
+}
+
+.page-item.active .page-link {
+  background-color: $lab-pagination-active-bg;
+  border-color: $lab-pagination-active-bg;
+
+  @if $lab-pagination-active-color != null {
+    color: $lab-pagination-active-color;
+  }
+}

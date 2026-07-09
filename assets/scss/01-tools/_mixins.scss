@@ -1,0 +1,28 @@
+// ============================================================================
+// 01-TOOLS / MIXINS
+// ============================================================================
+// Propósito      : Utilidades Sass reutilizables. No emiten CSS por sí solas.
+// Responsabilidad: Patrones repetidos entre componentes; hoy, la etiqueta
+//                  "instrumento" (mono, mayúsculas, espaciada) que usan
+//                  navbar, metadatos de título, categorías y TOC.
+// Dependencias   : 00-settings/_typography.scss ($font-family-monospace).
+// Modificar si   : Aparece un patrón repetido en 3+ módulos que merezca
+//                  abstraerse (regla de tres antes de crear un mixin).
+// ============================================================================
+
+// Etiqueta técnica: monospace, mayúsculas, tracking amplio.
+// $size      : tamaño de fuente.
+// $tracking  : letter-spacing.
+// $weight    : peso opcional (null = heredado).
+// $important : true cuando hay que vencer estilos propios de Quarto.
+@mixin lab-technical-label($size, $tracking, $weight: null, $important: false) {
+  $imp: if($important, unquote(" !important"), unquote(""));
+
+  font-family: $font-family-monospace;
+  font-size: #{$size}#{$imp};
+  @if $weight != null {
+    font-weight: $weight;
+  }
+  text-transform: uppercase;
+  letter-spacing: $tracking;
+}

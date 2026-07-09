@@ -1,0 +1,13 @@
+// ============================================================================
+// 05-PAGES / COURSES — STUB (inactivo)
+// ============================================================================
+// Propósito      : Reservado para estilos exclusivos de las páginas de cursos (teching/).
+// Estado         : Aún sin reglas. El guion bajo inicial lo excluye de la
+//                  compilación (scripts/build-page-css.sh solo compila
+//                  archivos SIN guion bajo).
+// Activación     : 1) renombrar a courses.scss (sin guion bajo);
+//                  2) añadir en el YAML de la página:
+//                       header-includes: <link rel="stylesheet" href="[...]assets/css/pages/courses.css">
+//                       resources: [...]assets/css/pages/courses.css
+// Dependencias   : Custom properties --lab-* (usar var(--lab-*) siempre).
+// ============================================================================

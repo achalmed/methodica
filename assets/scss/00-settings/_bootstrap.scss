@@ -1,0 +1,46 @@
+// ============================================================================
+// 00-SETTINGS / MAPEO A BOOTSTRAP (compartido por ambos temas)
+// ============================================================================
+// Propósito      : Traducir los tokens semánticos $lab-* a las variables que
+//                  Bootstrap/cosmo y Quarto entienden. Es la única frontera
+//                  entre nuestro Design System y el framework.
+// Responsabilidad: SOLO asignaciones `$variable-bootstrap: $token !default`.
+//                  Las variables Bootstrap exclusivas de un tema viven al
+//                  final de su _tokens-{light,dark}.scss.
+// Dependencias   : 00-settings/_tokens-{light|dark}.scss (debe importarse
+//                  después de los tokens del tema).
+// Modificar si   : Un componente Bootstrap/Quarto necesita otro token.
+// ============================================================================
+
+// Colores base de Bootstrap
+$primary: $lab-accent !default;      // foco, botones, activo
+$secondary: $lab-ink-2 !default;     // elementos secundarios
+$success: $lab-green !default;
+$body-color: $lab-ink !default;
+$body-bg: $lab-bg !default;
+$headings-color: $lab-ink !default;
+
+// Enlaces
+$link-color: $lab-accent !default;
+$link-decoration: underline !default;
+$link-hover-color: $lab-accent-2 !default;
+$link-hover-decoration: none !default;
+
+// Bordes
+$border-color: $lab-border !default;
+
+// Tablas: estilo journal (reglas horizontales, sin verticales)
+$table-border-color: $lab-border !default;
+$table-group-separator-color: $lab-border-strong !default;
+$table-caption-color: $lab-muted !default;
+
+// Código
+$code-block-bg: $lab-code-bg !default;
+$code-block-border: $lab-border !default;
+$code-color: $lab-inline-code-color !default;
+$code-bg: transparent !default;
+
+// Dropdowns
+$dropdown-bg: $lab-bg-elevated !default;
+$dropdown-border-color: $lab-border !default;
+$dropdown-link-hover-bg: $lab-bg-surface !default;

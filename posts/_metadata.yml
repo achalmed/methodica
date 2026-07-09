@@ -89,7 +89,7 @@ toc: true                    # Mostrar tabla de contenidos
 toc-title: " "               # Título (vacío para solo mostrar el ícono)
 # toc-title: "Contenidos"    # O con título explícito
 
-toc-location: left           # Ubicación: left, right, body
+toc-location: right          # Ubicación: left, right, body (derecha: no interrumpe la lectura)
 toc-depth: 3                 # Profundidad de niveles (1-6)
 toc-expand: 2                # Nivel inicial expandido
 
@@ -186,11 +186,17 @@ format:
     toc-depth: 3
     toc-expand: 2
     toc-title: "Contenidos"
-    toc-location: left            # left, right, body
+    toc-location: right           # left, right, body (derecha: no interrumpe la lectura)
     
     # --- NAVEGACIÓN ---
     smooth-scroll: true           # Scroll suave al navegar
     link-external-newwindow: true # Enlaces externos en nueva pestaña
+
+    # --- NUMERACIÓN DE SECCIONES ---
+    # Jerárquica (1, 1.1, 1.1.1) como los PDF/DOCX apaquarto (ya la usan).
+    # El estilo visual vive en assets/scss/04-components/_section-numbers.scss
+    number-sections: true
+    number-depth: 3               # h1–h3 numerados; h4+ sin número (= toc-depth)
     
     # --- CITAS Y NOTAS ---
     citations-hover: true         # Popup con cita al pasar el mouse
@@ -236,9 +242,9 @@ format:
     
     # Configuración de grid (ancho de columnas)
     grid:
-      sidebar-width: 400px
-      body-width: 1000px
-      margin-width: 200px
+      sidebar-width: 0rem
+      body-width: 760px   # columna de lectura tipo journal (~70 caracteres)
+      margin-width: 410px  # margen derecho: TOC en una línea + otros formatos
       gutter-width: 1.5rem
 
     other-links:

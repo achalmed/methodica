@@ -1,0 +1,30 @@
+// ============================================================================
+// 04-COMPONENTS / CALLOUTS
+// ============================================================================
+// Propósito      : Refinar los callouts de Quarto (note, tip, warning…) sin
+//                  perder sus colores semánticos.
+// Responsabilidad: div.callout y su cabecera. Los colores por tipo los
+//                  mantiene Quarto.
+// Dependencias   : Tokens $lab-* ($lab-callout-bg es null en light: conserva
+//                  el fondo por defecto de Quarto).
+// Modificar si   : Cambia la presentación de los avisos.
+// ============================================================================
+
+div.callout {
+  border-radius: 8px;
+  border-left-width: 3px;
+
+  @if $lab-callout-bg != null {
+    background: $lab-callout-bg;
+  }
+
+  box-shadow: var(--lab-shadow-sm);
+
+  .callout-header {
+    font-family: $font-family-sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}

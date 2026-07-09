@@ -1,0 +1,33 @@
+// ============================================================================
+// 00-SETTINGS / TIPOGRAFÍA (compartida por ambos temas)
+// ============================================================================
+// Propósito      : Pilas tipográficas y métricas base del sistema. Identidad
+//                  única: la misma voz tipográfica en claro y oscuro.
+// Responsabilidad: SOLO variables Sass de tipografía. Los @font-face viven en
+//                  02-base/_fonts.scss; la escala de encabezados aplicada, en
+//                  02-base/_typography.scss.
+// Dependencias   : Ninguna.
+// Modificar si   : Cambia una familia, el tamaño base o el interlineado.
+// ============================================================================
+
+// Interfaz (navegación, listados, formularios, botones)
+$font-family-sans-serif: "Red Hat Text", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji" !default;
+
+// Código y etiquetas "instrumento" (metadatos, categorías, TOC)
+$font-family-monospace: ui-monospace, "JetBrains Mono", "SF Mono", SFMono-Regular,
+  Menlo, Consolas, "Liberation Mono", monospace !default;
+
+// Encabezados
+$headings-font-family: "Petrona", Georgia, "Times New Roman", serif !default;
+$headings-font-weight: 500 !default;
+
+// Serif de lectura para el cuerpo de los artículos (itálicas y versalitas
+// reales sin descargar fuentes: Source Serif/Charter/Georgia según sistema)
+$font-family-serif: "Source Serif 4", "Source Serif Pro", Charter,
+  "Bitstream Charter", "Iowan Old Style", Georgia, "Times New Roman", serif !default;
+
+// Métricas base
+$font-size-base: 1rem !default;
+$line-height-base: 1.65 !default;

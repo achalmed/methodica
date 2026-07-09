@@ -1,0 +1,94 @@
+// ============================================================================
+// 05-PAGES / CONTACT
+// ============================================================================
+// Propósito      : Estilos exclusivos de página (no forman parte del tema
+//                  global). Se compilan a assets/css/pages/contact.css con
+//                  scripts/build-page-css.sh (hook pre-render de Quarto).
+// Cargado por    : contact.qmd (header-includes + resources)
+// Dependencias   : Custom properties --lab-* (02-base/_root.scss). Usar
+//                  SIEMPRE var(--lab-*) para soportar ambos temas.
+// Modificar aquí : NUNCA editar el .css generado; editar este archivo y
+//                  renderizar (o ejecutar el script) para regenerarlo.
+// ============================================================================
+
+/* ============================================================================
+   PÁGINA CONTACT — recorrido narrativo con formularios como instrumentos
+   ============================================================================
+   Las secciones usan .lab-section (numeración y revelado: ../global.css +
+   interactions.html). Aquí: formularios como paneles de laboratorio y
+   etiquetas técnicas en monospace. Tokens --lab-* para ambos temas.
+   ============================================================================ */
+
+/* Formularios como paneles con marco hairline */
+#form form,
+#buttondown-form form {
+  background: var(--lab-bg-elevated, #FFFFFF);
+  border: 1px solid var(--lab-border, #E5E5DD);
+  border-radius: 12px;
+  padding: 1.75rem 1.75rem 2rem;
+  box-shadow: var(--lab-shadow-sm, 0 1px 2px rgba(16, 24, 32, 0.05));
+}
+
+/* Etiquetas técnicas: mono, mayúsculas, espaciadas */
+#form label,
+#buttondown-form label {
+  display: block;
+  font-family: ui-monospace, "JetBrains Mono", "SF Mono", SFMono-Regular,
+    Menlo, Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lab-muted, #5B6670);
+  margin: 1.1rem 0 0.35rem;
+}
+
+#form label:first-of-type,
+#buttondown-form label:first-of-type {
+  margin-top: 0;
+}
+
+/* Campos: fondo de página, foco en azul científico */
+#form .form-control,
+#buttondown-form .form-control {
+  background: var(--lab-bg, #FBFBF8);
+  border: 1px solid var(--lab-border-strong, #CDCDC2);
+  border-radius: 6px;
+  color: var(--lab-ink, #101820);
+  padding: 0.55rem 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#form .form-control:focus,
+#buttondown-form .form-control:focus {
+  border-color: var(--lab-accent, #0F5CA8);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--lab-accent, #0F5CA8) 18%, transparent);
+  outline: none;
+}
+
+/* Crédito de Buttondown: pequeño y discreto */
+#buttondown-form form p {
+  font-size: 0.75rem;
+  color: var(--lab-muted, #5B6670);
+  margin: 0.9rem 0 0;
+}
+
+/* Iconos sociales de la columna de texto */
+#note .link-dark {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#note .link-dark:hover {
+  background: var(--lab-bg-surface, #F2F2EC);
+  transform: translateY(-2px);
+}
+
+/* Calendario embebido: marco coherente con los paneles */
+section.lab-section iframe {
+  border: 1px solid var(--lab-border, #E5E5DD) !important;
+  border-radius: 12px;
+  background: var(--lab-bg-elevated, #FFFFFF);
+}

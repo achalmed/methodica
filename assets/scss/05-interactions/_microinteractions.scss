@@ -1,0 +1,61 @@
+// ============================================================================
+// 05-INTERACTIONS / MICROINTERACCIONES
+// ============================================================================
+// Propósito      : Capa de vida del sitio: revelado al hacer scroll, luz que
+//                  sigue el cursor y su desactivación accesible.
+// Responsabilidad: Clases .lab-reveal/.lab-in y body::before (glow). El JS
+//                  que las orquesta vive en assets/interactions.html; sin JS
+//                  todo queda visible.
+// Dependencias   : Custom properties --lab-glow/--lab-mx/--lab-my (02-base/
+//                  _root.scss + interactions.html).
+// Modificar si   : Cambian las microinteracciones o su accesibilidad.
+// ============================================================================
+
+/* ── Reveal on scroll (clases de interactions.html) ──────────────────────── */
+.lab-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.lab-reveal.lab-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Iluminación global que sigue el cursor (variables desde interactions.html) */
+@media (pointer: fine) {
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      560px circle at var(--lab-mx, 50%) var(--lab-my, -20%),
+      var(--lab-glow),
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+  body.lab-glow-on::before { opacity: 1; }
+}
+
+/* El contenido queda por encima del glow */
+#quarto-content, .navbar, .nav-footer { position: relative; z-index: 1; }
+
+/* ── ACCESIBILIDAD: reducción de movimiento ──────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .lab-reveal { opacity: 1; transform: none; }
+
+  body::before { display: none; }
+}

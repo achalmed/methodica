@@ -1,0 +1,36 @@
+// ============================================================================
+// 00-SETTINGS / PALETA LIGHT — "Paper Lab"
+// ============================================================================
+// Propósito      : Paleta cruda del tema claro. Papel científico, tinta suave,
+//                  azul de journal, hairlines editoriales.
+// Responsabilidad: SOLO valores de color literales ($spc-*). Ningún selector,
+//                  ninguna regla CSS. El significado (qué es "acento", qué es
+//                  "superficie") se asigna en _tokens-light.scss.
+// Dependencias   : Ninguna.
+// Modificar si   : Cambia la identidad cromática del tema claro.
+//                  Contraste verificado WCAG AA para texto sobre sus fondos.
+// ============================================================================
+
+// Fondos
+$spc-bg: #FBFBF8 !default;             // papel: blanco cálido casi neutro
+$spc-bg-dark: #F2F2EC !default;        // superficie secundaria (paneles, TOC)
+$spc-bg-elevated: #FFFFFF !default;    // superficies elevadas (cards, menús)
+
+// Tinta (texto)
+$spc-primary: #101820 !default;        // tinta principal: negro suave azulado
+$spc-primary-light: #33404C !default;  // tinta secundaria (subtítulos)
+$spc-text-muted: #5B6670 !default;     // metadatos, fechas (AA sobre $spc-bg)
+
+// Azul científico (interacción: enlaces, botones, foco)
+$spc-secondary: #0F5CA8 !default;      // azul de journal
+$spc-secondary-light: #0B6FCE !default; // hover
+
+// Verde discreto (acentos menores, éxito)
+$spc-accent: #2F7D5D !default;
+$spc-accent-light: #EAF2EC !default;   // fondo verdoso muy suave (código inline)
+
+// Estructura
+$spc-border: #E5E5DD !default;         // hairlines
+$spc-border-strong: #CDCDC2 !default;  // bordes con más presencia
+$spc-code-bg: #F5F6F2 !default;        // fondo de bloques de código
+$spc-selection: #CFE3F6 !default;      // selección de texto

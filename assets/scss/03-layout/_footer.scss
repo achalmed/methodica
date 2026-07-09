@@ -1,0 +1,44 @@
+// ============================================================================
+// 03-LAYOUT / FOOTER — banda de superficie silenciosa, sin líneas
+// ============================================================================
+// Propósito      : Cierre del documento como superficie continua: sin borde
+//                  superior, tipografía pequeña y enlaces que despiertan al
+//                  hover.
+// Responsabilidad: .nav-footer y sus iconos centrales. La adaptación móvil
+//                  vive en 03-layout/_responsive.scss.
+// Dependencias   : Tokens $lab-* ($lab-footer-bg difiere entre temas).
+// Modificar si   : Cambia el pie del sitio.
+// ============================================================================
+
+.nav-footer {
+  background: $lab-footer-bg;
+  border-top: none;
+  margin-top: 6rem;
+  padding: 2.75rem 1.5rem 3rem;
+  font-size: 0.8rem;
+  color: $lab-muted;
+
+  a {
+    color: $lab-ink-2;
+    text-decoration: none;
+
+    &:hover { color: $lab-accent; }
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+
+    &:hover { text-decoration: underline; text-underline-offset: 0.25em; }
+  }
+}
+
+.nav-footer-center i {
+  color: $lab-ink-2 !important;
+  transition: color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: $lab-accent !important;
+    transform: translateY(-2px);
+  }
+}

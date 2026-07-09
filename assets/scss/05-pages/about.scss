@@ -1,0 +1,124 @@
+// ============================================================================
+// 05-PAGES / ABOUT
+// ============================================================================
+// Propósito      : Estilos exclusivos de página (no forman parte del tema
+//                  global). Se compilan a assets/css/pages/about.css con
+//                  scripts/build-page-css.sh (hook pre-render de Quarto).
+// Cargado por    : about/index.qmd (header-includes + resources)
+// Dependencias   : Custom properties --lab-* (02-base/_root.scss). Usar
+//                  SIEMPRE var(--lab-*) para soportar ambos temas.
+// Modificar aquí : NUNCA editar el .css generado; editar este archivo y
+//                  renderizar (o ejecutar el script) para regenerarlo.
+// ============================================================================
+
+/* ============================================================================
+   PÁGINA ABOUT (plantilla trestles) — ficha de investigador
+   ============================================================================
+   Usa los tokens --lab-* definidos por los temas claro y oscuro.
+   ============================================================================ */
+
+/* Título y subtítulo */
+#title-block-header {
+  margin-bottom: 0;
+}
+
+/* Panel de identidad: superficie sutil con marco hairline */
+.about-entity {
+  background-color: var(--lab-bg-surface, #F2F2EC);
+  border: 1px solid var(--lab-border, #E5E5DD);
+  border-radius: 14px;
+  padding: 3em 1em !important;
+  margin: 0 2em;
+}
+
+/* Retrato */
+.about-entity .about-image {
+  border: 1px solid var(--lab-border, #E5E5DD);
+  box-shadow: var(--lab-shadow-md, 0 6px 24px -8px rgba(16, 24, 32, 0.12));
+}
+
+/* Nombre y especialidad */
+.about-entity .title {
+  letter-spacing: -0.015em;
+}
+
+.about-entity .subtitle {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--lab-muted, #5B6670);
+}
+
+/* Enlaces "Ver todo" (como subtítulos) */
+.about-links.subtitle {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+/* Enlaces sociales: bloque de enlaces */
+.about-entity .about-links {
+  justify-content: center !important;
+  column-gap: 0.35em !important;
+  font-size: 1.2em !important;
+}
+
+/* Enlaces sociales: enlaces individuales */
+.about-entity .about-link {
+  padding: 0.25em 0.4em !important;
+  border: none !important;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.about-entity .about-link:hover {
+  background: var(--lab-bg-elevated, #FFFFFF);
+  transform: translateY(-2px);
+}
+
+/* Encabezados de secciones del cuerpo (Lately, etc.) */
+#about-me h2,
+#lately h2 {
+  letter-spacing: -0.01em;
+}
+
+/* Consulta de medios para pantallas móviles hasta ~992px de ancho */
+@media screen and (max-width: 991.98px) {
+  #lately .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #blog, #talks, #publications, #projects {
+    flex-basis: 40% !important;
+    flex-grow: 1;
+  }
+
+  .about-entity .about-links {
+    font-size: 1.2em !important;
+  }
+}
+
+/* Consulta de medios para pantallas móviles hasta ~576px de ancho */
+@media screen and (max-width: 576px) {
+  #about-me .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #lately .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #blog, #talks, #publications, #projects {
+    flex-basis: 100% !important;
+  }
+
+  .about-entity .about-links {
+    font-size: 1em !important;
+  }
+
+  .about-entity {
+    margin: 0;
+  }
+}

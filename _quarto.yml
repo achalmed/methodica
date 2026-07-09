@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  # Compila assets/scss/05-pages/*.scss → assets/css/pages/*.css en cada render
+  pre-render: scripts/build-page-css.sh
   resources:
     - assets/img/sidebar.jpg
 
@@ -16,7 +18,7 @@ website:
     # Contenido obligatorio (puede incluir markdown)
     #content: "¡Bienvenidos a mi mundo! ¡Felices fiestas! Gracias por visitar 🎄"
     # Apariencia (opcional)
-    #icon: gift         # Icono de Bootstrap
+    #icon: gift                  # Icono de Bootstrap
     #type: primary               # Color del anuncio
     #dismissable: true           # Si se puede cerrar
     #position: below-navbar      # Ubicación
@@ -121,18 +123,34 @@ website:
         href: index.xml
         #href: https://achalmaedison.netlify.app/blog/index.xml
 
+# bibliography: references.bib
+lang: es
 
 format:
   html:
+    # Design System: assets/scss/ (guía en assets/scss/README.md)
     theme:
       light:
         - cosmo
-        - assets/theme_light.scss
-        - assets/colors.scss
-        - assets/fonts.scss
-    css: assets/styles.css
-
+        - assets/scss/theme-light.scss
+      dark:
+        - cosmo
+        - assets/scss/theme-dark.scss
+    css:
+      - assets/css/global.css
+      - assets/css/components/bibbase.css
     # Google Tag Manager
     include-in-header: assets/gtm-head.html
-    include-after-body: assets/gtm-body.html
+    include-after-body:
+      - assets/gtm-body.html
+      - assets/interactions.html
+    highlight-style: a11y
+    code-link: true
+    pagetitle: "{{< meta title >}}"
+    lightbox:
+      match: auto
+      effect: fade
+      desc-position: right
+      loop: false
+    
 

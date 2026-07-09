@@ -1,0 +1,60 @@
+// ============================================================================
+// 04-COMPONENTS / NUMERACIÓN DE SECCIONES — marca editorial de laboratorio
+// ============================================================================
+// Propósito      : Estilizar la numeración jerárquica nativa de Quarto
+//                  (number-sections: 1, 1.1, 1.1.1) con el lenguaje de las
+//                  secciones numeradas de About: mono, pequeña, en acento.
+//                  · h1: número en bloque SOBRE el título, con regla "—"
+//                  · h2: inline en acento, alineado a la izquierda del texto
+//                  · h3: inline en tinta muted (menor peso en la jerarquía)
+// Responsabilidad: Solo .header-section-number y .toc-section-number. Estos
+//                  selectores únicamente existen en páginas con
+//                  number-sections: true (hoy: blog/posts/_metadata.yml).
+// Dependencias   : Tokens $lab-*, $font-family-monospace.
+// Modificar si   : Cambia el tratamiento visual de la numeración (activarla
+//                  en otra sección es cosa del _metadata.yml de esa carpeta).
+// ============================================================================
+
+/* ── Nivel 1: marca de laboratorio sobre el título (estética About) ──────── */
+main.content section.level1 > h1 .header-section-number {
+  display: block;
+  font-family: $font-family-monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: $lab-accent;
+  margin-bottom: 0.55rem;
+
+  /* pequeña regla tras el número, como "01 —" en About */
+  &::after {
+    content: " —";
+    color: $lab-accent;
+  }
+}
+
+/* ── Niveles 2 y 3: número inline, discreto y bien separado del texto ─────── */
+main.content section.level2 > h2 .header-section-number,
+main.content section.level3 > h3 .header-section-number {
+  font-family: $font-family-monospace;
+  font-size: 0.72em;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-right: 0.65em;
+}
+
+main.content section.level2 > h2 .header-section-number {
+  color: $lab-accent;
+}
+
+main.content section.level3 > h3 .header-section-number {
+  color: $lab-muted;
+}
+
+/* ── TOC: números en mono muted; la tinta y el acento quedan para el texto ──
+   (Quarto reutiliza .header-section-number también dentro del índice) */
+.sidebar nav[role="doc-toc"] .header-section-number {
+  font-family: $font-family-monospace;
+  font-size: 0.82em;
+  color: $lab-muted;
+  margin-right: 0.35em;
+}

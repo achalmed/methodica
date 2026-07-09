@@ -285,7 +285,7 @@ En resumen: puedes usar, adaptar y redistribuir el contenido siempre que acredit
 
 [LinkedIn](https://linkedin.com/in/achalmaedison) • [GitHub](https://github.com/achalmed) • [Blog](https://achalmaedison.netlify.app) • [Buy Me a Coffee](https://buymeacoffee.com/achalmaedison)
 
-![Screenshot](assets/img/achalma-social.png)
+![Screenshot](../assets/img/achalma-social.png)
 
 <div align="center">
 

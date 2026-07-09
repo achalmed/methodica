@@ -1,0 +1,13 @@
+// ============================================================================
+// 05-PAGES / BLOG — STUB (inactivo)
+// ============================================================================
+// Propósito      : Reservado para estilos exclusivos de la página índice del blog (más allá de listing.css).
+// Estado         : Aún sin reglas. El guion bajo inicial lo excluye de la
+//                  compilación (scripts/build-page-css.sh solo compila
+//                  archivos SIN guion bajo).
+// Activación     : 1) renombrar a blog.scss (sin guion bajo);
+//                  2) añadir en el YAML de la página:
+//                       header-includes: <link rel="stylesheet" href="[...]assets/css/pages/blog.css">
+//                       resources: [...]assets/css/pages/blog.css
+// Dependencias   : Custom properties --lab-* (usar var(--lab-*) siempre).
+// ============================================================================

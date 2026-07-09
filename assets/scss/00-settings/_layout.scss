@@ -1,0 +1,18 @@
+// ============================================================================
+// 00-SETTINGS / LAYOUT Y GEOMETRÍA (compartido por ambos temas)
+// ============================================================================
+// Propósito      : Medidas estructurales del sitio: columna de lectura y
+//                  radios de borde. Geometría contenida, casi técnica.
+// Responsabilidad: SOLO variables Sass de medida. Ningún selector.
+// Dependencias   : Ninguna.
+// Modificar si   : Cambia el ancho de lectura o el lenguaje de redondeos.
+// ============================================================================
+
+// Columna de lectura tipo journal (por defecto Quarto usa 800px)
+$grid-body-width: 760px !default;
+$grid-margin-width: 300px !default;
+
+// Radios de borde
+$border-radius: 6px !default;
+$border-radius-sm: 4px !default;
+$border-radius-lg: 10px !default;

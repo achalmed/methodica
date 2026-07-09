@@ -1,0 +1,80 @@
+// ============================================================================
+// 05-PAGES / LISTING (cabecera de listados)
+// ============================================================================
+// Propósito      : Estilos exclusivos de página (no forman parte del tema
+//                  global). Se compilan a assets/css/pages/listing.css con
+//                  scripts/build-page-css.sh (hook pre-render de Quarto).
+// Cargado por    : blog/index.qmd · talk/index.qmd · teching/index.qmd
+// Dependencias   : Custom properties --lab-* (02-base/_root.scss). Usar
+//                  SIEMPRE var(--lab-*) para soportar ambos temas.
+// Modificar aquí : NUNCA editar el .css generado; editar este archivo y
+//                  renderizar (o ejecutar el script) para regenerarlo.
+// ============================================================================
+
+/* ============================================================================
+   PÁGINAS DE LISTADO (blog, talks, cursos) — cabecera tipo revista científica
+   ============================================================================
+   Se carga vía header-includes en las páginas index de cada sección.
+   Las filas/tarjetas del listado las estilizan los temas (quarto-post, card);
+   aquí solo se diseña la cabecera editorial de la sección.
+   ============================================================================ */
+
+/* Cabecera de sección: masthead editorial alineado a la izquierda */
+#title-block-header {
+  background-image: none !important;
+  margin: 2.5rem 0 0;
+}
+
+/* Marca técnica sobre el título de sección */
+#title-block-header .quarto-title::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 2px;
+  background: var(--lab-accent, #0F5CA8);
+  margin-bottom: 1.2rem;
+}
+
+#title-block-header.quarto-title-block.default .quarto-title .title {
+  font-size: clamp(2.2rem, 1.7rem + 2vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin: 0 0 0.4em 0;
+}
+
+/* Descripción: medida de lectura corta, tono secundario, regla inferior */
+.description {
+  overflow: hidden;
+}
+
+.description p {
+  text-align: left;
+  max-width: 62ch;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--lab-ink-2, #33404C);
+  margin: 0 0 2.2rem 0;
+  padding: 0 0 2.2rem 0;
+  border-bottom: 1px solid var(--lab-border, #E5E5DD);
+}
+
+.description a {
+  text-decoration: underline !important;
+  text-underline-offset: 0.22em;
+}
+
+.description a:hover {
+  text-decoration: none !important;
+}
+
+/* Controles del listado (orden, filtro) como instrumentos discretos */
+.quarto-listing .listing-actions-group .form-select,
+.quarto-listing .listing-actions-group .form-control {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  background-color: transparent;
+  border-color: var(--lab-border, #E5E5DD);
+  color: var(--lab-muted, #5B6670);
+  border-radius: 6px;
+}

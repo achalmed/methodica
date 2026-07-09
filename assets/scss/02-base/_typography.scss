@@ -1,0 +1,97 @@
+// ============================================================================
+// 02-BASE / TIPOGRAFÍA APLICADA — jerarquía editorial y prosa
+// ============================================================================
+// Propósito      : Escala de encabezados, prosa serif de artículos (ritmo de
+//                  libro académico), medida de lectura y enlaces con
+//                  subrayado técnico.
+// Responsabilidad: Elementos tipográficos globales (h1–h6, p, a) y el cambio
+//                  serif/sans dentro de main.content. Las pilas viven en
+//                  00-settings/_typography.scss.
+// Dependencias   : Tokens $lab-*, pilas $font-family-*.
+// Modificar si   : Cambia la escala, el ritmo vertical o la voz de la prosa.
+// ============================================================================
+
+/* ── Jerarquía tipográfica editorial ─────────────────────────────────────── */
+h1, .h1 { font-size: clamp(1.9rem, 1.45rem + 1.6vw, 2.6rem); letter-spacing: -0.015em; }
+h2, .h2 { font-size: clamp(1.5rem, 1.25rem + 0.9vw, 1.9rem); letter-spacing: -0.01em; }
+h3, .h3 { font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.45rem); }
+h4, .h4 { font-size: 1.15rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+}
+
+/* Regla editorial fina bajo los h2 de artículos (estilo journal) */
+main.content h2 {
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid $lab-border;
+}
+
+p { margin-bottom: 1.15rem; }
+
+/* ── Prosa de artículos: serif editorial, ritmo de libro académico ────────── */
+main.content p,
+main.content li,
+main.content dd,
+main.content blockquote {
+  font-family: $font-family-serif;
+  font-size: 1.03rem;
+  line-height: 1.75;
+}
+
+main.content p { margin-bottom: 1.3rem; }
+
+/* La interfaz vuelve a sans: listados, tarjetas, formularios, botones,
+   navegación interna de la página */
+main.content .quarto-listing p,
+main.content .quarto-listing li,
+main.content div.quarto-post p,
+main.content div.quarto-post li,
+main.content .card p,
+main.content .card li,
+main.content .about-links p,
+main.content form p,
+main.content form li,
+main.content .btn,
+main.content .quarto-title-meta-contents p,
+main.content .listing-description p {
+  font-family: $font-family-sans-serif;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Ancho de lectura cómodo dentro del contenido */
+main.content > p,
+main.content > ul,
+main.content > ol {
+  max-width: 70ch;
+}
+
+/* Más aire entre secciones de un artículo */
+main.content section.level2 {
+  margin-top: 2.5rem;
+}
+
+/* ── Enlaces con subrayado técnico ────────────────────────────────────────── */
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  text-decoration-color: $lab-link-underline;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease,
+    background-color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+/* ── Etiqueta "instrumento" en subtítulos ─────────────────────────────────── */
+/* Asimetría heredada: solo el tema claro pone .subtitle en monospace.
+   Revisar/unificar en Fase 2. */
+@if $lab-quirk-mono-subtitle {
+  .subtitle {
+    font-family: $font-family-monospace;
+  }
+}

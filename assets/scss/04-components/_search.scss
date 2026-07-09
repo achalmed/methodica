@@ -1,0 +1,20 @@
+// ============================================================================
+// 04-COMPONENTS / BÚSQUEDA — Algolia autocomplete de Quarto
+// ============================================================================
+// Propósito      : Redondear los paneles del buscador y difuminar el fondo
+//                  del overlay. El resto lo estiliza Quarto con las
+//                  variables Bootstrap del tema.
+// Responsabilidad: Contenedores .aa-* y #quarto-search-results.
+// Dependencias   : Ninguna directa (hereda del tema).
+// Modificar si   : Cambia la presentación del buscador.
+// ============================================================================
+
+.aa-DetachedContainer .aa-Panel,
+.aa-DetachedContainer .aa-Form,
+#quarto-search-results {
+  border-radius: 8px;
+}
+
+.aa-DetachedOverlay {
+  backdrop-filter: blur(3px);
+}

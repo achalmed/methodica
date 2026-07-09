@@ -1,0 +1,13 @@
+// ============================================================================
+// 05-PAGES / POST — STUB (inactivo)
+// ============================================================================
+// Propósito      : Reservado para estilos exclusivos de las entradas individuales del blog.
+// Estado         : Aún sin reglas. El guion bajo inicial lo excluye de la
+//                  compilación (scripts/build-page-css.sh solo compila
+//                  archivos SIN guion bajo).
+// Activación     : 1) renombrar a post.scss (sin guion bajo);
+//                  2) añadir en el YAML de la página:
+//                       header-includes: <link rel="stylesheet" href="[...]assets/css/pages/post.css">
+//                       resources: [...]assets/css/pages/post.css
+// Dependencias   : Custom properties --lab-* (usar var(--lab-*) siempre).
+// ============================================================================

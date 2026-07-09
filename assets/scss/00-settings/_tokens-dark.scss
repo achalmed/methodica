@@ -1,0 +1,94 @@
+// ============================================================================
+// 00-SETTINGS / TOKENS SEMÁNTICOS — TEMA OSCURO "Night Observatory"
+// ============================================================================
+// Propósito      : Mismo contrato de tokens $lab-* que _tokens-light.scss,
+//                  con los valores del tema oscuro. Los módulos compartidos
+//                  consumen estos tokens, nunca $spc-dark-* directamente.
+// Responsabilidad: Definir TODOS los tokens del contrato, más las variables
+//                  Bootstrap exclusivas de este tema (dropdowns, inputs).
+// Dependencias   : 00-settings/_palette-dark.scss.
+// Modificar si   : Cambia qué color cumple un rol en el tema oscuro, o se
+//                  añade un token nuevo (añadirlo TAMBIÉN en _tokens-light).
+// ============================================================================
+
+// ── Ámbito del tema ─────────────────────────────────────────────────────────
+$lab-css-vars-scope: 'body.quarto-dark' !default;
+$lab-color-scheme: dark !default;
+
+// ── Superficies ─────────────────────────────────────────────────────────────
+$lab-bg: $spc-dark-bg !default;
+$lab-bg-surface: $spc-dark-bg-accent !default;
+$lab-bg-elevated: $spc-dark-bg-elevated !default;
+
+// ── Tinta ───────────────────────────────────────────────────────────────────
+$lab-ink: $spc-dark-text-primary !default;
+$lab-ink-2: $spc-dark-text-secondary !default;
+$lab-muted: $spc-dark-text-muted !default;
+
+// ── Interacción (azul glaciar) ──────────────────────────────────────────────
+$lab-accent: $spc-dark-primary !default;
+$lab-accent-2: $spc-dark-primary-light !default;
+$lab-on-accent: $spc-dark-bg !default;       // texto oscuro sobre azul glaciar
+
+// ── Acento menor (jade) ─────────────────────────────────────────────────────
+$lab-green: $spc-dark-accent !default;
+$lab-green-bg: $spc-dark-accent-bg !default;
+
+// ── Estructura ──────────────────────────────────────────────────────────────
+$lab-border: $spc-dark-border !default;
+$lab-border-strong: $spc-dark-border-strong !default;
+$lab-code-bg: $spc-dark-code-bg !default;
+$lab-selection: $spc-dark-selection !default;
+
+// ── Elevación y atmósfera ───────────────────────────────────────────────────
+$lab-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35) !default;
+$lab-shadow-md: 0 10px 32px -10px rgba(0, 0, 0, 0.6) !default;
+$lab-glow: rgba(124, 181, 232, 0.05) !default;
+$lab-grid-line: rgba(230, 233, 237, 0.04) !default;
+
+// ── Tokens de componente ────────────────────────────────────────────────────
+// Enlaces
+$lab-link-underline: rgba(124, 181, 232, 0.4) !default;
+
+// Navbar translúcida
+$lab-navbar-bg: rgba(14, 17, 22, 0.78) !default;
+$lab-navbar-bg-scrolled: rgba(21, 27, 34, 0.92) !default;
+
+// Código
+$lab-inline-code-color: $spc-dark-accent !default;
+$lab-inline-code-border: rgba(123, 196, 162, 0.22) !default;
+$lab-code-copy-hover-bg: rgba(124, 181, 232, 0.14) !default;
+$lab-cell-output-color: $spc-dark-text-secondary !default;
+
+// Tablas
+$lab-table-frame: $spc-dark-text-secondary !default;
+$lab-table-color: $spc-dark-text-primary !default;
+$lab-table-row-hover: rgba(124, 181, 232, 0.06) !default;
+
+// Botones
+$lab-btn-primary-glow: 0 4px 18px -6px rgba(124, 181, 232, 0.55) !default;
+$lab-btn-primary-hover-color: $spc-dark-bg !default;
+
+// Paginación
+$lab-pagination-active-bg: $spc-dark-primary !default;
+$lab-pagination-active-color: $spc-dark-bg !default;
+
+// Callouts (superficie elevada para despegarlos del fondo)
+$lab-callout-bg: $spc-dark-bg-elevated !default;
+
+// Footer
+$lab-footer-bg: $spc-dark-bg-elevated !default;
+
+// ── Asimetrías del tema (flags; ver 06-themes/) ─────────────────────────────
+$lab-quirk-mono-subtitle: false !default;
+$lab-quirk-copy-chrome: false !default;
+$lab-dim-media: true !default;             // imágenes atenuadas hasta el hover
+
+// ── Variables Bootstrap exclusivas del tema oscuro ──────────────────────────
+$dropdown-link-color: $spc-dark-text-secondary !default;
+$dropdown-link-hover-color: $spc-dark-primary !default;
+
+// Inputs / formularios
+$input-bg: $spc-dark-bg-elevated !default;
+$input-color: $spc-dark-text-primary !default;
+$input-border-color: $spc-dark-border-strong !default;
