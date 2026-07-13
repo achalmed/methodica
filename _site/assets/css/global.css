@@ -1,0 +1,63 @@
+/* css styles */
+
+.keywords p {
+    font-style: italic;
+}
+
+#particles-js {
+    position: absolute;
+    /* Ensure it's positioned relative to the header */
+    width: 100%;
+    /* Cover the full width of the grid area */
+    height: 100%;
+    /* Cover the full height of the grid area */
+    grid-column: screen-start / screen-end;
+    /* Span all columns */
+    /* You might need to adjust z-index if particles are behind other elements */
+    /* z-index: -1; // Example: place behind content */
+}
+
+/* ============================================================================
+   SECCIONES NARRATIVAS (.lab-section) — About, Contact y páginas de recorrido
+   ============================================================================
+   Cada sección marcada con la clase .lab-section:
+   · recibe numeración de laboratorio (01 —, 02 —) sobre su encabezado;
+   · aparece progresivamente al hacer scroll (interactions.html le añade
+     .lab-reveal/.lab-in, definidas en los temas — sin JS todo queda visible);
+   · gana respiración vertical para marcar el ritmo del recorrido.
+   ============================================================================ */
+
+main.content {
+    counter-reset: labsec;
+}
+
+section.lab-section {
+    margin-top: 4.5rem;
+}
+
+section.lab-section:first-of-type {
+    margin-top: 2.5rem;
+}
+
+section.lab-section > h2 {
+    margin-top: 0;
+}
+
+section.lab-section > h2::before {
+    counter-increment: labsec;
+    content: counter(labsec, decimal-leading-zero);
+    display: block;
+    font-family: ui-monospace, "JetBrains Mono", "SF Mono", SFMono-Regular,
+        Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--lab-accent, #0F5CA8);
+    margin-bottom: 0.6rem;
+}
+
+/* La revelación por scroll usa una transición un poco más larga en secciones
+   para que el recorrido se sienta narrativo, no mecánico */
+section.lab-section.lab-reveal.lab-in {
+    transition-duration: 0.7s;
+}

@@ -1,0 +1,173 @@
+# ============================================================
+# Proyecto : pub_methodica
+# Ruta     : /home/achalmaedison/Documents/pub_methodica
+# Generado : 2026-07-10 22:06:49
+# Script   : main.sh v2.1.0
+# Profund. : 6 niveles
+# Formato  : txt
+# Excluye  : _extensions _freeze _partials _site site_libs build __pycache__ log output temp .git .quarto node_modules .Rproj.user index_cache __MACOSX *.aux *.log *.out *.toc *.bbl *.blg *.synctex.gz *.fff *.ttt *.fls *.fdb_latexmk *.pyc *.pyo *.egg-info *.ipynb_checkpoints .DS_Store Thumbs.db .Rhistory .RData estructura.txt
+# ============================================================
+
+[4.0K Jul  2 20:16]  /home/achalmaedison/Documents/pub_methodica
+├── [ 259 Jun 20 11:43]  404.qmd
+├── [ 940 Jun 20 11:44]  CITATION.cff
+├── [ 16K Jun 20 11:43]  LICENSE
+├── [ 619 Jun 20 11:43]  SECURITY.md
+├── [ 106 Jun 20 11:43]  _contenido-final.qmd
+├── [ 197 Jun 20 11:43]  _contenido-inicio.qmd
+├── [4.0K Jul  2 19:33]  _filters
+│   ├── [1.3K Jun 20 11:46]  _metadata-pdf.lua
+│   └── [6.5K Jul  2 16:52]  apa-floats-html.lua
+├── [5.9K Jul  2 15:14]  _quarto.yml
+├── [4.0K Jul  2 19:33]  assets
+│   ├── [4.0K Jul  2 09:51]  css
+│   │   ├── [4.0K Jul  2 19:33]  components
+│   │   │   └── [2.4K Jul  2 08:13]  bibbase.css
+│   │   ├── [1.9K Jul  2 08:13]  global.css
+│   │   └── [4.0K Jul  2 19:33]  pages
+│   │       ├── [2.8K Jul  9 05:02]  about.css
+│   │       ├── [2.7K Jul  9 05:02]  contact.css
+│   │       ├── [7.6K Jul  9 05:02]  home.css
+│   │       └── [2.2K Jul  9 05:02]  listing.css
+│   ├── [4.0K Jun 20 11:44]  fonts
+│   │   ├── [ 33K Jun 20 11:44]  DankMono-Bold.woff2
+│   │   ├── [ 32K Jun 20 11:44]  DankMono-Italic.woff2
+│   │   ├── [ 30K Jun 20 11:44]  DankMono-Regular.woff2
+│   │   ├── [ 25K Jun 20 11:44]  petrona-v16-latin-500.eot
+│   │   ├── [ 79K Jun 20 11:44]  petrona-v16-latin-500.svg
+│   │   ├── [ 48K Jun 20 11:44]  petrona-v16-latin-500.ttf
+│   │   ├── [ 26K Jun 20 11:44]  petrona-v16-latin-500.woff
+│   │   ├── [ 22K Jun 20 11:44]  petrona-v16-latin-500.woff2
+│   │   ├── [ 25K Jun 20 11:44]  petrona-v16-latin-regular.eot
+│   │   ├── [ 79K Jun 20 11:44]  petrona-v16-latin-regular.svg
+│   │   ├── [ 48K Jun 20 11:44]  petrona-v16-latin-regular.ttf
+│   │   ├── [ 26K Jun 20 11:44]  petrona-v16-latin-regular.woff
+│   │   ├── [ 21K Jun 20 11:44]  petrona-v16-latin-regular.woff2
+│   │   ├── [ 22K Jun 20 11:44]  red-hat-text-v3-latin-500.eot
+│   │   ├── [ 53K Jun 20 11:44]  red-hat-text-v3-latin-500.svg
+│   │   ├── [ 45K Jun 20 11:44]  red-hat-text-v3-latin-500.ttf
+│   │   ├── [ 23K Jun 20 11:44]  red-hat-text-v3-latin-500.woff
+│   │   ├── [ 19K Jun 20 11:44]  red-hat-text-v3-latin-500.woff2
+│   │   ├── [ 22K Jun 20 11:44]  red-hat-text-v3-latin-500italic.eot
+│   │   ├── [ 55K Jun 20 11:44]  red-hat-text-v3-latin-500italic.svg
+│   │   ├── [ 45K Jun 20 11:44]  red-hat-text-v3-latin-500italic.ttf
+│   │   ├── [ 23K Jun 20 11:44]  red-hat-text-v3-latin-500italic.woff
+│   │   ├── [ 19K Jun 20 11:44]  red-hat-text-v3-latin-500italic.woff2
+│   │   ├── [ 22K Jun 20 11:44]  red-hat-text-v3-latin-italic.eot
+│   │   ├── [ 55K Jun 20 11:44]  red-hat-text-v3-latin-italic.svg
+│   │   ├── [ 45K Jun 20 11:44]  red-hat-text-v3-latin-italic.ttf
+│   │   ├── [ 23K Jun 20 11:44]  red-hat-text-v3-latin-italic.woff
+│   │   ├── [ 19K Jun 20 11:44]  red-hat-text-v3-latin-italic.woff2
+│   │   ├── [ 21K Jun 20 11:44]  red-hat-text-v3-latin-regular.eot
+│   │   ├── [ 53K Jun 20 11:44]  red-hat-text-v3-latin-regular.svg
+│   │   ├── [ 44K Jun 20 11:44]  red-hat-text-v3-latin-regular.ttf
+│   │   ├── [ 22K Jun 20 11:44]  red-hat-text-v3-latin-regular.woff
+│   │   └── [ 18K Jun 20 11:44]  red-hat-text-v3-latin-regular.woff2
+│   ├── [ 243 Jun 20 11:44]  gtm-body.html
+│   ├── [ 420 Jun 20 11:44]  gtm-head.html
+│   ├── [4.0K Jun 20 11:44]  img
+│   │   ├── [281K Jun 20 11:44]  achalma-social.png
+│   │   ├── [1.1M Jun 20 11:44]  default-preview.jpg
+│   │   ├── [ 31K Jun 20 11:44]  favicon.png
+│   │   └── [1.1M Jun 20 11:44]  sidebar.jpg
+│   ├── [1.0K Jul  2 10:44]  interactions.html
+│   ├── [4.0K Jul  2 19:33]  js
+│   │   ├── [2.1K Jul  2 10:57]  README.md
+│   │   ├── [1.5K Jul  2 10:43]  cursor.js
+│   │   ├── [1.8K Jul  2 10:43]  hero.js
+│   │   ├── [ 974 Jul  2 10:43]  navbar.js
+│   │   └── [1.6K Jul  2 10:43]  scroll-effects.js
+│   └── [4.0K Jul  2 19:33]  scss
+│       ├── [4.0K Jul  2 19:33]  00-settings
+│       │   ├── [1.9K Jul  2 09:47]  _bootstrap.scss
+│       │   ├── [ 882 Jul  2 09:46]  _layout.scss
+│       │   ├── [1.6K Jul  2 09:45]  _palette-dark.scss
+│       │   ├── [1.9K Jul  2 09:45]  _palette-light.scss
+│       │   ├── [5.1K Jul  2 09:46]  _tokens-dark.scss
+│       │   ├── [5.5K Jul  2 09:46]  _tokens-light.scss
+│       │   └── [1.7K Jul  2 09:46]  _typography.scss
+│       ├── [4.0K Jul  2 19:33]  01-tools
+│       │   └── [1.3K Jul  2 09:47]  _mixins.scss
+│       ├── [4.0K Jul  2 19:33]  02-base
+│       │   ├── [3.8K Jul  2 09:47]  _fonts.scss
+│       │   ├── [1.1K Jul  2 09:47]  _reset.scss
+│       │   ├── [1.5K Jul  2 09:47]  _root.scss
+│       │   └── [3.4K Jul  2 09:48]  _typography.scss
+│       ├── [4.0K Jul  2 19:33]  03-layout
+│       │   ├── [1.3K Jul  2 09:49]  _footer.scss
+│       │   ├── [3.0K Jul  2 09:48]  _navbar.scss
+│       │   ├── [1.3K Jul  2 09:50]  _responsive.scss
+│       │   └── [4.7K Jul  2 12:36]  _toc.scss
+│       ├── [4.0K Jul  2 20:10]  04-components
+│       │   ├── [1.4K Jul  2 09:49]  _buttons.scss
+│       │   ├── [1.0K Jul  2 09:49]  _callouts.scss
+│       │   ├── [1.2K Jul  2 09:49]  _citations.scss
+│       │   ├── [1.9K Jul  2 09:48]  _code.scss
+│       │   ├── [2.6K Jul  2 16:54]  _floats.scss
+│       │   ├── [2.8K Jul  2 09:48]  _listings.scss
+│       │   ├── [ 781 Jul  2 09:49]  _math.scss
+│       │   ├── [1.1K Jul  2 09:49]  _pagination.scss
+│       │   ├── [ 848 Jul  2 09:49]  _search.scss
+│       │   ├── [2.5K Jul  2 11:45]  _section-numbers.scss
+│       │   ├── [ 866 Jul  2 09:49]  _social.scss
+│       │   ├── [1.5K Jul  2 09:49]  _tables.scss
+│       │   └── [1.9K Jul  2 09:48]  _title-block.scss
+│       ├── [4.0K Jul  2 19:33]  05-interactions
+│       │   └── [2.2K Jul  2 09:50]  _microinteractions.scss
+│       ├── [4.0K Jul  2 19:33]  05-pages
+│       │   ├── [ 956 Jul  2 10:42]  _blog.scss
+│       │   ├── [ 946 Jul  2 10:42]  _courses.scss
+│       │   ├── [ 935 Jul  2 10:42]  _post.scss
+│       │   ├── [ 940 Jul  2 10:42]  _projects.scss
+│       │   ├── [1022 Jul  2 10:42]  _publications.scss
+│       │   ├── [3.4K Jul  2 10:42]  about.scss
+│       │   ├── [3.3K Jul  2 10:42]  contact.scss
+│       │   ├── [8.3K Jul  2 10:42]  home.scss
+│       │   └── [2.9K Jul  2 10:42]  listing.scss
+│       ├── [4.0K Jul  2 19:33]  06-themes
+│       │   └── [1.9K Jul  2 09:50]  _dark-adjustments.scss
+│       ├── [6.0K Jul  2 10:57]  README.md
+│       ├── [2.1K Jul  2 20:06]  theme-dark.scss
+│       └── [1.9K Jul  2 20:06]  theme-light.scss
+├── [4.0K Jul  2 20:16]  docs
+│   └── [ 15K Jul  2 19:39]  README.md
+├── [2.1K Jul  2 15:08]  index.qmd
+├── [4.0K Jun 22 23:47]  posts
+│   ├── [4.0K Jun 20 11:44]  2023-06-03-ideas-de-investigacion-para-economia
+│   │   ├── [ 73K Jun 20 11:44]  index.html.md
+│   │   ├── [ 71K Jun 20 11:44]  index.qmd
+│   │   └── [105K Jun 20 11:44]  index.tex
+│   ├── [4.0K Jun 20 11:44]  2023-06-03-pautas-de-presentacion-del-informe-de-investigacion
+│   │   ├── [8.9K Jun 20 11:44]  index.html.md
+│   │   ├── [7.5K Jun 20 11:44]  index.qmd
+│   │   ├── [ 16K Jun 20 11:44]  index.tex
+│   │   └── [4.0K Jun 20 11:44]  index_files
+│   │       └── [4.0K Jun 20 11:44]  figure-html
+│   │           └── [ 27K Jun 20 11:44]  20230603152205.png
+│   ├── [4.0K Jun 20 11:44]  2025-01-12-recursos-de-bibliografia-y-documentacion
+│   │   ├── [ 22K Jun 20 11:44]  index.html.md
+│   │   ├── [ 21K Jun 20 11:44]  index.qmd
+│   │   └── [ 37K Jun 20 11:44]  index.tex
+│   ├── [4.0K Jun 20 11:44]  2025-02-09-recursos-para-traducci\303\263n-y-correccion
+│   │   ├── [5.9K Jun 20 11:44]  index.html.md
+│   │   ├── [4.5K Jun 20 11:44]  index.qmd
+│   │   └── [ 13K Jun 20 11:44]  index.tex
+│   ├── [4.0K Jun 20 11:44]  2025-04-23-tipos-de-elementos-en-zotero
+│   │   ├── [ 49K Jun 20 11:44]  index.html.md
+│   │   ├── [ 48K Jun 20 11:44]  index.qmd
+│   │   └── [ 71K Jun 20 11:44]  index.tex
+│   ├── [4.0K Jun 20 11:44]  2026-01-02-configuracion-de-quarto-yml
+│   │   ├── [ 72K Jun 20 11:44]  index.html.md
+│   │   ├── [ 71K Jun 20 11:44]  index.qmd
+│   │   └── [183K Jun 20 11:44]  index.tex
+│   ├── [4.0K Jun 20 11:44]  2026-01-02-guia-practica-de-metadata-en-quarto
+│   │   ├── [ 80K Jun 20 11:44]  index.html.md
+│   │   ├── [ 79K Jun 20 11:44]  index.qmd
+│   │   └── [202K Jun 20 11:44]  index.tex
+│   ├── [1.3K Jun 20 11:44]  _contenido_posts.qmd
+│   ├── [ 16K Jul  2 14:59]  _metadata.yml
+│   └── [1.1M Jun 20 11:44]  featured.jpg
+└── [4.0K Jul  2 19:33]  scripts
+    └── [2.2K Jul  2 10:43]  build-page-css.sh
+
+30 directories, 131 files

@@ -827,6 +827,8 @@ Si te interesó este artículo, te recomendamos que explores otros blogs y recur
 3. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.pdf) [Recursos De Bibliografia Y Documentacion](https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion)
 4. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2025-02-09-recursos-para-traducción-y-correccion/index.pdf) [Recursos Para Traducción Y Correccion](https://methodica.netlify.app/posts/2025-02-09-recursos-para-traducción-y-correccion)
 5. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero/index.pdf) [Tipos De Elementos En Zotero](https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero)
+6. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml/index.pdf) [Configuracion De Quarto Yml](https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml)
+7. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.pdf) [Guia Practica De Metadata En Quarto](https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

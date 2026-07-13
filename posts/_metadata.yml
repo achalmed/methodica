@@ -324,7 +324,7 @@ format:
     # draftall: false
 
     filters:
-      - ../../_metadata-pdf.lua 
+      - ../_filters/_metadata-pdf.lua 
     
   # ----------------------------------------------------------------------
   # Formato DOCX (APA Quarto)

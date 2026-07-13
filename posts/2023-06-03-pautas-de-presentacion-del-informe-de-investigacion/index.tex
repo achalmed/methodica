@@ -82,6 +82,7 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -170,9 +171,14 @@ testing, economic models, data analysis}
 \par{   El autor no tiene conflictos de interés que revelar.    Los
 roles de autor se clasificaron utilizando la taxonomía de roles de
 colaborador (CRediT; https://credit.niso.org/) de la siguiente
-manera:  Edison Achalma:   conceptualización, redacción}
+manera:  Edison Achalma:   conceptualización, metodología, análisis
+formal, investigación, recursos, curación de
+datos, redacción, visualización, supervisión, administración del
+proyecto}
 \par{La correspondencia relativa a este artículo debe dirigirse a Edison
-Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
+Achalma, Escuela Profesional de Economía, Universidad Nacional de San
+Cristóbal de Huamanga, Portal Independencia N°
+57, Ayacucho, AYA 5001, Perú, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
 }
 
 \usepackage{pbalance}
@@ -220,6 +226,10 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 
 
 
+\hypersetup{
+  pdftitle={Pautas para informe de investigaci\'{o}n},
+  pdfauthor={Autor}
+}
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -252,8 +262,8 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 \@ifpackageloaded{float}{}{\usepackage{float}}
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
-\floatname{codelisting}{Listing}
-\newcommand*\listoflistings{\listof{codelisting}{Lista de Listings}}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listados}}
 \makeatother
 \makeatletter
 \makeatother
@@ -523,6 +533,14 @@ algunas sugerencias:
   \href{https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero/index.pdf}{\faIcon{file-pdf}}
   \href{https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero}{Tipos
   De Elementos En Zotero}
+\item
+  \href{https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml}{Configuracion
+  De Quarto Yml}
+\item
+  \href{https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto}{Guia
+  Practica De Metadata En Quarto}
 \end{enumerate}
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y

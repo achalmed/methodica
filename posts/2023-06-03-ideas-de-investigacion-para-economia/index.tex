@@ -82,6 +82,7 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -185,6 +186,10 @@ Cristóbal de Huamanga, Portal Independencia N°
 
 
 
+\hypersetup{
+  pdftitle={Ideas de investigaci\'{o}n en econom\'{\i}a},
+  pdfauthor={Autor}
+}
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -301,6 +306,7 @@ la Región de Ayacucho, Periodo 2008-2021}
   \textbf{Enfoque:} Cuantitativo
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -347,9 +353,11 @@ desarrollo humano en Ayacucho durante el periodo 2008-2021. & HE3: Los
 programas sociales influyen positiva y significativamente en el índice
 de desarrollo humano en Ayacucho durante el periodo 2008-2021. \\
 \end{longtable}
+}
 
 \subsection{Variables e Indicadores}\label{variables-e-indicadores}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1200}}
@@ -389,9 +397,11 @@ Desnutrición crónica infantil & Razón (Años/Porcentaje) \\
 & & Nivel de Vida & - Ingreso per cápita- Acceso a servicios básicos-
 Índice de Desarrollo Humano (IDH) & Razón (Soles/Índice) \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4091}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5909}}@{}}
@@ -429,6 +439,7 @@ múltiple- Modelos econométricos de panel- Pruebas de cointegración-
 Análisis de causalidad (Granger) \\
 \textbf{Software Estadístico} & Stata, SPSS, R, EViews \\
 \end{longtable}
+}
 
 \subsection{Marco Teórico (Conceptos
 Clave)}\label{marco-teuxf3rico-conceptos-clave}
@@ -485,6 +496,7 @@ Perú, Periodo 2000-2024}
   \textbf{Enfoque:} Cuantitativo
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -532,9 +544,11 @@ inversión pública en capital humano se relaciona positiva y
 significativamente con la movilidad social en el Perú durante el periodo
 2000-2024. \\
 \end{longtable}
+}
 
 \subsection{Variables e Indicadores}\label{variables-e-indicadores-1}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1200}}
@@ -574,9 +588,11 @@ pobreza- Severidad de la pobreza & Razón (Porcentaje) \\
 & & Movilidad Social & - Índice de movilidad intergeneracional- Acceso a
 servicios públicos- Oportunidades educativas & Razón/Ordinal \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-1}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4091}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5909}}@{}}
@@ -614,6 +630,7 @@ de series de tiempo (VAR, VECM)- Análisis de cointegración- Regresión
 cuantílica \\
 \textbf{Software Estadístico} & Stata, R, EViews, Python \\
 \end{longtable}
+}
 
 \subsection{Marco Teórico (Conceptos
 Clave)}\label{marco-teuxf3rico-conceptos-clave-1}
@@ -669,6 +686,7 @@ los Distritos de Ayacucho, Periodo 2015-2023}
   \textbf{Enfoque:} Cuantitativo
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -715,9 +733,11 @@ mejores prácticas en la gestión del gasto educativo en Ayacucho. & HE3:
 Los distritos con mayor eficiencia implementan prácticas de gestión
 orientadas a resultados y monitoreo continuo. \\
 \end{longtable}
+}
 
 \subsection{Variables e Indicadores}\label{variables-e-indicadores-2}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1200}}
@@ -757,9 +777,11 @@ de deserción escolar & Razón (Porcentaje) \\
 & & Equidad & - Brecha urbano-rural en rendimiento- Equidad de género en
 logros- Acceso a servicios complementarios & Razón/Proporción \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-2}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4091}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5909}}@{}}
@@ -796,6 +818,7 @@ Estadística descriptiva comparativa- Análisis de correlación-
 Benchmarking \\
 \textbf{Software Estadístico} & DEA-Solver, SPSS, Stata, R, MaxDEA \\
 \end{longtable}
+}
 
 \subsection{Marco Teórico (Conceptos
 Clave)}\label{marco-teuxf3rico-conceptos-clave-2}
@@ -884,6 +907,7 @@ Crecimiento Económico de los Distritos de Ayacucho, Periodo 2010-2023}
   \textbf{Enfoque:} Cuantitativo
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -930,9 +954,11 @@ Ayacucho. & HE3: Existe una relación positiva y significativa entre
 conectividad vial y acceso a mercados en los distritos rurales de
 Ayacucho. \\
 \end{longtable}
+}
 
 \subsection{Variables e Indicadores}\label{variables-e-indicadores-3}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1200}}
@@ -975,9 +1001,11 @@ comercio- Producción agrícola comercializada & Razón/Número \\
 transporte- Frecuencia de transporte público & Razón
 (Km/Soles/Número) \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-3}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4091}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5909}}@{}}
@@ -1015,6 +1043,7 @@ cuasi-experimental- Estadística espacial \\
 \textbf{Software Estadístico} & Stata, R, QGIS (análisis espacial),
 EViews \\
 \end{longtable}
+}
 
 \subsection{Marco Teórico (Conceptos
 Clave)}\label{marco-teuxf3rico-conceptos-clave-3}
@@ -1095,6 +1124,7 @@ Análisis de Series de Tiempo, Periodo 2000-2023}
   \textbf{Enfoque:} Cuantitativo con análisis de series temporales
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -1140,9 +1170,11 @@ crecimiento económico de Ayacucho. & HE3: La inversión pública
 productiva tiene un mayor impacto en el crecimiento económico de
 Ayacucho que la inversión social. \\
 \end{longtable}
+}
 
 \subsection{Variables e Indicadores}\label{variables-e-indicadores-4}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1613}}
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0968}}
@@ -1186,9 +1218,11 @@ VAB sector terciario & Razón & Anual \\
 Inflación regional- PBI nacional- Tipo de cambio- Términos de
 intercambio & Razón & Mensual/Trimestral \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-4}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4091}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5909}}@{}}
@@ -1226,6 +1260,7 @@ de varianza \\
 \textbf{Software Estadístico} & EViews, Stata, R (forecast, vars, urca),
 Python (statsmodels) \\
 \end{longtable}
+}
 
 \subsection{Marco Teórico (Conceptos
 Clave)}\label{marco-teuxf3rico-conceptos-clave-4}
@@ -1370,6 +1405,7 @@ del Distrito de Santo Tomás, Chumbivilcas, Periodo 2020-2023}
   \textbf{Enfoque:} Mixto (cuantitativo-cualitativo)
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -1416,9 +1452,11 @@ sostenible en el distrito. & HE3: La participación ciudadana incide
 positivamente en la dimensión social del desarrollo sostenible del
 distrito. \\
 \end{longtable}
+}
 
 \subsection{Variables e Indicadores}\label{variables-e-indicadores-5}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1200}}
@@ -1466,9 +1504,11 @@ financieros & Razón (Soles/Porcentaje) \\
 básicos (agua, luz, saneamiento)- Tasa de pobreza- Cobertura en
 educación y salud- Equidad de género & Razón/Índice \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-5}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4091}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5909}}@{}}
@@ -1508,6 +1548,7 @@ contenido (datos cualitativos) \\
 \textbf{Software Estadístico} & SPSS, Excel, Atlas.ti (análisis
 cualitativo) \\
 \end{longtable}
+}
 
 \subsection{Marco Teórico (Conceptos
 Clave)}\label{marco-teuxf3rico-conceptos-clave-5}
@@ -1582,6 +1623,7 @@ Periodo 2024}
   \textbf{Enfoque:} Cuantitativo
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -1630,9 +1672,11 @@ Existe una relación positiva y significativa entre el seguimiento y
 rendición de cuentas del presupuesto participativo y la transparencia
 presupuestaria. \\
 \end{longtable}
+}
 
 \subsection{Variables e Indicadores}\label{variables-e-indicadores-6}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1200}}
@@ -1676,9 +1720,11 @@ presupuestaria- Accesibilidad de la información- Cumplimiento de
 normativa de transparencia- Índice de transparencia municipal &
 Ordinal/Razón \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-6}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4091}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5909}}@{}}
@@ -1716,6 +1762,7 @@ tablas, gráficos)- Coeficiente de correlación de Pearson- Coeficiente de
 correlación de Spearman- Regresión lineal simple- Chi-cuadrado \\
 \textbf{Software Estadístico} & SPSS, Excel, Stata \\
 \end{longtable}
+}
 
 \subsection{Marco Teórico (Conceptos
 Clave)}\label{marco-teuxf3rico-conceptos-clave-6}
@@ -1802,6 +1849,7 @@ Rural en la Región de Ayacucho, Periodo 2010-2023}
   \textbf{Enfoque:} Mixto (predominantemente cuantitativo)
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -1846,9 +1894,11 @@ de los hogares rurales que han salido de la pobreza en Ayacucho. & HE3:
 Los hogares que salieron de la pobreza presentan mayor acceso a
 programas sociales, educación y activos productivos. \\
 \end{longtable}
+}
 
 \subsection{Variables e Indicadores}\label{variables-e-indicadores-7}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1200}}
@@ -1892,9 +1942,11 @@ Razón/Ordinal \\
 & & Capital Humano & - Años de educación del jefe de hogar- Desnutrición
 crónica infantil- Acceso a seguro de salud & Razón/Ordinal \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-7}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4091}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5909}}@{}}
@@ -1936,6 +1988,7 @@ de contenido • Triangulación de datos \\
 \textbf{Software Estadístico} & Stata, R, SPSS, Atlas.ti
 (cualitativo) \\
 \end{longtable}
+}
 
 \subsection{Marco Teórico (Conceptos
 Clave)}\label{marco-teuxf3rico-conceptos-clave-7}
@@ -2053,6 +2106,7 @@ Público en la Municipalidad Distrital de Pillco Marca, Huánuco, Periodo
   \textbf{Enfoque:} Cuantitativo
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -2098,9 +2152,11 @@ HE3: Existe una relación positiva y significativa entre la gestión de
 recursos humanos por competencias y la eficiencia del gasto en
 personal. \\
 \end{longtable}
+}
 
 \subsection{Variables e Indicadores}\label{variables-e-indicadores-8}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1200}}
@@ -2147,9 +2203,11 @@ gasto & Razón \\
 presupuestaria- Cumplimiento de normativa de transparencia- Rendiciones
 de cuentas realizadas- Accesibilidad de información & Ordinal \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-8}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4091}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5909}}@{}}
@@ -2186,6 +2244,7 @@ de correlación de Pearson- Coeficiente de correlación de Spearman-
 Regresión lineal múltiple- Tablas de contingencia y Chi-cuadrado \\
 \textbf{Software Estadístico} & SPSS, Excel, Stata \\
 \end{longtable}
+}
 
 \subsection{Marco Teórico (Conceptos
 Clave)}\label{marco-teuxf3rico-conceptos-clave-8}
@@ -2257,6 +2316,7 @@ de Ayacucho, Periodo 2000-2020}
   \textbf{Enfoque:} Cuantitativo
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -2306,9 +2366,11 @@ actividad económica y el número de perceptores de ingreso inciden
 significativamente en la probabilidad de pobreza. La informalidad
 aumenta la probabilidad de ser pobre. \\
 \end{longtable}
+}
 
 \subsection{Variables e Indicadores}\label{variables-e-indicadores-9}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1200}}
@@ -2354,9 +2416,11 @@ laborales)- Acceso a seguridad social & Nominal \\
 & & Activos & - Propiedad de la vivienda- Acceso a activos productivos &
 Nominal \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-9}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4091}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5909}}@{}}
@@ -2391,6 +2455,7 @@ probabilidad: • Modelo Logit • Modelo Probit- Cálculo de efectos
 marginales- Pruebas de bondad de ajuste- Análisis de sensibilidad \\
 \textbf{Software Estadístico} & Stata, R, SPSS, Python \\
 \end{longtable}
+}
 
 \subsection{Marco Teórico (Conceptos
 Clave)}\label{marco-teuxf3rico-conceptos-clave-9}
@@ -2488,6 +2553,7 @@ Infantil}\label{matriz-11-factores-de-desnutriciuxf3n-infantil}
 \textbf{Factores Asociados a la Desnutrición en Niños Menores de 5 Años
 en el Perú}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4762}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5238}}@{}}
@@ -2511,10 +2577,12 @@ departamentos del Perú. \\
 significativamente en la desnutrición de niños menores de 5 años en el
 Perú. \\
 \end{longtable}
+}
 
 \subsection{Operacionalización de
 Variables}\label{operacionalizaciuxf3n-de-variables}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2632}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1579}}
@@ -2542,6 +2610,7 @@ analfabetismo (\%) \\
 \textbf{Inflación} & Control & Económica & - IPC (Índice de Precios al
 Consumidor) \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-10}
 
@@ -2569,6 +2638,7 @@ Prediales}\label{matriz-12-recaudaciuxf3n-de-impuestos-prediales}
 \textbf{Influencia de la Recaudación de Impuestos Prediales en la
 Recaudación Tributaria de la Municipalidad Distrital de Huamanga, 2021}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4762}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5238}}@{}}
@@ -2592,10 +2662,12 @@ Huamanga-2021. \\
 significativamente con la recaudación tributaria en la Municipalidad
 Distrital de Huamanga-2021. \\
 \end{longtable}
+}
 
 \subsection{Operacionalización de
 Variables}\label{operacionalizaciuxf3n-de-variables-1}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2444}}
@@ -2624,6 +2696,7 @@ total impuestos- \% ejecución & Análisis documental (SIAF-GL) \\
 & Tasas & - Licencias de funcionamiento- Otras tasas & Análisis
 documental \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-11}
 
@@ -2651,6 +2724,7 @@ Tributarios}\label{matriz-13-choques-externos-e-ingresos-tributarios}
 \textbf{Choques Externos e Internos sobre la Dinámica de los Ingresos
 Tributarios en el Perú, Periodo 2000-2019}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4762}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5238}}@{}}
@@ -2672,10 +2746,12 @@ de exportación en los ingresos tributarios de Perú (2000-2019). \\
 positivamente en la dinámica de los ingresos tributarios de Perú
 (2000-2019). \\
 \end{longtable}
+}
 
 \subsection{Operacionalización de
 Variables}\label{operacionalizaciuxf3n-de-variables-2}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1500}}
@@ -2703,6 +2779,7 @@ tributarios del gobierno central (millones S/.) & Análisis documental
 \textbf{V.I: PBI Real} & Independiente & - PBI (millones S/.
 constantes)- Tasa de crecimiento & Análisis documental (BCRP, INEI) \\
 \end{longtable}
+}
 
 \subsection{Metodología}\label{metodologuxeda-12}
 
@@ -2811,6 +2888,14 @@ algunas sugerencias:
   \href{https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero/index.pdf}{\faIcon{file-pdf}}
   \href{https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero}{Tipos
   De Elementos En Zotero}
+\item
+  \href{https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml}{Configuracion
+  De Quarto Yml}
+\item
+  \href{https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.pdf}{\faIcon{file-pdf}}
+  \href{https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto}{Guia
+  Practica De Metadata En Quarto}
 \end{enumerate}
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y
