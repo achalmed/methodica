@@ -45,6 +45,7 @@ citation:
 date: 01/12/2025
 draft: false
 image: ../featured.jpg
+curso: monografias
 ---
 
 

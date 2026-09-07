@@ -45,6 +45,7 @@ citation:
 date: 04/23/2025
 draft: false
 image: ../featured.jpg
+curso: monografias
 ---
 
 Esta publicación proporciona una descripción detallada de los tipos de elementos soportados por Zotero, basada en la documentación oficial de Zotero.

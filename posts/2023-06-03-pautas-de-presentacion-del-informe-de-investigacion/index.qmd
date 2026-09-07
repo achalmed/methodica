@@ -44,6 +44,7 @@ citation:
 date: 06/03/2023
 draft: false
 image: ../featured.jpg
+curso: monografias
 ---
 
 # Introducción

@@ -44,6 +44,7 @@ citation:
 date: 02/09/2025
 draft: false
 image: ../featured.jpg
+curso: monografias
 ---
 
 # A todos los investigadores y estudiantes
