@@ -1,3 +1,8 @@
+---
+tipo: fragmento
+titulo: índice de publicaciones de posts; lo genera script_generador_publicacion_similar
+---
+
 1. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf) [Ideas De Investigacion Para Economia](https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia)
 2. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf) [Pautas De Presentacion Del Informe De Investigacion](https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion)
 3. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.pdf) [Recursos De Bibliografia Y Documentacion](https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion)

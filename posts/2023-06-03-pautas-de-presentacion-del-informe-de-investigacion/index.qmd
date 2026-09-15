@@ -41,7 +41,7 @@ citation:
   author:
   - Edison Achalma
   pdf-url: https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf
-date: 06/03/2023
+date: 2023-06-03
 draft: false
 image: ../featured.jpg
 curso: monografias

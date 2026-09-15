@@ -5,9 +5,7 @@ copyrightext: All rights reserved
 title: Ideas de investigación en economía
 abstract: Este abstract será actualizado una vez que se complete el contenido final
   del artículo.
-keywords:
-- keyword1
-- keyword2
+keywords: []
 categories:
 - Metodología de Investigación
 tags:
@@ -33,7 +31,7 @@ citation:
   author:
   - Edison Achalma
   pdf-url: https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf
-date: 06/03/2023
+date: 2023-06-03
 draft: false
 image: ../featured.jpg
 curso: monografias

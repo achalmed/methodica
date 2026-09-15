@@ -98,7 +98,7 @@ Publicaciones formales, documentos técnicos y contribuciones externas. Incluye 
 
 Páginas informativas del autor con formulario de contacto y opción de agendar una cita.
 
-### Carpeta `README/`
+### Carpeta `docs/` del hub
 
 Contiene plantillas de referencia para documentos académicos en formato `apaquarto`, organizadas por modo de salida:
 
@@ -108,9 +108,9 @@ Contiene plantillas de referencia para documentos académicos en formato `apaqua
 | `index_jou.qmd`                   | `jou`          | Artículos en formato revista (dos columnas) |
 | `index_man.qmd`                   | `man`          | Manuscritos para envío a revistas           |
 | `index_stu.qmd`                   | `stu`          | Trabajos académicos estudiantiles           |
-| `_metadata_guia.yml`              | —              | Guía completa de metadatos disponibles      |
-| `_metadata_guia_simplificada.yml` | —              | Versión simplificada para uso cotidiano     |
-| `_quarto_guia.yml`                | —              | Referencia de opciones de `_quarto.yml`     |
+| `_metadata-guia.md`               | —              | Guía completa de metadatos disponibles      |
+| `_metadata-guia-simplificada.md`  | —              | Versión simplificada para uso cotidiano     |
+| `_quarto-guia.md`                 | —              | Referencia de opciones de `_quarto.yml`     |
 
 ---
 

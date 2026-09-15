@@ -41,7 +41,7 @@ citation:
   author:
   - Edison Achalma
   pdf-url: https://methodica.netlify.app/posts/2025-02-09-recursos-para-traducción-y-correccion/index.pdf
-date: 02/09/2025
+date: 2025-02-09
 draft: false
 image: ../featured.jpg
 curso: monografias

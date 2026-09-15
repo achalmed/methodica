@@ -42,7 +42,7 @@ citation:
   author:
   - Edison Achalma
   pdf-url: https://methodica.netlify.app/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.pdf
-date: 01/12/2025
+date: 2025-01-12
 draft: false
 image: ../featured.jpg
 curso: monografias

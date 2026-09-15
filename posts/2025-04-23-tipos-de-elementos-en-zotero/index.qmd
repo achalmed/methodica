@@ -42,7 +42,7 @@ citation:
   author:
   - Edison Achalma
   pdf-url: https://methodica.netlify.app/posts/2025-04-23-tipos-de-elementos-en-zotero/index.pdf
-date: 04/23/2025
+date: 2025-04-23
 draft: false
 image: ../featured.jpg
 curso: monografias

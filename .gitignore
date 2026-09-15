@@ -19,6 +19,7 @@ _book/
 # Archivos temporales de Quarto
 /_*.local
 **/*.quarto_ipynb
+**/*.quarto_ipynb_*
 .luarc.json
 
 # RStudio
