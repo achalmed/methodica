@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # =============================================================================
 # build-page-css.sh — compila assets/scss/05-pages/*.scss → assets/css/pages/
+# Fuente de verdad: el hub 04 index; en cada _pubs/pub_* es copia propagada por scripts/sync-theme-pubs.sh.
 # =============================================================================
 # Propósito : Los estilos por página se AUTORAN en SCSS (assets/scss/05-pages/)
 #             y se sirven como CSS plano por página (assets/css/pages/). Este
