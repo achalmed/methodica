@@ -5,7 +5,7 @@ estado: activo
 # assets/js/ — módulos de interacción «Quiet Laboratory» del hub y de los 11 blogs
 
 Fuente de verdad: el hub `04 index`. En cada `_pubs/pub_*` este archivo es una copia propagada por
-`scripts/sync-theme-pubs.sh`; se edita aquí, no allí.
+`04 index/scripts/sync-theme-pubs.sh`; se edita aquí, no allí.
 
 Cada módulo es un IIFE independiente, sin dependencias externas y con un solo propósito. Se cargan en todas
 las páginas mediante `assets/interactions.html` (`include-after-body` en `_quarto.yml`) con rutas absolutas
@@ -35,7 +35,7 @@ defecto, solo lo realza. Los módulos que animan respetan `prefers-reduced-motio
    temprana si la página no aplica).
 2. Añadir `<script src="/assets/js/<nombre>.js"></script>` en `assets/interactions.html`.
 3. Respetar `prefers-reduced-motion` si anima algo.
-4. Propagarlo a los blogs con `scripts/sync-theme-pubs.sh --aplicar` (`assets/js/` viaja entero;
+4. Propagarlo a los blogs con `04 index/scripts/sync-theme-pubs.sh --aplicar` (`assets/js/` viaja entero;
    `assets/interactions.html` no: cada sitio mantiene el suyo).
 
 ## Límite honesto

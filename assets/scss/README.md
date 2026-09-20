@@ -5,7 +5,7 @@ estado: activo
 # assets/scss/ — design system «Quiet Laboratory» del hub y de los 11 blogs
 
 Fuente de verdad: el hub `04 index`. En cada `_pubs/pub_*` este archivo es una copia propagada por
-`scripts/sync-theme-pubs.sh`; se edita aquí, no allí.
+`04 index/scripts/sync-theme-pubs.sh`; se edita aquí, no allí.
 
 Arquitectura SCSS del sitio, adaptación de ITCSS al sistema de temas de Quarto. Dos entradas
 (`theme-light.scss`, `theme-dark.scss`) definen el **mismo contrato de tokens semánticos `$lab-*`** con
@@ -103,7 +103,7 @@ Las microinteracciones viven en módulos independientes (`navbar.js`, `cursor.js
 4. ¿Solo afecta a un tema? → flag/token anulable, o `06-themes/`.
 5. Documenta el encabezado del archivo (propósito, responsabilidad, dependencias, cuándo modificarlo).
 6. `quarto render index.qmd` para compilar rápido los temas y revisar.
-7. Si el cambio es del tema compartido: `scripts/sync-theme-pubs.sh` (simula) y `--aplicar`; luego commit
+7. Si el cambio es del tema compartido: `04 index/scripts/sync-theme-pubs.sh` (simula) y `--aplicar`; luego commit
    en cada blog y en el hub.
 
 ## Límite honesto
