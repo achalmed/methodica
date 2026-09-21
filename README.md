@@ -48,5 +48,5 @@ principio a fin), `04 index/docs/despliegue-netlify.md` (cómo publica cada siti
 ## Límite honesto
 
 - Este README es el único documento propio del blog y se regenera desde el hub: lo escrito aquí a mano se pierde.
-- `_site/` sigue en git: Netlify publica _site/ empujado (sin build); D1 pendiente. `SECURITY.md` es la plantilla de GitHub sin rellenar.
+- `_site/` sigue en git: Netlify publica _site/ empujado (sin build); D1 pendiente. 
 - Licencia: código MPL-2.0 (`LICENSE`), contenido CC-BY-SA-4.0 según `license.qmd` del hub; unificarlas en los 12 sitios es la decisión D9.
