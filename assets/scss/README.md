@@ -77,6 +77,7 @@ assets/scss/05-pages/            assets/css/  (GENERADO: no editar a mano)
 ├── contact.scss       ──build──▶ pages/contact.css   # contact.qmd
 ├── listing.scss       ──build──▶ pages/listing.css   # blog/ y listados de cursos/
 ├── courses.scss       ──build──▶ pages/courses.css   # fichas y portadas de cursos/
+├── observatorio.scss  ──build──▶ pages/observatorio.css # observatorio/index.qmd
 ├── _blog.scss, _post.scss, _publications.scss,       # stubs inactivos:
 │   _projects.scss                                    #   quitar "_" + enlazar
 │
