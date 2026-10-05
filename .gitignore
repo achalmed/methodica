@@ -536,3 +536,9 @@ estructura.txt
 # `#_site/` está comentado arriba. Las figuras de los posts (`_site/**/index_files/`) son parte del
 # sitio publicado: se re-incluyen frente a `*_files/`, que solo debe actuar sobre las fuentes.
 !/_site/**/*_files/
+
+# Piloto 3 (2026-10-05): `_freeze/` se versiona cuando exista (normativa 5.16 y 7.6), declarado con `!` como `_site/`.
+# Con `freeze: true` un render global no re-ejecuta código: reutiliza esta caché, y Netlify publica el `_site/`
+# empujado sin build, así que la caché solo vive aquí. Hoy ningún post de methodica ejecuta código (sin bloques
+# ejecutables y `execute.enabled: false` en posts/_metadata.yml): Quarto no crea `_freeze/` y no hay nada que rastrear.
+!/_freeze/

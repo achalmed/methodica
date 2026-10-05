@@ -4,7 +4,7 @@ estado: activo
 ---
 # pub_methodica/ — Investigación y metodología: blog satélite del hub `04 index` (repo methodica, methodica.netlify.app)
 
-<!-- GENERADO por `04 index/scripts/pubs.py readme --aplicar` desde `04 index/_pubs/pubs.yml` (2026-10-04); no editar aquí: se regenera desde el hub -->
+<!-- GENERADO por `04 index/scripts/pubs.py readme --aplicar` desde `04 index/_pubs/pubs.yml` (2026-10-05); no editar aquí: se regenera desde el hub -->
 
 ## Qué es
 
@@ -24,6 +24,7 @@ llega por `04 index/scripts/sync-theme-pubs.sh`. Lo propio de este blog es `_qua
 quarto preview                              # vista previa local
 quarto render                               # regenera _site/ (freeze: true: el código no se re-ejecuta)
 git add -- <carpeta del post> _contenido_*.qmd _site && git commit -m "post: …"   # confirmar AQUÍ primero…
+../../scripts/puerta-r6.sh .                # puerta R6: _site/index.html al día antes del push (también es el hook pre-push)
 git push                                    # …al remoto propio (ssh git@github.com:achalmed/methodica.git)
 cd ../.. && git add _pubs/pub_methodica && git commit -m "pubs: methodica al último commit"   # y mover el puntero en el hub
 ```
@@ -37,6 +38,9 @@ cd ../.. && git add _pubs/pub_methodica && git commit -m "pubs: methodica al úl
 | `assets/scss/`, `assets/js/`, `assets/css/global.css`, `assets/css/components/`, `_extensions/`, `_filters/apa-floats-html.lua`, `scripts/build-page-css.sh` | tema propagado desde el hub por `sync-theme-pubs.sh`: no se edita aquí | |
 | `assets/img/`, `assets/fonts/`, `assets/gtm-*.html`, `assets/interactions.html`, `assets/scss/05-pages/`, `assets/css/pages/`, `_filters/_metadata-pdf.lua`, `_partials/` | propios del blog (no los escribe la sincronización) | |
 | `_site/` | sitio generado por `quarto render`; versionado a propósito: su push es el despliegue (`04 index/docs/decisiones.md` §4.1) | |
+| `THEME_VERSION` | sello del tema: commit del hub y sha256 del conjunto; lo escribe `sync-theme-pubs.sh --aplicar` (GENERADO) | |
+| `_freeze/` | caché de ejecución de Quarto (`freeze: true`); se versiona cuando existe (normativa 5.16 y 7.6) | |
+| `netlify.toml` | configuración de Netlify: publica `_site/` sin comando de build | |
 
 7 entradas. Cada entrada es `<sección>/AAAA-MM-DD-slug/index.qmd` con frontmatter apaquarto y fecha ISO;
 sus metadatos se editan en masa desde `scripts_quarto_studio` (`metadata_manager`).
@@ -50,5 +54,5 @@ principio a fin), `04 index/docs/despliegue-netlify.md` (cómo publica cada siti
 ## Límite honesto
 
 - Este README es el único documento propio del blog y se regenera desde el hub: lo escrito aquí a mano se pierde.
-- `_site/` sigue en git: Netlify publica el _site/ empujado, sin build (decisiones §4.1 del hub).
+- `_site/` sigue en git: Netlify publica el _site/ empujado, sin build (decisiones §4.1 del hub); `netlify.toml` lo declara (`publish = "_site"`, sin comando de build), y el hook pre-push de la puerta R6 no viaja con el repo: lo instala `04 index/scripts/puerta-r6.sh --instalar`.
 - Licencia: código MPL-2.0 (`LICENSE`), contenido CC-BY-SA-4.0 según `license.qmd` del hub; unificarlas en los 12 sitios es la decisión D9.
