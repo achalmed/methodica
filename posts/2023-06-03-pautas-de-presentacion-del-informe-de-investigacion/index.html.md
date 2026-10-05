@@ -41,9 +41,10 @@ citation:
   author:
   - Edison Achalma
   pdf-url: https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf
-date: 06/03/2023
+date: 2023-06-03
 draft: false
 image: ../featured.jpg
+curso: monografias
 ---
 
 # Introducción
@@ -136,10 +137,20 @@ Méndez Álvarez, C. E. (1995). Metodología: guía para elaborar diseños de in
 Mendoza Bellido, W. E. (2007). Cómo investigan los economistas: Guía para elaborar y desarrollar un proyecto de investigación. Fondo Editorial, PUCP.
 
 
+---
+tipo: fragmento
+titulo: texto de apertura del bloque «Publicaciones similares» (incluido en cada post)
+---
+
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
+
+---
+tipo: fragmento
+titulo: índice de publicaciones de posts; lo genera script_generador_publicacion_similar
+---
 
 1. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf) [Ideas De Investigacion Para Economia](https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia)
 2. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf) [Pautas De Presentacion Del Informe De Investigacion](https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion)
@@ -149,6 +160,11 @@ Si te interesó este artículo, te recomendamos que explores otros blogs y recur
 6. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml/index.pdf) [Configuracion De Quarto Yml](https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml)
 7. [{{< fa regular file-pdf >}}](https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.pdf) [Guia Practica De Metadata En Quarto](https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto)
 
+
+---
+tipo: fragmento
+titulo: texto de cierre del bloque «Publicaciones similares» (incluido en cada post)
+---
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 
