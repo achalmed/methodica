@@ -60,7 +60,7 @@ author-note:
 # ========================================================================
 
 # Metadatos del Documento
-date-modified: "today"                    # Se actualiza cada render
+date-modified: last-modified                    # fecha del archivo = su último commit (fechas-desde-git.py, ola 6)
 # O fecha específica:
 # date-modified: "2025-01-02"
 
