@@ -163,7 +163,7 @@ contributes:
           dev: svglite
     pdf:
       documentclass: apa7
-      pdf-engine: xelatex
+      pdf-engine: lualatex
       suppress-bibliography: false
       hyperrefoptions: 
         - linktoc=none

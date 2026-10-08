@@ -314,7 +314,7 @@ format:
     colorlinks: true                      # Enlaces con color
     
     # --- OPCIONES DE COMPILACIÓN ---
-    pdf-engine: xelatex                   # xelatex, pdflatex, lualatex
+    pdf-engine: lualatex                   # LuaLaTeX + Biber (normativa 5.14)
     keep-tex: true                        # Mantener archivos .tex
     keep-md: false                        # Mantener archivos .md
     
