@@ -14508,11 +14508,13 @@ font-style: inherit;">true</span></span></code></pre></div></div>
 <li>Open Graph Debugger: https://developers.facebook.com/tools/debug/</li>
 <li>Twitter Card Validator: https://cards-dev.twitter.com/validator</li>
 </ul>
+<!-- fragmento de inclusión — texto de apertura del bloque «Publicaciones similares» (incluido en cada post) -->
 </section>
 </section>
 <section id="publicaciones-similares" class="level1" data-number="14">
 <h1 data-number="14"><span class="header-section-number">14</span> Publicaciones Similares</h1>
 <p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
+<!-- fragmento de inclusión — índice de publicaciones de posts; lo genera script_generador_publicacion_similar -->
 <ol type="1">
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia">Ideas De Investigacion Para Economia</a></li>
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion">Pautas De Presentacion Del Informe De Investigacion</a></li>
@@ -14522,6 +14524,7 @@ font-style: inherit;">true</span></span></code></pre></div></div>
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml">Configuracion De Quarto Yml</a></li>
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto">Guia Practica De Metadata En Quarto</a></li>
 </ol>
+<!-- fragmento de inclusión — texto de cierre del bloque «Publicaciones similares» (incluido en cada post) -->
 <p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
 
 
@@ -30704,11 +30707,13 @@ font-style: inherit;"># Preview local</span></span>
 <span id="cb94-22"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">quarto</span> preview</span></code></pre></div></div>
+<!-- fragmento de inclusión — texto de apertura del bloque «Publicaciones similares» (incluido en cada post) -->
 </section>
 </section>
 <section id="publicaciones-similares" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span> Publicaciones Similares</h1>
 <p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
+<!-- fragmento de inclusión — índice de publicaciones de posts; lo genera script_generador_publicacion_similar -->
 <ol type="1">
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia">Ideas De Investigacion Para Economia</a></li>
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion">Pautas De Presentacion Del Informe De Investigacion</a></li>
@@ -30718,6 +30723,7 @@ font-style: inherit;">quarto</span> preview</span></code></pre></div></div>
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml">Configuracion De Quarto Yml</a></li>
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto">Guia Practica De Metadata En Quarto</a></li>
 </ol>
+<!-- fragmento de inclusión — texto de cierre del bloque «Publicaciones similares» (incluido en cada post) -->
 <p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
 
 
@@ -31856,10 +31862,12 @@ documentos académicos</em>. accepted, January 2. <a href="https://methodica.net
 <li><strong>Archivos</strong>: Siempre asociar archivos adjuntos a ítems completos para mejor funcionalidad.</li>
 <li><strong>Idioma</strong>: Usar códigos ISO (por ejemplo, “es-ES”) para consistencia en el formato de títulos.</li>
 </ul>
+<!-- fragmento de inclusión — texto de apertura del bloque «Publicaciones similares» (incluido en cada post) -->
 </section>
 <section id="publicaciones-similares" class="level1" data-number="40">
 <h1 data-number="40"><span class="header-section-number">40</span> Publicaciones Similares</h1>
 <p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
+<!-- fragmento de inclusión — índice de publicaciones de posts; lo genera script_generador_publicacion_similar -->
 <ol type="1">
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia">Ideas De Investigacion Para Economia</a></li>
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion">Pautas De Presentacion Del Informe De Investigacion</a></li>
@@ -31869,6 +31877,7 @@ documentos académicos</em>. accepted, January 2. <a href="https://methodica.net
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml">Configuracion De Quarto Yml</a></li>
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto">Guia Practica De Metadata En Quarto</a></li>
 </ol>
+<!-- fragmento de inclusión — texto de cierre del bloque «Publicaciones similares» (incluido en cada post) -->
 <p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
 
 
@@ -31999,11 +32008,13 @@ accepted, April 23. <a href="https://methodica.netlify.app/posts/2025-04-23-tipo
 <li><a href="https://www.linguee.es/">Linguee</a></li>
 </ul>
 <p>Esperamos que estos recursos te ayuden a mejorar tus traducciones y escritos, facilitando tu labor académica y de investigación.</p>
+<!-- fragmento de inclusión — texto de apertura del bloque «Publicaciones similares» (incluido en cada post) -->
 </section>
 </section>
 <section id="publicaciones-similares" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Publicaciones Similares</h1>
 <p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
+<!-- fragmento de inclusión — índice de publicaciones de posts; lo genera script_generador_publicacion_similar -->
 <ol type="1">
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia">Ideas De Investigacion Para Economia</a></li>
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion">Pautas De Presentacion Del Informe De Investigacion</a></li>
@@ -32013,6 +32024,7 @@ accepted, April 23. <a href="https://methodica.netlify.app/posts/2025-04-23-tipo
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml">Configuracion De Quarto Yml</a></li>
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto">Guia Practica De Metadata En Quarto</a></li>
 </ol>
+<!-- fragmento de inclusión — texto de cierre del bloque «Publicaciones similares» (incluido en cada post) -->
 <p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
 
 
@@ -32621,10 +32633,12 @@ textos</em>. accepted, February 9. <a href="https://methodica.netlify.app/posts/
 <li>Case, D. O., &amp; Given, L. M. (2016). <em>Looking for information: A survey of research on information seeking, needs, and behavior</em> (4th ed.). Emerald Group Publishing.</li>
 </ul>
 <p><em>“La investigación es ver lo que todos han visto y pensar lo que nadie ha pensado.”</em> - Albert Szent-Györgyi</p>
+<!-- fragmento de inclusión — texto de apertura del bloque «Publicaciones similares» (incluido en cada post) -->
 </section>
 <section id="publicaciones-similares" class="level1" data-number="12">
 <h1 data-number="12"><span class="header-section-number">12</span> Publicaciones Similares</h1>
 <p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
+<!-- fragmento de inclusión — índice de publicaciones de posts; lo genera script_generador_publicacion_similar -->
 <ol type="1">
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia">Ideas De Investigacion Para Economia</a></li>
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion">Pautas De Presentacion Del Informe De Investigacion</a></li>
@@ -32634,6 +32648,7 @@ textos</em>. accepted, February 9. <a href="https://methodica.netlify.app/posts/
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml">Configuracion De Quarto Yml</a></li>
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto">Guia Practica De Metadata En Quarto</a></li>
 </ol>
+<!-- fragmento de inclusión — texto de cierre del bloque «Publicaciones similares» (incluido en cada post) -->
 <p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
 
 
@@ -32768,10 +32783,12 @@ Figura&nbsp;1: Imagen 1
 <h1 data-number="2"><span class="header-section-number">2</span> Bibliografía</h1>
 <p>Méndez Álvarez, C. E. (1995). Metodología: guía para elaborar diseños de investigación en ciencias económicas, contables y administrativas. Buenos Aires, Argentina: McGraw-Hill.</p>
 <p>Mendoza Bellido, W. E. (2007). Cómo investigan los economistas: Guía para elaborar y desarrollar un proyecto de investigación. Fondo Editorial, PUCP.</p>
+<!-- fragmento de inclusión — texto de apertura del bloque «Publicaciones similares» (incluido en cada post) -->
 </section>
 <section id="publicaciones-similares" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Publicaciones Similares</h1>
 <p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
+<!-- fragmento de inclusión — índice de publicaciones de posts; lo genera script_generador_publicacion_similar -->
 <ol type="1">
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia">Ideas De Investigacion Para Economia</a></li>
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion">Pautas De Presentacion Del Informe De Investigacion</a></li>
@@ -32781,6 +32798,7 @@ Figura&nbsp;1: Imagen 1
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml">Configuracion De Quarto Yml</a></li>
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto">Guia Practica De Metadata En Quarto</a></li>
 </ol>
+<!-- fragmento de inclusión — texto de cierre del bloque «Publicaciones similares» (incluido en cada post) -->
 <p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
 
 
@@ -35433,10 +35451,12 @@ accepted, June 3. <a href="https://methodica.netlify.app/posts/2023-06-03-pautas
 <li>Gertler, P., et al.&nbsp;(2016). <em>La evaluación de impacto en la práctica</em> (2da ed.). Banco Mundial.</li>
 <li>Khandker, S., Koolwal, G., &amp; Samad, H. (2010). <em>Handbook on Impact Evaluation</em>. World Bank.</li>
 </ul>
+<!-- fragmento de inclusión — texto de apertura del bloque «Publicaciones similares» (incluido en cada post) -->
 </section>
 <section id="publicaciones-similares" class="level1" data-number="16">
 <h1 data-number="16"><span class="header-section-number">16</span> Publicaciones Similares</h1>
 <p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
+<!-- fragmento de inclusión — índice de publicaciones de posts; lo genera script_generador_publicacion_similar -->
 <ol type="1">
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-ideas-de-investigacion-para-economia">Ideas De Investigacion Para Economia</a></li>
 <li><a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion">Pautas De Presentacion Del Informe De Investigacion</a></li>
@@ -35446,6 +35466,7 @@ accepted, June 3. <a href="https://methodica.netlify.app/posts/2023-06-03-pautas
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-configuracion-de-quarto-yml">Configuracion De Quarto Yml</a></li>
 <li><a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://methodica.netlify.app/posts/2026-01-02-guia-practica-de-metadata-en-quarto">Guia Practica De Metadata En Quarto</a></li>
 </ol>
+<!-- fragmento de inclusión — texto de cierre del bloque «Publicaciones similares» (incluido en cada post) -->
 <p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
 
 
