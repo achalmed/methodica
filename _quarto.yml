@@ -6,6 +6,8 @@ project:
   pre-render:
     - scripts/build-page-css.sh
     - scripts/fechas-desde-git.py --aplicar   # fecha de cada página = su último commit: render reproducible (ola 6)
+  post-render:
+    - scripts/quitar-borradores.py --aplicar   # los borradores no se publican (decisión del autor, 2026-10-08)
   resources:
     - assets/img/sidebar.jpg
 

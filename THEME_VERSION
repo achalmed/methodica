@@ -1,5 +1,5 @@
 # THEME_VERSION — GENERADO por `04 index/scripts/sync-theme-pubs.sh --aplicar` desde el hub (website-achalma); no editar aquí
 # Sello del tema compartido (ADR-06, normativa 7.11): commit del hub que lo fijó por última vez y sha256 del conjunto.
-commit_hub: 4f1b777795d36af045286087ee1b68b0cc6cf74a
-sha256_conjunto: 1775c028bc52bce9f4245b01d9444b84a708d8488269d0b0e2248ffdce885295
-archivos: 113
+commit_hub: 2698329705da076172d7476a0bf39ff89798d8a1
+sha256_conjunto: 48025e0c21d502137dae9af8a8df9a7437801c730ed4a3bf7129215d6be28aa7
+archivos: 114
