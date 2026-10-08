@@ -542,3 +542,6 @@ estructura.txt
 # empujado sin build, así que la caché solo vive aquí. Hoy ningún post de methodica ejecuta código (sin bloques
 # ejecutables y `execute.enabled: false` en posts/_metadata.yml): Quarto no crea `_freeze/` y no hay nada que rastrear.
 !/_freeze/
+
+# Dank Mono: fuente comercial sin uso; fuera de git (ola 6), copia en $RESPALDOS_DIR/residuos/2026-10-08-dankmono
+assets/fonts/DankMono-*
