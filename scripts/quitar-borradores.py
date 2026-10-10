@@ -53,12 +53,12 @@ def main(argv):
         else:
             salidas += [site / p.with_suffix(s) for s in (".html", ".pdf", ".docx")]
     existentes = [s for s in salidas if s.exists()]
-    rutas = {"/" + s.relative_to(site).as_posix() for s in existentes}
+    rutas = {s.relative_to(site).as_posix() for s in salidas}   # también las ya quitadas: el enlace roto sigue siendo aviso
     enlazan = []
     if rutas:
-        patron = re.compile("|".join(re.escape(r.lstrip("/")) for r in sorted(rutas)))
+        patron = re.compile("|".join(re.escape(r) for r in sorted(rutas)))
         for html in site.rglob("*.html"):
-            if any(html == s or s in html.parents for s in existentes):
+            if any(html == s or s in html.parents for s in salidas):
                 continue
             if patron.search(html.read_text(encoding="utf-8", errors="ignore")):
                 enlazan.append(html.relative_to(site).as_posix())
