@@ -7,7 +7,7 @@ paso, en el `post-render` de `_quarto.yml`, borra esa salida. Para `<dir>/index.
 entera; para `<dir>/x.qmd`, `_site/<dir>/x.{html,pdf,docx}`. Ningún índice del sitio (sitemap, búsqueda, listados)
 enlaza un borrador; si una página publicada lo enlaza, se avisa.
 
-Simula por defecto; `--aplicar` borra. Sale 0 bien (los enlaces a borradores se avisan), 1 con `--estricto` si una
+También quita la página de redirección de cada `aliases:` del borrador. Simula por defecto; `--aplicar` borra. Sale 0 bien (los enlaces a borradores se avisan), 1 con `--estricto` si una
 página publicada enlaza un borrador, 2 si no hay `_site/`.
 Uso:  python3 scripts/quitar-borradores.py [carpeta del sitio] [--aplicar]   (en el post-render: QUARTO_PROJECT_DIR)
 """
@@ -19,6 +19,7 @@ import sys
 from pathlib import Path
 
 BORRADOR = re.compile(r"^draft:\s*true\s*(#.*)?$", re.M)
+ALIAS = re.compile(r"^\s+-\s+(\S+)\s*$", re.M)          # elementos de la lista `aliases:` (y de cualquier otra lista: solo cuentan los que existen en _site)
 
 
 def frontmatter(texto):
@@ -52,6 +53,10 @@ def main(argv):
             salidas.append(site / p.parent)
         else:
             salidas += [site / p.with_suffix(s) for s in (".html", ".pdf", ".docx")]
+        for alias in ALIAS.findall(fm):            # Quarto escribe una página de redirección por cada alias del borrador
+            alias = alias.strip().strip("'\"").strip("/")
+            if alias:
+                salidas.append(site / alias / "index.html" if not alias.endswith(".html") else site / alias)
     existentes = [s for s in salidas if s.exists()]
     rutas = {s.relative_to(site).as_posix() for s in salidas}   # también las ya quitadas: el enlace roto sigue siendo aviso
     enlazan = []
