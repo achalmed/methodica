@@ -1,4 +1,4 @@
-# CITATION.cff — GENERADO por `04 index/scripts/pubs.py citation --aplicar` desde `04 index/_pubs/pubs.yml` (2026-09-20); no editar aquí
+# CITATION.cff — GENERADO por `web/scripts/pubs.py citation --aplicar` desde `web/_pubs/pubs.yml` (2026-10-10); no editar aquí
 cff-version: 1.2.0
 title: "Investigación y metodología — blog de Edison Achalma (methodica)"
 message: "Si citas una entrada de este blog, usa los metadatos de este archivo y la URL de la entrada."
