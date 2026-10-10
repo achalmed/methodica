@@ -4,7 +4,7 @@ estado: activo
 ---
 # assets/scss/ — design system «Quiet Laboratory» del hub y de los 11 blogs
 
-Fuente de verdad: el hub `04 index`. En cada `_pubs/pub_*` este archivo es una copia propagada por
+Fuente de verdad: el hub `04 index`. En cada `_pubs/*` este archivo es una copia propagada por
 `04 index/scripts/sync-theme-pubs.sh`; se edita aquí, no allí.
 
 Arquitectura SCSS del sitio, adaptación de ITCSS al sistema de temas de Quarto. Dos entradas
