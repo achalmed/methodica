@@ -1,5 +1,5 @@
 # netlify.toml — configuración de Netlify de methodica (methodica.netlify.app): publica el `_site/` empujado, sin build
-# Reproduce lo que hace hoy (04 index/docs/decisiones.md §4.1): Netlify sirve `_site/` desde git y no ejecuta ningún
-# comando; el render es local (`quarto render`) y la puerta R6 (04 index/scripts/puerta-r6.sh) lo exige antes del push.
+# Reproduce lo que hace hoy (web/docs/decisiones.md §4.1): Netlify sirve `_site/` desde git y no ejecuta ningún
+# comando; el render es local (`quarto render`) y la puerta R6 (web/scripts/puerta-r6.sh) lo exige antes del push.
 [build]
   publish = "_site"

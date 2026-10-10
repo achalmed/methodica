@@ -532,7 +532,7 @@ yarn.lock
 estructura.txt
 
 # DOC10 (2026-10-04): `_site/` se versiona a propósito (NORMATIVA §15.8, excepción declarada):
-# Netlify publica el `_site/` empujado, sin build (04 index/docs/decisiones.md §4.1–§4.2); por eso
+# Netlify publica el `_site/` empujado, sin build (web/docs/decisiones.md §4.1–§4.2); por eso
 # `#_site/` está comentado arriba. Las figuras de los posts (`_site/**/index_files/`) son parte del
 # sitio publicado: se re-incluyen frente a `*_files/`, que solo debe actuar sobre las fuentes.
 !/_site/**/*_files/
