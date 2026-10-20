@@ -22,7 +22,8 @@ FUERA = ("_site/", "_freeze/", ".quarto/", "_pubs/")
 
 
 def git(raiz, *args):
-    return subprocess.run(["git", "-C", raiz, *args], capture_output=True, text=True, check=True).stdout
+    # core.quotePath=false: sin él git cita las rutas no ASCII («traducci\303\263n») y esas páginas nunca casaban (2026-10-20)
+    return subprocess.run(["git", "-C", raiz, "-c", "core.quotePath=false", *args], capture_output=True, text=True, check=True).stdout
 
 
 def main(argv):
