@@ -1,0 +1,9 @@
+# _redirects — GENERADO por aula (src/integracion/recursos.mjs); no editar.
+# Cada post del sitio Quarto de methodica lleva a su página nueva; los archivos del post (PDF, DOCX, figuras) también.
+/posts/2026-01-02-configuracion-de-quarto-yml/*  /blog/configuracion-de-quarto-yml/:splat  301
+/posts/2026-01-02-guia-practica-de-metadata-en-quarto/*  /blog/guia-practica-de-metadata-en-quarto/:splat  301
+/posts/2025-04-23-tipos-de-elementos-en-zotero/*  /blog/tipos-de-elementos-en-zotero/:splat  301
+/posts/2025-02-09-recursos-para-traducción-y-correccion/*  /blog/recursos-para-traducción-y-correccion/:splat  301
+/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/*  /blog/recursos-de-bibliografia-y-documentacion/:splat  301
+/posts/2023-06-03-ideas-de-investigacion-para-economia/*  /blog/ideas-de-investigacion-para-economia/:splat  301
+/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/*  /blog/pautas-de-presentacion-del-informe-de-investigacion/:splat  301
