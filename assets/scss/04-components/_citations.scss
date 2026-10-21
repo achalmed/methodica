@@ -15,9 +15,9 @@ blockquote, .blockquote {
   font-style: italic;
   font-size: 1.02em;
   color: $lab-ink-2;
-  border-left: 2px solid $lab-accent;
+  border-left: 0;                 // sin barra: la sangría basta (autor, 2026-10-21)
   margin: 1.8rem 0;
-  padding: 0.35rem 0 0.35rem 1.4rem;
+  padding: 0 1.5rem;
 }
 
 .footnote-ref {

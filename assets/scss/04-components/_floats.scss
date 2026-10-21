@@ -73,26 +73,38 @@ figure.quarto-float-tbl:has(thead th:nth-child(8)) .table {
 }
 
 // --- Estructura APA: número arriba, título en cursiva, nota abajo ----------
-.quarto-float-caption.quarto-float-caption-top {
+// Título arriba en la letra y el tamaño del texto; la nota debajo, un punto más
+// pequeña (autor, 2026-10-21: el pie en sans pequeña no combinaba con el cuerpo).
+.quarto-float-caption,
+.quarto-float-caption.quarto-float-caption-top,
+figure figcaption,
+div[class*="quarto-figure-"] > figure.figure > figcaption.quarto-float-caption {   // gana al centrado de Quarto
+  font-family: $font-family-serif;
+  font-size: 1.03rem;
+  line-height: 1.5;
+  color: $lab-ink;
   text-align: left;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.6rem;
 }
 
 .apa-float-label {
+  display: block;
   font-style: normal;
   font-weight: 600;
 }
 
 .apa-float-title {
+  display: block;
   font-style: italic;
   margin-top: 0.15rem;
 }
 
 .apa-float-note {
-  font-size: 0.85rem;
-  color: $lab-muted;
+  font-family: $font-family-serif;
+  font-size: 0.97rem;
+  color: $lab-ink-2;
   text-align: left;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
 
   p {
     margin-bottom: 0;

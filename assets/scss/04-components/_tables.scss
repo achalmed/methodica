@@ -32,10 +32,11 @@
     font-size: 0.875rem;
     font-weight: 600;
     color: $lab-ink;
-    background: $lab-bg-surface;
-    border-bottom: 1px solid $lab-border;
-    padding: 0.65rem 0.9rem;
-    vertical-align: bottom;
+    background: none;             // cabecera delgada, sin relleno, centrada en vertical (visor de Claude)
+    border-bottom: 1px solid $lab-border-strong;
+    padding: 0.55rem 0.9rem;
+    line-height: 1.35;
+    vertical-align: middle;
   }
 
   tbody td {
