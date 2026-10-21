@@ -1,5 +1,7 @@
-# netlify.toml — configuración de Netlify de methodica (methodica.netlify.app): publica el `_site/` empujado, sin build
-# Reproduce lo que hace hoy (web/docs/decisiones.md §4.1): Netlify sirve `_site/` desde git y no ejecuta ningún
-# comando; el render es local (`quarto render`) y la puerta R6 (web/scripts/puerta-r6.sh) lo exige antes del push.
+# netlify.toml — configuración de Netlify de methodica (methodica.netlify.app): publica la vitrina empujada, sin build
+# Desde la fase 7 de web/docs/plataforma-educativa.md el sitio es la vitrina de la plataforma de cursos (web/_aula):
+# `_aula/scripts/publicar.sh methodica --aplicar` la construye, prueba que ninguna URL vieja se pierda y la copia a
+# `_vitrina/` (GENERADO; no se edita). `_site/` sigue siendo el render de Quarto, fuente de las lecciones; volver al
+# sitio Quarto es `publicar.sh methodica --volver --aplicar` (publish = "_site"). Netlify no ejecuta ningún comando.
 [build]
-  publish = "_site"
+  publish = "_vitrina"

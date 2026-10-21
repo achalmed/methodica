@@ -1,0 +1,1096 @@
+<!DOCTYPE html><html lang="es" data-pub="methodica" data-acento="revista"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Tipos de elementos y campos en Zotero — Methodica</title><meta name="description" content="Guía completa sobre los diferentes tipos de ítems (libro, artículo, tesis) y campos disponibles en el gestor bibliográfico Zotero."><link rel="canonical" href="https://methodica.netlify.app/blog/tipos-de-elementos-en-zotero/"><meta property="og:title" content="Tipos de elementos y campos en Zotero — Methodica"><meta property="og:description" content="Guía completa sobre los diferentes tipos de ítems (libro, artículo, tesis) y campos disponibles en el gestor bibliográfico Zotero."><meta property="og:locale" content="es_PE"><meta name="generator" content="aula (prototipo, fase 4)"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><script>
+    // Tema y modo lectura elegidos, antes de pintar (sin parpadeo). Si el almacenamiento falla, manda el sistema.
+    try {
+      const t = JSON.parse(localStorage.getItem('aula:tema'));
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch {}
+  </script><link rel="stylesheet" href="/_astro/lector.BkfZqtkF.css"><style>.mas[data-astro-cid-oxkwrqsq] h2[data-astro-cid-oxkwrqsq]{font-family:var(--f-interfaz);font-size:var(--t-0);color:var(--tinta-2);letter-spacing:0;margin-bottom:.5rem;font-weight:600}.mas[data-astro-cid-oxkwrqsq] ul[data-astro-cid-oxkwrqsq]{list-style:none;display:grid}.mas[data-astro-cid-oxkwrqsq] li[data-astro-cid-oxkwrqsq]{border-top:1px solid var(--linea);font-size:var(--t-1);gap:.1rem;padding-block:.55rem;line-height:1.35;display:grid}.mas[data-astro-cid-oxkwrqsq] a[data-astro-cid-oxkwrqsq]{text-decoration:none}.mas[data-astro-cid-oxkwrqsq] a[data-astro-cid-oxkwrqsq]:hover{text-decoration:underline}.mas[data-astro-cid-oxkwrqsq] .dato[data-astro-cid-oxkwrqsq]{font-size:.72rem}@media (width<=999px){.mas[data-astro-cid-oxkwrqsq]{display:none}}
+</style><link rel="stylesheet" href="/_astro/base.DLgKtWMB.css"><style>.autoevaluacion[data-astro-cid-2nclk3sa]{border:1px solid var(--linea-fuerte);border-radius:var(--r-3);background:var(--elevado);gap:.75rem;margin-top:3rem;padding:1.4rem;display:grid}.autoevaluacion[data-astro-cid-2nclk3sa] h2[data-astro-cid-2nclk3sa]{font-size:var(--t-4)}.preguntas[data-astro-cid-2nclk3sa]{gap:1rem;list-style:none;display:grid}.pregunta[data-astro-cid-2nclk3sa]{border:1px solid var(--linea);border-radius:var(--r-2);border-left-width:3px;gap:.75rem;padding:1rem;display:grid}.pregunta[data-astro-cid-2nclk3sa].bien{border-left-color:var(--acento)}.pregunta[data-astro-cid-2nclk3sa].mal{border-left-color:var(--cod-numero)}fieldset[data-astro-cid-2nclk3sa]{border:0;min-width:0;margin:0;padding:0}legend[data-astro-cid-2nclk3sa]{font-family:var(--f-lectura);margin-bottom:.6rem;padding:0;font-size:1.08rem;line-height:1.5}legend[data-astro-cid-2nclk3sa] .dato[data-astro-cid-2nclk3sa]{color:var(--acento)}.opciones[data-astro-cid-2nclk3sa]{gap:.35rem;display:grid}.opciones[data-astro-cid-2nclk3sa].en-linea{flex-wrap:wrap;gap:.5rem 1.5rem;display:flex}.opciones[data-astro-cid-2nclk3sa] label[data-astro-cid-2nclk3sa]{cursor:pointer;border-radius:var(--r-1);align-items:baseline;gap:.6rem;padding:.35rem .25rem;display:flex}.opciones[data-astro-cid-2nclk3sa] label[data-astro-cid-2nclk3sa]:hover{background:var(--papel-2)}input[data-astro-cid-2nclk3sa][type=radio]{accent-color:var(--acento);width:1.05rem;height:1.05rem}.numerica[data-astro-cid-2nclk3sa]{gap:.35rem;max-width:16rem;display:grid}.numerica[data-astro-cid-2nclk3sa] label[data-astro-cid-2nclk3sa]{font-size:var(--t-0);color:var(--tinta-2)}.numerica[data-astro-cid-2nclk3sa] input[data-astro-cid-2nclk3sa]{min-height:2.5rem;font:1rem var(--f-datos);color:var(--tinta);background:var(--papel);border:1px solid var(--linea-fuerte);border-radius:var(--r-2);padding:.4rem .7rem}.pie-pregunta[data-astro-cid-2nclk3sa]{flex-wrap:wrap;align-items:center;gap:.5rem 1rem;display:flex}.resultado[data-astro-cid-2nclk3sa]{font-size:var(--t-1);font-weight:600}.bien[data-astro-cid-2nclk3sa] .resultado[data-astro-cid-2nclk3sa]{color:var(--acento)}.explicacion[data-astro-cid-2nclk3sa]{font-size:var(--t-1);color:var(--tinta-2);border-top:1px dashed var(--linea);padding-top:.6rem}.marcador[data-astro-cid-2nclk3sa]{font-weight:600}
+</style></head> <body class="pagina-lector"> <a class="saltar" href="#principal">Saltar al contenido</a> <header class="cabecera" data-astro-cid-n7emlgxr> <div class="envoltura cabecera-fila" data-astro-cid-n7emlgxr> <a class="marca" href="/" aria-label="Methodica, inicio" data-astro-cid-n7emlgxr> <svg class="signo" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-ar5j3fuj> <rect x="1" y="1" width="22" height="22" rx="3" class="signo-marco" data-astro-cid-ar5j3fuj></rect> <path d="M8.33 1v22M15.67 1v22M1 8.33h22M1 15.67h22" class="signo-reticula" data-astro-cid-ar5j3fuj></path> <rect x="8.33" y="8.33" width="7.34" height="7.34" class="signo-celda" data-astro-cid-ar5j3fuj></rect> </svg> <span class="marca-nombre" data-astro-cid-n7emlgxr>Methodica</span> </a> <nav class="navegacion" aria-label="Secciones" data-astro-cid-n7emlgxr> <ul data-astro-cid-n7emlgxr> <li data-astro-cid-n7emlgxr><a href="/cursos/" data-astro-cid-n7emlgxr>Cursos</a></li><li data-astro-cid-n7emlgxr><a href="/blog/" aria-current="page" data-astro-cid-n7emlgxr>Blog</a></li><li data-astro-cid-n7emlgxr><a href="/ediciones/" data-astro-cid-n7emlgxr>Ediciones</a></li> </ul> </nav> <button class="tema" type="button" data-tema aria-label="Cambiar a tema oscuro" title="Tema claro u oscuro" data-astro-cid-n7emlgxr> <svg class="sol" viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-n7emlgxr><circle cx="12" cy="12" r="4.2" data-astro-cid-n7emlgxr></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" data-astro-cid-n7emlgxr></path></svg> <svg class="luna" viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-n7emlgxr><path d="M20 14.6A8.5 8.5 0 0 1 9.4 4a8.5 8.5 0 1 0 10.6 10.6Z" data-astro-cid-n7emlgxr></path></svg> </button> </div> </header><script type="module" src="/_astro/cabecera.astro_astro_type_script_index_0_lang.DkzuoUKN.js"></script> <main id="principal" tabindex="-1">  <div class="avance-lectura" aria-hidden="true" data-astro-cid-egnxznue><span data-avance-lectura data-astro-cid-egnxznue></span></div> <div class="lector envoltura" data-astro-cid-egnxznue> <aside class="lector-lateral" aria-label="Más del blog" data-astro-cid-egnxznue> <div class="mas" data-astro-cid-oxkwrqsq> <h2 data-astro-cid-oxkwrqsq>Más del blog</h2> <ul data-astro-cid-oxkwrqsq> <li data-astro-cid-oxkwrqsq><a href="/blog/configuracion-de-quarto-yml/" data-astro-cid-oxkwrqsq>Configuración de _quarto.yml para Proyectos Quarto</a><span class="dato tenue" data-astro-cid-oxkwrqsq>2026-01-02</span></li><li data-astro-cid-oxkwrqsq><a href="/blog/guia-practica-de-metadata-en-quarto/" data-astro-cid-oxkwrqsq>Configuración de _metadata.yml para documentos académicos</a><span class="dato tenue" data-astro-cid-oxkwrqsq>2026-01-02</span></li><li data-astro-cid-oxkwrqsq><a href="/blog/recursos-para-traduccion-y-correccion/" data-astro-cid-oxkwrqsq>Recursos para traducción y corrección textos</a><span class="dato tenue" data-astro-cid-oxkwrqsq>2025-02-09</span></li><li data-astro-cid-oxkwrqsq><a href="/blog/recursos-de-bibliografia-y-documentacion/" data-astro-cid-oxkwrqsq>Recursos Académicos para Investigación</a><span class="dato tenue" data-astro-cid-oxkwrqsq>2025-01-12</span></li><li data-astro-cid-oxkwrqsq><a href="/blog/ideas-de-investigacion-para-economia/" data-astro-cid-oxkwrqsq>Ideas de investigación en economía</a><span class="dato tenue" data-astro-cid-oxkwrqsq>2023-06-03</span></li><li data-astro-cid-oxkwrqsq><a href="/blog/pautas-de-presentacion-del-informe-de-investigacion/" data-astro-cid-oxkwrqsq>Pautas para informe de investigación</a><span class="dato tenue" data-astro-cid-oxkwrqsq>2023-06-03</span></li> </ul> </div> </aside> <article class="lector-articulo" data-articulo data-astro-cid-egnxznue> <header class="lector-cabeza" data-astro-cid-egnxznue> <nav aria-label="Ruta" data-astro-cid-egnxznue> <ol class="migas" data-astro-cid-egnxznue> <li data-astro-cid-egnxznue><a href="/blog/" data-astro-cid-egnxznue>Blog</a></li><li data-astro-cid-egnxznue><span data-astro-cid-egnxznue>Metodología de Investigación</span></li> </ol> </nav> <h1 data-astro-cid-egnxznue>Tipos de elementos y campos en Zotero</h1> <p class="lector-desc" data-astro-cid-egnxznue>Guía completa sobre los diferentes tipos de ítems (libro, artículo, tesis) y campos disponibles en el gestor bibliográfico Zotero.</p> <p class="metadatos" data-astro-cid-egnxznue> <time datetime="2025-04-23" data-astro-cid-egnxznue>23 de abril de 2025</time> <span data-astro-cid-egnxznue>28 min de lectura</span> <a href="/blog/tipos-de-elementos-en-zotero/index.pdf" data-astro-cid-egnxznue>PDF <span class="sr" data-astro-cid-egnxznue>de esta entrada</span>(97 KB)</a> <a href="/blog/tipos-de-elementos-en-zotero/index.docx" data-astro-cid-egnxznue>DOCX (40 KB)</a> </p> <div class="acciones lector-acciones" data-astro-cid-egnxznue> <button class="boton chico" type="button" data-modo-lectura aria-pressed="false" data-astro-cid-egnxznue>Modo lectura</button>  <span class="sr" aria-live="polite" data-aviso data-astro-cid-egnxznue></span> </div> </header> <div class="prosa" data-astro-cid-egnxznue>
+
+
+
+
+
+
+
+<p>Esta publicación proporciona una descripción detallada de los tipos de elementos soportados por Zotero, basada en la documentación oficial de Zotero.</p>
+<section id="artwork-obra-de-arte" class="level1" data-number="1">
+<h2 data-number="1"><span class="header-section-number">1</span> Artwork (Obra de arte)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para registrar obras de arte como pinturas al óleo, esculturas, fotografías o cualquier tipo de imagen visual, incluidas figuras científicas (por ejemplo, gráficos o diagramas).</li>
+<li>Usar este tipo en lugar de “Document” para elementos visuales con un enfoque artístico o científico que requieran citar al creador como un artista.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Artwork” para categorizar como obra de arte.</li>
+<li><strong>Artist</strong>: Nombre del creador de la obra (persona o entidad). Ingresar en formato de dos campos (Apellido, Nombre) para personas o un campo para instituciones.</li>
+<li><strong>Title</strong>: Título principal de la obra, en mayúsculas según el idioma (sentence case).</li>
+<li><strong>Abstract</strong>: Breve descripción de la obra, si es relevante.</li>
+<li><strong>Date</strong>: Año de creación o publicación de la obra.</li>
+<li><strong>Medium</strong>: Tipo de obra o material usado (por ejemplo, “Pintura al óleo”, “Escultura de madera”, “Gráfico de dispersión”).</li>
+<li><strong>Artwork Size</strong>: Dimensiones físicas de la obra (por ejemplo, “50x70 cm”).</li>
+<li><strong>Place</strong>: Lugar donde se creó o exhibe la obra, si aplica.</li>
+<li><strong>Publisher</strong>: Institución o galería que publica o exhibe la obra.</li>
+<li><strong>Language</strong>: Código ISO del idioma (por ejemplo, “es-ES” para español).</li>
+<li><strong>Short Title</strong>: Versión abreviada del título para citas posteriores en estilos de notas.</li>
+<li><strong>URL</strong>: Dirección web donde se puede acceder a una representación digital de la obra.</li>
+<li><strong>Accessed</strong>: Fecha en que se accedió a la obra en línea.</li>
+<li><strong>Archive</strong>: Nombre del archivo o museo donde se encuentra la obra.</li>
+<li><strong>Loc. in Archive</strong>: Ubicación específica en el archivo (por ejemplo, número de sala o caja).</li>
+<li><strong>Library Catalog</strong>: Catálogo o base de datos de donde se importó la información.</li>
+<li><strong>Call Number</strong>: Número de clasificación en una biblioteca o archivo.</li>
+<li><strong>Rights</strong>: Información sobre derechos de autor o licencias.</li>
+<li><strong>Extra</strong>: Información adicional, como notas o campos no soportados (por ejemplo, “Original Date: 1886”).</li>
+<li><strong>Date Added/Modified</strong>: Campos automáticos con la fecha de adición o modificación.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es ideal para citar obras de arte o imágenes visuales, diferenciándolas de documentos genéricos. La documentación recomienda usar el campo “Medium” para describir el material o tipo de obra, y “Artwork Size” para dimensiones físicas. Si la obra no encaja perfectamente, se puede adaptar usando el campo “Extra” para detalles específicos.</li>
+</ul></li>
+</ul>
+</section>
+<section id="audio-recording-grabación-de-audio" class="level1" data-number="2">
+<h2 data-number="2"><span class="header-section-number">2</span> Audio Recording (Grabación de audio)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para música, grabaciones de voz, efectos de sonido, grabaciones de archivo o figuras científicas basadas en audio.</li>
+<li>Usar en lugar de “Podcast” si no es un programa distribuido en línea por suscripción.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Audio Recording”.</li>
+<li><strong>Performer</strong>: Nombre del intérprete principal (persona o grupo). Ingresar en formato de dos campos para personas.</li>
+<li><strong>Composer</strong>: Nombre del compositor de la música, si aplica.</li>
+<li><strong>Words By</strong>: Autor de las letras o texto hablado (por ejemplo, letrista o guionista).</li>
+<li><strong>Title</strong>: Título de la grabación (por ejemplo, nombre de la canción o pieza).</li>
+<li><strong>Abstract</strong>: Descripción breve del contenido.</li>
+<li><strong>Date</strong>: Fecha de publicación o grabación.</li>
+<li><strong>Format</strong>: Formato de la grabación (por ejemplo, “CD”, “MP3”).</li>
+<li><strong>Running Time</strong>: Duración de la grabación (por ejemplo, “3:45 mins”).</li>
+<li><strong>Label</strong>: Compañía discográfica que distribuye la grabación.</li>
+<li><strong>Series</strong>: Nombre de una serie de grabaciones, si aplica.</li>
+<li><strong>Series Title</strong>: Título de una serie específica dentro de una publicación.</li>
+<li><strong>Volume</strong>: Número de volumen, si es parte de una colección.</li>
+<li><strong>Place</strong>: Lugar de publicación o grabación.</li>
+<li><strong>Publisher</strong>: Editorial o productora de la grabación.</li>
+<li><strong>ISBN</strong>: Número ISBN, si la grabación está publicada como parte de un conjunto.</li>
+<li><strong>Language</strong>: Código ISO del idioma.</li>
+<li><strong>Short Title</strong>: Título abreviado para citas posteriores.</li>
+<li><strong>URL</strong>: Dirección web de la grabación.</li>
+<li><strong>Accessed</strong>: Fecha de acceso en línea.</li>
+<li><strong>Archive/Loc. in Archive</strong>: Archivo y ubicación específica donde se encuentra.</li>
+<li><strong>Library Catalog/Call Number</strong>: Catálogo y número de clasificación.</li>
+<li><strong>Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo cubre cualquier grabación de audio, desde música hasta grabaciones históricas. El campo “Format” es clave para especificar el medio físico o digital. Los creadores como “Performer” o “Composer” son esenciales para citas precisas. Para roles adicionales (por ejemplo, productores), usar el campo “Extra” con el formato “Director: Nombre || Apellido”.</li>
+</ul></li>
+</ul>
+</section>
+<section id="bill-proyecto-de-ley" class="level1" data-number="3">
+<h2 data-number="3"><span class="header-section-number">3</span> Bill (Proyecto de ley)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para propuestas de legislación presentadas ante un cuerpo legislativo.</li>
+<li>Usar en lugar de “Statute” si la legislación aún no ha sido aprobada.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Bill”.</li>
+<li><strong>Sponsor</strong>: Autor principal del proyecto (persona o entidad).</li>
+<li><strong>Cosponsor</strong>: Coautores o patrocinadores adicionales.</li>
+<li><strong>Title</strong>: Título oficial del proyecto de ley.</li>
+<li><strong>Abstract</strong>: Resumen del contenido del proyecto.</li>
+<li><strong>Bill Number</strong>: Número asignado al proyecto de ley.</li>
+<li><strong>Code</strong>: Nombre del código donde se publica el proyecto.</li>
+<li><strong>Code Volume</strong>: Volumen del código.</li>
+<li><strong>Code Number</strong>: Número específico dentro del código.</li>
+<li><strong>Section</strong>: Sección específica del proyecto citada.</li>
+<li><strong>Date</strong>: Fecha de presentación del proyecto.</li>
+<li><strong>Legislative Body</strong>: Cuerpo legislativo que debate el proyecto (por ejemplo, “Senado”).</li>
+<li><strong>Session</strong>: Sesión legislativa en la que se presentó.</li>
+<li><strong>History</strong>: Información sobre el historial procesal del proyecto.</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es específico para legislación propuesta. El campo “Bill Number” es crucial para identificar el proyecto, y “History” permite rastrear su progreso. La documentación sugiere usar “Extra” para campos legales adicionales no soportados, como “Event Place”.</li>
+</ul></li>
+</ul>
+</section>
+<section id="blog-post-entrada-de-blog" class="level1" data-number="4">
+<h2 data-number="4"><span class="header-section-number">4</span> Blog Post (Entrada de blog)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para artículos o entradas publicadas en un blog personal.</li>
+<li>Usar “Magazine Article” o “Newspaper Article” para publicaciones en línea de medios más grandes (por ejemplo, blogs de NYT).</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Blog Post”.</li>
+<li><strong>Author</strong>: Autor de la entrada, en formato de dos campos.</li>
+<li><strong>Commenter</strong>: Persona que comenta la entrada (no usado en citas).</li>
+<li><strong>Title</strong>: Título de la entrada del blog.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Blog Title</strong>: Nombre del blog que contiene la entrada.</li>
+<li><strong>Website Type</strong>: Género del sitio web (por ejemplo, “Blog personal”), raramente usado.</li>
+<li><strong>Date</strong>: Fecha de publicación de la entrada.</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es ideal para blogs personales, diferenciándolos de artículos de medios establecidos. El campo “Blog Title” es esencial para contextualizar la entrada. La documentación recomienda usar “Webpage” si no se ajusta a otros tipos más específicos.</li>
+</ul></li>
+</ul>
+</section>
+<section id="book-libro" class="level1" data-number="5">
+<h2 data-number="5"><span class="header-section-number">5</span> Book (Libro)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para libros publicados, incluidas monografías, antologías o textos académicos.</li>
+<li>Usar “Report” para documentos gubernamentales, informes técnicos o manuales.</li>
+<li>Puede adaptarse para ítems inusuales si otros tipos no encajan.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Book”.</li>
+<li><strong>Author</strong>: Autor principal del libro.</li>
+<li><strong>Editor</strong>: Editor del libro, si aplica.</li>
+<li><strong>Translator</strong>: Traductor, si el libro es una traducción.</li>
+<li><strong>Contributor</strong>: Colaboradores adicionales (no usados en citas).</li>
+<li><strong>Title</strong>: Título completo del libro.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Series</strong>: Nombre de la serie editorial, si aplica.</li>
+<li><strong>Series Number</strong>: Número del libro en la serie.</li>
+<li><strong>Volume</strong>: Volumen del libro, si es parte de una colección.</li>
+<li><strong># of Volumes</strong>: Número total de volúmenes en la obra.</li>
+<li><strong>Edition</strong>: Número de edición (por ejemplo, “2” para segunda edición).</li>
+<li><strong>Place</strong>: Lugar de publicación.</li>
+<li><strong>Publisher</strong>: Editorial que publicó el libro.</li>
+<li><strong>Date</strong>: Año de publicación.</li>
+<li><strong># of Pages</strong>: Número total de páginas.</li>
+<li><strong>ISBN</strong>: Número ISBN del libro.</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es versátil y puede adaptarse a muchos ítems inusuales. La documentación recomienda usar “Type” o “Extra” para especificar subtipos (por ejemplo, “Novela” o “Biografía”). El campo “Edition” debe contener solo números, y “Series” es clave para colecciones editoriales.</li>
+</ul></li>
+</ul>
+</section>
+<section id="book-section-sección-de-libro" class="level1" data-number="6">
+<h2 data-number="6"><span class="header-section-number">6</span> Book Section (Sección de libro)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para capítulos, prólogos, introducciones, apéndices, comentarios u otras secciones de un libro.</li>
+<li>Usar en lugar de “Book” cuando se cita una parte específica de un libro.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Book Section”.</li>
+<li><strong>Author</strong>: Autor de la sección.</li>
+<li><strong>Editor/Translator/Contributor</strong>: Igual que en “Book”.</li>
+<li><strong>Title</strong>: Título de la sección o capítulo.</li>
+<li><strong>Book Title</strong>: Título del libro que contiene la sección.</li>
+<li><strong>Abstract/Series/Series Number/Volume/# of Volumes/Edition/Place/Publisher/Date/# of Pages/ISBN/Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Book”.</li>
+<li><strong>Pages</strong>: Rango de páginas de la sección dentro del libro.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es específico para citar partes de libros. El campo “Book Title” es obligatorio para contextualizar la sección, y “Pages” es crucial para ubicar la cita. La documentación sugiere usar “Extra” para campos como “Chapter Number”.</li>
+</ul></li>
+</ul>
+</section>
+<section id="case-caso-legal" class="level1" data-number="7">
+<h2 data-number="7"><span class="header-section-number">7</span> Case (Caso legal)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para casos legales, ya sean publicados o inéditos.</li>
+<li>Usar en lugar de “Document” para citas legales formales.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Case”.</li>
+<li><strong>Author</strong>: Abogado o entidad que presenta el caso (rara vez usado).</li>
+<li><strong>Counsel</strong>: Abogado que argumenta el caso.</li>
+<li><strong>Case Name</strong>: Título oficial del caso (por ejemplo, “Roe v. Wade”).</li>
+<li><strong>Abstract</strong>: Resumen del caso.</li>
+<li><strong>Court</strong>: Tribunal donde se argumentó el caso.</li>
+<li><strong>Date Decided</strong>: Fecha de la decisión del caso.</li>
+<li><strong>Docket Number</strong>: Número de expediente asignado.</li>
+<li><strong>Reporter</strong>: Publicación donde se reporta el caso.</li>
+<li><strong>Reporter Volume</strong>: Volumen del reporter.</li>
+<li><strong>First Page</strong>: Primera página del caso en el reporter.</li>
+<li><strong>History</strong>: Recursos relacionados con el historial del caso.</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es específico para citas legales. Los campos “Case Name” y “Court” son esenciales, y “History” permite rastrear el progreso del caso. La documentación recomienda consultar la sección de “Legal Citations” para soporte adicional.</li>
+</ul></li>
+</ul>
+</section>
+<section id="conference-paper-artículo-en-conferencia" class="level1" data-number="8">
+<h2 data-number="8"><span class="header-section-number">8</span> Conference Paper (Artículo en conferencia)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para trabajos presentados en conferencias y publicados en actas formales (por ejemplo, como libro o revista).</li>
+<li>Usar “Presentation” para trabajos no publicados en actas.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Conference Paper”.</li>
+<li><strong>Author</strong>: Autor del artículo.</li>
+<li><strong>Title</strong>: Título del artículo.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Proceedings Title</strong>: Título de las actas donde se publicó.</li>
+<li><strong>Conference Name</strong>: Nombre de la conferencia.</li>
+<li><strong>Place</strong>: Lugar de publicación de las actas.</li>
+<li><strong>Publisher</strong>: Editorial de las actas.</li>
+<li><strong>Date</strong>: Año de publicación.</li>
+<li><strong>Volume</strong>: Volumen de las actas.</li>
+<li><strong>Pages</strong>: Rango de páginas del artículo.</li>
+<li><strong>Series</strong>: Serie de la publicación, si aplica.</li>
+<li><strong>DOI</strong>: Identificador DOI del artículo.</li>
+<li><strong>ISBN</strong>: ISBN de las actas.</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para artículos publicados en actas, no para presentaciones orales. Los campos “Proceedings Title” y “Conference Name” son clave para contextualizar. Si la conferencia y la publicación tienen lugares diferentes, usar “Extra” para “Event Place”.</li>
+</ul></li>
+</ul>
+</section>
+<section id="dictionary-entry-entrada-de-diccionario" class="level1" data-number="9">
+<h2 data-number="9"><span class="header-section-number">9</span> Dictionary Entry (Entrada de diccionario)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para entradas publicadas en un diccionario.</li>
+<li>Usar en lugar de “Encyclopedia Article” si el recurso es específicamente un diccionario.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Dictionary Entry”.</li>
+<li><strong>Author</strong>: Autor de la entrada, si se especifica.</li>
+<li><strong>Title</strong>: Título de la entrada (por ejemplo, la palabra definida).</li>
+<li><strong>Dictionary Title</strong>: Título del diccionario.</li>
+<li><strong>Abstract/Series/Series Number/Volume/# of Volumes/Edition/Place/Publisher/Date/Pages/ISBN/Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Book”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es específico para diccionarios. El campo “Dictionary Title” es esencial, y “Pages” puede usarse para entradas largas. La documentación sugiere usar “Book Section” si la entrada es más extensa o compleja.</li>
+</ul></li>
+</ul>
+</section>
+<section id="document-documento" class="level1" data-number="10">
+<h2 data-number="10"><span class="header-section-number">10</span> Document (Documento)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para documentos genéricos no cubiertos por otros tipos.</li>
+<li>Evitar su uso si es posible, ya que tiene pocos campos y soporte limitado en estilos de cita.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Document”.</li>
+<li><strong>Author</strong>: Autor del documento.</li>
+<li><strong>Title</strong>: Título del documento.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Publisher</strong>: Entidad que publica el documento.</li>
+<li><strong>Date</strong>: Fecha de publicación.</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es un último recurso debido a su falta de campos específicos. La documentación recomienda usar “Book”, “Report” o “Manuscript” para mejores resultados en citas.</li>
+</ul></li>
+</ul>
+</section>
+<section id="email-correo-electrónico" class="level1" data-number="11">
+<h2 data-number="11"><span class="header-section-number">11</span> Email (Correo electrónico)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para mensajes enviados por correo electrónico u otras formas de comunicación personal.</li>
+<li>Usar en lugar de “Letter” si la comunicación es digital.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Email”.</li>
+<li><strong>Author</strong>: Remitente del correo.</li>
+<li><strong>Recipient</strong>: Destinatario del correo.</li>
+<li><strong>Subject</strong>: Asunto del correo electrónico.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Date</strong>: Fecha de envío.</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es adecuado para comunicaciones personales digitales. El campo “Subject” actúa como título, y “Recipient” es importante para el contexto. La documentación sugiere usar “Letter” para comunicaciones similares no electrónicas.</li>
+</ul></li>
+</ul>
+</section>
+<section id="encyclopedia-article-artículo-de-enciclopedia" class="level1" data-number="12">
+<h2 data-number="12"><span class="header-section-number">12</span> Encyclopedia Article (Artículo de enciclopedia)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para artículos o capítulos publicados en una enciclopedia.</li>
+<li>Usar en lugar de “Dictionary Entry” si el recurso es una enciclopedia general.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Encyclopedia Article”.</li>
+<li><strong>Author</strong>: Autor del artículo.</li>
+<li><strong>Title</strong>: Título del artículo.</li>
+<li><strong>Encyclopedia Title</strong>: Título de la enciclopedia.</li>
+<li><strong>Abstract/Series/Series Number/Volume/# of Volumes/Edition/Place/Publisher/Date/Pages/ISBN/Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Book”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para enciclopedias, con “Encyclopedia Title” como campo clave. Similar a “Book Section”, pero optimizado para enciclopedias. Usar “Extra” para detalles adicionales.</li>
+</ul></li>
+</ul>
+</section>
+<section id="film-película" class="level1" data-number="13">
+<h2 data-number="13"><span class="header-section-number">13</span> Film (Película)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para películas artísticas, incluyendo ficción, no ficción y documentales.</li>
+<li>Usar “Video Recording” para videos no artísticos (por ejemplo, YouTube).</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Film”.</li>
+<li><strong>Director</strong>: Director de la película (autor principal).</li>
+<li><strong>Producer/Scriptwriter</strong>: Productores o guionistas, si aplica.</li>
+<li><strong>Cast Member</strong>: Actores principales (no usado en citas).</li>
+<li><strong>Title</strong>: Título de la película.</li>
+<li><strong>Abstract</strong>: Resumen de la trama o contenido.</li>
+<li><strong>Date</strong>: Año de estreno.</li>
+<li><strong>Format</strong>: Formato de la película (por ejemplo, “DVD”, “Streaming”).</li>
+<li><strong>Running Time</strong>: Duración de la película.</li>
+<li><strong>Distributor</strong>: Compañía que distribuye la película.</li>
+<li><strong>Genre</strong>: Género de la película (por ejemplo, “Drama”).</li>
+<li><strong>Place/Publisher/ISBN/Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para películas con enfoque artístico. El campo “Director” es clave, y roles como “Producer” deben especificarse en “Extra”. La documentación recomienda usar etiquetas en “Extra” para roles adicionales.</li>
+</ul></li>
+</ul>
+</section>
+<section id="forum-post-publicación-en-foro" class="level1" data-number="14">
+<h2 data-number="14"><span class="header-section-number">14</span> Forum Post (Publicación en foro)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para publicaciones en foros en línea, incluidas redes sociales como tweets o comentarios de Facebook.</li>
+<li>Usar en lugar de “Blog Post” si la publicación es en un foro o red social.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Forum Post”.</li>
+<li><strong>Author</strong>: Autor de la publicación.</li>
+<li><strong>Commenter</strong>: Persona que comenta (no usado en citas).</li>
+<li><strong>Title</strong>: Título de la publicación o mensaje.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Forum/Listserv Title</strong>: Nombre del foro o plataforma (por ejemplo, “Twitter”).</li>
+<li><strong>Post Type</strong>: Tipo de publicación (por ejemplo, “Tweet”).</li>
+<li><strong>Date</strong>: Fecha de publicación.</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo cubre publicaciones en foros y redes sociales. El campo “Post Type” permite especificar el formato (por ejemplo, “Tweet”). La documentación sugiere usar “Webpage” para publicaciones en línea más genéricas.</li>
+</ul></li>
+</ul>
+</section>
+<section id="hearing-audiencia" class="level1" data-number="15">
+<h2 data-number="15"><span class="header-section-number">15</span> Hearing (Audiencia)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para informes o registros de audiencias formales de un cuerpo legislativo.</li>
+<li>Usar en lugar de “Document” para citas legales específicas.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Hearing”.</li>
+<li><strong>Contributor</strong>: Persona o entidad asociada (autor principal).</li>
+<li><strong>Title</strong>: Título de la audiencia.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Committee</strong>: Comité que realiza la audiencia.</li>
+<li><strong>Place</strong>: Lugar de la audiencia.</li>
+<li><strong>Publisher</strong>: Entidad que publica el registro.</li>
+<li><strong>Date</strong>: Fecha de la audiencia.</li>
+<li><strong># of Volumes</strong>: Número de volúmenes del registro.</li>
+<li><strong>Document Number</strong>: Número de identificación del registro.</li>
+<li><strong>Pages</strong>: Rango de páginas citado.</li>
+<li><strong>Legislative Body</strong>: Cuerpo legislativo (por ejemplo, “Congreso”).</li>
+<li><strong>Session</strong>: Sesión legislativa.</li>
+<li><strong>History</strong>: Historial procesal de la audiencia.</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para audiencias legislativas formales. Los campos “Committee” y “Document Number” son esenciales. La documentación recomienda usar “Legal Citations” para más detalles.</li>
+</ul></li>
+</ul>
+</section>
+<section id="instant-message-mensaje-instantáneo" class="level1" data-number="16">
+<h2 data-number="16"><span class="header-section-number">16</span> Instant Message (Mensaje instantáneo)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para mensajes enviados por servicios de mensajería instantánea o chat.</li>
+<li>Usar en lugar de “Email” si la comunicación es en tiempo real.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Instant Message”.</li>
+<li><strong>Author</strong>: Remitente del mensaje.</li>
+<li><strong>Recipient</strong>: Destinatario del mensaje.</li>
+<li><strong>Title</strong>: Título o asunto del mensaje.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Date</strong>: Fecha de envío.</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para comunicaciones personales en tiempo real. Similar a “Email”, pero enfocado en chats. La documentación sugiere usar “Letter” para comunicaciones similares no digitales.</li>
+</ul></li>
+</ul>
+</section>
+<section id="interview-entrevista" class="level1" data-number="17">
+<h2 data-number="17"><span class="header-section-number">17</span> Interview (Entrevista)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para grabaciones, transcripciones o registros de entrevistas.</li>
+<li>Usar en lugar de “Document” para entrevistas formales o publicadas.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Interview”.</li>
+<li><strong>Interview With</strong>: Persona entrevistada (autor principal).</li>
+<li><strong>Interviewer</strong>: Persona que realiza la entrevista.</li>
+<li><strong>Title</strong>: Título de la entrevista, si tiene uno.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Date</strong>: Fecha de la entrevista.</li>
+<li><strong>Medium</strong>: Formato de la entrevista (por ejemplo, “Grabación de audio”, “Transcripción”).</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para entrevistas formales o publicadas. El campo “Interview With” es clave, y “Medium” especifica el formato. La documentación recomienda usar “Extra” para detalles como “Event Date”.</li>
+</ul></li>
+</ul>
+</section>
+<section id="journal-article-artículo-de-revista-académica" class="level1" data-number="18">
+<h2 data-number="18"><span class="header-section-number">18</span> Journal Article (Artículo de revista académica)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para artículos publicados en revistas académicas, ya sea en formato impreso u online.</li>
+<li>Usar en lugar de “Magazine Article” para publicaciones académicas revisadas por pares.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Journal Article”.</li>
+<li><strong>Author</strong>: Autor del artículo.</li>
+<li><strong>Reviewed Author</strong>: Autor de la obra reseñada, si es una reseña.</li>
+<li><strong>Title</strong>: Título del artículo.</li>
+<li><strong>Publication</strong>: Nombre de la revista.</li>
+<li><strong>Abstract</strong>: Resumen del artículo.</li>
+<li><strong>Volume</strong>: Volumen de la revista.</li>
+<li><strong>Issue</strong>: Número de la revista.</li>
+<li><strong>Pages</strong>: Rango de páginas del artículo.</li>
+<li><strong>Date</strong>: Fecha de publicación.</li>
+<li><strong>Series/Series Title</strong>: Serie o sección especial de la revista.</li>
+<li><strong>Journal Abbr</strong>: Abreviatura de la revista (según estándares como MEDLINE).</li>
+<li><strong>DOI</strong>: Identificador DOI del artículo.</li>
+<li><strong>ISSN</strong>: Número ISSN de la revista.</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para artículos académicos revisados por pares. Los campos “Publication”, “Volume” e “Issue” son esenciales. La documentación recomienda usar “Extra” para campos como “PMID” o “Status” (por ejemplo, “in press”).</li>
+</ul></li>
+</ul>
+</section>
+<section id="letter-carta" class="level1" data-number="19">
+<h2 data-number="19"><span class="header-section-number">19</span> Letter (Carta)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para cartas enviadas entre personas u organizaciones, especialmente comunicaciones históricas o personales.</li>
+<li>Usar en lugar de “Email” para comunicaciones no digitales.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Letter”.</li>
+<li><strong>Author</strong>: Remitente de la carta.</li>
+<li><strong>Recipient</strong>: Destinatario de la carta.</li>
+<li><strong>Title</strong>: Título o descripción de la carta.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Type</strong>: Tipo de carta (por ejemplo, “Correspondencia privada”).</li>
+<li><strong>Date</strong>: Fecha de envío.</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para comunicaciones personales no electrónicas. El campo “Type” permite especificar el propósito de la carta. La documentación sugiere usar “Manuscript” para cartas históricas con valor archivístico.</li>
+</ul></li>
+</ul>
+</section>
+<section id="magazine-article-artículo-de-revista" class="level1" data-number="20">
+<h2 data-number="20"><span class="header-section-number">20</span> Magazine Article (Artículo de revista)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para artículos publicados en revistas populares, comerciales o no académicas.</li>
+<li>Usar en lugar de “Journal Article” si no es una publicación revisada por pares.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Magazine Article”.</li>
+<li><strong>Author</strong>: Autor del artículo.</li>
+<li><strong>Title</strong>: Título del artículo.</li>
+<li><strong>Publication</strong>: Nombre de la revista.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Volume/Issue</strong>: Volumen y número de la revista, si aplica.</li>
+<li><strong>Date</strong>: Fecha de publicación.</li>
+<li><strong>Pages</strong>: Rango de páginas.</li>
+<li><strong>ISSN</strong>: Número ISSN de la revista.</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para revistas no académicas. Los campos “Publication” y “Date” son clave. La documentación recomienda usar “Journal Article” para publicaciones académicas y “Newspaper Article” para diarios.</li>
+</ul></li>
+</ul>
+</section>
+<section id="manuscript-manuscrito" class="level1" data-number="21">
+<h2 data-number="21"><span class="header-section-number">21</span> Manuscript (Manuscrito)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para manuscritos inéditos, ya sean históricos o modernos (por ejemplo, trabajos no publicados, borradores o artículos en proceso).</li>
+<li>Usar en lugar de “Document” para documentos con valor archivístico o académico.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Manuscript”.</li>
+<li><strong>Author</strong>: Autor del manuscrito.</li>
+<li><strong>Title</strong>: Título del manuscrito.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Type</strong>: Tipo o estado del manuscrito (por ejemplo, “Manuscrito inédito”, “Trabajo en proceso”).</li>
+<li><strong>Date</strong>: Fecha de creación o redacción.</li>
+<li><strong>Place</strong>: Lugar donde se creó el manuscrito.</li>
+<li><strong># of Pages</strong>: Número de páginas.</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es versátil para documentos inéditos. El campo “Type” es crucial para especificar el estado. La documentación recomienda usar “Extra” para detalles archivísticos adicionales.</li>
+</ul></li>
+</ul>
+</section>
+<section id="map-mapa" class="level1" data-number="22">
+<h2 data-number="22"><span class="header-section-number">22</span> Map (Mapa)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para mapas o modelos geográficos.</li>
+<li>Usar en lugar de “Artwork” si el enfoque es cartográfico.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Map”.</li>
+<li><strong>Cartographer</strong>: Creador del mapa (autor principal).</li>
+<li><strong>Title</strong>: Título del mapa.</li>
+<li><strong>Abstract</strong>: Descripción del contenido.</li>
+<li><strong>Type</strong>: Tipo o género del mapa (por ejemplo, “Mapa topográfico”).</li>
+<li><strong>Scale</strong>: Escala del mapa (por ejemplo, “1:50,000”).</li>
+<li><strong>Series/Series Title</strong>: Serie cartográfica, si aplica.</li>
+<li><strong>Edition</strong>: Edición del mapa.</li>
+<li><strong>Place/Publisher/Date/ISBN/Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para recursos cartográficos. El campo “Scale” es único y esencial. La documentación sugiere usar “Type” para géneros específicos y “Extra” para detalles adicionales.</li>
+</ul></li>
+</ul>
+</section>
+<section id="newspaper-article-artículo-de-periódico" class="level1" data-number="23">
+<h2 data-number="23"><span class="header-section-number">23</span> Newspaper Article (Artículo de periódico)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para artículos publicados en periódicos, ya sea en formato impreso u online.</li>
+<li>Usar en lugar de “Magazine Article” si el medio es un diario.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Newspaper Article”.</li>
+<li><strong>Author</strong>: Autor del artículo.</li>
+<li><strong>Title</strong>: Título del artículo.</li>
+<li><strong>Publication</strong>: Nombre del periódico.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Place</strong>: Lugar de publicación del periódico.</li>
+<li><strong>Edition</strong>: Edición del periódico (por ejemplo, “Edición matutina”).</li>
+<li><strong>Date</strong>: Fecha de publicación.</li>
+<li><strong>Section</strong>: Sección del periódico (por ejemplo, “Internacional”).</li>
+<li><strong>Pages</strong>: Rango de páginas.</li>
+<li><strong>ISSN</strong>: Número ISSN del periódico.</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para artículos de prensa. Los campos “Publication” y “Section” son clave para contextualizar. La documentación recomienda usar “Magazine Article” para revistas no académicas.</li>
+</ul></li>
+</ul>
+</section>
+<section id="patent-patente" class="level1" data-number="24">
+<h2 data-number="24"><span class="header-section-number">24</span> Patent (Patente)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para patentes otorgadas por una invención.</li>
+<li>Usar en lugar de “Document” para citas legales específicas.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Patent”.</li>
+<li><strong>Inventor</strong>: Creador de la invención (autor principal).</li>
+<li><strong>Attorney/Agent</strong>: Abogado o agente que representa al inventor.</li>
+<li><strong>Title</strong>: Título de la patente.</li>
+<li><strong>Abstract</strong>: Resumen de la invención.</li>
+<li><strong>Country</strong>: País que emite la patente.</li>
+<li><strong>Assignee</strong>: Entidad a la que se asignan los derechos.</li>
+<li><strong>Issuing Authority</strong>: Oficina que emite la patente.</li>
+<li><strong>Patent Number</strong>: Número de la patente.</li>
+<li><strong>Filing Date</strong>: Fecha de presentación de la solicitud.</li>
+<li><strong>Issue Date</strong>: Fecha de emisión de la patente.</li>
+<li><strong>Application Number</strong>: Número de la solicitud.</li>
+<li><strong>Priority Numbers</strong>: Números de prioridad internacional.</li>
+<li><strong>References</strong>: Recursos relacionados con la patente.</li>
+<li><strong>Legal Status</strong>: Estado legal de la patente.</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para patentes formales. Los campos “Patent Number” e “Issuing Authority” son esenciales. La documentación recomienda usar “Extra” para campos legales adicionales.</li>
+</ul></li>
+</ul>
+</section>
+<section id="podcast-podcast" class="level1" data-number="25">
+<h2 data-number="25"><span class="header-section-number">25</span> Podcast (Podcast)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para episodios de programas de audio o video distribuidos en línea, generalmente por suscripción.</li>
+<li>Usar en lugar de “Audio Recording” si el contenido es un podcast.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Podcast”.</li>
+<li><strong>Podcaster</strong>: Anfitrión del podcast (autor principal).</li>
+<li><strong>Guest</strong>: Invitado en el episodio, si aplica.</li>
+<li><strong>Title</strong>: Título del episodio.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Program Title</strong>: Nombre del programa de podcast.</li>
+<li><strong>Episode Number</strong>: Número del episodio.</li>
+<li><strong>Date</strong>: Fecha de publicación.</li>
+<li><strong>Running Time</strong>: Duración del episodio.</li>
+<li><strong>Format</strong>: Formato del podcast (por ejemplo, “MP3”).</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para podcasts distribuidos en línea. El campo “Program Title” contextualiza el episodio, y “Episode Number” es útil para identificación. La documentación sugiere usar “Audio Recording” para grabaciones no distribuidas como podcasts.</li>
+</ul></li>
+</ul>
+</section>
+<section id="presentation-presentación" class="level1" data-number="26">
+<h2 data-number="26"><span class="header-section-number">26</span> Presentation (Presentación)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para presentaciones en conferencias, simposios o reuniones, no publicadas en actas.</li>
+<li>Usar “Conference Paper” si la presentación se publicó en actas.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Presentation”.</li>
+<li><strong>Presenter</strong>: Persona que realiza la presentación (autor principal).</li>
+<li><strong>Title</strong>: Título de la presentación.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Meeting Name</strong>: Nombre del evento o conferencia.</li>
+<li><strong>Place</strong>: Lugar donde se realizó la presentación.</li>
+<li><strong>Date</strong>: Fecha de la presentación.</li>
+<li><strong>Type</strong>: Formato de la presentación (por ejemplo, “Póster”, “Conferencia”).</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para presentaciones no publicadas. El campo “Type” permite especificar el formato, y “Meeting Name” es clave para el contexto. La documentación sugiere usar “Extra” para “Event Date” si es diferente de la fecha de publicación.</li>
+</ul></li>
+</ul>
+</section>
+<section id="radio-broadcast-emisión-de-radio" class="level1" data-number="27">
+<h2 data-number="27"><span class="header-section-number">27</span> Radio Broadcast (Emisión de radio)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para programas de radio, como noticias, series de entretenimiento o grabaciones archivadas.</li>
+<li>Usar en lugar de “Podcast” si no es un programa distribuido por suscripción.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Radio Broadcast”.</li>
+<li><strong>Director</strong>: Director del programa (autor principal).</li>
+<li><strong>Producer/Scriptwriter/Cast Member/Guest</strong>: Roles adicionales, si aplica.</li>
+<li><strong>Title</strong>: Título del episodio o programa.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Program Title</strong>: Nombre del programa de radio.</li>
+<li><strong>Episode Number</strong>: Número del episodio, si aplica.</li>
+<li><strong>Date</strong>: Fecha de emisión.</li>
+<li><strong>Running Time</strong>: Duración del programa.</li>
+<li><strong>Network</strong>: Cadena de radio que emite el programa.</li>
+<li><strong>Format</strong>: Formato de la emisión (por ejemplo, “Streaming”).</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para emisiones de radio, incluidas grabaciones archivadas. El campo “Network” es importante para contextualizar. La documentación recomienda usar “Extra” para roles como “Producer”.</li>
+</ul></li>
+</ul>
+</section>
+<section id="report-informe" class="level1" data-number="28">
+<h2 data-number="28"><span class="header-section-number">28</span> Report (Informe)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para informes publicados por organizaciones, gobiernos o instituciones, incluidos preprints y documentos de trabajo.</li>
+<li>Usar en lugar de “Book” para informes técnicos o gubernamentales.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Report”.</li>
+<li><strong>Author</strong>: Autor del informe.</li>
+<li><strong>Title</strong>: Título del informe.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Report Number</strong>: Número asignado al informe.</li>
+<li><strong>Report Type</strong>: Tipo de informe (por ejemplo, “Informe técnico”).</li>
+<li><strong>Institution</strong>: Organización que publica el informe.</li>
+<li><strong>Place</strong>: Lugar de publicación.</li>
+<li><strong>Date</strong>: Fecha de publicación.</li>
+<li><strong>Pages</strong>: Número de páginas.</li>
+<li><strong>Series/Series Number</strong>: Serie del informe, si aplica.</li>
+<li><strong>DOI</strong>: Identificador DOI, si aplica.</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es versátil para informes institucionales. Los campos “Report Number” e “Institution” son clave. La documentación sugiere usar “Extra” para campos como “Status” (por ejemplo, “preprint”).</li>
+</ul></li>
+</ul>
+</section>
+<section id="software-software" class="level1" data-number="29">
+<h2 data-number="29"><span class="header-section-number">29</span> Software (Software)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para programas de computadora, aplicaciones o software.</li>
+<li>Usar en lugar de “Document” para citas de software específicas.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Software”.</li>
+<li><strong>Programmer</strong>: Creador del software (autor principal).</li>
+<li><strong>Title</strong>: Nombre del software.</li>
+<li><strong>Abstract</strong>: Descripción del software.</li>
+<li><strong>Version</strong>: Versión del software (por ejemplo, “2.3.1”).</li>
+<li><strong>System</strong>: Sistema operativo o plataforma (por ejemplo, “Windows”).</li>
+<li><strong>Company</strong>: Empresa que publica el software.</li>
+<li><strong>Date</strong>: Fecha de publicación.</li>
+<li><strong>Language</strong>: Lenguaje de programación, si aplica.</li>
+<li><strong>Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para software y aplicaciones. El campo “Version” es crucial para identificación. La documentación recomienda usar “Extra” para detalles adicionales.</li>
+</ul></li>
+</ul>
+</section>
+<section id="statute-ley" class="level1" data-number="30">
+<h2 data-number="30"><span class="header-section-number">30</span> Statute (Ley)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para leyes o legislación aprobada.</li>
+<li>Usar en lugar de “Bill” si la legislación ya está promulgada.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Statute”.</li>
+<li><strong>Sponsor</strong>: Autor principal de la ley.</li>
+<li><strong>Title</strong>: Título oficial de la ley.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Name of Act</strong>: Nombre completo de la ley.</li>
+<li><strong>Code</strong>: Código donde se publica la ley.</li>
+<li><strong>Code Volume</strong>: Volumen del código.</li>
+<li><strong>Code Number</strong>: Número de la ley en el código.</li>
+<li><strong>Public Law Number</strong>: Número de la ley pública.</li>
+<li><strong>Date Enacted</strong>: Fecha de promulgación.</li>
+<li><strong>Section</strong>: Sección citada.</li>
+<li><strong>Pages</strong>: Páginas en el código.</li>
+<li><strong>Legislative Body</strong>: Cuerpo que aprobó la ley.</li>
+<li><strong>Session</strong>: Sesión legislativa.</li>
+<li><strong>History</strong>: Historial de la ley.</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para legislación aprobada. Los campos “Name of Act” y “Public Law Number” son esenciales. La documentación recomienda usar “Legal Citations” para más detalles.</li>
+</ul></li>
+</ul>
+</section>
+<section id="thesis-tesis" class="level1" data-number="31">
+<h2 data-number="31"><span class="header-section-number">31</span> Thesis (Tesis)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para tesis de grado, ya sean publicadas o inéditas.</li>
+<li>Usar en lugar de “Manuscript” para trabajos académicos formales.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Thesis”.</li>
+<li><strong>Author</strong>: Autor de la tesis.</li>
+<li><strong>Title</strong>: Título de la tesis.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Type</strong>: Tipo de tesis (por ejemplo, “Tesis doctoral”, “Tesis de maestría”).</li>
+<li><strong>University</strong>: Universidad que otorga el grado.</li>
+<li><strong>Place</strong>: Lugar de la universidad.</li>
+<li><strong>Date</strong>: Año de presentación.</li>
+<li><strong># of Pages</strong>: Número de páginas.</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para tesis académicas. El campo “Type” debe incluir “tesis” o “disertación”. La documentación recomienda usar “Extra” para campos como “Submitted Date”.</li>
+</ul></li>
+</ul>
+</section>
+<section id="tv-broadcast-emisión-de-televisión" class="level1" data-number="32">
+<h2 data-number="32"><span class="header-section-number">32</span> TV Broadcast (Emisión de televisión)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para episodios de series de televisión o programas emitidos.</li>
+<li>Usar en lugar de “Video Recording” para emisiones formales.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “TV Broadcast”.</li>
+<li><strong>Director</strong>: Director del episodio (autor principal).</li>
+<li><strong>Producer/Scriptwriter/Cast Member/Guest</strong>: Roles adicionales.</li>
+<li><strong>Title</strong>: Título del episodio.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Program Title</strong>: Nombre del programa.</li>
+<li><strong>Episode Number</strong>: Número del episodio.</li>
+<li><strong>Date</strong>: Fecha de emisión.</li>
+<li><strong>Running Time</strong>: Duración del episodio.</li>
+<li><strong>Network</strong>: Cadena de televisión.</li>
+<li><strong>Format</strong>: Formato de la emisión (por ejemplo, “Streaming”).</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para emisiones de televisión. El campo “Program Title” es clave para contextualizar. La documentación recomienda usar “Extra” para roles como “Producer”.</li>
+</ul></li>
+</ul>
+</section>
+<section id="video-recording-grabación-de-video" class="level1" data-number="33">
+<h2 data-number="33"><span class="header-section-number">33</span> Video Recording (Grabación de video)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para videos que no encajan en “Film”, “TV Broadcast” o “Podcast” (por ejemplo, videos de YouTube o figuras científicas).</li>
+<li>Usar en lugar de “Document” para contenido audiovisual.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Video Recording”.</li>
+<li><strong>Director</strong>: Director del video (autor principal).</li>
+<li><strong>Producer/Scriptwriter</strong>: Roles adicionales.</li>
+<li><strong>Title</strong>: Título del video.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Date</strong>: Fecha de publicación.</li>
+<li><strong>Format</strong>: Formato del video (por ejemplo, “MP4”).</li>
+<li><strong>Running Time</strong>: Duración del video.</li>
+<li><strong>Studio</strong>: Estudio que produce el video.</li>
+<li><strong>Language/Short Title/URL/Accessed/Archive/Loc. in Archive/Library Catalog/Call Number/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para videos genéricos. El campo “Format” es importante para especificar el medio. La documentación recomienda usar “Film” para películas artísticas.</li>
+</ul></li>
+</ul>
+</section>
+<section id="webpage-página-web" class="level1" data-number="34">
+<h2 data-number="34"><span class="header-section-number">34</span> Webpage (Página web)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para páginas web genéricas que no encajan en tipos más específicos como “Blog Post” o “Report”.</li>
+<li>Usar como última opción si no hay un tipo más adecuado.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Webpage”.</li>
+<li><strong>Author</strong>: Autor de la página.</li>
+<li><strong>Title</strong>: Título de la página.</li>
+<li><strong>Abstract</strong>: Resumen del contenido.</li>
+<li><strong>Website Title</strong>: Nombre del sitio web.</li>
+<li><strong>Website Type</strong>: Género del sitio (por ejemplo, “Sitio corporativo”), raramente usado.</li>
+<li><strong>Date</strong>: Fecha de publicación o actualización.</li>
+<li><strong>Language/Short Title/URL/Accessed/Rights/Extra/Date Added/Modified</strong>: Igual que en “Artwork”.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es genérico para contenido en línea. El campo “Website Title” es clave para contextualizar. La documentación recomienda usar tipos más específicos siempre que sea posible.</li>
+</ul></li>
+</ul>
+</section>
+<section id="attachment-archivo-adjunto" class="level1" data-number="35">
+<h2 data-number="35"><span class="header-section-number">35</span> Attachment (Archivo adjunto)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para archivos independientes (por ejemplo, PDF, JPEG, DOCX) no asociados a un ítem principal.</li>
+<li>Evitar su uso, ya que tiene funcionalidad limitada (no se pueden citar ni buscar adecuadamente).</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Attachment”.</li>
+<li><strong>Title</strong>: Nombre del archivo.</li>
+<li><strong>Date Added/Modified</strong>: Campos automáticos.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para archivos sueltos, pero la documentación desaconseja su uso. Se recomienda asociar archivos a ítems completos (por ejemplo, “Journal Article” con un PDF adjunto).</li>
+</ul></li>
+</ul>
+</section>
+<section id="note-nota" class="level1" data-number="36">
+<h2 data-number="36"><span class="header-section-number">36</span> Note (Nota)</h2>
+<ul>
+<li><strong>Cuándo utilizar</strong>:
+<ul>
+<li>Para notas independientes usadas para organización o anotaciones.</li>
+<li>No es ideal para citas, ya que usa los primeros 120 caracteres como título.</li>
+</ul></li>
+<li><strong>Campos y su propósito</strong>:
+<ul>
+<li><strong>Item Type</strong>: Seleccionar “Note”.</li>
+<li><strong>Title</strong>: Primeros 120 caracteres de la nota (automático).</li>
+<li><strong>Date Added/Modified</strong>: Campos automáticos.</li>
+</ul></li>
+<li><strong>Información oficial de Zotero</strong>:
+<ul>
+<li>Este tipo es para notas internas. La documentación advierte que citar notas no es confiable y sugiere usar ítems completos para comentarios en bibliografías.</li>
+</ul></li>
+</ul>
+</section>
+<section id="tipos-de-elementos-no-soportados-formalmente" class="level1" data-number="37">
+<h2 data-number="37"><span class="header-section-number">37</span> Tipos de Elementos No Soportados Formalmente</h2>
+<p>Zotero no soporta formalmente los siguientes tipos, pero pueden citarse usando el campo “Extra” con el formato <code>Type: CSL Type</code>. Ejemplo: <code>Type: dataset</code>.</p>
+<ul>
+<li><strong>Dataset (Conjunto de datos)</strong>:
+<ul>
+<li><strong>Cuándo utilizar</strong>: Para datos crudos o conjuntos de datos.</li>
+<li><strong>Campos sugeridos</strong>: Usar “Report” o “Document” y agregar <code>Type: dataset</code> en “Extra”. Incluir “Identifier”, “Version”, “Repository”.</li>
+<li><strong>Información oficial</strong>: La documentación recomienda usar “Extra” para “DOI” o “Format”.</li>
+</ul></li>
+<li><strong>Figure (Figura)</strong>:
+<ul>
+<li><strong>Cuándo utilizar</strong>: Para figuras en trabajos académicos.</li>
+<li><strong>Campos sugeridos</strong>: Usar “Artwork” y agregar <code>Type: figure</code> en “Extra”. Incluir “Medium”.</li>
+<li><strong>Información oficial</strong>: Similar a “Artwork”, pero enfocado en figuras científicas.</li>
+</ul></li>
+<li><strong>Musical Score (Partitura musical)</strong>:
+<ul>
+<li><strong>Cuándo utilizar</strong>: Para partituras escritas.</li>
+<li><strong>Campos sugeridos</strong>: Usar “Book” o “Manuscript” y agregar <code>Type: musical_score</code> en “Extra”.</li>
+<li><strong>Información oficial</strong>: La documentación sugiere usar “Extra” para detalles específicos.</li>
+</ul></li>
+<li><strong>Pamphlet (Folleto)</strong>:
+<ul>
+<li><strong>Cuándo utilizar</strong>: Para trabajos publicados informalmente.</li>
+<li><strong>Campos sugeridos</strong>: Usar “Report” y agregar <code>Type: pamphlet</code> en “Extra”.</li>
+<li><strong>Información oficial</strong>: Menos técnico que “Report”.</li>
+</ul></li>
+<li><strong>Book Review (Reseña de libro)</strong>:
+<ul>
+<li><strong>Cuándo utilizar</strong>: Para reseñas de libros publicadas.</li>
+<li><strong>Campos sugeridos</strong>: Usar “Journal Article”, “Magazine Article” o “Newspaper Article” con “Reviewed Author” y agregar <code>Type: review-book</code> en “Extra”.</li>
+<li><strong>Información oficial</strong>: La documentación recomienda especificar “Reviewed Title” en “Extra”.</li>
+</ul></li>
+<li><strong>Treaty (Tratado)</strong>:
+<ul>
+<li><strong>Cuándo utilizar</strong>: Para tratados legales entre naciones.</li>
+<li><strong>Campos sugeridos</strong>: Usar “Document” y agregar <code>Type: treaty</code> en “Extra”.</li>
+<li><strong>Información oficial</strong>: La documentación sugiere consultar “Legal Citations”.</li>
+</ul></li>
+</ul>
+</section>
+<section id="campos-adicionales-en-extra" class="level1" data-number="38">
+<h2 data-number="38"><span class="header-section-number">38</span> Campos Adicionales en “Extra”</h2>
+<p>Para campos no soportados, usar el formato <code>CSL Variable: Value</code> en el campo “Extra”. Ejemplos:</p>
+<ul>
+<li><code>PMID: 123456</code></li>
+<li><code>Status: in press</code></li>
+<li><code>Director: Kubrick || Stanley</code></li>
+</ul>
+<p>Campos comunes:</p>
+<ul>
+<li><strong>PMID/PMCID</strong>: Identificadores de PubMed.</li>
+<li><strong>Status</strong>: Estado de publicación (por ejemplo, “forthcoming”).</li>
+<li><strong>Original Date</strong>: Fecha original de publicación (formato ISO).</li>
+<li><strong>Director/Editorial Director/Illustrator</strong>: Roles de creadores adicionales.</li>
+</ul>
+</section>
+<section id="recomendación" class="level1" data-number="39">
+<h2 data-number="39"><span class="header-section-number">39</span> Recomendación</h2>
+<ul>
+<li><strong>Selección del tipo de elemento</strong>: Elegir el tipo más específico posible para mejorar la precisión de las citas.</li>
+<li><strong>Uso de “Extra”</strong>: Aprovechar este campo para información no cubierta por los campos estándar.</li>
+<li><strong>Citas legales</strong>: Consultar la sección “Legal Citations” de Zotero para soporte adicional.</li>
+<li><strong>Archivos</strong>: Siempre asociar archivos adjuntos a ítems completos para mejor funcionalidad.</li>
+<li><strong>Idioma</strong>: Usar códigos ISO (por ejemplo, “es-ES”) para consistencia en el formato de títulos.</li>
+</ul>
+
+</section>
+
+
+</div>  <section class="citar" aria-labelledby="t-citar" data-astro-cid-egnxznue> <h2 id="t-citar" data-astro-cid-egnxznue>Cómo citar</h2> <p data-astro-cid-egnxznue>Achalma, E. (2025, 23 de abril). <i data-astro-cid-egnxznue>Tipos de elementos y campos en Zotero</i>. Methodica. <a href="https://methodica.netlify.app/blog/tipos-de-elementos-en-zotero/" data-astro-cid-egnxznue>https://methodica.netlify.app/blog/tipos-de-elementos-en-zotero/</a></p> </section>  </article> <nav class="lector-indice" aria-label="En esta página" data-astro-cid-egnxznue> <p data-astro-cid-egnxznue>En esta página</p> <ol data-astro-cid-egnxznue> <li class data-astro-cid-egnxznue><a href="#artwork-obra-de-arte" data-indice="artwork-obra-de-arte" data-astro-cid-egnxznue>Artwork (Obra de arte)</a></li><li class data-astro-cid-egnxznue><a href="#audio-recording-grabación-de-audio" data-indice="audio-recording-grabación-de-audio" data-astro-cid-egnxznue>Audio Recording (Grabación de audio)</a></li><li class data-astro-cid-egnxznue><a href="#bill-proyecto-de-ley" data-indice="bill-proyecto-de-ley" data-astro-cid-egnxznue>Bill (Proyecto de ley)</a></li><li class data-astro-cid-egnxznue><a href="#blog-post-entrada-de-blog" data-indice="blog-post-entrada-de-blog" data-astro-cid-egnxznue>Blog Post (Entrada de blog)</a></li><li class data-astro-cid-egnxznue><a href="#book-libro" data-indice="book-libro" data-astro-cid-egnxznue>Book (Libro)</a></li><li class data-astro-cid-egnxznue><a href="#book-section-sección-de-libro" data-indice="book-section-sección-de-libro" data-astro-cid-egnxznue>Book Section (Sección de libro)</a></li><li class data-astro-cid-egnxznue><a href="#case-caso-legal" data-indice="case-caso-legal" data-astro-cid-egnxznue>Case (Caso legal)</a></li><li class data-astro-cid-egnxznue><a href="#conference-paper-artículo-en-conferencia" data-indice="conference-paper-artículo-en-conferencia" data-astro-cid-egnxznue>Conference Paper (Artículo en conferencia)</a></li><li class data-astro-cid-egnxznue><a href="#dictionary-entry-entrada-de-diccionario" data-indice="dictionary-entry-entrada-de-diccionario" data-astro-cid-egnxznue>Dictionary Entry (Entrada de diccionario)</a></li><li class data-astro-cid-egnxznue><a href="#document-documento" data-indice="document-documento" data-astro-cid-egnxznue>Document (Documento)</a></li><li class data-astro-cid-egnxznue><a href="#email-correo-electrónico" data-indice="email-correo-electrónico" data-astro-cid-egnxznue>Email (Correo electrónico)</a></li><li class data-astro-cid-egnxznue><a href="#encyclopedia-article-artículo-de-enciclopedia" data-indice="encyclopedia-article-artículo-de-enciclopedia" data-astro-cid-egnxznue>Encyclopedia Article (Artículo de enciclopedia)</a></li><li class data-astro-cid-egnxznue><a href="#film-película" data-indice="film-película" data-astro-cid-egnxznue>Film (Película)</a></li><li class data-astro-cid-egnxznue><a href="#forum-post-publicación-en-foro" data-indice="forum-post-publicación-en-foro" data-astro-cid-egnxznue>Forum Post (Publicación en foro)</a></li><li class data-astro-cid-egnxznue><a href="#hearing-audiencia" data-indice="hearing-audiencia" data-astro-cid-egnxznue>Hearing (Audiencia)</a></li><li class data-astro-cid-egnxznue><a href="#instant-message-mensaje-instantáneo" data-indice="instant-message-mensaje-instantáneo" data-astro-cid-egnxznue>Instant Message (Mensaje instantáneo)</a></li><li class data-astro-cid-egnxznue><a href="#interview-entrevista" data-indice="interview-entrevista" data-astro-cid-egnxznue>Interview (Entrevista)</a></li><li class data-astro-cid-egnxznue><a href="#journal-article-artículo-de-revista-académica" data-indice="journal-article-artículo-de-revista-académica" data-astro-cid-egnxznue>Journal Article (Artículo de revista académica)</a></li><li class data-astro-cid-egnxznue><a href="#letter-carta" data-indice="letter-carta" data-astro-cid-egnxznue>Letter (Carta)</a></li><li class data-astro-cid-egnxznue><a href="#magazine-article-artículo-de-revista" data-indice="magazine-article-artículo-de-revista" data-astro-cid-egnxznue>Magazine Article (Artículo de revista)</a></li><li class data-astro-cid-egnxznue><a href="#manuscript-manuscrito" data-indice="manuscript-manuscrito" data-astro-cid-egnxznue>Manuscript (Manuscrito)</a></li><li class data-astro-cid-egnxznue><a href="#map-mapa" data-indice="map-mapa" data-astro-cid-egnxznue>Map (Mapa)</a></li><li class data-astro-cid-egnxznue><a href="#newspaper-article-artículo-de-periódico" data-indice="newspaper-article-artículo-de-periódico" data-astro-cid-egnxznue>Newspaper Article (Artículo de periódico)</a></li><li class data-astro-cid-egnxznue><a href="#patent-patente" data-indice="patent-patente" data-astro-cid-egnxznue>Patent (Patente)</a></li><li class data-astro-cid-egnxznue><a href="#podcast-podcast" data-indice="podcast-podcast" data-astro-cid-egnxznue>Podcast (Podcast)</a></li><li class data-astro-cid-egnxznue><a href="#presentation-presentación" data-indice="presentation-presentación" data-astro-cid-egnxznue>Presentation (Presentación)</a></li><li class data-astro-cid-egnxznue><a href="#radio-broadcast-emisión-de-radio" data-indice="radio-broadcast-emisión-de-radio" data-astro-cid-egnxznue>Radio Broadcast (Emisión de radio)</a></li><li class data-astro-cid-egnxznue><a href="#report-informe" data-indice="report-informe" data-astro-cid-egnxznue>Report (Informe)</a></li><li class data-astro-cid-egnxznue><a href="#software-software" data-indice="software-software" data-astro-cid-egnxznue>Software (Software)</a></li><li class data-astro-cid-egnxznue><a href="#statute-ley" data-indice="statute-ley" data-astro-cid-egnxznue>Statute (Ley)</a></li><li class data-astro-cid-egnxznue><a href="#thesis-tesis" data-indice="thesis-tesis" data-astro-cid-egnxznue>Thesis (Tesis)</a></li><li class data-astro-cid-egnxznue><a href="#tv-broadcast-emisión-de-televisión" data-indice="tv-broadcast-emisión-de-televisión" data-astro-cid-egnxznue>TV Broadcast (Emisión de televisión)</a></li><li class data-astro-cid-egnxznue><a href="#video-recording-grabación-de-video" data-indice="video-recording-grabación-de-video" data-astro-cid-egnxznue>Video Recording (Grabación de video)</a></li><li class data-astro-cid-egnxznue><a href="#webpage-página-web" data-indice="webpage-página-web" data-astro-cid-egnxznue>Webpage (Página web)</a></li><li class data-astro-cid-egnxznue><a href="#attachment-archivo-adjunto" data-indice="attachment-archivo-adjunto" data-astro-cid-egnxznue>Attachment (Archivo adjunto)</a></li><li class data-astro-cid-egnxznue><a href="#note-nota" data-indice="note-nota" data-astro-cid-egnxznue>Note (Nota)</a></li><li class data-astro-cid-egnxznue><a href="#tipos-de-elementos-no-soportados-formalmente" data-indice="tipos-de-elementos-no-soportados-formalmente" data-astro-cid-egnxznue>Tipos de Elementos No Soportados Formalmente</a></li><li class data-astro-cid-egnxznue><a href="#campos-adicionales-en-extra" data-indice="campos-adicionales-en-extra" data-astro-cid-egnxznue>Campos Adicionales en “Extra”</a></li><li class data-astro-cid-egnxznue><a href="#recomendación" data-indice="recomendación" data-astro-cid-egnxznue>Recomendación</a></li> </ol> </nav> </div>  </main> <footer class="pie" data-astro-cid-gafhg2u3> <div class="envoltura pie-rejilla" data-astro-cid-gafhg2u3> <div class="pie-firma" data-astro-cid-gafhg2u3> <p class="pie-marca" data-astro-cid-gafhg2u3><svg class="signo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-ar5j3fuj> <rect x="1" y="1" width="22" height="22" rx="3" class="signo-marco" data-astro-cid-ar5j3fuj></rect> <path d="M8.33 1v22M15.67 1v22M1 8.33h22M1 15.67h22" class="signo-reticula" data-astro-cid-ar5j3fuj></path> <rect x="8.33" y="8.33" width="7.34" height="7.34" class="signo-celda" data-astro-cid-ar5j3fuj></rect> </svg> Methodica</p> <p data-astro-cid-gafhg2u3>Métodos cualitativos y cuantitativos, APA y redacción académica.</p> <p class="tenue" data-astro-cid-gafhg2u3>
+Textos de <a href="https://achalmaedison.netlify.app/" data-astro-cid-gafhg2u3>Edison Achalma</a>, con licencia
+<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="license noopener" data-astro-cid-gafhg2u3>CC BY-SA 4.0</a>.
+</p> </div> <nav class="pie-red" aria-label="Red de aulas" data-astro-cid-gafhg2u3> <h2 data-astro-cid-gafhg2u3>La red de aulas</h2> <ul data-astro-cid-gafhg2u3> <li data-astro-cid-gafhg2u3> <a href="https://actus-mercator.netlify.app/" data-astro-cid-gafhg2u3><b data-astro-cid-gafhg2u3>Actus Mercator</b> <span class="tenue" data-astro-cid-gafhg2u3>Gestión empresarial</span></a> </li><li data-astro-cid-gafhg2u3> <a href="https://aequilibria.netlify.app/" data-astro-cid-gafhg2u3><b data-astro-cid-gafhg2u3>Aequilibria</b> <span class="tenue" data-astro-cid-gafhg2u3>Macroeconomía</span></a> </li><li data-astro-cid-gafhg2u3> <a href="https://axiomata.netlify.app/" data-astro-cid-gafhg2u3><b data-astro-cid-gafhg2u3>Axiomata</b> <span class="tenue" data-astro-cid-gafhg2u3>Matemática</span></a> </li><li data-astro-cid-gafhg2u3> <a href="https://chaska-x.netlify.app/" data-astro-cid-gafhg2u3><b data-astro-cid-gafhg2u3>Chaska</b> <span class="tenue" data-astro-cid-gafhg2u3>Tecnología y seguridad</span></a> </li><li data-astro-cid-gafhg2u3> <a href="https://dialectica-y-mercado.netlify.app/" data-astro-cid-gafhg2u3><b data-astro-cid-gafhg2u3>Dialéctica y Mercado</b> <span class="tenue" data-astro-cid-gafhg2u3>Filosofía y política</span></a> </li><li data-astro-cid-gafhg2u3> <a href="https://epsilon-y-beta.netlify.app/" data-astro-cid-gafhg2u3><b data-astro-cid-gafhg2u3>Epsilon y Beta</b> <span class="tenue" data-astro-cid-gafhg2u3>Econometría</span></a> </li><li data-astro-cid-gafhg2u3> <span aria-current="page" data-astro-cid-gafhg2u3><b data-astro-cid-gafhg2u3>Methodica</b> <span class="tenue" data-astro-cid-gafhg2u3>Investigación y metodología</span></span> </li><li data-astro-cid-gafhg2u3> <a href="https://numerus-scriptum.netlify.app/" data-astro-cid-gafhg2u3><b data-astro-cid-gafhg2u3>Numerus Scriptum</b> <span class="tenue" data-astro-cid-gafhg2u3>Programación y software</span></a> </li><li data-astro-cid-gafhg2u3> <a href="https://optimums.netlify.app/" data-astro-cid-gafhg2u3><b data-astro-cid-gafhg2u3>Optimums</b> <span class="tenue" data-astro-cid-gafhg2u3>Microeconomía</span></a> </li><li data-astro-cid-gafhg2u3> <a href="https://pecunia-fluxus.netlify.app/" data-astro-cid-gafhg2u3><b data-astro-cid-gafhg2u3>Pecunia Fluxus</b> <span class="tenue" data-astro-cid-gafhg2u3>Finanzas</span></a> </li><li data-astro-cid-gafhg2u3> <a href="https://res-publica.netlify.app/" data-astro-cid-gafhg2u3><b data-astro-cid-gafhg2u3>Res Publica</b> <span class="tenue" data-astro-cid-gafhg2u3>Gestión pública</span></a> </li> </ul> </nav> </div> <div class="envoltura pie-nota" data-astro-cid-gafhg2u3> <p data-astro-cid-gafhg2u3>Prototipo de la plataforma de cursos (fase 4, 2026). Los sitios publicados siguen construyéndose con Quarto hasta el cambio.</p> </div> </footer> </body> </html><script type="module" src="/_astro/lector.astro_astro_type_script_index_0_lang.Dl_UVYf8.js"></script>

@@ -1,0 +1,1 @@
+import{i as e,t}from"./almacen.C_DB31qH.js";e();var n=document.querySelector(`[data-continuar]`);if(n){let e=(n.dataset.ids||``).split(` `),r=(n.dataset.urls||``).split(` `),i=t(),a=e.filter(e=>i[e]).length,o=e.findIndex(e=>!i[e]);a>0&&o>=0?(n.href=r[o],n.textContent=`Continuar donde lo dejaste`):a>0&&o<0&&(n.textContent=`Repasar desde la primera lección`)}
