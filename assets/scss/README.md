@@ -2,7 +2,7 @@
 tipo: readme
 estado: activo
 ---
-# assets/scss/ — design system «Quiet Laboratory» del hub y de los 11 blogs
+# assets/scss/ — design system «Quiet Laboratory» del hub y de los blogs de la familia
 
 Fuente de verdad: el hub `web`. En cada `_pubs/*` este archivo es una copia propagada por
 `web/scripts/sync-theme-pubs.sh`; se edita aquí, no allí.
