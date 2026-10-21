@@ -155,6 +155,8 @@ class Sitio:
                     continue
                 if a.name.endswith(INTERMEDIOS) and a.name.startswith(p.stem + "."):
                     continue
+                if a.name.startswith(p.stem + ".quarto_ipynb_"):   # copias numeradas que Quarto deja al no poder pisar la anterior
+                    continue
                 if a.suffix == ".ipynb" and a.stem == p.stem and p.suffix != ".ipynb":     # keep-ipynb
                     continue
                 if any(part.endswith("_files") for part in rel.parts[:-1]):
