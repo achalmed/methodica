@@ -545,3 +545,6 @@ estructura.txt
 
 # Dank Mono: fuente comercial sin uso; fuera de git (ola 6), copia en $RESPALDOS_DIR/residuos/2026-10-08-dankmono
 assets/fonts/DankMono-*
+# 2026-10-20: la vitrina (_vitrina/, salida de web/_aula) publica las figuras de cada post en index_files/:
+# se re-incluyen frente a `*_files/`, igual que las de _site/.
+!/_vitrina/**/*_files/
