@@ -10,31 +10,54 @@
 // Modificar si   : Cambia la presentación del código o sus salidas.
 // ============================================================================
 
-/* Código inline: pastilla verdosa con tinta técnica */
+/* Código inline: papel apenas teñido y tinta; sin color propio (pauta editorial, 2026-10-21) */
 p code:not(.sourceCode),
 li code:not(.sourceCode),
 td code:not(.sourceCode),
 h1 code, h2 code, h3 code {
-  color: $lab-inline-code-color;
-  background: $lab-green-bg;
-  border: 1px solid $lab-inline-code-border;
+  color: $lab-ink;
+  background: $lab-bg-surface;
+  border: 0;
   border-radius: 4px;
-  padding: 0.12em 0.35em;
+  padding: 0.08em 0.32em;
   font-size: 0.86em;
 }
 
+/* Bloque de código: tarjeta oscura y sobria, la misma en los dos temas (demo de Qillqa, 2026-10-21) */
 div.sourceCode {
-  background-color: $lab-code-bg;
-  border: 1px solid $lab-border;
-  border-radius: 8px;
-  box-shadow: var(--lab-shadow-sm);
+  background-color: $lab-code-card-bg;
+  border: 1px solid $lab-code-card-border;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px -18px rgba(0, 0, 0, 0.45);
   margin: 1.4rem 0;
+  overflow: hidden;
 }
 
 pre.sourceCode {
-  padding: 1rem 1.15rem;
+  padding: 1.1rem 1.25rem;
   font-size: 0.86em;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: $lab-code-card-text;
+  background: transparent;
+  scrollbar-width: thin;
+  scrollbar-color: $lab-code-card-muted transparent;
+}
+
+div.sourceCode pre.sourceCode code { color: $lab-code-card-text; }
+
+/* Resaltado casi monocromo: palabras clave fuertes, cadenas y números apenas distintos, comentarios grises */
+div.sourceCode code span {
+  &.kw, &.cf, &.im { color: $lab-code-card-strong; font-weight: 600; }
+  &.st, &.ss, &.vs, &.ch { color: $lab-code-card-string; }
+  &.dv, &.bn, &.fl, &.cn { color: $lab-code-card-number; }
+  &.fu, &.bu, &.dt, &.at { color: $lab-code-card-function; }
+  &.co, &.do, &.an, &.cv, &.in { color: $lab-code-card-muted; font-style: normal; }
+  &.op, &.ot, &.va, &.ex, &.sc { color: $lab-code-card-text; }
+}
+
+@media (max-width: 575.98px) {
+  div.sourceCode { border-radius: 12px; }
+  pre.sourceCode { font-size: 0.8125rem; padding: 0.95rem 1rem; }
 }
 
 .code-copy-button {
@@ -46,6 +69,12 @@ pre.sourceCode {
   }
 
   &:hover { background-color: $lab-code-copy-hover-bg; }
+}
+
+/* El botón de copiar vive sobre la tarjeta oscura */
+div.sourceCode .code-copy-button {
+  color: $lab-code-card-muted;
+  &:hover { color: $lab-code-card-strong; background-color: rgba(255, 255, 255, 0.1); }
 }
 
 /* Salidas de celdas (Jupyter/knitr) */

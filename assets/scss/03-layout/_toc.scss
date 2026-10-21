@@ -19,6 +19,10 @@
 #quarto-margin-sidebar,
 #quarto-sidebar-toc-left {
   overflow-x: hidden;
+  /* La barra de desplazamiento no se ve en reposo; aparece fina al pasar el cursor (2026-10-21) */
+  scrollbar-width: none;
+  &::-webkit-scrollbar { width: 0; }
+  &:hover { scrollbar-width: thin; scrollbar-color: $lab-border-strong transparent; }
 }
 
 .sidebar nav[role="doc-toc"] {
@@ -27,8 +31,9 @@
     color: $lab-muted;
   }
 
+  /* Sin filete vertical (pauta editorial, 2026-10-21): la lista respira sola */
   > ul {
-    border-left: 1px solid $lab-border;
+    border-left: 0;
   }
 
   /* Títulos largos: ajuste de línea limpio, con guiones como último recurso */
@@ -42,16 +47,14 @@
     font-size: 0.85rem;
     line-height: 1.35;
     text-decoration: none;
-    border-left: 1px solid transparent;
-    margin-left: -1px;
-    transition: color 0.2s ease, border-color 0.2s ease;
+    border-left: 0;
+    transition: color 0.2s ease;
 
-    &:hover { color: $lab-accent; }
+    &:hover { color: $lab-ink; }
 
     &.active {
-      color: $lab-accent;
-      border-left-color: $lab-accent;
-      font-weight: 500;
+      color: $lab-ink;
+      font-weight: 600;
     }
   }
 

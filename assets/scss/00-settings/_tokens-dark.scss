@@ -40,6 +40,17 @@ $lab-border-strong: $spc-dark-border-strong !default;
 $lab-code-bg: $spc-dark-code-bg !default;
 $lab-selection: $spc-dark-selection !default;
 
+// Tarjeta de código (04-components/_code.scss)
+$lab-code-card-bg: $spc-dark-code-card-bg !default;
+$lab-code-card-bar: $spc-dark-code-card-bar !default;
+$lab-code-card-border: $spc-dark-code-card-border !default;
+$lab-code-card-text: $spc-dark-code-card-text !default;
+$lab-code-card-muted: $spc-dark-code-card-muted !default;
+$lab-code-card-strong: $spc-dark-code-card-strong !default;
+$lab-code-card-string: $spc-dark-code-card-string !default;
+$lab-code-card-number: $spc-dark-code-card-number !default;
+$lab-code-card-function: $spc-dark-code-card-function !default;
+
 // ── Elevación y atmósfera ───────────────────────────────────────────────────
 $lab-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35) !default;
 $lab-shadow-md: 0 10px 32px -10px rgba(0, 0, 0, 0.6) !default;

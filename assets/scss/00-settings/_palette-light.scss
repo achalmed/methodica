@@ -34,3 +34,15 @@ $spc-border: #E5E5DD !default;         // hairlines
 $spc-border-strong: #CDCDC2 !default;  // bordes con más presencia
 $spc-code-bg: #F5F6F2 !default;        // fondo de bloques de código
 $spc-selection: #CFE3F6 !default;      // selección de texto
+
+// Tarjeta de código (demo de Qillqa, decisión del autor 2026-10-21): oscura y
+// sobria, la misma en los dos temas; resaltado casi monocromo.
+$spc-code-card-bg: #1D1D1F !default;
+$spc-code-card-bar: #262628 !default;
+$spc-code-card-border: #2E2E31 !default;
+$spc-code-card-text: #ECECF1 !default;
+$spc-code-card-muted: #8E8E93 !default;
+$spc-code-card-strong: #FFFFFF !default;
+$spc-code-card-string: #C5D3B4 !default;
+$spc-code-card-number: #E2C99B !default;
+$spc-code-card-function: #D6DCF2 !default;

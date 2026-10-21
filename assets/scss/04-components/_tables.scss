@@ -16,23 +16,26 @@
     color: $lab-table-color;
   }
 
-  border-top: 2px solid $lab-table-frame;
-  border-bottom: 2px solid $lab-table-frame;
+  /* Tres filetes, cifras tabulares y cabecera sin versalitas (pauta editorial, 2026-10-21) */
+  font-family: $font-family-sans-serif;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1.45;
+  border-top: 1.5px solid $lab-table-frame;
+  border-bottom: 1.5px solid $lab-table-frame;
 
   thead th {
     font-family: $font-family-sans-serif;
-    font-size: 0.78rem;
+    font-size: 0.875rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: $lab-ink-2;
-    border-bottom: 1px solid $lab-border-strong;
-    padding: 0.6rem 0.75rem;
+    color: $lab-ink;
+    border-bottom: 1px solid $lab-table-frame;
+    padding: 0.5rem 0.75rem;
+    vertical-align: bottom;
   }
 
   tbody td {
-    padding: 0.55rem 0.75rem;
-    border-bottom-color: $lab-border;
+    padding: 0.5rem 0.75rem;
+    border-bottom-color: color-mix(in srgb, $lab-border 55%, transparent);
 
     @if $lab-table-color != null {
       color: $lab-table-color;
@@ -46,9 +49,15 @@
   }
 
   caption {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     font-style: italic;
-    color: $lab-muted;
+    color: $lab-ink-2;
     caption-side: top;
+  }
+
+  @media (max-width: 575.98px) {
+    font-size: 0.8125rem;
+
+    thead th, tbody td { padding: 0.45rem 0.55rem; }
   }
 }
