@@ -1,0 +1,53 @@
+---
+aliases:
+  - /talk/2025-02-12-sesion-08-tablas-figuras-y-notas/
+title: "Búsqueda en Internet y Formato APA, Tablas y Figuras"
+subtitle: "Octavo Clase en CAU - UNSCH"
+# Información del Autor
+author:
+  - name: Edison Achalma # Nombre del autor
+    url: https://achalmaedison.netlify.app # URL del autor
+    affiliation:
+      - id: unsch
+        name: Corporación Académica Universitaria CAU - UNSCH # Afiliación del autor
+        department: Economía
+        # address: Portal Independencia N 57
+        city: Ayacucho
+        region: AYA
+        country: Perú
+        postal-code: ~
+    # affiliation-url: https://www.gob.pe/unsch # URL de la afiliación del autor
+    orcid: 0000-0001-6996-3364 # ORCID del autor
+    email: elmer.achalma.09@unsch.edu.pe
+    attributes:
+      corresponding: true
+      equal-contributor: true
+      deceased: false
+    # Los roles son opcionales. Seleccione de la taxonomía CRediT: Contributor Roles https://credit.niso.org/
+    # conceptualización, curación de datos, Análisis formal, adquisición de financiación, investigación, metodología,
+    # administración de proyectos, recursos, software, supervisión, validación, visualización, redacción, edición.
+    roles:
+      - conceptualización
+      - redacción
+
+
+date: 2025-02-12
+slug: env-justice
+image: featured.png
+categories: [Tablas, Figuras, Notas]
+---
+
+Esta presentación explora los niveles de internet (superficial, profunda y oscura) y estrategias de búsqueda avanzada con operadores como comillas, AND, OR y exclusion (-), incluyendo ejemplos prácticos. También detalla el estilo APA 7ª edición para tablas y figuras, explicando su estructura, numeración, títulos y citas de fuentes, con casos de elaboración propia y adaptados. Orientada a estudiantes y académicos, ofrece herramientas para localizar información confiable en línea y presentarla visualmente según normas académicas.
+
+
+::: {#fig-manuscript fig-cap="sesión 08"}
+```{=html}
+<object data="slides/slides.pdf" type="application/pdf" width=100% height=800 '><p>Unable to display PDF file. <a href="slides/slides.pdf">Download</a> instead.</p></object>
+```
+:::
+
+
+
+## Materiales
+
+{{< include resources/_links.md >}}

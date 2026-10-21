@@ -1,0 +1,778 @@
+%% =====================================================================
+%%  cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_07_estilo_vancouver/slides/slides.tex — diapositivas beamer de la sesión 07: estilo vancouver (2025-1-cau-unsch)
+%% ---------------------------------------------------------------------
+%%  Uso: compilar desde su carpeta (beamer; imágenes en images/)
+%% =====================================================================
+\documentclass[
+11pt, % Set the default font size, options include: 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt
+%t, % Uncomment to vertically align all slide content to the top of the slide, rather than the default centered
+%aspectratio=169, % Uncomment to set the aspect ratio to a 16:9 ratio which matches the aspect ratio of 1080p and 4K screens and projectors
+]{beamer}
+
+\graphicspath{{images/}{./}} % Specifies where to look for included images (trailing slash required)
+
+\usepackage{watermark}
+\usepackage{graphicx}  % Para incluir imágenes si deseas usar una imagen como marca de agua
+\usepackage{array}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{circuitikz} % Paquete para diagramas de circuitos eléctricos
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+\usepackage{smartdiagram}
+\usepackage{eso-pic}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{url}
+
+
+
+% Agregar logo
+\logo{\includegraphics[width=1cm]{logo.jpeg}} % Cambia "logo.png" por la ruta de tu imagen
+
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule for better rules in tables
+
+%----------------------------------------------------------------------------------------
+%	SELECT LAYOUT THEME
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with a number of default layout themes which change the colors and layouts of slides. Below is a list of all themes available, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+%----------------------------------------------------------------------------------------
+%	SELECT COLOR THEME
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with a number of color themes that can be applied to any layout theme to change its colors. Uncomment each of these in turn to see how they change the colors of your selected layout theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{monarca}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{spruce}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%----------------------------------------------------------------------------------------
+%	SELECT FONT THEME & FONTS
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with several font themes to easily change the fonts used in various parts of the presentation. Review the comments beside each one to decide if you would like to use it. Note that additional options can be specified for several of these font themes, consult the beamer documentation for more information.
+
+\usefonttheme{default} % Typeset using the default sans serif font
+%\usefonttheme{serif} % Typeset using the default serif font (make sure a sans font isn't being set as the default font if you use this option!)
+%\usefonttheme{structurebold} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in bold
+%\usefonttheme{structureitalicserif} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in italic serif
+%\usefonttheme{structuresmallcapsserif} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in small caps serif
+
+%------------------------------------------------
+
+%\usepackage{mathptmx} % Use the Times font for serif text
+\usepackage{palatino} % Use the Palatino font for serif text
+
+%\usepackage{helvet} % Use the Helvetica font for sans serif text
+\usepackage[default]{opensans} % Use the Open Sans font for sans serif text
+%\usepackage[default]{FiraSans} % Use the Fira Sans font for sans serif text
+%\usepackage[default]{lato} % Use the Lato font for sans serif text
+
+%----------------------------------------------------------------------------------------
+%	SELECT INNER THEME
+%----------------------------------------------------------------------------------------
+
+% Inner themes change the styling of internal slide elements, for example: bullet points, blocks, bibliography entries, title pages, theorems, etc. Uncomment each theme in turn to see what changes it makes to your presentation.
+
+%\useinnertheme{default}
+\useinnertheme{circles}
+%\useinnertheme{rectangles}
+%\useinnertheme{rounded}
+%\useinnertheme{inmargin}
+
+%----------------------------------------------------------------------------------------
+%	SELECT OUTER THEME
+%----------------------------------------------------------------------------------------
+
+% Outer themes change the overall layout of slides, such as: header and footer lines, sidebars and slide titles. Uncomment each theme in turn to see what changes it makes to your presentation.
+
+%\useoutertheme{default}
+%\useoutertheme{infolines}
+%\useoutertheme{miniframes}
+%\useoutertheme{smoothbars}
+%\useoutertheme{sidebar}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme{tree}
+%\useoutertheme{smoothtree}
+
+%\setbeamertemplate{footline} % Uncomment this line to remove the footer line in all slides
+%\setbeamertemplate{footline}[page number] % Uncomment this line to replace the footer line in all slides with a simple slide count
+
+%\setbeamertemplate{navigation symbols}{} % Uncomment this line to remove the navigation symbols from the bottom of all slides
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title[Metodología de Investigación]{Metodología para el estudio universitario} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
+
+%\subtitle{Optional Subtitle} % Presentation subtitle, remove this command if a subtitle isn't required
+
+\author[Edison Achalma]{Edison Achalma} % Presenter name(s), the optional parameter can contain a shortened version to appear on the bottom of every slide, while the main parameter will appear on the title slide
+
+\institute[CAU - UNSCH]{Corporación Académica Universitaria CAU - UNSCH \\ \smallskip \textit{achalmed.18@gmail.com}} % Your institution, the optional parameter can be used for the institution shorthand and will appear on the bottom of every slide after author names, while the required parameter is used on the title slide and can include your email address or additional information on separate lines
+
+\date[\today]{Sesión 07 \\ \today} % Presentation date or conference/meeting name, the optional parameter can contain a shortened version to appear on the bottom of every slide, while the required parameter value is output to the title slide
+
+%----------------------------------------------------------------------------------------
+
+
+\begin{document}
+% Página de título
+\begin{frame}
+	\titlepage
+\end{frame}
+
+% Diapositiva de contenido
+% Configuración: Incluir índice automáticamente en cada sección
+
+\AtBeginSection[]{
+	\begin{frame}{Índice de la Sección}
+		\tableofcontents[currentsection] % Índice automático de la sección actual
+	\end{frame}
+}
+
+
+
+% Sección 10 Estilo vancouver
+\section{Estilo vancouver}
+\begin{frame}
+	\frametitle{Introducción al Estilo Vancouver}
+
+	\textbf{¿Qué es el estilo Vancouver?}
+	\begin{itemize}
+		\item Es un sistema de citación y referencia utilizado principalmente en publicaciones biomédicas y de ciencias de la salud.
+		\item Desarrollado por el International Committee of Medical Journal Editors (ICMJE) en 1978.
+		\item Utiliza un sistema numérico para las citas en el texto.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Formato Vancouver}
+
+	\textbf{Papel:}
+	\begin{itemize}
+		\item Tamaño: carta (21,59 cm × 27,94 cm)
+	\end{itemize}
+
+	\textbf{Numeración de Páginas:}
+	\begin{itemize}
+		\item Números arábigos empezando por la portada, en posición centrada.
+	\end{itemize}
+
+	\textbf{Párrafo:}
+	\begin{itemize}
+		\item Alineamiento: hacia la izquierda
+		\item Interlineado: doble
+		\item Sangría: 1,25 cm en la primera línea de cada párrafo
+	\end{itemize}
+
+	\textbf{Fuentes y Tamaños:}
+	\begin{itemize}
+		\item Times New Roman 12
+		\item Verdana 12
+	\end{itemize}
+
+	\textbf{Márgenes:}
+	\begin{itemize}
+		\item Superior: 3 cm
+		\item Inferior: 3 cm
+		\item Izquierdo: 4 cm
+		\item Derecho: 2 cm
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Abreviaturas en Vancouver}
+
+	\begin{tabular}{ll}
+		\textbf{Término}       & \textbf{Abreviatura}             \\
+		\midrule
+		editor, editores       & ed., eds.                        \\
+		traductor, traductores & trad., trads.                    \\
+		y otros                & et al.                           \\
+		sin fecha              & s. f.                            \\
+		edición                & ed.                              \\
+		edición revisada       & ed. rev.                         \\
+		número de edición      & 2.a ed., 5.a ed., 10.a ed., etc. \\
+		página, páginas        & p.                               \\
+		capítulo               & cap.                             \\
+		volumen                & vol.                             \\
+		número                 & núm.                             \\
+		parte                  & pt.                              \\
+		suplemento             & supl.                            \\
+	\end{tabular}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{¿Qué es una Fuente?}
+
+	\textbf{Definición:}
+	\begin{itemize}
+		\item Recurso que proporciona información para la investigación académica.
+		\item Es necesario para dialogar con otros autores y fortalecer el propio texto.
+	\end{itemize}
+
+	\textbf{Tipos de Fuentes:}
+	\begin{itemize}
+		\item Formato impreso o electrónico: libros, artículos, fotografías, páginas web, videos, simposios, etc.
+	\end{itemize}
+
+	\textbf{Criterios:}
+	\begin{itemize}
+		\item Seleccionar fuentes confiables y elaboradas por especialistas en la materia.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Registro de Fuentes y Plagio}
+
+	\textbf{Importancia del Registro:}
+	\begin{itemize}
+		\item Garantiza el respeto a la propiedad intelectual.
+		\item Evita el plagio, que es presentar palabras, ideas o imágenes ajenas como propias.
+	\end{itemize}
+
+	\textbf{Consecuencias del Plagio:}
+	\begin{itemize}
+		\item Puede ser deliberado o casual pero siempre es una violación ética.
+		\item Profesionales: rechazo de publicaciones y censura en su campo.
+	\end{itemize}
+
+\end{frame}
+
+\section{Citación}
+
+\begin{frame}
+	\frametitle{Citación en Vancouver}
+	Seleccionar ideas ajenas, provenientes de diferentes fuentes de información, e integrarlas a un trabajo académico o científico propio.
+
+	\textbf{Importancia de la Citación:}
+	\begin{itemize}
+		\item Permite el diálogo con otros autores, inserción en debates y actualización de información.
+		\item Crucial en Ciencias de la Salud y Medicina para mantener la investigación actualizada.
+	\end{itemize}
+
+	\textbf{Consideraciones Prácticas:}
+	\begin{itemize}
+		\item Preferir fuentes primarias.
+		\item \textbf{Evitar excesos o escasez de citas;} buscar equilibrio entre información citada y propia.
+	\end{itemize}
+
+	\textbf{Tipos de Citas:}
+	\begin{itemize}
+		\item Citas textuales (directas)
+		\item Citas de paráfrasis (indirectas)
+	\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Citas Textuales (Directas)}
+
+	\textbf{Características:}
+	\begin{itemize}
+		\item Transcripción exacta de un fragmento de una fuente original.
+		\item Deben ser breves (menos de 5 líneas).
+		\item Insertadas en el texto entre comillas.
+	\end{itemize}
+
+	\begin{exampleblock}{Ejemplo}
+		“Siendo el tabaquismo el primer problema sanitario susceptible de prevención, la mayoría de los países desarrollados han puesto en marcha planes de lucha antitabáquica, siguiendo las recomendaciones de la Organización Mundial de la Salud, y han fomentado la investigación en este campo considerándolo un tema prioritario” (6).
+	\end{exampleblock}
+
+	\textbf{Para tener en cuenta:}
+	\begin{itemize}
+		\item Punto final de la cita después del paréntesis de la referencia.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Citas de Paráfrasis (Indirectas)}
+
+	\textbf{Características:}
+	\begin{itemize}
+		\item Interpretación y reinterpretación del texto original para hacerlo más sintético o comprensible.
+		\item No solo cambiar palabras por sinónimos.
+	\end{itemize}
+
+	\begin{exampleblock}{Ejemplo}
+		La mayoría de los países desarrollados, por recomendación de la Organización Mundial de la Salud, han fomentado investigaciones y ejecutado programas preventivos contra el tabaquismo por considerarlo un problema sanitario prioritario (6).
+	\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}
+	\textbf{Uso de Números:}
+	\begin{itemize}
+		\item Tanto en las citas textuales como en las citas de paráfrasis, los números arábigos indican la fuente de información.
+		\item La referencia de esa fuente se detalla en la lista de referencias bibliográficas al final del texto con el mismo número.
+		\item Para múltiples fuentes, números separados por comas o un guion para fuentes correlativas.
+	\end{itemize}
+
+	\begin{exampleblock}{Ejemplo}
+		Los estados afectivos sensoriales se caracterizan por estar ligados a excitaciones de partes precisas del cuerpo (1, 7), y los estados vitales están más relacionados con sensaciones difusas y estados del organismo (4-6).
+	\end{exampleblock}
+
+	\textbf{Para tener en cuenta:}
+	\begin{itemize}
+		\item Comas para fuentes no consecutivas
+		\item Guion para fuentes consecutivas
+	\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Cita Integral}
+
+	\textbf{Características:}
+	\begin{itemize}
+		\item Mención del autor en el texto, seguida del número de referencia.
+		\item Puede ser textual o parafraseada.
+	\end{itemize}
+
+	\begin{exampleblock}{Ejemplo Textual}
+		De acuerdo con García (6), “siendo el tabaquismo el primer problema sanitario susceptible de prevención, la mayoría de los países desarrollados han puesto en marcha planes de lucha antitabáquica...”.
+	\end{exampleblock}
+
+	\begin{exampleblock}{Ejemplo Parafraseada}
+		Según García (6), la mayoría de los países desarrollados, por recomendación de la OMS, han fomentado investigaciones...
+	\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Cita No Integral}
+
+	\textbf{Características:}
+	\begin{itemize}
+		\item Sin mencionar al autor, solo el número de referencia al final.
+		\item Verbos sugeridos: indicar, señalar, confirmar, sugerir, etc.
+	\end{itemize}
+
+	\begin{exampleblock}{Ejemplo Textual}
+		Algunos especialistas han precisado que “siendo el tabaquismo el primer problema sanitario...” (6).
+	\end{exampleblock}
+
+	\begin{exampleblock}{Ejemplo Parafraseada}
+		Algunos especialistas han precisado que, en la mayoría de los países desarrollados, se han fomentado investigaciones... (6).
+	\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Citación de Tablas}
+
+	\textbf{Características:}
+	\begin{itemize}
+		\item Organizan información textual o numérica por medio de filas y columnas.
+		\item Elementos: número, título, encabezado y nota si es necesario.
+	\end{itemize}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{images/Screenshot_20250206_054556.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Consideraciones para la Elaboración de Tablas}
+
+	\begin{itemize}
+		\item Las tablas \textbf{no deben insertarse como fotografías o imágenes}; deben ser \textbf{elaboradas en el documento}.
+		\item Las tablas deben \textbf{construirse sobre la base de líneas horizontales}.
+		\item \textbf{El número de tabla} debe colocarse \textbf{en negrita} en la parte \textbf{superior izquierda}.
+		\item La inserción de notas puede realizarse mediante estos elementos en la secuencia pertinente: \textbf{*}, \textbf{†}, \textbf{‡‡}, \textbf{¶}, \textbf{**}, \textbf{††}, \textbf{‡‡}, etc.
+		\item Si la tabla es de \textbf{elaboración propia}, \textbf{no es necesario} que se haga precisión de ello en la nota.
+		\item En la medida de lo posible, las tablas deben \textbf{insertarse en una misma hoja}. En caso de partirse, \textbf{el encabezado deberá repetirse} en la hoja siguiente.
+		\item Si la tabla resulta \textbf{muy extensa}, debe consultarse si es posible manejarla como \textbf{anexo}.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Para Tener en Cuenta}
+
+	Si la fuente de la que se está tomando la tabla se encuentra en la lista de referencias, entonces es posible citarla al final del título con el número de referencia correspondiente. De esa manera, \textbf{no será necesario} incluir la referencia bibliográfica en la nota.
+
+	\textbf{Ejemplo:}
+
+	\begin{quote}
+		\textbf{Tabla 4.} Porcentajes de focos de necrosis según medio de preservación de tejido del diente avulsionado (\textbf{5})
+	\end{quote}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Citación de Figuras}
+
+	\textbf{Características:}
+	\begin{itemize}
+		\item Cualquier elemento visual que no sea una tabla (diagramas, gráficos, fotos).
+		\item Elementos: número, título, nota si necesario.
+	\end{itemize}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{images/Screenshot_20250206_054632.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Consideraciones para la Inserción de Figuras}
+
+	\begin{itemize}
+		\item A diferencia de las tablas, las \textbf{figuras} presentan el \textbf{número y el título} \textbf{debajo del contenido}.
+		\item Las figuras que se utilicen deben ser \textbf{nítidas y de alta calidad}.
+		\item Las imágenes deben tener un \textbf{peso adecuado}, de modo que puedan compartirse en el archivo sin inconvenientes.
+		\item Si la figura es de \textbf{elaboración propia}, \textbf{no es necesario} que se precise esta información en la nota. Debe colocarse \textbf{únicamente el título} si no existen datos adicionales para consignar.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Para Tener en Cuenta}
+
+	Si la fuente de la que se está tomando la figura se encuentra en la lista de referencias, entonces es posible citarla al final del título con el número de referencia correspondiente. De esa manera, \textbf{no será necesario} incluir la referencia bibliográfica en la nota.
+
+	\textbf{Ejemplo:}
+
+	\begin{quote}
+		\textbf{Figura 1.} Promedio del porcentaje de fibroblastos preservados según medio de preservación de ligamento periodontal y tercio de la raíz del diente (\textbf{8})
+	\end{quote}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Consideraciones}
+
+	\begin{itemize}
+		\item Tablas y figuras deben ser relevantes y no repetitivas.
+		\item Numeración consecutiva según aparición en el texto.
+		\item Citar fuente si está en la lista de referencias, solo con el número de referencia.
+	\end{itemize}
+
+	\textbf{Mención de Tablas y Figuras:}
+	\begin{itemize}
+		\item Usar el número asignado: “la tabla 5 evidencia...”, “en la figura 2, se expone...”.
+		\item Evitar referencias vagas como “en la tabla de abajo”.
+	\end{itemize}
+
+\end{frame}
+
+
+\section{Referenciación}
+
+\begin{frame}
+	\frametitle{Consideraciones Generales}
+
+	\begin{itemize}
+		\item La elaboración de una lista de referencias bibliográficas es \textbf{obligatoria} en todo trabajo académico, porque indica el detalle de las fuentes citadas en el cuerpo del texto.
+		\item La lista de referencias debe ir en una \textbf{hoja nueva} al final del documento y con el título “\textbf{Referencias}”.
+		\item Las referencias bibliográficas se presentan \textbf{numeradas} según el \textbf{orden de aparición en el texto}, no en orden alfabético.
+	\end{itemize}
+
+	\textbf{Para tener en cuenta:}
+	\begin{itemize}
+		\item No se debe confundir una lista de referencias con una \textbf{bibliografía}. La segunda es más amplia, ya que incluye no solo los materiales citados en un trabajo académico, sino también los que fueron consultados para su elaboración.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Variaciones Comunes}
+
+	\textbf{Número de Autores:}
+	\begin{itemize}
+		\item De 1 a 6 autores: listar \textbf{todos los autores}.
+		\item De 7 a más autores: listar los \textbf{seis primeros} y luego añadir “\textbf{et al.}”.
+	\end{itemize}
+
+	\textbf{Tipo de Autor:}
+	\begin{itemize}
+		\item \textbf{Autor individual:} Apellido seguido de inicial(es) de nombre(s), e.g., \textbf{Moreno B.}
+		\item \textbf{Autor organizacional:} Nombre completo de la institución, abreviar si coincide con la editorial, e.g., \textbf{Eunsa}.
+		\item \textbf{Editor o compilador:} Nombre del editor seguido de “, editor.”, e.g., \textbf{Madigan M, editor}.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Modelos de Referencias Libros}
+
+	\textbf{Libro físico completo}
+	\begin{itemize}
+		\item \textbf{Formato:} Apellido Inicial. Título del libro. Edición. Lugar de publicación: Editorial; año. Páginas.
+		\item \textbf{Ejemplo:} Bell J. Doing your research project. 5.a ed. Maidenhead: Open University Press; 2005.
+	\end{itemize}
+
+	\textbf{Libro físico completo con ISBN}
+	\begin{itemize}
+		\item \textbf{Formato:} Apellido Inicial. Título del libro. Edición. Lugar de publicación: Editorial; año. Páginas. ISBN.
+		\item \textbf{Ejemplo:} Stern S, Cifu A, Altkorn D. Symptom to diagnosis: an evidence-based guide. New York: Lange Medical Books; 2006. 434 p. ISBN: 9780071463898.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Libros}
+
+	\textbf{Libro físico con editor}
+
+	\textbf{Formato:} Apellido Inicial, editor. Título del libro. Edición. Lugar de publicación: Editorial; año. Páginas.
+	\begin{quote}
+		1.  Tintinalli J, editora. Tintinalli’s emergency medicine. A comprehensive study guide. 9.a ed. Nueva York: McGraw Hill Medical; 2019. 2114 p.
+	\end{quote}
+
+	\textbf{Capítulo de libro físico}
+
+	\textbf{Formato:} Apellido Inicial. Título del capítulo. En: Apellido Inicial, editor. Título del libro. Edición. Lugar de publicación: Editorial; año, p. inicial-final.
+
+	\begin{quote}
+		2.  Franklin A. Management of the problem. En: Smith SM, editor. The maltreatment of children. Lancaster: MTP; 2002, p. 83-95.
+	\end{quote}
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Libros (cont.)}
+
+	\textbf{Prólogo escrito por otro autor}
+
+	\textbf{Formato:} Apellido Inicial. Prólogo. En: Apellido Inicial. Título del libro. Edición. Lugar de publicación: Editorial; año, p. inicial-final.
+
+	\begin{quote}
+		3.  Capel H. Prólogo. En: Sala Catalá J. Ciencia y técnica en la metropolización de América. Madrid: Doce Calles; 1994, p. 7-21.
+	\end{quote}
+
+
+	\textbf{Libro físico en formato digital}
+
+	\textbf{Formato:} Apellido Inicial. Título [Internet]. Edición. Lugar de publicación: Editor; año. [Fecha de consulta]. Disponible en: URL
+
+	\begin{quote}
+		4.  Carroll K, Morse S, Mietzner T, Miller S. Microbiología médica [Internet]. 27.a ed. Ciudad de México: McGraw-Hill; 2016. [Consultado el 22 de julio de 2022]. Disponible en: \url{https://bibliotecaia.ism.edu.ec/Repo-book/m/MicrobiologiaMedica.pdf}
+	\end{quote}
+
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Libros (cont.)}
+
+	\textbf{Entrada de diccionario o enciclopedia físicos}
+
+	\textbf{Formato:} Apellido Inicial o Institución. Título del artículo. [Entrada de diccionario o enciclopedia]. En: Título. Ciudad: Editorial; año.
+
+	\begin{quote}
+		5.  Tauro A. Braun, Herman. [Entrada de enciclopedia]. En: Enciclopedia ilustrada del Perú, tomo 3. Lima: Peisa; 1993.
+
+		6. Real Academia Española. Páncreas. [Entrada de diccionario]. En: Diccionario de la lengua española. Madrid: Espasa; 2001.
+
+	\end{quote}
+
+
+
+	\textbf{Entrada de Wikipedia}
+
+	\textbf{Formato:} Título. [Internet]. Wikipedia. [Fecha de consulta]. Disponible en: URL
+
+	\begin{quote}
+		7.  Homeostasis. [Internet]. Wikipedia. [Consultado el 2 de agosto de 2022]. Disponible en: \url{https://es.wikipedia.org/wiki/Homeostasis}
+	\end{quote}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Revistas Científicas}
+
+	\textbf{Revista completa}
+
+
+	\textbf{Formato:} Nombre de la revista. Ciudad: Editorial. Volumen(número). Fecha de inicio de publicación.
+	\begin{quote}
+		7. The Journal of Urology. Nueva York: Elsevier. 1(1). Febrero de 1917.
+	\end{quote}
+
+
+	\textbf{Artículo de revista}
+
+	\textbf{Formato:} Apellido Inicial. Título del artículo. Abreviatura internacional del nombre de la revista. Año;volumen(número):página inicial-final.
+
+	\begin{quote}
+		8. American Academy of Pediatrics, Committee on Pediatric Emergency Medicine; American College of Emergency Physicians, Pediatric Committee. Care of children in the emergency department: guidelines for preparedness. Pediatrics. 2001;107(4):777-81.
+	\end{quote}
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Revistas Científicas (cont.)}
+
+	\textbf{Artículo de revista en línea}
+
+	\textbf{Formato:} Apellido Inicial. Título. Nombre de la revista abreviado [Internet]. Año;volumen(número):páginas o indicador de extensión. [Fecha de consulta]. Disponible en: URL
+
+	\begin{quote}
+		9.  Picardeau M. Virulence of the zoonotic agent of leptospirosis: still terra incognita? Nat Rev Microbiol. [Internet]. 2017;15(5):297-307. [Consultado el 22 de agosto de 2022]. Disponible en: \url{http://dx.doi.org/10.1038/nrmicro.2017.5}
+	\end{quote}
+
+
+	\textbf{Para tener en cuenta:}
+	\begin{itemize}
+		\item Si el artículo aún no ha sido publicado, es válido usar la expresión “\textbf{en prensa}” en sustitución de la fecha, el volumen y el número de la revista.
+		\item Si en la revista no se consigna el volumen, pero sí el número, debe indicarse este signo gráfico entre paréntesis. Por ejemplo: \textbf{(4)}.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tesis}
+
+	\textbf{Tesis impresa}
+
+	\textbf{Formato:} Apellido Inicial. Título de la tesis. [Indicar el grado y la mención de la tesis]. Lugar: Universidad; año. Páginas.
+
+	\begin{quote}
+		10.  Sánchez L. Acusación constitucional. Control y responsabilidad política. [Tesis doctoral en Derecho]. Santiago: Rubicón Editores; 2001. 326 p.
+	\end{quote}
+
+
+	\textbf{Tesis en línea}
+
+	\textbf{Formato:} Apellido Inicial. Título de la tesis. [Indicar el grado y la mención de la tesis]. Lugar: Universidad; año. Disponible en: URL
+
+	\begin{quote}
+		11.  Castro S, Meléndez C. Inteligencia emocional y motivación laboral en personal de salud de la Central de Esterilización del Hospital Nacional 2 de Mayo, Lima, 2017. [Tesis para optar al grado de maestro en Ciencias de la Enfermería con mención en Gestión de Centrales de Esterilización]. Lima: Universidad Norbert Wiener; 2019. Disponible en: \url{http://repositorio.uwiener.edu.pe/xmlui/bitstream/handle/123456789/2937/TESIS\%20Castro\%20Silvana\%20-\%20Melendez\%20Concepcion.pdf?sequence=3\&isAllowed=y}
+	\end{quote}
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Lista de Referencias}
+
+	\textbf{Estructura:}
+	\begin{itemize}
+		\item La lista de referencias aparece al final del documento.
+		\item Cada referencia se numera correlativamente según su aparición en el texto.
+		\item El formato varía según el tipo de documento (artículo, libro, capítulo, etc.):
+		      \begin{itemize}
+			      \item \textbf{Artículo de Revista:} Autor(es). Título del artículo. Abreviatura de la revista. Año;volumen(número):páginas inicial-final.
+			      \item \textbf{Libro:} Autor(es). Título del libro. Edición. Lugar de publicación: Editorial; año.
+			      \item \textbf{Capítulo de Libro:} Autor(es) del capítulo. Título del capítulo. En: Editor(es) del libro. Título del libro. Edición. Lugar de publicación: Editorial; año. páginas inicial-final.
+		      \end{itemize}
+	\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Conclusión}
+
+	\textbf{Ventajas del Estilo Vancouver:}
+	\begin{itemize}
+		\item Simplicidad y claridad en la citación.
+		\item Facilita la lectura y comprensión de textos científicos.
+		\item Permite un enfoque en el contenido más que en la forma de las referencias.
+	\end{itemize}
+
+	\textbf{Importancia:}
+	\begin{itemize}
+		\item Esencial en la comunicación científica, especialmente en campos médicos y biomédicos.
+		\item Asegura la integridad y la verificación de la información presentada.
+	\end{itemize}
+
+\end{frame}
+
+
+% Sección 9
+\section{Tablas, Figuras y Notas}
+\begin{frame}{Tablas, Figuras y Notas}
+
+\end{frame}
+
+% Sección 10
+\section{Estilos}
+\begin{frame}{Estilos}
+
+\end{frame}
+
+% Sección 11
+\section{Referencias}
+\begin{frame}{Referencias}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	CLOSING SLIDE
+%----------------------------------------------------------------------------------------
+
+\begin{frame}[plain] % The optional argument 'plain' hides the headline and footline
+	\begin{center}
+		{\Huge The End}
+
+		\bigskip\bigskip % Vertical whitespace
+
+		{\LARGE Questions? Comments?}
+	\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\end{document}

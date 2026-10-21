@@ -1,0 +1,53 @@
+---
+aliases:
+  - /talk/2025-02-19-sesion-09-practica-estructura-y-citas-apa/
+title: "Estructura y Citas APA"
+subtitle: "Segunda práctica en word"
+# Información del Autor
+author:
+  - name: Edison Achalma # Nombre del autor
+    url: https://achalmaedison.netlify.app # URL del autor
+    affiliation:
+      - id: unsch
+        name: Corporación Académica Universitaria CAU - UNSCH # Afiliación del autor
+        department: Economía
+        # address: Portal Independencia N 57
+        city: Ayacucho
+        region: AYA
+        country: Perú
+        postal-code: ~
+    # affiliation-url: https://www.gob.pe/unsch # URL de la afiliación del autor
+    orcid: 0000-0001-6996-3364 # ORCID del autor
+    email: elmer.achalma.09@unsch.edu.pe
+    attributes:
+      corresponding: true
+      equal-contributor: true
+      deceased: false
+    # Los roles son opcionales. Seleccione de la taxonomía CRediT: Contributor Roles https://credit.niso.org/
+    # conceptualización, curación de datos, Análisis formal, adquisición de financiación, investigación, metodología,
+    # administración de proyectos, recursos, software, supervisión, validación, visualización, redacción, edición.
+    roles:
+      - conceptualización
+      - redacción
+
+
+date: 2025-02-19
+slug: env-justice
+image: featured.png
+categories: [APA, Estructura, Práctica]
+---
+
+Esta segunda práctica es sobre la estructura de documentos académicos en Word, siguiendo el estilo APA 7ª edición. Incluye portada, índice, capítulos, citas textuales y parafraseadas, y una lista de referencias, con ejemplos aplicados. Detalla la creación de tablas y figuras, numeradas y tituladas según normas APA, integrando fuentes citadas correctamente. Dirigida a estudiantes y académicos, proporciona un modelo práctico para organizar trabajos, citar fuentes y presentar datos visuales, adaptable a diversas temáticas de investigación.
+
+
+::: {#fig-manuscript fig-cap="sesion 09 practica estructura y citas apa"}
+```{=html}
+<object data="practice/sesion 09 practica estructura y citas apa.pdf" type="application/pdf" width=100% height=800 '><p>Unable to display PDF file. <a href="practice/sesion 09 practica estructura y citas apa.pdf">Download</a> instead.</p></object>
+```
+:::
+
+
+
+## Materiales
+
+{{< include resources/_links.md >}}

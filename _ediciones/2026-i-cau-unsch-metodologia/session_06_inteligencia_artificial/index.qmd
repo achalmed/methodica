@@ -1,0 +1,12 @@
+---
+title: "Inteligencia artificial aplicada"
+description: "Sesión del taller de Metodología de la Investigación (2026-1, CAU-UNSCH)."
+date: 2026-04-06
+order: 6
+categories: [IA, Herramientas]
+image: /assets/img/default-preview.jpg
+---
+
+## Materiales
+
+{{< include resources/_links.md >}}

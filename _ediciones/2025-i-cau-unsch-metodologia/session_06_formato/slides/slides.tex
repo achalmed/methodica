@@ -1,0 +1,411 @@
+%% =====================================================================
+%%  cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_06_formato/slides/slides.tex — diapositivas beamer de la sesión 06: formato (2025-1-cau-unsch)
+%% ---------------------------------------------------------------------
+%%  Uso: compilar desde su carpeta (beamer; imágenes en images/)
+%% =====================================================================
+\documentclass[
+11pt, % Set the default font size, options include: 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt
+%t, % Uncomment to vertically align all slide content to the top of the slide, rather than the default centered
+%aspectratio=169, % Uncomment to set the aspect ratio to a 16:9 ratio which matches the aspect ratio of 1080p and 4K screens and projectors
+]{beamer}
+
+\graphicspath{{images/}{./}} % Specifies where to look for included images (trailing slash required)
+
+\usepackage{watermark}
+\usepackage{graphicx}  % Para incluir imágenes si deseas usar una imagen como marca de agua
+\usepackage{array}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{circuitikz} % Paquete para diagramas de circuitos eléctricos
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+\usepackage{smartdiagram}
+\usepackage{eso-pic}
+\usepackage{lmodern}
+\usepackage{xcolor}
+
+
+
+% Agregar logo
+\logo{\includegraphics[width=1cm]{logo.jpeg}} % Cambia "logo.png" por la ruta de tu imagen
+
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule for better rules in tables
+
+%----------------------------------------------------------------------------------------
+%	SELECT LAYOUT THEME
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with a number of default layout themes which change the colors and layouts of slides. Below is a list of all themes available, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+%----------------------------------------------------------------------------------------
+%	SELECT COLOR THEME
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with a number of color themes that can be applied to any layout theme to change its colors. Uncomment each of these in turn to see how they change the colors of your selected layout theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{monarca}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{spruce}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%----------------------------------------------------------------------------------------
+%	SELECT FONT THEME & FONTS
+%----------------------------------------------------------------------------------------
+
+% Beamer comes with several font themes to easily change the fonts used in various parts of the presentation. Review the comments beside each one to decide if you would like to use it. Note that additional options can be specified for several of these font themes, consult the beamer documentation for more information.
+
+\usefonttheme{default} % Typeset using the default sans serif font
+%\usefonttheme{serif} % Typeset using the default serif font (make sure a sans font isn't being set as the default font if you use this option!)
+%\usefonttheme{structurebold} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in bold
+%\usefonttheme{structureitalicserif} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in italic serif
+%\usefonttheme{structuresmallcapsserif} % Typeset important structure text (titles, headlines, footlines, sidebar, etc) in small caps serif
+
+%------------------------------------------------
+
+%\usepackage{mathptmx} % Use the Times font for serif text
+\usepackage{palatino} % Use the Palatino font for serif text
+
+%\usepackage{helvet} % Use the Helvetica font for sans serif text
+\usepackage[default]{opensans} % Use the Open Sans font for sans serif text
+%\usepackage[default]{FiraSans} % Use the Fira Sans font for sans serif text
+%\usepackage[default]{lato} % Use the Lato font for sans serif text
+
+%----------------------------------------------------------------------------------------
+%	SELECT INNER THEME
+%----------------------------------------------------------------------------------------
+
+% Inner themes change the styling of internal slide elements, for example: bullet points, blocks, bibliography entries, title pages, theorems, etc. Uncomment each theme in turn to see what changes it makes to your presentation.
+
+%\useinnertheme{default}
+\useinnertheme{circles}
+%\useinnertheme{rectangles}
+%\useinnertheme{rounded}
+%\useinnertheme{inmargin}
+
+%----------------------------------------------------------------------------------------
+%	SELECT OUTER THEME
+%----------------------------------------------------------------------------------------
+
+% Outer themes change the overall layout of slides, such as: header and footer lines, sidebars and slide titles. Uncomment each theme in turn to see what changes it makes to your presentation.
+
+%\useoutertheme{default}
+%\useoutertheme{infolines}
+%\useoutertheme{miniframes}
+%\useoutertheme{smoothbars}
+%\useoutertheme{sidebar}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme{tree}
+%\useoutertheme{smoothtree}
+
+%\setbeamertemplate{footline} % Uncomment this line to remove the footer line in all slides
+%\setbeamertemplate{footline}[page number] % Uncomment this line to replace the footer line in all slides with a simple slide count
+
+%\setbeamertemplate{navigation symbols}{} % Uncomment this line to remove the navigation symbols from the bottom of all slides
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title[Metodología de Investigación]{Metodología para el estudio universitario} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
+
+%\subtitle{Optional Subtitle} % Presentation subtitle, remove this command if a subtitle isn't required
+
+\author[Edison Achalma]{Edison Achalma} % Presenter name(s), the optional parameter can contain a shortened version to appear on the bottom of every slide, while the main parameter will appear on the title slide
+
+\institute[CAU - UNSCH]{Corporación Académica Universitaria CAU - UNSCH \\ \smallskip \textit{achalmed.18@gmail.com}} % Your institution, the optional parameter can be used for the institution shorthand and will appear on the bottom of every slide after author names, while the required parameter is used on the title slide and can include your email address or additional information on separate lines
+
+\date[\today]{Sesión 05 \\ \today} % Presentation date or conference/meeting name, the optional parameter can contain a shortened version to appear on the bottom of every slide, while the required parameter value is output to the title slide
+
+%----------------------------------------------------------------------------------------
+
+
+\begin{document}
+% Página de título
+\begin{frame}
+	\titlepage
+\end{frame}
+
+% Diapositiva de contenido
+% Configuración: Incluir índice automáticamente en cada sección
+
+\AtBeginSection[]{
+	\begin{frame}{Índice de la Sección}
+		\tableofcontents[currentsection] % Índice automático de la sección actual
+	\end{frame}
+}
+
+% Repaso
+\begin{frame}
+	\frametitle{Citas en APA}
+
+	\textbf{¿Qué es una cita?}
+
+	Una cita es el reconocimiento formal de ideas, palabras o trabajos de otros autores dentro de tu propio texto. El estilo APA utiliza el sistema \textbf{autor-fecha} para las citas en el texto.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Cita Textual}
+
+	\textbf{Definición:}
+	\begin{itemize}
+		\item Se reproduce textualmente el material de otra fuente.
+	\end{itemize}
+
+	\textbf{Formatos:}
+	\begin{itemize}
+		\item \textbf{Corta (menos de 40 palabras):} Se integra en el texto entre comillas dobles, seguida de la cita autor-fecha y número de página en paréntesis.
+		      \begin{quote}
+			      "La diversidad cultural es esencial para la paz mundial" (Smith, 2020, p. 15).
+		      \end{quote}
+		\item \textbf{Larga (40 palabras o más):} Se presenta en un bloque separado, sin comillas, sangrado 0.5 pulgadas del margen izquierdo, con la cita al final del bloque.
+		      \begin{quote}
+			      Según Smith (2020), la diversidad cultural no solo enriquece nuestras vidas sino que también es un fundamento para la paz mundial y la cooperación internacional. La comprensión de diferentes culturas permite una coexistencia más armoniosa. (p. 15)
+		      \end{quote}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Cita Parafraseada}
+
+	\textbf{Definición:}
+	\begin{itemize}
+		\item Se expresan las ideas de otro autor en tus propias palabras.
+	\end{itemize}
+
+	\textbf{Formatos:}
+	\begin{itemize}
+		\item \textbf{Narrativo:} El autor y el año se integran en la frase.
+		      \begin{quote}
+			      Smith (2020) argumenta que la diversidad cultural es vital para la paz mundial.
+		      \end{quote}
+		\item \textbf{Parentético:} El autor y el año se añaden entre paréntesis al final de la frase.
+		      \begin{quote}
+			      La diversidad cultural es considerada vital para la paz mundial (Smith, 2020).
+		      \end{quote}
+	\end{itemize}
+
+	\textbf{Notas:}
+	\begin{itemize}
+		\item Aunque no es obligatorio, se recomienda incluir el número de página para facilitar la localización de la información original.
+		\item La paráfrasis debe ser una reformulación sustancial, no solo cambiar algunas palabras.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Consideraciones Generales}
+
+	\textbf{Importancia de las Citas:}
+	\begin{itemize}
+		\item Evitar el plagio.
+		\item Dar crédito a los autores originales.
+		\item Permitir a los lectores localizar las fuentes de información.
+	\end{itemize}
+
+	\textbf{Recomendaciones:}
+	\begin{itemize}
+		\item Siempre verifica que las citas correspondan a las referencias al final del documento.
+		\item Usa citas textuales con moderación; parafrasear es generalmente preferible para mostrar comprensión y evitar llenar el texto de citas.
+		\item Asegúrate de que las citas textuales sean exactas, y si encuentras errores en el original, usa "[sic]" para indicarlo.
+	\end{itemize}
+\end{frame}
+
+% Sección 9
+\section{Formato}
+
+\begin{frame}
+	\frametitle{Tamaño de Papel y Márgenes}
+
+	\textbf{Tamaño de Papel:}
+	\begin{itemize}
+		\item Preferiblemente, usar papel de tamaño carta (8.5 x 11 pulgadas).
+	\end{itemize}
+
+	\textbf{Márgenes:}
+	\begin{itemize}
+		\item Superior: 1 pulgada (2.54 cm)
+		\item Inferior: 1 pulgada (2.54 cm)
+		\item Izquierda: 1 pulgada (2.54 cm)
+		\item Derecha: 1 pulgada (2.54 cm)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tipo y Tamaño de Letra}
+
+	\textbf{Tipo de Letra:}
+	\begin{itemize}
+		\item Se recomienda Times New Roman o un tipo de letra similar.
+	\end{itemize}
+
+	\textbf{Tamaño de Letra:}
+	\begin{itemize}
+		\item Cuerpo del texto: 12 puntos.
+		\item Notas al pie y tablas: puede ser de 10 puntos.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Encabezado y Títulos}
+
+	\textbf{Encabezado:}
+	\begin{itemize}
+		\item Página de título: Sin encabezado.
+		\item Páginas siguientes: Incluye el título del documento en mayúsculas y el número de página, alineado a la derecha.
+	\end{itemize}
+
+	\textbf{Títulos y Subtítulos:}
+	\begin{itemize}
+		\item \textbf{Títulos de nivel 1:} Centrado, en negrita, con mayúsculas y minúsculas.
+		\item \textbf{Títulos de nivel 2:} Alineado a la izquierda, en negrita, con mayúsculas y minúsculas.
+		\item \textbf{Títulos de nivel 3:} Alineado a la izquierda, en cursiva, con mayúsculas y minúsculas.
+		\item \textbf{Títulos de nivel 4:} Alineado a la izquierda, en negrita y cursiva, con mayúsculas y minúsculas.
+		\item \textbf{Títulos de nivel 5:} Alineado a la izquierda, en cursiva, con mayúsculas y minúsculas.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interlineado y Alineación}
+
+	\textbf{Interlineado:}
+	\begin{itemize}
+		\item Doble espacio en todo el documento, incluyendo referencias y citas.
+	\end{itemize}
+
+	\textbf{Alineación de Párrafos:}
+	\begin{itemize}
+		\item Alineación justificada o alineación a la izquierda según preferencia, pero manteniendo consistencia.
+	\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Estructura del Documento}
+
+	\textbf{Estructura Básica:}
+	\begin{enumerate}
+		\item \textbf{Página de Título}
+		      \begin{itemize}
+			      \item Título del trabajo
+			      \item Nombre del autor
+			      \item Institución
+			      \item Nota del autor (opcional)
+		      \end{itemize}
+		\item \textbf{Resumen}
+		\item \textbf{Introducción}
+		\item \textbf{Metodología}
+		\item \textbf{Resultados}
+		\item \textbf{Discusión}
+		\item \textbf{Conclusión}
+		\item \textbf{Referencias}
+		\item \textbf{Apéndices} (si los hay)
+	\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Otros Elementos}
+
+	\textbf{Listas:}
+	\begin{itemize}
+		\item Usar viñetas o números para listas.
+		\item Mantener consistencia en el estilo de las listas.
+	\end{itemize}
+
+	\textbf{Citas y Referencias:}
+	\begin{itemize}
+		\item Citas en texto usando el sistema autor-fecha.
+		\item Lista de referencias al final del documento, ordenada alfabéticamente por apellido del primer autor.
+	\end{itemize}
+
+	\textbf{Imágenes y Tablas:}
+	\begin{itemize}
+		\item Numeración consecutiva.
+		\item Título y fuente por debajo de la imagen o tabla.
+	\end{itemize}
+
+\end{frame}
+
+% Sección 10
+\section{Estilos}
+\begin{frame}{Estilos}
+
+\end{frame}
+
+
+% Sección 9
+\section{Tablas, Figuras y Notas}
+\begin{frame}{Tablas, Figuras y Notas}
+
+\end{frame}
+
+% Sección 10
+\section{Estilos}
+\begin{frame}{Estilos}
+
+\end{frame}
+
+% Sección 11
+\section{Referencias}
+\begin{frame}{Referencias}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	CLOSING SLIDE
+%----------------------------------------------------------------------------------------
+
+\begin{frame}[plain] % The optional argument 'plain' hides the headline and footline
+	\begin{center}
+		{\Huge The End}
+
+		\bigskip\bigskip % Vertical whitespace
+
+		{\LARGE Questions? Comments?}
+	\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\end{document}

@@ -1,0 +1,66 @@
+---
+aliases:
+  - /talk/2025-01-08-sesion-02-estructura-en-word/
+title: "Diseño de Portadas y Formato APA"
+subtitle: "Segunda Clase en CAU - UNSCH"
+# Información del Autor
+author:
+  - name: Edison Achalma # Nombre del autor
+    url: https://achalmaedison.netlify.app # URL del autor
+    affiliation:
+      - id: unsch
+        name: Corporación Académica Universitaria CAU - UNSCH # Afiliación del autor
+        department: Economía
+        # address: Portal Independencia N 57
+        city: Ayacucho
+        region: AYA
+        country: Perú
+        postal-code: ~
+    # affiliation-url: https://www.gob.pe/unsch # URL de la afiliación del autor
+    orcid: 0000-0001-6996-3364 # ORCID del autor
+    email: elmer.achalma.09@unsch.edu.pe
+    attributes:
+      corresponding: true
+      equal-contributor: true
+      deceased: false
+    # Los roles son opcionales. Seleccione de la taxonomía CRediT: Contributor Roles https://credit.niso.org/
+    # conceptualización, curación de datos, Análisis formal, adquisición de financiación, investigación, metodología,
+    # administración de proyectos, recursos, software, supervisión, validación, visualización, redacción, edición.
+    roles:
+      - conceptualización
+      - redacción
+
+
+date: 2025-01-08
+slug: env-justice
+image: featured.png
+categories: [Estructura, Word, Formato]
+---
+
+Esta presentación aborda la creación de portadas para informes y monografías, siguiendo estándares académicos, y el uso de Microsoft Word para aplicar el formato APA a títulos y subtítulos. Incluye ejemplos prácticos de portadas estructuradas y documentos con encabezados ajustados en medidas y estilos según las normas APA. Dirigida a estudiantes y académicos, proporciona una base clara para organizar trabajos escritos, combinando diseño visual y normas técnicas para mejorar la presentación y legibilidad de textos académicos.
+
+
+::: {#fig-portada-informe fig-cap="Portada de Informe - Sesión 02"}
+```{=html}
+<object data="practice/sesion 02 portada informe.pdf" type="application/pdf" width=100% height=800 '><p>Unable to display PDF file. <a href="practice/sesion 02 portada informe.pdf">Download</a> instead.</p></object>
+```
+:::
+
+
+::: {#fig-portada-monografia fig-cap="Portada de Monografía - Sesión 02"}
+```{=html}
+<object data="practice/sesion 02 portada monografia.pdf" type="application/pdf" width=100% height=800 '><p>Unable to display PDF file. <a href="practice/sesion 02 portada monografia.pdf">Download</a> instead.</p></object>
+```
+:::
+
+
+::: {#fig-titulos-subtitulos fig-cap="Títulos y Subtítulos en APA - Sesión 02"}
+```{=html}
+<object data="practice/sesion 02 titulos y subitulos.pdf" type="application/pdf" width=100% height=800 '><p>Unable to display PDF file. <a href="practice/sesion 02 titulos y subitulos.pdf">Download</a> instead.</p></object>
+```
+:::
+
+
+## Materiales
+
+{{< include resources/_links.md >}}

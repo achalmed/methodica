@@ -1,0 +1,53 @@
+---
+aliases:
+  - /talk/2025-02-05-sesion-07-estilo-vancouver/
+title: "Estilo Vancouver: Citas y Referencias Académicas"
+subtitle: "Séptima Clase en CAU - UNSCH"
+# Información del Autor
+author:
+  - name: Edison Achalma # Nombre del autor
+    url: https://achalmaedison.netlify.app # URL del autor
+    affiliation:
+      - id: unsch
+        name: Corporación Académica Universitaria CAU - UNSCH # Afiliación del autor
+        department: Economía
+        # address: Portal Independencia N 57
+        city: Ayacucho
+        region: AYA
+        country: Perú
+        postal-code: ~
+    # affiliation-url: https://www.gob.pe/unsch # URL de la afiliación del autor
+    orcid: 0000-0001-6996-3364 # ORCID del autor
+    email: elmer.achalma.09@unsch.edu.pe
+    attributes:
+      corresponding: true
+      equal-contributor: true
+      deceased: false
+    # Los roles son opcionales. Seleccione de la taxonomía CRediT: Contributor Roles https://credit.niso.org/
+    # conceptualización, curación de datos, Análisis formal, adquisición de financiación, investigación, metodología,
+    # administración de proyectos, recursos, software, supervisión, validación, visualización, redacción, edición.
+    roles:
+      - conceptualización
+      - redacción
+
+
+date: 2025-02-05
+slug: env-justice
+image: featured.png
+categories: [Vancouver, Citas]
+---
+
+Esta presentación introduce el estilo Vancouver, usado en ciencias de la salud, detallando su sistema numérico para citas textuales y de paráfrasis, con ejemplos prácticos. Explica el formato de tablas y figuras, incluyendo su numeración y citación, y presenta modelos de referencias para libros, artículos y tesis, tanto impresos como en línea. Dirigida a estudiantes y profesionales, ofrece una guía clara para aplicar este estilo, asegurando la correcta atribución de fuentes y la presentación estructurada de trabajos académicos en contextos científicos.
+
+
+::: {#fig-manuscript fig-cap="sesión 07"}
+```{=html}
+<object data="slides/slides.pdf" type="application/pdf" width=100% height=800 '><p>Unable to display PDF file. <a href="slides/slides.pdf">Download</a> instead.</p></object>
+```
+:::
+
+
+
+## Materiales
+
+{{< include resources/_links.md >}}
