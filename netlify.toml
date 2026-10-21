@@ -5,3 +5,7 @@
 # sitio Quarto es `publicar.sh methodica --volver --aplicar` (publish = "_site"). Netlify no ejecuta ningún comando.
 [build]
   publish = "_vitrina"
+
+# Node 22: sin build no se usa, pero Netlify avisaba de que el entorno del sitio estaba en Node 16 (2026-10-21).
+[build.environment]
+  NODE_VERSION = "22"
