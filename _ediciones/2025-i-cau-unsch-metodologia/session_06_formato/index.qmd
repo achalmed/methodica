@@ -1,0 +1,58 @@
+---
+aliases:
+  - /talk/2025-01-29-sesion-06-formato/
+title: "Citas APA y Formato de Documentos Académicos"
+subtitle: "Sexta Clase en CAU - UNSCH"
+# Información del Autor
+author:
+  - name: Edison Achalma # Nombre del autor
+    url: https://achalmaedison.netlify.app # URL del autor
+    affiliation:
+      - id: unsch
+        name: Corporación Académica Universitaria CAU - UNSCH # Afiliación del autor
+        department: Economía
+        # address: Portal Independencia N 57
+        city: Ayacucho
+        region: AYA
+        country: Perú
+        postal-code: ~
+    # affiliation-url: https://www.gob.pe/unsch # URL de la afiliación del autor
+    orcid: 0000-0001-6996-3364 # ORCID del autor
+    email: elmer.achalma.09@unsch.edu.pe
+    attributes:
+      corresponding: true
+      equal-contributor: true
+      deceased: false
+    # Los roles son opcionales. Seleccione de la taxonomía CRediT: Contributor Roles https://credit.niso.org/
+    # conceptualización, curación de datos, Análisis formal, adquisición de financiación, investigación, metodología,
+    # administración de proyectos, recursos, software, supervisión, validación, visualización, redacción, edición.
+    roles:
+      - conceptualización
+      - redacción
+
+
+date: 2025-01-29
+slug: env-justice
+image: featured.png
+categories: [Formato, Estilo]
+---
+
+Esta presentación aborda las citas en estilo APA, explicando citas textuales (cortas y largas) y parafraseadas con ejemplos prácticos, junto a consideraciones para evitar el plagio. También detalla el formato de documentos académicos, incluyendo tamaño de papel, márgenes, tipo de letra, interlineado, títulos y estructura básica como página de título, resumen y referencias. Orientada a estudiantes y académicos, proporciona una guía precisa para citar fuentes correctamente y estructurar trabajos escritos según normas establecidas, aplicable a diversas disciplinas.
+
+
+::: {#fig-manuscript fig-cap="sesión 06"}
+```{=html}
+<object data="slides/slides.pdf" type="application/pdf" width=100% height=800 '><p>Unable to display PDF file. <a href="slides/slides.pdf">Download</a> instead.</p></object>
+```
+:::
+
+::: {#fig-manuscript fig-cap="sesion 06 practica"}
+```{=html}
+<object data="practice/sesion 06 practica.pdf" type="application/pdf" width=100% height=800 '><p>Unable to display PDF file. <a href="practice/sesion 06 practica.pdf">Download</a> instead.</p></object>
+```
+:::
+
+
+## Materiales
+
+{{< include resources/_links.md >}}

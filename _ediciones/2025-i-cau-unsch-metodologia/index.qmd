@@ -1,0 +1,36 @@
+---
+title: "Metodología de la Investigación — 2025-1 · CAU-UNSCH"
+subtitle: "9 sesiones · CAU-UNSCH"
+description: "Taller de redacción académica: estructura de monografías e informes, citación APA y Vancouver, parafraseo, formato, tablas y figuras."
+categories: [Investigación]
+image: /assets/img/default-preview.jpg
+listing:
+  - id: sesiones
+    contents:
+      - "session_*/index.qmd"
+    type: default
+    sort: "date"
+    sort-ui: false
+    filter-ui: true
+    fields: [title, categories, date, image]
+    image-align: left
+    feed: true
+header-includes: |
+  <link rel="stylesheet" href="/assets/css/pages/listing.css">
+  <link rel="stylesheet" href="/assets/css/pages/courses.css">
+format:
+  html:
+    page-layout: full
+title-block-banner: false
+toc: false
+comments: false
+---
+
+**Docente:** Edison Achalma · **Institución:** CAU-UNSCH · **Periodo:** enero–febrero 2025 · **Sesiones:** 9
+
+Cada sesión incluye sus diapositivas y materiales (práctica, tareas y recursos) descargables.
+
+## Sesiones
+
+::: {#sesiones}
+:::

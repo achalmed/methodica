@@ -1,0 +1,20 @@
+---
+title: "Redacción académica"
+description: "Sesión del taller de Metodología de la Investigación (2026-1, CAU-UNSCH)."
+date: 2026-03-23
+order: 4
+categories: [Redacción, Estilo]
+image: /assets/img/default-preview.jpg
+---
+
+## Diapositivas
+
+::: {#fig-slides fig-cap="Diapositivas de la sesión"}
+```{=html}
+<object data="slides/index.pdf" type="application/pdf" width="100%" height="760"><p><a href="slides/index.pdf">Descargar diapositivas (PDF)</a></p></object>
+```
+:::
+
+## Materiales
+
+{{< include resources/_links.md >}}

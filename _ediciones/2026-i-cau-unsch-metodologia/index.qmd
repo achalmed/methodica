@@ -1,0 +1,36 @@
+---
+title: "Metodología de la Investigación — 2026-1 · CAU-UNSCH"
+subtitle: "6 sesiones · CAU-UNSCH"
+description: "Nueva edición del taller: monografía e informe, estructura, búsqueda de información, redacción, APA e inteligencia artificial aplicada a la investigación."
+categories: [Investigación]
+image: /assets/img/default-preview.jpg
+listing:
+  - id: sesiones
+    contents:
+      - "session_*/index.qmd"
+    type: default
+    sort: "order"
+    sort-ui: false
+    filter-ui: true
+    fields: [title, categories, date, image]
+    image-align: left
+    feed: true
+header-includes: |
+  <link rel="stylesheet" href="/assets/css/pages/listing.css">
+  <link rel="stylesheet" href="/assets/css/pages/courses.css">
+format:
+  html:
+    page-layout: full
+title-block-banner: false
+toc: false
+comments: false
+---
+
+**Docente:** Edison Achalma · **Institución:** CAU-UNSCH · **Periodo:** 2026-1 · **Sesiones:** 6
+
+Cada sesión trae sus diapositivas y materiales (práctica, tareas, evaluación y recursos) descargables.
+
+## Sesiones
+
+::: {#sesiones}
+:::

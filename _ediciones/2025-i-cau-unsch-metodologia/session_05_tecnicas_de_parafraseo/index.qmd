@@ -1,0 +1,53 @@
+---
+aliases:
+  - /talk/2025-01-22-sesion-05-tecnicas-de-parafraseo/
+title: "Recursos Académicos en Línea y Técnicas de Parafraseo"
+subtitle: "Quinta Clase en CAU - UNSCH"
+# Información del Autor
+author:
+  - name: Edison Achalma # Nombre del autor
+    url: https://achalmaedison.netlify.app # URL del autor
+    affiliation:
+      - id: unsch
+        name: Corporación Académica Universitaria CAU - UNSCH # Afiliación del autor
+        department: Economía
+        # address: Portal Independencia N 57
+        city: Ayacucho
+        region: AYA
+        country: Perú
+        postal-code: ~
+    # affiliation-url: https://www.gob.pe/unsch # URL de la afiliación del autor
+    orcid: 0000-0001-6996-3364 # ORCID del autor
+    email: elmer.achalma.09@unsch.edu.pe
+    attributes:
+      corresponding: true
+      equal-contributor: true
+      deceased: false
+    # Los roles son opcionales. Seleccione de la taxonomía CRediT: Contributor Roles https://credit.niso.org/
+    # conceptualización, curación de datos, Análisis formal, adquisición de financiación, investigación, metodología,
+    # administración de proyectos, recursos, software, supervisión, validación, visualización, redacción, edición.
+    roles:
+      - conceptualización
+      - redacción
+
+
+date: 2025-01-22
+slug: env-justice
+image: images/scihub.png
+categories: [Parafraseo, Redacción]
+---
+
+Esta presentación explora herramientas en línea para la investigación académica, como Google Scholar, PubMed y RENATI, con ejemplos prácticos de búsqueda. Además, aborda técnicas de parafraseo, incluyendo sustitución de sinónimos y cambios estructurales, ilustradas con casos concretos para evitar el plagio. Dirigida a estudiantes y profesionales, ofrece una guía clara que combina teoría y práctica para mejorar la búsqueda de recursos y la redacción académica, aplicable en diversas áreas del conocimiento.
+
+
+::: {#fig-manuscript fig-cap="sesión 05"}
+```{=html}
+<object data="slides/slides.pdf" type="application/pdf" width=100% height=800 '><p>Unable to display PDF file. <a href="slides/slides.pdf">Download</a> instead.</p></object>
+```
+:::
+
+
+
+## Materiales
+
+{{< include resources/_links.md >}}
