@@ -1,4 +1,4 @@
-# netlify.toml — configuración de Netlify de methodica (methodica.netlify.app): publica la vitrina empujada, sin build
+# netlify.toml — configuración de Netlify de methodica (methodica.netlify.app/): publica la vitrina empujada, sin build
 # Desde la fase 7 de web/docs/plataforma-educativa.md el sitio es la vitrina de la plataforma de cursos (web/_aula):
 # `_aula/scripts/publicar.sh methodica --aplicar` la construye, prueba que ninguna URL vieja se pierda y la copia a
 # `_vitrina/` (GENERADO; no se edita). `_site/` sigue siendo el render de Quarto, fuente de las lecciones; volver al
