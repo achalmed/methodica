@@ -16,31 +16,40 @@
     color: $lab-table-color;
   }
 
-  /* Tres filetes, cifras tabulares y cabecera sin versalitas (pauta editorial, 2026-10-21) */
+  /* Recuadro redondeado que se ajusta al ancho, como el visor de Markdown de Claude: las celdas parten el texto,
+     cabecera en papel teñido, filetes finos, cifras tabulares (autor, 2026-10-21) */
   font-family: $font-family-sans-serif;
   font-variant-numeric: lining-nums tabular-nums;
-  line-height: 1.45;
-  border-top: 1.5px solid $lab-table-frame;
-  border-bottom: 1.5px solid $lab-table-frame;
+  line-height: 1.5;
+  border: 1px solid $lab-border;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
 
   thead th {
     font-family: $font-family-sans-serif;
     font-size: 0.875rem;
     font-weight: 600;
     color: $lab-ink;
-    border-bottom: 1px solid $lab-table-frame;
-    padding: 0.5rem 0.75rem;
+    background: $lab-bg-surface;
+    border-bottom: 1px solid $lab-border;
+    padding: 0.65rem 0.9rem;
     vertical-align: bottom;
   }
 
   tbody td {
-    padding: 0.5rem 0.75rem;
-    border-bottom-color: color-mix(in srgb, $lab-border 55%, transparent);
+    padding: 0.65rem 0.9rem;
+    overflow-wrap: break-word;
+    border-bottom: 0;
+    border-top: 1px solid $lab-border;
 
     @if $lab-table-color != null {
       color: $lab-table-color;
     }
   }
+
+  tbody tr:first-child td { border-top: 0; }
 
   tbody tr {
     transition: background-color 0.15s ease;

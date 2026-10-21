@@ -39,7 +39,7 @@
   /* Títulos largos: ajuste de línea limpio, con guiones como último recurso */
   li a {
     overflow-wrap: break-word;
-    hyphens: auto;
+    hyphens: manual;   /* sin guiones de partición (autor, 2026-10-21) */
   }
 
   a {

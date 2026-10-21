@@ -23,6 +23,24 @@ figure.quarto-float-tbl > div {
   max-width: 100%;
 }
 
+// En el celular: tabla compacta y, si aún no cabe, se desliza con el dedo sin barra
+// visible (autor, 2026-10-21: las barras horizontales distraen).
+@media (max-width: 575.98px) {
+  figure.quarto-float-tbl > div {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar { display: none; }
+  }
+
+  figure.quarto-float-tbl .table {
+    font-size: 0.8125rem;
+
+    thead th, tbody td { padding: 0.5rem 0.4rem; }
+    thead th:first-child, tbody td:first-child { padding-left: 0.6rem; }
+    thead th:last-child, tbody td:last-child { padding-right: 0.6rem; }
+  }
+}
+
 // Las celdas pueden partir palabras largas antes de forzar scroll.
 figure.quarto-float-tbl .table {
   th,
