@@ -59,6 +59,8 @@ devolver() {        # $1 = publicadas (solo las páginas con su .html) o todo (e
 trap 'devolver todo; exit 130' INT TERM
 apartar
 estado=0
-nice -n 10 quarto render --to html "$@" || estado=$?
+# El archivo de entrada, si lo hay, va antes de --to: «quarto render --to html x.qmd» no ve la entrada y renderiza el
+# proyecto entero, que vacía _site/ (visto el 2026-10-20 con license.qmd).
+nice -n 10 quarto render "$@" --to html || estado=$?
 if (( estado == 0 )); then devolver publicadas; else devolver todo; fi
 exit "$estado"

@@ -4,7 +4,7 @@ estado: activo
 ---
 # methodica/ — Investigación y metodología: blog satélite del hub `web` (repo methodica, methodica.netlify.app)
 
-<!-- GENERADO por `web/scripts/pubs.py readme --aplicar` desde `web/_pubs/pubs.yml` (2026-10-10); no editar aquí: se regenera desde el hub -->
+<!-- GENERADO por `web/scripts/pubs.py readme --aplicar` desde `web/_pubs/pubs.yml` (2026-10-20); no editar aquí: se regenera desde el hub -->
 
 ## Qué es
 
@@ -55,4 +55,4 @@ principio a fin), `web/docs/despliegue-netlify.md` (cómo publica cada sitio) y 
 
 - Este README es el único documento propio del blog y se regenera desde el hub: lo escrito aquí a mano se pierde.
 - `_site/` sigue en git: Netlify publica el _site/ empujado, sin build (decisiones §4.1 del hub); `netlify.toml` lo declara (`publish = "_site"`, sin comando de build), y el hook pre-push de la puerta R6 no viaja con el repo: lo instala `web/scripts/puerta-r6.sh --instalar`.
-- Licencia: código MPL-2.0 (`LICENSE`), contenido CC-BY-SA-4.0 según `license.qmd` del hub; unificarlas en los 12 sitios es la decisión D9.
+- Licencia: el contenido es CC-BY-SA-4.0 (`license.qmd` del hub) y el código MPL-2.0 (`LICENSE`), igual en los 12 sitios (D9, `web/docs/decisiones.md` §3.6).

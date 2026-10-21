@@ -1,4 +1,4 @@
-# CITATION.cff — GENERADO por `web/scripts/pubs.py citation --aplicar` desde `web/_pubs/pubs.yml` (2026-10-10); no editar aquí
+# CITATION.cff — GENERADO por `web/scripts/pubs.py citation --aplicar` desde `web/_pubs/pubs.yml` (2026-10-20); no editar aquí
 cff-version: 1.2.0
 title: "Investigación y metodología — blog de Edison Achalma (methodica)"
 message: "Si citas una entrada de este blog, usa los metadatos de este archivo y la URL de la entrada."
@@ -13,4 +13,4 @@ identifiers:
 repository-code: 'https://github.com/achalmed/methodica'
 url: 'https://methodica.netlify.app/'
 abstract: "Métodos cualitativos y cuantitativos, APA y redacción académica. Blog satélite del hub https://achalmaedison.netlify.app/ (website-achalma)."
-license: MPL-2.0
+license: CC-BY-SA-4.0   # se cita el contenido; el código va en LICENSE (MPL-2.0)
