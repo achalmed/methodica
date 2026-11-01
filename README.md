@@ -4,7 +4,7 @@ estado: activo
 ---
 # methodica/ — Investigación y metodología: blog satélite del hub `web` (repo methodica, methodica.netlify.app)
 
-<!-- GENERADO por `web/scripts/pubs.py readme --aplicar` desde `web/_pubs/pubs.yml` (2026-10-21); no editar aquí: se regenera desde el hub -->
+<!-- GENERADO por `web/scripts/pubs.py readme --aplicar` desde `web/_pubs/pubs.yml` (2026-10-31); no editar aquí: se regenera desde el hub -->
 
 ## Qué es
 
@@ -15,7 +15,7 @@ GitHub `achalmed/methodica` y dominio `methodica.netlify.app`; el registro de lo
 
 El tema visual (SCSS, JS, extensiones, filtros, `scripts/build-page-css.sh`) **no se edita aquí**: vive en el hub y
 llega por `web/scripts/sync-theme-pubs.sh`. Lo propio de este blog es `_quarto.yml`, `index.qmd`, `_contenido-*.qmd`,
-`assets/img/` y las entradas; los índices `_contenido_<sección>.qmd` los genera `scripts-quarto`
+`assets/img/` y las entradas; los índices `_contenido_<sección>.qmd` los genera `quarto-studio`
 (`script_generador_publicacion_similar`) y no se editan a mano.
 
 ## Uso
@@ -43,7 +43,7 @@ cd ../.. && git add _pubs/methodica && git commit -m "pubs: methodica al último
 | `netlify.toml` | configuración de Netlify: publica `_site/` sin comando de build | |
 
 7 entradas. Cada entrada es `<sección>/AAAA-MM-DD-slug/index.qmd` con frontmatter apaquarto y fecha ISO;
-sus metadatos se editan en masa desde `scripts-quarto` (`metadata_manager`).
+sus metadatos se editan en masa desde `quarto-studio` (`metadata_manager`).
 
 ## Documentación
 
